@@ -9,22 +9,28 @@ public class SkillCooldown : MonoBehaviour
     bool skill2delay = false;
     bool skillultdelay = false;
 
+    private Rigidbody2D rigid;
+    private GameObject Monster;
+
+    public GameObject P_bullet;
+
     // Start is called before the first frame update
-    void Start()
+    void Awake()
     {
-        
+        Monster = GameObject.Find("Monster");
+        rigid = GetComponent<Rigidbody2D>();
     }
 
     // Update is called once per frame
     void Update()
     {
-        
+
     }
 
     #region activate skill
     public void baseatk()
     {
-        if(!atkdelay)
+        if (!atkdelay)
         {
             atkdelay = true;
             //기본공격 실행
@@ -87,6 +93,8 @@ public class SkillCooldown : MonoBehaviour
     IEnumerator BaseAttack()
     {
         yield return new WaitForSeconds(0.5f);
+        Instantiate(P_bullet, transform.position, transform.rotation); //추후에 근,원거리무기 판별 조건 필요
+        Debug.Log("shoot");
         atkdelay = false;
     }
 

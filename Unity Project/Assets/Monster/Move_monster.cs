@@ -11,11 +11,13 @@ public class Move_monster : MonoBehaviour
     [SerializeField]
     private float Hp;
 
+    public float damage;
+
     private Rigidbody2D rigid;
     private GameObject Player;
     private Transform transform;
 
-    void Start()
+    void Awake()
     {
         Player = GameObject.Find("Player");
         transform = GetComponent<Transform>();
@@ -49,14 +51,33 @@ public class Move_monster : MonoBehaviour
 
     void move()
     {
-        transform.position = Vector3.MoveTowards(transform.position, Player.transform.position, moveSpeed);
+        //플레이어한테 이동
+        transform.position = Vector3.MoveTowards(transform.position, 
+            Player.transform.position, moveSpeed);
     }
 
-    private void OnTriggerEnter(Collider other)
+    void OnTriggerEnter2D(Collider2D other)
     {
-        if(other.tag == "Attack")
+        Debug.Log("coll");
+        if (other.gameObject.tag == "Player") //플레이어(임시 스킬로 대체할 예정)와 충돌시
         {
-            
+            //충돌한 객체의 컴퍼넌트에서 데미지 받아옴
+            damage = other.GetComponent<Test>().Dam;
+            Get_damange(damage); // 데미지 입음
         }
+    }
+
+    void Get_damange(float damage)
+    {
+        Hp -= damage;
+        if(Hp <= 0 ) //체력 0 되면 사망
+        {
+            die();
+        }
+    }
+    void die()
+    {
+        //Instantiate(item, transform.position); //아이템 생성
+        Destroy(this);
     }
 }

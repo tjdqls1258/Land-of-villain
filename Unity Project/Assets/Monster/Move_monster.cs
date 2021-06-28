@@ -74,6 +74,24 @@ public class Move_monster : MonoBehaviour
     }
     void die()
     {
+        /* 10%확률로 아이템 드랍.
+         * int random = Random.Range(0,10);
+         * switch (random)
+         * {
+         *      case 0:
+         *          Instantiate(item, transform.position);
+         *          break;
+         *      case 1:
+         *      case 2:
+         *      case 3:
+         *      case 4:
+         *      case 5:
+         *      case 6:
+         *      case 7:
+         *      case 8:
+         *      case 9:
+         * }
+         */
         //Instantiate(item, transform.position); //아이템 생성
         Destroy(gameObject);
     }

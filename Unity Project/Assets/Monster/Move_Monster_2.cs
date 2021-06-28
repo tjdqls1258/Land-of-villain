@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Move_monster : MonoBehaviour
+public class Move_Monster_2 : MonoBehaviour
 {
     [SerializeField]
     private float rotateSpeed;
@@ -10,21 +10,24 @@ public class Move_monster : MonoBehaviour
     private float moveSpeed;
     [SerializeField]
     private float Hp;
-
+    public float Atk_dir;
     public float damage;
 
     private Rigidbody2D rigid;
     private GameObject Player;
 
+    public GameObject Monster_Bullet;
     void Awake()
     {
         Player = GameObject.Find("Player");
         rigid = GetComponent<Rigidbody2D>();
+        StartCoroutine("Fire");
     }
 
     // Update is called once per frame
     void Update()
     {
+
         LookAt_Player();
         move();
     }
@@ -50,8 +53,11 @@ public class Move_monster : MonoBehaviour
     void move()
     {
         //플레이어한테 이동
-        transform.position = Vector3.MoveTowards(transform.position, 
-            Player.transform.position, moveSpeed);
+        if (Vector3.Distance(transform.position, Player.transform.position) > Atk_dir)
+        {
+            transform.position = Vector3.MoveTowards(transform.position,
+                Player.transform.position, moveSpeed);
+        }
     }
 
     void OnTriggerEnter2D(Collider2D other)
@@ -67,14 +73,28 @@ public class Move_monster : MonoBehaviour
     void Get_damange(float damage)
     {
         Hp -= damage;
-        if(Hp <= 0 ) //체력 0 되면 사망
+        if (Hp <= 0) //체력 0 되면 사망
         {
             //die();
         }
     }
     void die()
     {
-        //Instantiate(item, transform.position); //아이템 생성
+        //Instantiate(item, tran.position); //아이템 생성
+        StopCoroutine("Fire");
         Destroy(gameObject);
+
+    }
+    IEnumerator Fire()
+    {
+        while (true)
+        {
+            Debug.Log("coll");
+            yield return new WaitForSecondsRealtime(1f);
+            if (!(Vector3.Distance(transform.position, Player.transform.position) > Atk_dir))
+            {
+                Instantiate(Monster_Bullet, transform.position, transform.rotation);
+            }
+        }
     }
 }

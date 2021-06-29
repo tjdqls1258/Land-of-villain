@@ -18,4 +18,6 @@ public class Movement2D : MonoBehaviour
         // 새로운 위치 = 현재 위치 + (방향 * 속도)
         transform.position += moveDirection * moveSpeed * Time.deltaTime;
     }
+
+
 }

@@ -25,7 +25,7 @@ public class Player_bullet : MonoBehaviour
             this.transform.rotation = Quaternion.AngleAxis(angle - 90, Vector3.forward); 
             // 회전
         }
-        Damage_s += Player.GetComponent<Player_Stat>().Get_ATK(); 
+        Damage_s += Player.GetComponent<Player_Stats>().Get_ATK(); 
 
         rigid = GetComponent<Rigidbody2D>();
         StartCoroutine("Die");

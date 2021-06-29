@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Player_Stat : MonoBehaviour
+public class Player_Stats : MonoBehaviour
 {
     //공 방 체력 민첩
     float ATK; 

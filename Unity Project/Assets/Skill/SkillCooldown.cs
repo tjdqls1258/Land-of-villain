@@ -27,12 +27,19 @@ public class SkillCooldown : MonoBehaviour
     {
         FoundObjects = new List<GameObject>(GameObject.FindGameObjectsWithTag("Monster"));              
         rigid = GetComponent<Rigidbody2D>();
+        shortDis = Vector3.Distance(gameObject.transform.position, FoundObjects[0].transform.position);
+        Monster = FoundObjects[0];
     }
 
     // Update is called once per frame
     void Update()
     {
         
+    }
+
+    public GameObject Get_Monster()
+    {
+        return Monster;
     }
 
     #region activate skill
@@ -124,19 +131,23 @@ public class SkillCooldown : MonoBehaviour
         }
         else
         {
-            shortDis = Vector3.Distance(gameObject.transform.position, FoundObjects[0].transform.position);
-            Monster = FoundObjects[0];
+            Monster = null;
+            shortDis = 1000f;
             foreach (GameObject found in FoundObjects)
             {
+                if(found == null)
+                {
+                    continue;
+                }
                 float Distance = Vector3.Distance(gameObject.transform.position, found.transform.position);
 
                 if (Distance < shortDis) // 위에서 잡은 기준으로 거리 재기
                 {
                     Monster = found;
                     shortDis = Distance;
+                    Monsterpos = Monster.transform.position;
                 }
             }
-            Monsterpos = Monster.transform.position;
             Debug.Log(Monsterpos);
             Instantiate(P_bullet, transform.position, transform.rotation);
             //원거리 공격 추후에 근,원거리무기 판별 조건 필요

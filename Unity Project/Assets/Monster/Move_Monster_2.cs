@@ -59,14 +59,6 @@ public class Move_Monster_2 : MonoBehaviour
         }
     }
 
-    void OnTriggerEnter2D(Collider2D other)
-    {
-        if (other.gameObject.tag == "Player") //플레이어(임시 스킬로 대체할 예정)와 충돌시
-        {
-            //충돌한 객체의 컴퍼넌트에서 데미지 받아옴
-            monster_Stats.Hit_monster(other.GetComponent<Player_Stat>().Get_ATK());
-        }
-    }
 
     IEnumerator Fire()
     {

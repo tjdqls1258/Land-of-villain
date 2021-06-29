@@ -16,7 +16,7 @@ public class Monster_Bullet : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        rigid.AddForce(transform.up * Move_speed, ForceMode2D.Impulse);
+        rigid.AddForce(transform.up * Move_speed, ForceMode2D.Force);
     }
 
     private void OnTriggerEnter2D(Collider2D collision)

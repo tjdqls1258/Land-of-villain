@@ -32,20 +32,7 @@ public class SkillCooldown : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        shortDis = Vector3.Distance(gameObject.transform.position, FoundObjects[0].transform.position);
-        Monster = FoundObjects[0];
-        foreach (GameObject found in FoundObjects)
-        {
-            float Distance = Vector3.Distance(gameObject.transform.position, found.transform.position);
-
-            if (Distance < shortDis) // 위에서 잡은 기준으로 거리 재기
-            {
-                Monster = found;
-                shortDis = Distance;
-                Monsterpos = Monster.transform.position;
-            }
-        }
-        Debug.Log(Monster.name);
+        
     }
 
     #region activate skill
@@ -137,7 +124,22 @@ public class SkillCooldown : MonoBehaviour
         }
         else
         {
-            Instantiate(P_bullet, transform.position, transform.rotation); //원거리 공격 추후에 근,원거리무기 판별 조건 필요
+            shortDis = Vector3.Distance(gameObject.transform.position, FoundObjects[0].transform.position);
+            Monster = FoundObjects[0];
+            foreach (GameObject found in FoundObjects)
+            {
+                float Distance = Vector3.Distance(gameObject.transform.position, found.transform.position);
+
+                if (Distance < shortDis) // 위에서 잡은 기준으로 거리 재기
+                {
+                    Monster = found;
+                    shortDis = Distance;
+                }
+            }
+            Monsterpos = Monster.transform.position;
+            Debug.Log(Monsterpos);
+            Instantiate(P_bullet, transform.position, transform.rotation);
+            //원거리 공격 추후에 근,원거리무기 판별 조건 필요
         }
         Debug.Log("shoot");
         atkdelay = false;

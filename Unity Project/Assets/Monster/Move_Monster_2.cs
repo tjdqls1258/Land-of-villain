@@ -8,10 +8,8 @@ public class Move_Monster_2 : MonoBehaviour
     private float rotateSpeed;
     [SerializeField]
     private float moveSpeed;
-    [SerializeField]
-    private float Hp;
-    public float Atk_dir;
-    public float damage;
+
+    Monster_stats monster_Stats;
 
     private Rigidbody2D rigid;
     private GameObject Player;
@@ -20,6 +18,7 @@ public class Move_Monster_2 : MonoBehaviour
     void Awake()
     {
         Player = GameObject.Find("Player");
+        monster_Stats = GetComponent<Monster_stats>();
         rigid = GetComponent<Rigidbody2D>();
         StartCoroutine("Fire");
     }
@@ -53,7 +52,7 @@ public class Move_Monster_2 : MonoBehaviour
     void move()
     {
         //플레이어한테 이동
-        if (Vector3.Distance(transform.position, Player.transform.position) > Atk_dir)
+        if (Vector3.Distance(transform.position, Player.transform.position) > monster_Stats.Atk_dir)
         {
             transform.position = Vector3.MoveTowards(transform.position,
                 Player.transform.position, moveSpeed);
@@ -65,33 +64,17 @@ public class Move_Monster_2 : MonoBehaviour
         if (other.gameObject.tag == "Player") //플레이어(임시 스킬로 대체할 예정)와 충돌시
         {
             //충돌한 객체의 컴퍼넌트에서 데미지 받아옴
-            damage = other.GetComponent<Player_Stat>().Get_ATK();
-            Get_damange(damage); // 데미지 입음
+            monster_Stats.Hit_monster(other.GetComponent<Player_Stat>().Get_ATK());
         }
     }
 
-    void Get_damange(float damage)
-    {
-        Hp -= damage;
-        if (Hp <= 0) //체력 0 되면 사망
-        {
-            //die();
-        }
-    }
-    void die()
-    {
-        //Instantiate(item, tran.position); //아이템 생성
-        StopCoroutine("Fire");
-        Destroy(gameObject);
-
-    }
     IEnumerator Fire()
     {
         while (true)
         {
             Debug.Log("coll");
             yield return new WaitForSecondsRealtime(1f);
-            if (!(Vector3.Distance(transform.position, Player.transform.position) > Atk_dir))
+            if (!(Vector3.Distance(transform.position, Player.transform.position) > monster_Stats.Atk_dir))
             {
                 Instantiate(Monster_Bullet, transform.position, transform.rotation);
             }

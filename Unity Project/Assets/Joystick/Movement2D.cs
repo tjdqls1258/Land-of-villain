@@ -17,5 +17,6 @@ public class Movement2D : MonoBehaviour
 
         // 새로운 위치 = 현재 위치 + (방향 * 속도)
         transform.position += moveDirection * moveSpeed * Time.deltaTime;
+        transform.position = new Vector3(Mathf.Clamp(transform.position.x, -10.0f, 10.0f), Mathf.Clamp(transform.position.y, -10.0f, 10.0f), 0);
     }
 }

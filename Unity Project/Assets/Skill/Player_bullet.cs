@@ -8,13 +8,17 @@ public class Player_bullet : MonoBehaviour
     Rigidbody2D rigid;
     public float Move_speed;
     private Vector3 monsterpos;
-    private Vector2 movedir;
+    //private Vector2 movedir;
     // Start is called before the first frame update
     void Awake()
-    {
-        monsterpos = GameObject.Find("Player").GetComponent<SkillCooldown>().Monsterpos;
+    { 
         Player = GameObject.Find("Player");
-        movedir = monsterpos - Player.transform.position;//몬스터좌표 - 내좌표 = 진행방향
+        monsterpos = GameObject.Find("Player").GetComponent<SkillCooldown>().Monsterpos;
+        //movedir = (monsterpos - transform.position).normalized;//몬스터좌표 - 내좌표 = 진행방향
+        float angle = Mathf.Atan2(monsterpos.y - transform.position.y
+            , monsterpos.x - transform.position.x) * Mathf.Rad2Deg;
+        this.transform.rotation = Quaternion.AngleAxis(angle - 90, Vector3.forward);
+
         rigid = GetComponent<Rigidbody2D>();
         StartCoroutine("Die");
     }
@@ -22,8 +26,8 @@ public class Player_bullet : MonoBehaviour
     // Update is called once per frame
     void Update()
     {       
-        rigid.AddForce(movedir * Move_speed, ForceMode2D.Force);
-        Debug.DrawLine(movedir, Player.transform.position, Color.black);
+        rigid.AddForce(transform.up * Move_speed, ForceMode2D.Force);
+        Debug.DrawLine(transform.up * 10f, Player.transform.position, Color.black);
     }
 
     private void OnTriggerEnter2D(Collider2D collision)

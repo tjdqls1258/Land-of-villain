@@ -906,12 +906,12 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1544915017}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: -10}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
-  m_Father: {fileID: 0}
-  m_RootOrder: 0
+  m_Father: {fileID: 2012668316}
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1570021855
 GameObject:
@@ -1265,7 +1265,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 4
+  m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1653970933
 GameObject:
@@ -1439,6 +1439,7 @@ GameObject:
   - component: {fileID: 2012668320}
   - component: {fileID: 2012668319}
   - component: {fileID: 2012668321}
+  - component: {fileID: 2012668322}
   m_Layer: 0
   m_Name: Player
   m_TagString: Player
@@ -1508,8 +1509,9 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 1969651872}
+  - {fileID: 1544915020}
   m_Father: {fileID: 0}
-  m_RootOrder: 2
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &2012668317
 MonoBehaviour:
@@ -1523,8 +1525,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ca06e33379cc01740909be108d0df52a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Dam: 10
-  Hp: 100
 --- !u!61 &2012668318
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -1597,8 +1597,24 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7380e2396a3974f47853581410184a8f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  FoundObjects: []
+  shortDis: 0
+  Monsterpos: {x: 0, y: 0}
+  meeleattack: {fileID: 0}
   P_bullet: {fileID: 4263445422830632123, guid: 9817903500eb5d745ab1f3c52274c8fe,
     type: 3}
+--- !u!114 &2012668322
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2012668314}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 05d955e3de4c2c14faef6f28f3bc999c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &5569113962076966342
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1625,7 +1641,7 @@ PrefabInstance:
     - target: {fileID: 4599802621097070877, guid: d18fb17948b0fd647a5ad8ade0420d25,
         type: 3}
       propertyPath: m_RootOrder
-      value: 3
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 4599802621097070877, guid: d18fb17948b0fd647a5ad8ade0420d25,
         type: 3}
@@ -1700,7 +1716,7 @@ PrefabInstance:
     - target: {fileID: 3559349196867692226, guid: 8bdad898db19e724e8641b40671d3e2b,
         type: 3}
       propertyPath: m_RootOrder
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 3559349196867692226, guid: 8bdad898db19e724e8641b40671d3e2b,
         type: 3}

@@ -10,7 +10,7 @@ public class Hp_Bar : MonoBehaviour
     public float P_Hp;
     public void Start()
     {
-        P_Hp = Player.GetComponent<Test>().Hp;
+        P_Hp = Player.GetComponent<Player_Stat>().Get_HP();
     }
     public void Damage(float Dam)
     {

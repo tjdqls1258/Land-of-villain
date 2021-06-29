@@ -59,7 +59,7 @@ public class Move_monster : MonoBehaviour
         if (other.gameObject.tag == "Player") //플레이어(임시 스킬로 대체할 예정)와 충돌시
         {
             //충돌한 객체의 컴퍼넌트에서 데미지 받아옴
-            damage = other.GetComponent<Test>().Dam;
+            damage = other.GetComponent<Player_Stat>().Get_ATK();
             Get_damange(damage); // 데미지 입음
         }
     }

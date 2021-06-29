@@ -1813,7 +1813,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2012668314}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0.951, y: 0.473, z: 0}
+  m_LocalPosition: {x: 1, y: 0.5, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 1969651872}
@@ -1935,17 +1935,6 @@ PrefabInstance:
       propertyPath: Atk_dir
       value: 1
       objectReference: {fileID: 0}
-    - target: {fileID: 3710322082196225584, guid: d18fb17948b0fd647a5ad8ade0420d25,
-        type: 3}
-      propertyPath: rotateSpeed
-      value: 10
-      objectReference: {fileID: 0}
-    - target: {fileID: 3710322082196225584, guid: d18fb17948b0fd647a5ad8ade0420d25,
-        type: 3}
-      propertyPath: Monster_Bullet
-      value: 
-      objectReference: {fileID: 1260675018369206476, guid: 9a5f6e88fa7dbc8448d38f625349f512,
-        type: 3}
     - target: {fileID: 4599802621097070877, guid: d18fb17948b0fd647a5ad8ade0420d25,
         type: 3}
       propertyPath: m_RootOrder
@@ -1954,7 +1943,7 @@ PrefabInstance:
     - target: {fileID: 4599802621097070877, guid: d18fb17948b0fd647a5ad8ade0420d25,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: -0.344
+      value: -0.5
       objectReference: {fileID: 0}
     - target: {fileID: 4599802621097070877, guid: d18fb17948b0fd647a5ad8ade0420d25,
         type: 3}
@@ -1986,21 +1975,6 @@ PrefabInstance:
       propertyPath: m_LocalRotation.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 4599802621097070877, guid: d18fb17948b0fd647a5ad8ade0420d25,
-        type: 3}
-      propertyPath: m_LocalEulerAnglesHint.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4599802621097070877, guid: d18fb17948b0fd647a5ad8ade0420d25,
-        type: 3}
-      propertyPath: m_LocalEulerAnglesHint.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4599802621097070877, guid: d18fb17948b0fd647a5ad8ade0420d25,
-        type: 3}
-      propertyPath: m_LocalEulerAnglesHint.z
-      value: 0
-      objectReference: {fileID: 0}
     - target: {fileID: 5436700300560640486, guid: d18fb17948b0fd647a5ad8ade0420d25,
         type: 3}
       propertyPath: m_Name
@@ -2011,8 +1985,7 @@ PrefabInstance:
       propertyPath: m_IsTrigger
       value: 1
       objectReference: {fileID: 0}
-    m_RemovedComponents:
-    - {fileID: 6581931007420916285, guid: d18fb17948b0fd647a5ad8ade0420d25, type: 3}
+    m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: d18fb17948b0fd647a5ad8ade0420d25, type: 3}
 --- !u!1001 &7340456407952528896
 PrefabInstance:

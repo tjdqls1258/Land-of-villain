@@ -8,10 +8,6 @@ public class Move_monster : MonoBehaviour
     private float rotateSpeed;
     [SerializeField]
     private float moveSpeed;
-    [SerializeField]
-    private float Hp;
-
-    public float damage;
 
     private Rigidbody2D rigid;
     private GameObject Player;
@@ -54,45 +50,5 @@ public class Move_monster : MonoBehaviour
             Player.transform.position, moveSpeed);
     }
 
-    void OnTriggerEnter2D(Collider2D other)
-    {
-        if (other.gameObject.tag == "Player") //플레이어(임시 스킬로 대체할 예정)와 충돌시
-        {
-            //충돌한 객체의 컴퍼넌트에서 데미지 받아옴
-            damage = other.GetComponent<Player_Stat>().Get_ATK();
-            Get_damange(damage); // 데미지 입음
-        }
-    }
-
-    void Get_damange(float damage)
-    {
-        Hp -= damage;
-        if(Hp <= 0 ) //체력 0 되면 사망
-        {
-            //die();
-        }
-    }
-    void die()
-    {
-        /* 10%확률로 아이템 드랍.
-         * int random = Random.Range(0,10);
-         * switch (random)
-         * {
-         *      case 0:
-         *          Instantiate(item, transform.position);
-         *          break;
-         *      case 1:
-         *      case 2:
-         *      case 3:
-         *      case 4:
-         *      case 5:
-         *      case 6:
-         *      case 7:
-         *      case 8:
-         *      case 9:
-         * }
-         */
-        //Instantiate(item, transform.position); //아이템 생성
-        Destroy(gameObject);
-    }
+  
 }

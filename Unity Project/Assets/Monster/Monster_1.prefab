@@ -160,6 +160,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8dabfc865e2173c4f9eb2d7c849d5050, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Hp: 100
+  Hp: 10
   damage: 2
-  Atk_dir: 5
+  Atk_dir: 1
+  Monster_Drop_Tear: 0

@@ -53,7 +53,6 @@ public class Move_monster : MonoBehaviour
         transform.position = Vector3.MoveTowards(transform.position, 
             Player.transform.position, moveSpeed);
     }
-<<<<<<< Updated upstream
 
     void OnTriggerEnter2D(Collider2D other)
     {
@@ -96,6 +95,4 @@ public class Move_monster : MonoBehaviour
         //Instantiate(item, transform.position); //아이템 생성
         Destroy(gameObject);
     }
-=======
->>>>>>> Stashed changes
 }

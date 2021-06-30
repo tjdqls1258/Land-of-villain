@@ -6,15 +6,18 @@ public class Player_Item : MonoBehaviour
 {
     string[] Items;
     Item item;
-    GameObject Waapon, Armor, Ring, Hat;
+    public GameObject Weapon, Armor, Ring, Hat;
     void Awake()
     {
         item = new Item();
-        
-        Waapon = (GameObject)Resources.Load("Item/" + item.get_F_Item(0));
+
+        //Weapon = (GameObject)Resources.Load("Item/" + item.get_F_Item(0));
+        Weapon = (GameObject)Resources.Load("Item/Copper_Sword"); //임시로 넣음
         Armor = (GameObject)Resources.Load("Item/" + item.get_F_Item(1));
         Hat = (GameObject)Resources.Load("Item/" + item.get_F_Item(2));
         Ring = (GameObject)Resources.Load("Item/" + item.get_F_Item(3));
+
+        
     }
 
     // Update is called once per frame

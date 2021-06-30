@@ -4,10 +4,11 @@ using UnityEngine;
 
 public class Item_stats : MonoBehaviour
 {
-    public int[] Item_stat = { }; //종류,(무기일경우) 공격력, 방어력, 부가 스텟
-
-    private void Awake()
-    {
-        
-    }
+    public int[] Item_stat = { };
+    // 0 = 종류
+    // 1 = 공격력
+    // 2 = 방어력
+    // 그 이상 부가 스텟
+    public Skill skill = new Skill_01();
+    
 }

@@ -22,9 +22,12 @@ public class SkillCooldown : MonoBehaviour
     public GameObject meeleattack;
     public GameObject P_bullet;
 
+    Player_Item item_skill;
+
     // Start is called before the first frame update
     void Awake()
     {
+        item_skill = GetComponent<Player_Item>();
         FoundObjects = new List<GameObject>(GameObject.FindGameObjectsWithTag("Monster"));              
         rigid = GetComponent<Rigidbody2D>();
         shortDis = Vector3.Distance(gameObject.transform.position, FoundObjects[0].transform.position);
@@ -64,6 +67,8 @@ public class SkillCooldown : MonoBehaviour
         {
             weaponskilldelay = true;
             //무기스킬 실행
+            item_skill.Weapon.GetComponent<Item_stats>().skill.Skill_Action();
+
             StartCoroutine("WeaponSkill");
             Debug.Log("weaponskill success");
         }

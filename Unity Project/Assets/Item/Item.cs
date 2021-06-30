@@ -5,6 +5,15 @@ using UnityEngine;
 public class Item 
 {   //Normal 아이템 이름.(일반적인 아이템)
     //아이템을 늘리려면 동일한 배열의 수만큼 배열값을 할당해 줘야함. Copper_Sword2는 예시로 넣어둠
+
+    string[,] F_Item = new string[,] { { "Copper_Sword", "Copper_Sword2" }, { "Copper_Armor", "Copper_Armor2" }, { "Copper_Hat", "Copper_Hat2" }, { "Copper_Ring", "Copper_Ring2" } };
+    public string get_F_Item(int N1)
+    {
+        int N2; //아이템의 총 개수에서 하나를 가져오기 위한 변수. 
+        N2 = Random.Range(0, N_Item.GetLength(1));
+        return F_Item[N1, N2];
+    }
+
     string[,] N_Item = new string[,] { { "Copper_Sword","Copper_Sword2" },{ "Copper_Armor","NONE" },{ "Copper_Hat","NONE" },{ "Copper_Ring" ,"NONE"} };
     public string get_N_Item()
     {

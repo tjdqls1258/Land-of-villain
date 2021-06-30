@@ -26,7 +26,10 @@ public class Move_Monster_2 : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-
+        if (Player == null)
+        {
+            return;
+        }
         LookAt_Player();
         move();
     }
@@ -34,6 +37,7 @@ public class Move_Monster_2 : MonoBehaviour
     void LookAt_Player()//플레이어를 바라보게 하는 함수
     {
         Vector2 vec = Vector2.zero;//초기화
+        
         if (transform != null)
         {
             vec = new Vector2(Player.transform.position.x - transform.position.x,

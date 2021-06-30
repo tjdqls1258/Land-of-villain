@@ -9,7 +9,7 @@ public class Player_bullet : MonoBehaviour
     public float Move_speed;
     private Vector3 monsterpos;
 
-    float Damage_s;
+    int Damage_s;
 
     //private Vector2 movedir;
     // Start is called before the first frame update
@@ -25,7 +25,7 @@ public class Player_bullet : MonoBehaviour
             this.transform.rotation = Quaternion.AngleAxis(angle - 90, Vector3.forward); 
             // 회전
         }
-        Damage_s += Player.GetComponent<Player_Stats>().Get_ATK(); 
+        Damage_s += Player.GetComponent<Player_Stat>().Get_P_State(2); 
 
         rigid = GetComponent<Rigidbody2D>();
         StartCoroutine("Die");
@@ -43,15 +43,8 @@ public class Player_bullet : MonoBehaviour
         yield return new WaitForSecondsRealtime(5.0f);
         Destroy(gameObject);
     }
-    public float Damage()
+    public int Damage()
     {
         return Damage_s;
-    }
-    private void OnTriggerEnter2D(Collider2D other)
-    {
-        //if (other.tag == "Monster")
-        //{
-        //    Destroy(gameObject);
-        //}
     }
 }

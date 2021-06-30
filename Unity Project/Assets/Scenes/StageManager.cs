@@ -6,27 +6,29 @@ using UnityEngine.SceneManagement;
 public class StageManager : MonoBehaviour
 {
     public GameObject Player;
-    //public GameObject[] Monster;
     public List<GameObject> FoundObjects;
     public string stage;
 
     private int monsternum;
+    private bool scenechanger;
 
     // Start is called before the first frame update
     void Start()
     {
+        Player = GameObject.Find("Player");
         FoundObjects = new List<GameObject>(GameObject.FindGameObjectsWithTag("Monster"));
         monsternum = FoundObjects.Count;
-        //Monster = GameObject.FindGameObjectsWithTag("Monster");
+        scenechanger = false;
     }
 
     // Update is called once per frame
     void Update()
     {
-        if (monsternum <= 0)
+        if (monsternum <= 0 && scenechanger == false)
         {
-            SceneManager.LoadScene(stage);
+            SceneManager.LoadScene(stage, LoadSceneMode.Additive);
             SceneManager.MoveGameObjectToScene(Player, SceneManager.GetSceneByName(stage));
+            scenechanger = true;
         }
     }
 

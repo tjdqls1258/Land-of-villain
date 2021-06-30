@@ -708,7 +708,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   slider: {fileID: 814961239}
-  SceneName: 
 --- !u!4 &1857554357
 Transform:
   m_ObjectHideFlags: 0
@@ -757,7 +756,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -371.9, y: -276.5}
+  m_AnchoredPosition: {x: -3.7, y: 72.4}
   m_SizeDelta: {x: 214.22931, y: 80.05786}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &2128008093

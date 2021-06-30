@@ -25,8 +25,11 @@ public class Move_monster : MonoBehaviour
         {
             return;
         }
-        LookAt_Player();
-        move();
+        if (!GameManager.isPause)
+        {
+            LookAt_Player();
+            move();
+        }
     }
 
     void LookAt_Player()//플레이어를 바라보게 하는 함수

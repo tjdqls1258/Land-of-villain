@@ -6,6 +6,8 @@ public class Monster_Bullet : MonoBehaviour
 {
     Rigidbody2D rigid;
     public float Move_speed;
+
+    private int Damage_s = 10;
     // Start is called before the first frame update
     void Awake()
     {
@@ -30,5 +32,10 @@ public class Monster_Bullet : MonoBehaviour
     {
         yield return new WaitForSecondsRealtime(5f);
         Destroy(gameObject);
+    }
+
+    public int Damage()
+    {
+        return Damage_s;
     }
 }

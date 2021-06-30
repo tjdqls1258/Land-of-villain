@@ -22,8 +22,9 @@ public class Player_Manger : MonoBehaviour
     {
         if(other.tag == "Monster")
         {
-            //stats.Set_HP(stats.Get_HP() - 1.0f);
-            //hp_bar.Damage(1.0f);
+            int Monster_Damage = other.GetComponent<Monster_stats>().damage;
+            //stats.Set_P_State(1,stats.Get_P_State(1) - Monster_Damage);
+            //hp_bar.Set_Hp(1.0f);
         }
     }
 }

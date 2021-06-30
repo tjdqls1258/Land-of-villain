@@ -13,16 +13,21 @@ public class Player_State_Window : MonoBehaviour
         P_S_Text=GameObject.Find("Player_State_Window_UI").GetComponent<Text>();
         //일단 플레이어라는 빈 오브젝트안에 Player_Stat 스크립을 넣음.
         P_S = GameObject.Find("Player").GetComponent<Player_Stat>();
+
+        //텍스트를 찾아서 넣은것처럼 이 텍스트를 써줄 패널을 넣어줄것!
     }
 
     // Update is called once per frame
     void Update()
     {
-        get_Player_State_Text();
+        //get_Player_State_Text(); 
+        //버튼 눌럿을때 활성화 할 생각이라 업데이트 자체는 필요없다고 생각함.
     }
 
     public void get_Player_State_Text()
     {
+        //추가 해야할것 - 1, 버튼을 클릭했을때 패널을 생성해서 창을 활성화 해주는거.
+        //              - 2, 활성화 된 창을 다시 닫는거 
         P_S_Text.text = "<Max HP / HP> : " + P_S.Get_P_State(0) + " / " + P_S.Get_P_State(1) + "\n"
         + "<STR> : " + P_S.Get_P_State(2) + "\n"
         + "<DEF> : " + P_S.Get_P_State(3) + "\n"

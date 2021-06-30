@@ -4,8 +4,8 @@ using UnityEngine;
 
 public class Monster_stats : MonoBehaviour
 {
-    public float Hp;
-    public float damage;
+    public int Hp;
+    public int damage;
     public float Atk_dir;
 
     public void Hit_monster(float dam)
@@ -13,7 +13,7 @@ public class Monster_stats : MonoBehaviour
         Get_damange(dam);
     }
 
-    void Get_damange(float damage)
+    void Get_damange(int damage)
     {
         Hp -= damage;
         if (Hp <= 0) //체력 0 되면 사망

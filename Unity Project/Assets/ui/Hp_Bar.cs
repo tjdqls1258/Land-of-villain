@@ -5,17 +5,20 @@ using UnityEngine.UI;
 public class Hp_Bar : MonoBehaviour
 {
     public Slider HealBar;
-    public Text Hp;
+    public Text HP_T;
     public GameObject Player;
-    public float P_Hp;
-    public void Start()
+    public void Awake()
     {
+<<<<<<< Updated upstream
         P_Hp = Player.GetComponent<Player_Stat>().Get_HP();
+=======
+
+>>>>>>> Stashed changes
     }
-    public void Damage(float Dam)
+    public void Set_Hp(int Hp)
     {
-        HealBar.value -= Dam / 100;
-        Hp.text = (P_Hp - Dam).ToString();
+        HealBar.value = Hp / Player.GetComponent<Player_Stat>().Get_P_State(0);
+        HP_T.text = (Hp).ToString();
         //100부분 플레이어 HP로 치완
     }
 }

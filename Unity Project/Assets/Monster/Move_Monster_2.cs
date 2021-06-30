@@ -25,30 +25,23 @@ public class Move_Monster_2 : MonoBehaviour
 
     void Update()
     {
-<<<<<<< HEAD
         if (Player == null)
         {
             return;
         }
         LookAt_Player();
         move();
-=======
         if(!GameManager.isPause)
         {
             LookAt_Player();
             move();
         }
->>>>>>> 7c2062ec2f04f0682a7483a1af07664210d46a63
     }
 
     void LookAt_Player() // 플레이어를 바라보게 하는 함수
     {
-<<<<<<< HEAD
         Vector2 vec = Vector2.zero;//초기화
         
-=======
-        Vector2 vec = Vector2.zero; // 초기화
->>>>>>> 7c2062ec2f04f0682a7483a1af07664210d46a63
         if (transform != null)
         {
             vec = new Vector2(Player.transform.position.x - transform.position.x,

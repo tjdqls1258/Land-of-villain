@@ -41,17 +41,13 @@ public class Player_bullet : MonoBehaviour
         yield return new WaitForSecondsRealtime(5.0f);
         Destroy(gameObject);
     }
-<<<<<<< HEAD
+
     public int Damage()
     {
         return Damage_s;
     }
-=======
 
-    public float Damage()
-    {
-        return Damage_s;
-    }
+
 
     private void OnTriggerEnter2D(Collider2D other)
     {
@@ -60,5 +56,5 @@ public class Player_bullet : MonoBehaviour
         //    Destroy(gameObject);
         //}
     }
->>>>>>> 7c2062ec2f04f0682a7483a1af07664210d46a63
+
 }

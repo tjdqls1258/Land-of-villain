@@ -3367,7 +3367,6 @@ MonoBehaviour:
   HealBar: {fileID: 1152429151}
   Hp: {fileID: 1165350206}
   Player: {fileID: 2012668314}
-  P_Hp: 0
 --- !u!1 &2012668314
 GameObject:
   m_ObjectHideFlags: 0
@@ -3381,6 +3380,7 @@ GameObject:
   - component: {fileID: 2012668317}
   - component: {fileID: 2012668318}
   - component: {fileID: 2012668320}
+  - component: {fileID: 2012668323}
   - component: {fileID: 2012668319}
   - component: {fileID: 2012668321}
   - component: {fileID: 2012668322}
@@ -3557,6 +3557,18 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 05d955e3de4c2c14faef6f28f3bc999c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &2012668323
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2012668314}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 920a2bbe1148809499a8f9ffea9ceb3d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
 --- !u!1 &2078216075

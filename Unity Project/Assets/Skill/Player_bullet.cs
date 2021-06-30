@@ -11,7 +11,8 @@ public class Player_bullet : MonoBehaviour
 
     float Damage_s;
 
-    // private Vector2 movedir;
+    //private Vector2 movedir;
+    // Start is called before the first frame update
     void Awake()
     { 
         Player = GameObject.Find("Player");
@@ -20,7 +21,7 @@ public class Player_bullet : MonoBehaviour
         if (Player.GetComponent<SkillCooldown>().Get_Monster() != null)
         {
             float angle = Mathf.Atan2(monsterpos.y - transform.position.y
-                , monsterpos.x - transform.position.x) * Mathf.Rad2Deg; // 몬스터를 바라보는 각도
+                , monsterpos.x - transform.position.x) * Mathf.Rad2Deg; //몬스터를 바라보는 각도
             this.transform.rotation = Quaternion.AngleAxis(angle - 90, Vector3.forward); 
             // 회전
         }
@@ -30,6 +31,7 @@ public class Player_bullet : MonoBehaviour
         StartCoroutine("Die");
     }
 
+    // Update is called once per frame
     void Update()
     {       
         rigid.AddForce(transform.up * Move_speed, ForceMode2D.Force);
@@ -41,12 +43,10 @@ public class Player_bullet : MonoBehaviour
         yield return new WaitForSecondsRealtime(5.0f);
         Destroy(gameObject);
     }
-
     public float Damage()
     {
         return Damage_s;
     }
-
     private void OnTriggerEnter2D(Collider2D other)
     {
         //if (other.tag == "Monster")

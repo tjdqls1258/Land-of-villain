@@ -23,39 +23,50 @@ public class Move_Monster_2 : MonoBehaviour
         StartCoroutine("Fire");
     }
 
-    // Update is called once per frame
     void Update()
     {
+<<<<<<< HEAD
         if (Player == null)
         {
             return;
         }
         LookAt_Player();
         move();
+=======
+        if(!GameManager.isPause)
+        {
+            LookAt_Player();
+            move();
+        }
+>>>>>>> 7c2062ec2f04f0682a7483a1af07664210d46a63
     }
 
-    void LookAt_Player()//플레이어를 바라보게 하는 함수
+    void LookAt_Player() // 플레이어를 바라보게 하는 함수
     {
+<<<<<<< HEAD
         Vector2 vec = Vector2.zero;//초기화
         
+=======
+        Vector2 vec = Vector2.zero; // 초기화
+>>>>>>> 7c2062ec2f04f0682a7483a1af07664210d46a63
         if (transform != null)
         {
             vec = new Vector2(Player.transform.position.x - transform.position.x,
                 Player.transform.position.y - transform.position.y);
-            //트렌스폼 찾으면 플레이어를 바라보는 벡터구함.
+            // 트렌스폼 찾으면 플레이어를 바라보는 벡터구함.
         }
 
-        float angle = Mathf.Atan2(vec.y, vec.x) * Mathf.Rad2Deg; //y와 x의 좌표를 탄젠트해서 각도를 구함
-        Quaternion angleAxis = Quaternion.AngleAxis(angle - 90f, Vector3.forward); //회전할 Z축 각도 저장
+        float angle = Mathf.Atan2(vec.y, vec.x) * Mathf.Rad2Deg; // y와 x의 좌표를 탄젠트해서 각도를 구함
+        Quaternion angleAxis = Quaternion.AngleAxis(angle - 90f, Vector3.forward); // 회전할 Z축 각도 저장
         Quaternion rotation = Quaternion.Slerp(transform.rotation, angleAxis, rotateSpeed * Time.deltaTime);
-        //회전 속도
+        // 회전 속도
 
         transform.rotation = rotation; // 회전
     }
 
     void move()
     {
-        //플레이어한테 이동
+        // 플레이어한테 이동
         if (Vector3.Distance(transform.position, Player.transform.position) > monster_Stats.Atk_dir)
         {
             transform.position = Vector3.MoveTowards(transform.position,
@@ -63,13 +74,16 @@ public class Move_Monster_2 : MonoBehaviour
         }
     }
 
-
     IEnumerator Fire()
     {
         while (true)
         {
             Debug.Log("coll");
             yield return new WaitForSecondsRealtime(1f);
+            if(GameManager.isPause)
+            {
+                continue;
+            }
             if (!(Vector3.Distance(transform.position, Player.transform.position) > monster_Stats.Atk_dir))
             {
                 Instantiate(Monster_Bullet, transform.position, transform.rotation);

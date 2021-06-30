@@ -18,6 +18,7 @@ public class LoadingSceneManger : MonoBehaviour
     private void Awake()
     {
         ScenManger = GameObject.Find("SceneManger");
+        slider.value = 0;
     }
     IEnumerator LoadAsynSceneCoroutine()
     {

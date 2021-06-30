@@ -6,6 +6,10 @@ public class Monster_Bullet : MonoBehaviour
 {
     Rigidbody2D rigid;
     public float Move_speed;
+<<<<<<< Updated upstream
+=======
+
+>>>>>>> Stashed changes
     private int Damage_s = 10;
     // Start is called before the first frame update
     void Awake()

@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class Item 
 {   //Normal 아이템 이름.(일반적인 아이템)
+<<<<<<< Updated upstream
     string[] N_Weapon_Item = new string[] { "Copper_Sword" };
    
 
@@ -12,6 +13,17 @@ public class Item
     string[] N_Hat_Item = new string[] { "Copper_Hat" };
 
     string[] N_Accessory_Item = new string[] { "Copper_Ring" };
+=======
+    //아이템을 늘리려면 동일한 배열의 수만큼 배열값을 할당해 줘야함. Copper_Sword2는 예시로 넣어둠
+    string[,] F_Item = new string[,] { { "Copper_Sword", "Copper_Sword2" }, { "Copper_Armor", "Copper_Armor2" }, { "Copper_Hat", "Copper_Hat2" }, { "Copper_Ring", "Copper_Ring2" } };
+    public string Get_First_Item(int N1)
+    {
+        int N2 = Random.Range(0, F_Item.GetLength(1));
+        return F_Item[N1, N2];
+    }
+
+    string[,] N_Item = new string[,] { { "Copper_Sword", "Copper_Sword2" }, { "Copper_Armor", "NONE" }, { "Copper_Hat", "NONE" }, { "Copper_Ring", "NONE" } };
+>>>>>>> Stashed changes
     public string get_N_Item()
     {
         int N1 = Random.Range(0, 4);//장비의 종류를 결정해줌.

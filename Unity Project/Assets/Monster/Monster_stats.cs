@@ -43,11 +43,20 @@ public class Monster_stats : MonoBehaviour
     }
     void OnTriggerEnter2D(Collider2D other)
     {
-        if (other.gameObject.tag == "Player_ATk") //플레이어(임시 스킬로 대체할 예정)와 충돌시
+        if (other.gameObject.tag == "Player_ATk")
         {
             //충돌한 객체의 컴퍼넌트에서 데미지 받아옴
             Get_damange(other.GetComponent<Player_bullet>().Damage());
 
+            if (Hp <= 0)
+            {
+                Destroy(gameObject);
+            }
+            Destroy(other.gameObject);
+        }
+        if (other.gameObject.tag == "Skill")
+        {
+            Get_damange(other.GetComponent<Skill_Danamge>().Damage());
             if (Hp <= 0)
             {
                 Destroy(gameObject);

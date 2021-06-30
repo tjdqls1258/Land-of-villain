@@ -12,9 +12,10 @@ GameObject:
   - component: {fileID: 90315203144554663}
   - component: {fileID: 4485035102060577671}
   - component: {fileID: 1789182596340727050}
+  - component: {fileID: 5743026364138246272}
   m_Layer: 0
   m_Name: P_Skill_01
-  m_TagString: Player_ATk
+  m_TagString: Skill
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -121,5 +122,16 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4a5365faadd9ce4459fff1443a494bc9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &5743026364138246272
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7277228207333237351}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d9764b191e360354b9bcd3953501100d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
   Skill_Damage: 10
-  cool_Time: 0

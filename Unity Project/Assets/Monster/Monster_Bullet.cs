@@ -7,9 +7,12 @@ public class Monster_Bullet : MonoBehaviour
     Rigidbody2D rigid;
     public float Move_speed;
 
+<<<<<<< HEAD
 
     private int Damage_s = 10;
 
+=======
+>>>>>>> parent of 3efe070 (Revert "일시정지 ver1.1")
     void Awake()
     {
         rigid = GetComponent<Rigidbody2D>();

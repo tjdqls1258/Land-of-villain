@@ -20,6 +20,7 @@ public class Move_monster : MonoBehaviour
 
     void Update()
     {
+<<<<<<< HEAD
 
         if (Player == null)
         {
@@ -28,16 +29,22 @@ public class Move_monster : MonoBehaviour
         LookAt_Player();
         move();
 
+=======
+>>>>>>> parent of 3efe070 (Revert "일시정지 ver1.1")
         if (!GameManager.isPause)
         {
             LookAt_Player();
             move();
         }
+<<<<<<< HEAD
 
+=======
+>>>>>>> parent of 3efe070 (Revert "일시정지 ver1.1")
     }
 
     void LookAt_Player() // 플레이어를 바라보게 하는 함수
     {
+<<<<<<< HEAD
 
         Vector2 vec = Vector2.zero;//초기화
         if (Player == null)
@@ -45,6 +52,9 @@ public class Move_monster : MonoBehaviour
             return;
         }
 
+=======
+        Vector2 vec = Vector2.zero; // 초기화
+>>>>>>> parent of 3efe070 (Revert "일시정지 ver1.1")
         if (transform != null)
         {
             vec = new Vector2(Player.transform.position.x - transform.position.x,

@@ -42,13 +42,20 @@ public class Player_bullet : MonoBehaviour
         Destroy(gameObject);
     }
 
+<<<<<<< HEAD
     public int Damage()
+=======
+    public float Damage()
+>>>>>>> parent of 3efe070 (Revert "일시정지 ver1.1")
     {
         return Damage_s;
     }
 
+<<<<<<< HEAD
 
 
+=======
+>>>>>>> parent of 3efe070 (Revert "일시정지 ver1.1")
     private void OnTriggerEnter2D(Collider2D other)
     {
         //if (other.tag == "Monster")

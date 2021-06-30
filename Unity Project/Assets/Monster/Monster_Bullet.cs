@@ -6,14 +6,13 @@ public class Monster_Bullet : MonoBehaviour
 {
     Rigidbody2D rigid;
     public float Move_speed;
-    // Start is called before the first frame update
+
     void Awake()
     {
         rigid = GetComponent<Rigidbody2D>();
         StartCoroutine("Die");
     }
 
-    // Update is called once per frame
     void Update()
     {
         rigid.AddForce(transform.up * Move_speed, ForceMode2D.Force);
@@ -26,6 +25,7 @@ public class Monster_Bullet : MonoBehaviour
             Destroy(gameObject);
         }
     }
+
     IEnumerator Die()
     {
         yield return new WaitForSecondsRealtime(5f);

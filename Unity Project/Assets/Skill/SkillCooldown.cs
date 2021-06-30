@@ -24,6 +24,7 @@ public class SkillCooldown : MonoBehaviour
 
     Player_Item item_skill;
 
+    float Weapon_CoolTime;
     // Start is called before the first frame update
     void Awake()
     {
@@ -68,7 +69,7 @@ public class SkillCooldown : MonoBehaviour
             weaponskilldelay = true;
             //무기스킬 실행
             item_skill.Weapon.GetComponent<Item_stats>().skill.Skill_Action();
-
+            Weapon_CoolTime = item_skill.Weapon.GetComponent<Item_stats>().CoolTime;
             StartCoroutine("WeaponSkill");
             Debug.Log("weaponskill success");
         }

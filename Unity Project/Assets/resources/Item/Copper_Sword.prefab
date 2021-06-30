@@ -95,3 +95,4 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Item_stat: 0000000005000000
+  CoolTime: 2

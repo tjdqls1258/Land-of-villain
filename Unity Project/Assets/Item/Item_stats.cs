@@ -10,5 +10,6 @@ public class Item_stats : MonoBehaviour
     // 2 = 방어력
     // 그 이상 부가 스텟
     public Skill skill = new Skill_01();
+    public float CoolTime;
     
 }

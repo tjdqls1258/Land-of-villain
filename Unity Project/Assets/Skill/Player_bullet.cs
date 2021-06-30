@@ -10,7 +10,7 @@ public class Player_bullet : MonoBehaviour
     private Vector3 monsterpos;
 
     int Damage_s;
-
+    float time;
     //private Vector2 movedir;
     // Start is called before the first frame update
     void Awake()
@@ -28,7 +28,6 @@ public class Player_bullet : MonoBehaviour
         Damage_s += Player.GetComponent<Player_Stat>().Get_P_State(2); 
 
         rigid = GetComponent<Rigidbody2D>();
-        StartCoroutine("Die");
     }
 
     // Update is called once per frame
@@ -36,6 +35,14 @@ public class Player_bullet : MonoBehaviour
     {       
         rigid.AddForce(transform.up * Move_speed, ForceMode2D.Force);
         Debug.DrawLine(transform.up * 10f, Player.transform.position, Color.black);
+        if (!GameManager.isPause)
+        {
+            time += Time.deltaTime;
+            if (time >= 5.0)
+            {
+                Destroy(gameObject);
+            }
+        }
     }
 
     IEnumerator Die()

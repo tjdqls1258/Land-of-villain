@@ -15,12 +15,13 @@ public class Move_Monster_2 : MonoBehaviour
     private GameObject Player;
 
     public GameObject Monster_Bullet;
+
+    float time;
     void Awake()
     {
         Player = GameObject.Find("Player");
         monster_Stats = GetComponent<Monster_stats>();
         rigid = GetComponent<Rigidbody2D>();
-        StartCoroutine("Fire");
     }
 
     // Update is called once per frame
@@ -34,6 +35,12 @@ public class Move_Monster_2 : MonoBehaviour
         {
             LookAt_Player();
             move();
+            time += Time.deltaTime;
+            if(time >= 1.0f)
+            {
+                Fire();
+                time = 0;
+            }
         }
     }
 
@@ -67,16 +74,11 @@ public class Move_Monster_2 : MonoBehaviour
     }
 
 
-    IEnumerator Fire()
+    void Fire()
     {
-        while (true)
+        if (!(Vector3.Distance(transform.position, Player.transform.position) > monster_Stats.Atk_dir))
         {
-            Debug.Log("coll");
-            yield return new WaitForSecondsRealtime(1f);
-            if (!(Vector3.Distance(transform.position, Player.transform.position) > monster_Stats.Atk_dir))
-            {
-                Instantiate(Monster_Bullet, transform.position, transform.rotation);
-            }
+            Instantiate(Monster_Bullet, transform.position, transform.rotation);
         }
     }
 }

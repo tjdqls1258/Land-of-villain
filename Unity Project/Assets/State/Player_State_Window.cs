@@ -13,6 +13,8 @@ public class Player_State_Window : MonoBehaviour
         P_S_Text=GameObject.Find("Player_State_Window_UI").GetComponent<Text>();
         //일단 플레이어라는 빈 오브젝트안에 Player_Stat 스크립을 넣음.
         P_S = GameObject.Find("Player").GetComponent<Player_Stat>();
+
+        //이 텍스트를 넣어줄 패널 필요
     }
 
     // Update is called once per frame

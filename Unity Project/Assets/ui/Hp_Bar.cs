@@ -7,15 +7,14 @@ public class Hp_Bar : MonoBehaviour
     public Slider HealBar;
     public Text Hp;
     public GameObject Player;
-    public float P_Hp;
-    public void Start()
+    public void Awake()
     {
-        P_Hp = Player.GetComponent<Player_Stats>().Get_HP();
+        Player.GetComponent<Player_Stat>().Get_P_State(0);
     }
-    public void Damage(float Dam)
+    public void Damage(int Dam)
     {
-        HealBar.value -= Dam / 100;
-        Hp.text = (P_Hp - Dam).ToString();
+        HealBar.value = Player.GetComponent<Player_Stat>().Get_P_State(1) / Player.GetComponent<Player_Stat>().Get_P_State(0); ;
+        Hp.text = (Player.GetComponent<Player_Stat>().Get_P_State(1)).ToString();
         //100부분 플레이어 HP로 치완
     }
 }

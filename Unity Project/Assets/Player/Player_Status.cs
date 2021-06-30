@@ -5,7 +5,8 @@ using UnityEngine.SceneManagement;
 
 public class Player_Status : MonoBehaviour
 {
-    private int Hp = 100;
+    public static int healthMax = 100;  // 플레이어 캐릭터의 최대 체력을 저장할 정수형 변수
+    public static int health = 100;     // 플레이어 캐릭터의 현재 체력을 저장할 정수형 변수
     public int damage;
 
     // Start is called before the first frame update
@@ -22,13 +23,12 @@ public class Player_Status : MonoBehaviour
 
     void Get_damange(int damage)
     {
-
-        Hp -= damage;
-        if (Hp <= 0) //체력 0 되면 사망
+        health -= damage;
+        if (health <= 0) //체력 0 되면 사망
         {
             die();
         }
-        Debug.Log(Hp);
+        Debug.Log(health);
     }
 
     void die()

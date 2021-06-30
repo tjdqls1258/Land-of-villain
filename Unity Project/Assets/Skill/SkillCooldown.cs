@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class SkillCooldown : MonoBehaviour
 {
@@ -28,17 +29,28 @@ public class SkillCooldown : MonoBehaviour
     // Start is called before the first frame update
     void Awake()
     {
-        item_skill = GetComponent<Player_Item>();
-        FoundObjects = new List<GameObject>(GameObject.FindGameObjectsWithTag("Monster"));              
+        item_skill = GetComponent<Player_Item>();             
         rigid = GetComponent<Rigidbody2D>();
-        shortDis = Vector3.Distance(gameObject.transform.position, FoundObjects[0].transform.position);
-        Monster = FoundObjects[0];
     }
 
     // Update is called once per frame
     void Update()
     {
         
+    }
+
+    void OnEnable()
+    {
+        SceneManager.sceneLoaded += OnSceneLoaded;
+    }
+    private void OnSceneLoaded(Scene scene, LoadSceneMode mode)
+    {
+        FoundObjects = new List<GameObject>(GameObject.FindGameObjectsWithTag("Monster"));
+        Monster = FoundObjects[0];
+    }
+    void OnDisable()
+    {
+        SceneManager.sceneLoaded -= OnSceneLoaded;
     }
 
     public GameObject Get_Monster()

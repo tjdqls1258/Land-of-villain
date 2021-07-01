@@ -9,7 +9,7 @@ public class Skill_01 : MonoBehaviour, Skill
     {
         GameObject Player = GameObject.Find("Player");
         Instantiate((GameObject)Resources.Load(("Skill/P_Skill_01"),typeof(GameObject)),
-            Player.transform.position + (Vector3.up * 0.5f), Player.transform.rotation);
+            Player.transform.position + (Player.transform.up * 0.5f), Player.transform.rotation);
         Debug.Log("01번 스킬발사 히히");
     }
 }

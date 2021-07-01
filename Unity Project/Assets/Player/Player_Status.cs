@@ -54,4 +54,9 @@ public class Player_Status : MonoBehaviour
             Destroy(other.gameObject);
         }
     }
+
+    public int Damage()
+    {
+        return damage;
+    }
 }

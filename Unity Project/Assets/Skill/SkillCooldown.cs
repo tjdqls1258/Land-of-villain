@@ -11,7 +11,7 @@ public class SkillCooldown : MonoBehaviour
     bool helmetskilldelay = false;
     bool acceskilldelay = false;
 
-    bool ismeele = false;
+    bool ismeele = true;
 
     public List<GameObject> FoundObjects;
     public float shortDis;
@@ -50,6 +50,7 @@ public class SkillCooldown : MonoBehaviour
         
     }
 
+    #region 스테이지 넘어갈때마다 몬스터 검색
     void OnEnable()
     {
         SceneManager.sceneLoaded += OnSceneLoaded;
@@ -68,6 +69,7 @@ public class SkillCooldown : MonoBehaviour
     {
         return Monster;
     }
+    #endregion
 
     #region activate skill
     public void baseatk()
@@ -162,31 +164,35 @@ public class SkillCooldown : MonoBehaviour
     IEnumerator BaseAttack()
     {
         yield return new WaitForSeconds(0.3f);
+        Monster = null;
+        shortDis = 1000f;
+        foreach (GameObject found in FoundObjects)
+        {
+            if (found == null)
+            {
+                continue;
+            }
+            float Distance = Vector3.Distance(gameObject.transform.position, found.transform.position);
+
+            if (Distance < shortDis) // 위에서 잡은 기준으로 거리 재기
+            {
+                Monster = found;
+                shortDis = Distance;
+                Monsterpos = Monster.transform.position;
+            }
+        }
         if (ismeele)
         {
+            float angle = Mathf.Atan2(Monsterpos.y - transform.position.y
+                , Monsterpos.x - transform.position.x) * Mathf.Rad2Deg; //몬스터를 바라보는 각도
+            this.transform.rotation = Quaternion.AngleAxis(angle - 90, Vector3.forward);
+            // 회전
             meeleattack.gameObject.SetActive(true);//근거리공격
             StartCoroutine("MeeleAttacktime");
             meeleattack.gameObject.SetActive(false);
         }
         else
-        {
-            Monster = null;
-            shortDis = 1000f;
-            foreach (GameObject found in FoundObjects)
-            {
-                if(found == null)
-                {
-                    continue;
-                }
-                float Distance = Vector3.Distance(gameObject.transform.position, found.transform.position);
-
-                if (Distance < shortDis) // 위에서 잡은 기준으로 거리 재기
-                {
-                    Monster = found;
-                    shortDis = Distance;
-                    Monsterpos = Monster.transform.position;
-                }
-            }
+        {        
             Debug.Log(Monsterpos);
             Instantiate(P_bullet, transform.position, transform.rotation);
             //원거리 공격 추후에 근,원거리무기 판별 조건 필요

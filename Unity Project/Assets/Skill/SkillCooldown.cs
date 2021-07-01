@@ -185,10 +185,9 @@ public class SkillCooldown : MonoBehaviour
         {
             float angle = Mathf.Atan2(Monsterpos.y - transform.position.y
                 , Monsterpos.x - transform.position.x) * Mathf.Rad2Deg; //몬스터를 바라보는 각도
-            this.transform.rotation = Quaternion.AngleAxis(angle - 90, Vector3.forward);
             // 회전            
             Instantiate((GameObject)Resources.Load(("Skill/P_Meele_Atk"), typeof(GameObject)),
-                transform.position + (transform.up * 0.5f), transform.rotation);
+                transform.position, Quaternion.AngleAxis(angle - 90, Vector3.forward));
         }
         else
         {        

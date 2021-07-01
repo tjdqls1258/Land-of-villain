@@ -10,6 +10,7 @@ public class Skill_Danamge : MonoBehaviour
     public float 지속시간;
     void Start()
     {
+        transform.position += transform.up * 0.5f; 
         time = 0;
         GameObject Players = GameObject.Find("Player");
         Skill_Damage += Players.GetComponent<Player_Stat>().Get_P_State(2);

@@ -61,7 +61,6 @@ public class Monster_stats : MonoBehaviour
             {
                 Destroy(gameObject);
             }
-            Destroy(other.gameObject);
         }
     }
 

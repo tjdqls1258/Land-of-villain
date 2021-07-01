@@ -93,6 +93,7 @@ public class SkillCooldown : MonoBehaviour
         {
             weaponskilldelay = true;
             //무기스킬 실행
+            item_skill.Weapon.GetComponent<Item_stats>().Skill_Set();
             item_skill.Weapon.GetComponent<Item_stats>().skill.Skill_Action();
             Weapon_CoolTime = item_skill.Weapon.GetComponent<Item_stats>().CoolTime;
 
@@ -111,6 +112,7 @@ public class SkillCooldown : MonoBehaviour
         {
             armorskilldelay = true;
             //갑옷스킬 실행
+            item_skill.Armor.GetComponent<Item_stats>().Skill_Set();
             item_skill.Armor.GetComponent<Item_stats>().skill.Skill_Action();
             Amor_CoolTime = item_skill.Armor.GetComponent<Item_stats>().CoolTime;
 
@@ -129,6 +131,11 @@ public class SkillCooldown : MonoBehaviour
         {
             helmetskilldelay = true;
             //투구스킬
+            if(item_skill.Hat == null)
+            {
+                return;
+            }
+            item_skill.Hat.GetComponent<Item_stats>().Skill_Set();
             item_skill.Hat.GetComponent<Item_stats>().skill.Skill_Action();
             Amor_CoolTime = item_skill.Hat.GetComponent<Item_stats>().CoolTime;
 

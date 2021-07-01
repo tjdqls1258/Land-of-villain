@@ -94,6 +94,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c5fcb7b2d6c24a44aa9fa96506ef9885, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Item_stat: 0000000005000000
-  skill_number: Skill_01
+  Item_stat: 000000000a00000000000000000000000000000000000000
+  skill_number: W_Skill_01
   CoolTime: 2

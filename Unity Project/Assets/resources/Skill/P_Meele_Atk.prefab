@@ -121,5 +121,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d9764b191e360354b9bcd3953501100d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Skill_Damage: 0
+  Skill_Damage: 2
   "\uC9C0\uC18D\uC2DC\uAC04": 0.1

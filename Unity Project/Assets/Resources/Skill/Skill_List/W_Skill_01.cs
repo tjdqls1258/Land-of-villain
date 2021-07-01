@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Skill_01 : MonoBehaviour, Skill 
+public class W_Skill_01 : MonoBehaviour, Skill 
 {
 
     public void Skill_Action()
@@ -10,6 +10,6 @@ public class Skill_01 : MonoBehaviour, Skill
         GameObject Player = GameObject.Find("Player");
         Instantiate((GameObject)Resources.Load(("Skill/P_Skill_01"),typeof(GameObject)),
             Player.transform.position, Player.transform.rotation);
-        Debug.Log("01번 스킬발사 히히");
+        Debug.Log("무기 스킬발사 히히");
     }
 }

@@ -1115,6 +1115,11 @@ PrefabInstance:
       propertyPath: img_Weapon_Cool
       value: 
       objectReference: {fileID: 147713335}
+    - target: {fileID: 8747877978991524282, guid: 92d273cf0eade2743b705dff6d3d5c6b,
+        type: 3}
+      propertyPath: Player
+      value: 
+      objectReference: {fileID: 2012668314}
     - target: {fileID: 8747877979034491065, guid: 92d273cf0eade2743b705dff6d3d5c6b,
         type: 3}
       propertyPath: HealthBar

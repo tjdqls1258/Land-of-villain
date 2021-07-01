@@ -4,10 +4,13 @@ using UnityEngine;
 
 public class Item_stats : MonoBehaviour
 {
-    public int[] Item_stat = { };
+    public int[] Item_stat;
     // 0 = 종류
-    // 1 = 공격력
-    // 2 = 방어력
+    // 1 = 체력
+    // 2 = 힘
+    // 3 = 방어력
+    // 4 = 민첩
+    // 5 = 운
     // 그 이상 부가 스텟
     public string skill_number;
     public Skill skill;
@@ -18,6 +21,6 @@ public class Item_stats : MonoBehaviour
     }
     public void Skill_Set()
     {
-        skill = (Skill)Resources.Load("Skill/Skill list/"+ skill_number, typeof(Skill));
+        this.skill = (Skill)Resources.Load("Skill/Skill_List/" + skill_number, typeof(Skill));
     }
 }

@@ -13,7 +13,7 @@ public class Skill_Danamge : MonoBehaviour
         transform.position += transform.up * 0.5f; 
         time = 0;
         GameObject Players = GameObject.Find("Player");
-        Skill_Damage += Players.GetComponent<Player_Stat>().Get_P_State(2);
+        Skill_Damage = (int)(Players.GetComponent<Player_Stat>().Get_P_State(2) * Skill_Damage);
     }
     public int Damage()
     {

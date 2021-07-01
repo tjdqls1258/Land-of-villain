@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
-
+using UnityEngine.UI;
 public class SkillCooldown : MonoBehaviour
 {
     bool atkdelay = false;
@@ -26,11 +26,14 @@ public class SkillCooldown : MonoBehaviour
     Player_Item item_skill;
 
     float Weapon_CoolTime;
-    // Start is called before the first frame update
+
+    public Image img_Weapon_Cool;
+
     void Awake()
     {
         item_skill = GetComponent<Player_Item>();             
         rigid = GetComponent<Rigidbody2D>();
+        img_Weapon_Cool.fillAmount = 0;
     }
 
     // Update is called once per frame
@@ -180,7 +183,14 @@ public class SkillCooldown : MonoBehaviour
 
     IEnumerator WeaponSkill()
     {
-        yield return new WaitForSeconds(3.0f);
+        float Cool_Dwon = Weapon_CoolTime;
+        img_Weapon_Cool.fillAmount = 0;
+        while (Weapon_CoolTime >= 0.0f)
+        {
+            img_Weapon_Cool.fillAmount = (Weapon_CoolTime / Cool_Dwon);
+            Weapon_CoolTime -= Time.deltaTime;
+            yield return new WaitForFixedUpdate();
+        }
         weaponskilldelay = false;
     }
 

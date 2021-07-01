@@ -19,6 +19,7 @@ public class Monster_stats : MonoBehaviour
     {
         stageManger = GameObject.Find("StageManager");
         item_Drop = new Drop_Item();
+
     }
 
     void Get_damange(int damage)
@@ -34,10 +35,11 @@ public class Monster_stats : MonoBehaviour
     {
         Drop_item_it = item_Drop.drop_Item(Monster_Drop_Tear);
         GameObject item = (GameObject)Resources.Load("Item/" + Drop_item_it);
+        //GameObject item = (GameObject)Resources.Load("Item/Copper_Sword", typeof(GameObject));
         //리소스파일 속 item파일에 있는 Drop_item_it와 같은 이름을 가진 프리팹
         if (item != null) //있으면 소환 없으면 아무것도 안함
         {
-            Instantiate(item, this.transform);
+            Instantiate(item, this.transform.position, Quaternion.identity); 
         }
         stageManger.GetComponent<StageManager>().monsterdead();
     }

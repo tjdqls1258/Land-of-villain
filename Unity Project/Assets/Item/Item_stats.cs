@@ -12,6 +12,10 @@ public class Item_stats : MonoBehaviour
     public string skill_number;
     public Skill skill;
     public float CoolTime;
+    public void Awake()
+    {
+        this.transform.parent = null; //아이템 상속 해제
+    }
     public void Skill_Set()
     {
         skill = (Skill)Resources.Load("Skill/Skill list/"+ skill_number, typeof(Skill));

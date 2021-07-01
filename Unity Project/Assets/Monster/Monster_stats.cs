@@ -47,8 +47,7 @@ public class Monster_stats : MonoBehaviour
     {
         if(other.gameObject.tag == "Player_Meele")
         {
-            Get_damange(other.GetComponent<Player_Status>().Damage());
-
+            Get_damange(other.GetComponent<Skill_Danamge>().Damage());
             if (Hp <= 0)
             {
                 Destroy(gameObject);

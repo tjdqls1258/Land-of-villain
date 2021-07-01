@@ -17,7 +17,7 @@ public class Player_Item : MonoBehaviour
         Hat = (GameObject)Resources.Load("Item/" + item.get_F_Item(2));
         Ring = (GameObject)Resources.Load("Item/" + item.get_F_Item(3));
 
-        
+        Weapon.GetComponent<Item_stats>().Skill_Set();
     }
 
     // Update is called once per frame

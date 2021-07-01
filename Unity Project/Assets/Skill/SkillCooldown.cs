@@ -137,7 +137,7 @@ public class SkillCooldown : MonoBehaviour
             }
             item_skill.Hat.GetComponent<Item_stats>().Skill_Set();
             item_skill.Hat.GetComponent<Item_stats>().skill.Skill_Action();
-            Amor_CoolTime = item_skill.Hat.GetComponent<Item_stats>().CoolTime;
+            helmat_CoolTime = item_skill.Hat.GetComponent<Item_stats>().CoolTime;
 
             StartCoroutine("HelmetSkill");
             Debug.Log("helmetskill success");

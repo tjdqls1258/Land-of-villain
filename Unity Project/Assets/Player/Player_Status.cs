@@ -8,13 +8,18 @@ public class Player_Status : MonoBehaviour
     public static int healthMax = 100;  // 플레이어 캐릭터의 최대 체력을 저장할 정수형 변수
     public static int health = 100;     // 플레이어 캐릭터의 현재 체력을 저장할 정수형 변수
     public int damage;
+    public GameObject Player;
 
     // Start is called before the first frame update
     void Start()
     {
         DontDestroyOnLoad(gameObject);
     }
-
+    private void Awake()
+    {
+        Player_Status.healthMax = 100;
+        Player_Status.health = 100;
+    }
     // Update is called once per frame
     void Update()
     {
@@ -23,12 +28,13 @@ public class Player_Status : MonoBehaviour
 
     void Get_damange(int damage)
     {
-        health -= damage;
-        if (health <= 0) //체력 0 되면 사망
+        int Setting_Hp = Player.GetComponent<Player_Stat>().Get_P_State(1) - damage;
+        Player.GetComponent<Player_Stat>().Set_P_State(1,
+            Setting_Hp);
+        if (Player.GetComponent<Player_Stat>().Get_P_State(1) <= 0) //체력 0 되면 사망
         {
             die();
         }
-        Debug.Log(health);
     }
 
     void die()

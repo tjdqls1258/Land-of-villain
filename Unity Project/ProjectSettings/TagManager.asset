@@ -9,6 +9,7 @@ TagManager:
   - Monster_Bullet
   - Player_ATk
   - Skill
+  - Player_Meele
   layers:
   - Default
   - TransparentFX

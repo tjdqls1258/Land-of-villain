@@ -43,6 +43,15 @@ public class Monster_stats : MonoBehaviour
     }
     void OnTriggerEnter2D(Collider2D other)
     {
+        if(other.gameObject.tag == "Player_Meele")
+        {
+            Get_damange(other.GetComponent<Player_Status>().Damage());
+
+            if (Hp <= 0)
+            {
+                Destroy(gameObject);
+            }
+        }
         if (other.gameObject.tag == "Player_ATk")
         {
             //충돌한 객체의 컴퍼넌트에서 데미지 받아옴

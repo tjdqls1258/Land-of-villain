@@ -10,7 +10,11 @@ public class StageManager : MonoBehaviour
     public string stage;
 
     private int monsternum;
-    private bool scenechanger;
+    private bool scenechanger = false;
+
+    public GameObject Gate;
+    private bool isgate = false;
+    public bool clear;
 
     // Start is called before the first frame update
     void Start()
@@ -18,18 +22,37 @@ public class StageManager : MonoBehaviour
         Player = GameObject.Find("Player");
         FoundObjects = new List<GameObject>(GameObject.FindGameObjectsWithTag("Monster"));
         monsternum = FoundObjects.Count;
-        scenechanger = false;
     }
 
     // Update is called once per frame
     void Update()
     {
-        if (monsternum <= 0 && scenechanger == false)
+        clear = Player.GetComponent<Player_Status>().isclear;
+        if ((monsternum <= 0) && (isgate == false))
         {
-            SceneManager.LoadScene(stage, LoadSceneMode.Additive);
+            Instantiate(Gate, new Vector3(0, 9.5f, 0), Quaternion.identity);
+            isgate = true;
+        }
+        if ((clear == true) && (scenechanger == false))
+        {
+            SceneManager.LoadScene(stage);
             SceneManager.MoveGameObjectToScene(Player, SceneManager.GetSceneByName(stage));
             scenechanger = true;
         }
+    }
+
+    void OnEnable()
+    {
+        SceneManager.sceneLoaded += OnSceneLoaded;
+    }
+    private void OnSceneLoaded(Scene scene, LoadSceneMode mode)
+    {
+        isgate = false;
+        scenechanger = false;
+    }
+    void OnDisable()
+    {
+        SceneManager.sceneLoaded -= OnSceneLoaded;
     }
 
     public void monsterdead()

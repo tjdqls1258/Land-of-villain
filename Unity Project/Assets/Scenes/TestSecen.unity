@@ -646,6 +646,8 @@ MonoBehaviour:
   Player: {fileID: 2012668314}
   FoundObjects: []
   stage: TestSecen_lv2
+  Gate: {fileID: 1361088879153880688, guid: 2d74d104ce57ce64eb004b02be3d752d, type: 3}
+  clear: 0
 --- !u!4 &1971951787
 Transform:
   m_ObjectHideFlags: 0

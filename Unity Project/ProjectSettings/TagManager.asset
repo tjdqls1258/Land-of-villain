@@ -10,6 +10,7 @@ TagManager:
   - Player_ATk
   - Skill
   - Player_Meele
+  - Gate
   layers:
   - Default
   - TransparentFX

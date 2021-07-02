@@ -10,6 +10,8 @@ public class Player_Status : MonoBehaviour
     public int damage;
     public GameObject Player;
 
+    public bool isclear = false;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -53,6 +55,24 @@ public class Player_Status : MonoBehaviour
 
             Destroy(other.gameObject);
         }
+        if (other.gameObject.tag == "Gate")
+        {
+            isclear = true;
+            Destroy(other.gameObject);
+        }
+    }
+
+    void OnEnable()
+    {
+        SceneManager.sceneLoaded += OnSceneLoaded;
+    }
+    private void OnSceneLoaded(Scene scene, LoadSceneMode mode)
+    {
+        isclear = false;
+    }
+    void OnDisable()
+    {
+        SceneManager.sceneLoaded -= OnSceneLoaded;
     }
 
     public int Damage()

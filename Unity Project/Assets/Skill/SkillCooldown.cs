@@ -11,7 +11,7 @@ public class SkillCooldown : MonoBehaviour
     bool helmetskilldelay = false;
     bool acceskilldelay = false;
 
-    bool ismeele = true;
+    bool ismeele = false;
 
     public List<GameObject> FoundObjects;
     public float shortDis;

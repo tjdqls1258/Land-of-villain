@@ -36,7 +36,6 @@ public class StageManager : MonoBehaviour
         if ((clear == true) && (scenechanger == false))
         {
             SceneManager.LoadScene(stage);
-            SceneManager.MoveGameObjectToScene(Player, SceneManager.GetSceneByName(stage));
             scenechanger = true;
         }
     }

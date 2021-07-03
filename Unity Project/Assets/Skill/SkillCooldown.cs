@@ -57,14 +57,16 @@ public class SkillCooldown : MonoBehaviour
     }
     private void OnSceneLoaded(Scene scene, LoadSceneMode mode)
     {
-        FoundObjects = new List<GameObject>(GameObject.FindGameObjectsWithTag("Monster"));
-        Monster = FoundObjects[0];
     }
     void OnDisable()
     {
         SceneManager.sceneLoaded -= OnSceneLoaded;
     }
-
+    public void Load_New_Stage()
+    {
+        this.FoundObjects = new List<GameObject>(GameObject.FindGameObjectsWithTag("Monster"));
+        this.Monster = FoundObjects[0];
+    }
     public GameObject Get_Monster()
     {
         return Monster;

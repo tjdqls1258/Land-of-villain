@@ -58,6 +58,7 @@ public class Player_Status : MonoBehaviour
         if (other.gameObject.tag == "Gate")
         {
             isclear = true;
+            GetComponent<Player_Stat>().N_Stages++;
             Destroy(other.gameObject);
         }
     }

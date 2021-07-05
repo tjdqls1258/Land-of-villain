@@ -15,10 +15,12 @@ public class Player_Stat : MonoBehaviour
     */
     //위에 것같은 스탯을 배열로 다룸
     private int[] P_State;
+    public int N_Stages;
 
     private void Awake()
     {
         P_State = new int[] { 100, 100, 10, 5, 5, 0, 0 };
+        N_Stages = 1;
     }
     public void Set_P_State(int N1,int N2)
     { P_State[N1] = N2; }

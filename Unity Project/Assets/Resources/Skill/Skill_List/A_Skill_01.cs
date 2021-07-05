@@ -10,7 +10,6 @@ public class A_Skill_01 : MonoBehaviour, Skill
     {
         GameObject Player = GameObject.Find("Player");
 
-        float time = 0;
         reset_stat = Player.GetComponent<Player_Stat>().Get_P_State(3);
         Debug.Log("아머 스킬발사 히히");
         Player.GetComponent<Player_Stat>().Set_P_State(3, (int)(Player.GetComponent<Player_Stat>().Get_P_State(3) * 1.5f));

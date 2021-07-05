@@ -17,13 +17,26 @@ public class Player_Item : MonoBehaviour
         Hat = (GameObject)Resources.Load("Item/Copper_Hat");
         Ring = (GameObject)Resources.Load("Item/Copper_Ring");
 
-        Ring.GetComponent<Item_stats>().Skill_Set();
-        Weapon.GetComponent<Item_stats>().Skill_Set();
-        Armor.GetComponent<Item_stats>().Skill_Set();
-        Hat.GetComponent<Item_stats>().Skill_Set();
+        if (Ring != null)
+        {
+            Ring.GetComponent<Item_stats>().Skill_Set();
+            Ring.GetComponent<Item_stats>().skill.Skill_Action();
+        }
+        if (Weapon != null)
+        {
+            Weapon.GetComponent<Item_stats>().Skill_Set();
+        }
+        if (Armor != null)
+        {
+            Armor.GetComponent<Item_stats>().Skill_Set();
+        }
+        if (Hat != null)
+        {
+            Hat.GetComponent<Item_stats>().Skill_Set();
+        }
 
 
-        Ring.GetComponent<Item_stats>().skill.Skill_Action();
+        
     }
 
     // Update is called once per frame

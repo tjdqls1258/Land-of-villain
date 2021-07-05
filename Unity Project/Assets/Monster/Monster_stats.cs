@@ -17,8 +17,11 @@ public class Monster_stats : MonoBehaviour
 
     private void Awake()
     {
+        GameObject Player = GameObject.Find("Player");
         stageManger = GameObject.Find("StageManager");
         item_Drop = new Drop_Item();
+        Hp += (Player.GetComponent<Player_Stat>().N_Stages) * 10;
+        damage += Player.GetComponent<Player_Stat>().N_Stages;
 
     }
 

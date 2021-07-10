@@ -11,9 +11,10 @@ GameObject:
   - component: {fileID: 1873258070169747556}
   - component: {fileID: 1134459127768511696}
   - component: {fileID: 6731618153317912002}
+  - component: {fileID: -2403047256767742689}
   m_Layer: 0
   m_Name: Copper_Hat
-  m_TagString: Untagged
+  m_TagString: Item
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -91,9 +92,37 @@ MonoBehaviour:
   m_GameObject: {fileID: 6494748608171203134}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c5fcb7b2d6c24a44aa9fa96506ef9885, type: 3}
+  m_Script: {fileID: 11500000, guid: 4ca50350593932d42bc761259a6830ee, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Item_stat: 020000000000000000000000050000000500000000000000
+  Item_stat: 
+  Item_Name: Copper_Hat
+  Item_Kind: 0
   skill_number: H_Skill_01
-  CoolTime: 2
+  CoolTime: 0
+--- !u!61 &-2403047256767742689
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6494748608171203134}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 0.32, y: 0.32}
+    newSize: {x: 0.16, y: 0.16}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 0.32, y: 0.32}
+  m_EdgeRadius: 0

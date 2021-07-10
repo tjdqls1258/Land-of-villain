@@ -55,15 +55,17 @@ public class Player_Get_Item : MonoBehaviour
     //원래는 OnTriggerstay2D로 만들려 했으나 가만히 있으면 몇 프레임 동안만 호출하여 계속 움직여 줘야하는 문제가 생겨서 아래 코드로 제작
     public void Drop_Item()
     {
-
+        
         if (Item_Check == true && Input.GetKeyDown(KeyCode.D) == true)
         {   //주우려는 장비 아이템의 종류와 플레이어의 아이템의 종류가 같고 장비가 없을 시
+            Debug.Log("아이템 줍기");
             if (PI.Get_Player_Item(IS.Get_Item_Kind()) == "NONE")
             {
                 //플레이어의 아이템의 장비에 맞춰 플레이어 장비에 이름을 할당해줌.
                 PI.Set_Player_Item(IS.Get_Item_Kind(), IS.Get_Item_Name());
                 Destroy(DI.gameObject);//그리고 주운 아이템 파괴 처리
 
+                
             }
             else if (PI.Get_Player_Item(IS.Get_Item_Kind()) != "NONE")//플레이어가 아이템을 가지고 있었다면.
             {

@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Item_stats : MonoBehaviour
+public class Item_stats_01 : MonoBehaviour
 {
     public int[] Item_stat;
     public string Item_Name;//아이템의 이름

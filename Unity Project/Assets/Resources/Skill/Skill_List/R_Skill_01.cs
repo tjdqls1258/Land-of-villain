@@ -26,6 +26,10 @@ public class R_Skill_01 : MonoBehaviour, Skill
         {
             Player.GetComponent<Player_Stat>().Set_P_State(1, N_HP + Healing);
         }
+        if(Player != null)
+        {
+            CancelInvoke("Stop_Passive");
+        }
     }
     //중지시키는 함수
     public void Stop_Passive()

@@ -7,6 +7,16 @@ public class Player_Item : MonoBehaviour
     string[] Items;
     Item item;
     public GameObject Weapon, Armor, Ring, Hat;
+    private string[] player_item = new string[] { "NONE", "NONE", "NONE", "Copper_Ring" };
+
+    public string Get_Player_Item(int N)
+    {
+        return player_item[N];
+    }
+    public void Set_Player_Item(int N1, string N2)
+    {
+        player_item[N1] = N2;
+    }
     void Awake()
     {
         item = new Item();

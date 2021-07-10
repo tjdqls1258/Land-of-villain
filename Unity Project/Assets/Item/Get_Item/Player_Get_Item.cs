@@ -63,6 +63,8 @@ public class Player_Get_Item : MonoBehaviour
             {
                 //플레이어의 아이템의 장비에 맞춰 플레이어 장비에 이름을 할당해줌.
                 PI.Set_Player_Item(IS.Get_Item_Kind(), IS.Get_Item_Name());
+
+
                 Destroy(DI.gameObject);//그리고 주운 아이템 파괴 처리
 
                 

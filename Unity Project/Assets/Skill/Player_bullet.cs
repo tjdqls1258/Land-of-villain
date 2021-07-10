@@ -34,7 +34,7 @@ public class Player_bullet : MonoBehaviour
     void Update()
     {       
         rigid.AddForce(transform.up * Move_speed, ForceMode2D.Force);
-        Debug.DrawLine(transform.up * 10f, Player.transform.position, Color.black);
+        //Debug.DrawLine(transform.up * 10f, Player.transform.position, Color.black);
         if (!GameManager.isPause)
         {
             time += Time.deltaTime;

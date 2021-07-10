@@ -28,6 +28,11 @@ public class Player_Item : MonoBehaviour
         Hat = (GameObject)Resources.Load("Item/Item_Prefab/Copper_Hat");
         Ring = (GameObject)Resources.Load("Item/Item_Prefab/Copper_Ring");
 
+        player_item[0] = Weapon.ToString();
+        player_item[1] = Armor.ToString();
+        player_item[2] = Hat.ToString();
+        player_item[3] = Ring.ToString();
+
         if (Ring != null)
         {
             Ring.GetComponent<Item_stats>().Skill_Set();

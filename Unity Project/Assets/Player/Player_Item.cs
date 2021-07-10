@@ -28,10 +28,10 @@ public class Player_Item : MonoBehaviour
         Hat = (GameObject)Resources.Load("Item/Item_Prefab/Copper_Hat");
         Ring = (GameObject)Resources.Load("Item/Item_Prefab/Copper_Ring");
 
-        player_item[0] = Weapon.ToString();
-        player_item[1] = Armor.ToString();
-        player_item[2] = Hat.ToString();
-        player_item[3] = Ring.ToString();
+        player_item[0] = Weapon.GetComponent<Item_stats>().Item_Name;
+        player_item[1] = Armor.GetComponent<Item_stats>().Item_Name;
+        player_item[2] = Hat.GetComponent<Item_stats>().Item_Name;
+        player_item[3] = Ring.GetComponent<Item_stats>().Item_Name;
 
         if (Ring != null)
         {
@@ -78,16 +78,31 @@ public class Player_Item : MonoBehaviour
         }
     }
 
-    public void 아이템_강화(int item, string item_name)
+    public bool 아이템_강화(int item, string item_name)
     {
         if(player_item[item] == item_name)
         {
-            
+            switch (item)
+            {
+                case 0:
+                    Weapon.GetComponent<Item_stats>().reinforce();
+                    Debug.Log("무기강화");
+                    return true;
+                case 1:
+                    Armor.GetComponent<Item_stats>().reinforce();
+                    Debug.Log("아머강화");
+                    return true;
+                case 2:
+                    Hat.GetComponent<Item_stats>().reinforce();
+                    Debug.Log("모자강화");
+                    return true;
+                case 3:
+                    Ring.GetComponent<Item_stats>().reinforce();
+                    Debug.Log("반지강화");
+                    return true;
+            }
+                
         }
-    }
-    // Update is called once per frame
-    void Update()
-    {
-        
+        return false;
     }
 }

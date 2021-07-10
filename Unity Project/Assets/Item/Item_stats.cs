@@ -7,7 +7,7 @@ public class Item_stats : MonoBehaviour
     public int[] Item_stat;
     public string Item_Name;//아이템의 이름
     public int Item_Kind;
-    // 0 = 종류
+    // 0 = 강화정도
     // 1 = 체력
     // 2 = 힘
     // 3 = 방어력
@@ -24,6 +24,13 @@ public class Item_stats : MonoBehaviour
     public void Skill_Set()
     {
         this.skill = (Skill)Resources.Load("Skill/Skill_List/" + skill_number, typeof(Skill));
+    }
+    public void reinforce()
+    {
+        for(int i = 0; i< Item_stat.Length; i++)
+        {
+            Item_stat[i]++;
+        }
     }
     public string Get_Item_Name()
     { return Item_Name; }

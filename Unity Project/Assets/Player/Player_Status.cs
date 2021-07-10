@@ -11,6 +11,7 @@ public class Player_Status : MonoBehaviour
     public GameObject Player;
 
     public bool isclear = false;
+    private bool isinvincible = false;
 
     // Start is called before the first frame update
     void Start()
@@ -48,18 +49,28 @@ public class Player_Status : MonoBehaviour
 
     void OnTriggerEnter2D(Collider2D other)
     {
-        if (other.gameObject.tag == "Monster_Bullet") //몬스터 원거리 공격과 충돌시
+        if ((other.gameObject.tag == "Monster_Bullet") && (isinvincible == false)) //몬스터 원거리 공격과 충돌시
         {
+            isinvincible = true;
             //충돌한 객체의 컴퍼넌트에서 데미지 받아옴
             Get_damange(other.GetComponent<Monster_Bullet>().Damage());
-
+            StartCoroutine("CollisionINvincible");
             Destroy(other.gameObject);
-        }
+        }        
         if (other.gameObject.tag == "Gate")
         {
             isclear = true;
             GetComponent<Player_Stat>().N_Stages++;
             Destroy(other.gameObject);
+        }
+    }
+    void OnTriggerStay2D(Collider2D other)
+    {
+        if ((other.gameObject.tag == "Monster") && (isinvincible == false))
+        {
+            isinvincible = true;
+            Get_damange(other.GetComponent<Monster_stats>().give_damage());
+            StartCoroutine("CollisionINvincible");
         }
     }
 
@@ -79,5 +90,11 @@ public class Player_Status : MonoBehaviour
     public int Damage()
     {
         return damage;
+    }
+
+    IEnumerator CollisionINvincible()
+    {     
+        yield return new WaitForSeconds(5.0f);
+        isinvincible = false;
     }
 }

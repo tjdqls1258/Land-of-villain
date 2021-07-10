@@ -77,7 +77,7 @@ public class Monster_stats : MonoBehaviour
         }
     }
 
-    public float give_damage()
+    public int give_damage()
     {
         return damage;
     }

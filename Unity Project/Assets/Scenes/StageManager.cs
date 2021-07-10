@@ -84,7 +84,10 @@ public class StageManager : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        clear = Player.GetComponent<Player_Status>().isclear;
+        if (Player != null)
+        {
+            clear = Player.GetComponent<Player_Status>().isclear;
+        }
         if ((monsternum <= 0) && (isgate == false))
         {
             Instantiate(Gate, Player.transform.position + (Vector3.up)
@@ -94,6 +97,7 @@ public class StageManager : MonoBehaviour
         if ((clear == true) && (scenechanger == false))
         {
             SceneManager.LoadScene(stage);
+            Player.GetComponent<Player_Status>().isclear = false;
             scenechanger = true;
         }
     }

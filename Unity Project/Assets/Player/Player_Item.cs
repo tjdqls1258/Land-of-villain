@@ -12,10 +12,10 @@ public class Player_Item : MonoBehaviour
         item = new Item();
 
         //Weapon = (GameObject)Resources.Load("Item/" + item.get_F_Item(0));
-        Weapon = (GameObject)Resources.Load("Item/Copper_Sword"); //임시로 넣음
-        Armor = (GameObject)Resources.Load("Item/Copper_Armor");
-        Hat = (GameObject)Resources.Load("Item/Copper_Hat");
-        Ring = (GameObject)Resources.Load("Item/Copper_Ring");
+        Weapon = (GameObject)Resources.Load("Item_Prefab/Copper_Sword"); //임시로 넣음
+        Armor = (GameObject)Resources.Load("Item_Prefab/Copper_Armor");
+        Hat = (GameObject)Resources.Load("Item_Prefab/Copper_Hat");
+        Ring = (GameObject)Resources.Load("Item_Prefab/Copper_Ring");
 
         if (Ring != null)
         {

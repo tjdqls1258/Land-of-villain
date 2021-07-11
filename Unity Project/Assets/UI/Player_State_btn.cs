@@ -8,13 +8,11 @@ public class Player_State_btn : MonoBehaviour
 
     public void P_State_btn()
     {
-        Player_State.SetActive(true);
-        Time.timeScale = 0.0f;     
+        Player_State.SetActive(true); 
     }
 
     public void Back_btn()
     {
         Player_State.SetActive(false);
-        Time.timeScale = 0.0f;
     }
 }

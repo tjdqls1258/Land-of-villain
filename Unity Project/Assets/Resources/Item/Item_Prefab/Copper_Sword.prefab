@@ -69,9 +69,9 @@ SpriteRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 0
-  m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingLayerID: 1976784991
+  m_SortingLayer: 1
+  m_SortingOrder: 1
   m_Sprite: {fileID: 21300000, guid: 14e97624d204a5746a0aeedbe214d1f5, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -95,11 +95,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4ca50350593932d42bc761259a6830ee, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Item_stat: 000000000a00000000000000000000000000000000000000
   Item_Name: Copper_Sword
   Item_Kind: 0
+  tear: 0
+  Item_stat: 000000000a00000000000000000000000000000000000000
   skill_number: W_Skill_01
   CoolTime: 3
+  reinforce_add: 0
 --- !u!61 &8754920593809045317
 BoxCollider2D:
   m_ObjectHideFlags: 0

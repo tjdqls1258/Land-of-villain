@@ -51,3 +51,6 @@ TagManager:
   - name: Player
     uniqueID: 1976784991
     locked: 0
+  - name: Monster
+    uniqueID: 1395904143
+    locked: 0

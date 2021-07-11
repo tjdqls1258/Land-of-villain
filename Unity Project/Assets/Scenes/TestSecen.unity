@@ -89761,5 +89761,40 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 8747877978991524230, guid: 92d273cf0eade2743b705dff6d3d5c6b,
+        type: 3}
+      propertyPath: m_SpriteTilingProperty.border.w
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8747877978991524230, guid: 92d273cf0eade2743b705dff6d3d5c6b,
+        type: 3}
+      propertyPath: m_SpriteTilingProperty.border.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8747877978991524230, guid: 92d273cf0eade2743b705dff6d3d5c6b,
+        type: 3}
+      propertyPath: m_SpriteTilingProperty.border.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8747877978991524230, guid: 92d273cf0eade2743b705dff6d3d5c6b,
+        type: 3}
+      propertyPath: m_SpriteTilingProperty.border.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8747877978991524230, guid: 92d273cf0eade2743b705dff6d3d5c6b,
+        type: 3}
+      propertyPath: m_SpriteTilingProperty.drawMode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8747877978991524230, guid: 92d273cf0eade2743b705dff6d3d5c6b,
+        type: 3}
+      propertyPath: m_SpriteTilingProperty.oldSize.x
+      value: 0.32
+      objectReference: {fileID: 0}
+    - target: {fileID: 8747877978991524230, guid: 92d273cf0eade2743b705dff6d3d5c6b,
+        type: 3}
+      propertyPath: m_SpriteTilingProperty.oldSize.y
+      value: 0.32
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 92d273cf0eade2743b705dff6d3d5c6b, type: 3}

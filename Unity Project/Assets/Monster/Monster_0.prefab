@@ -84,7 +84,7 @@ SpriteRenderer:
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
-  m_SpriteSortPoint: 0
+  m_SpriteSortPoint: 1
 --- !u!50 &7340456408813093567
 Rigidbody2D:
   serializedVersion: 4
@@ -162,3 +162,4 @@ MonoBehaviour:
   damage: 5
   Atk_dir: 0
   Monster_Drop_Tear: 0
+  stageManger: {fileID: 0}

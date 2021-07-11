@@ -9,8 +9,9 @@ public class Player_State_Window : MonoBehaviour
     Player_Stat P_S;
 
     void Start()
-    {   
-        P_S_Text=GameObject.Find("Player_State_Window_UI").GetComponent<Text>();
+    {
+        //P_S_Text=GameObject.Find("Player_State_Window_UI").GetComponent<Text>();
+        P_S_Text = GameObject.Find("Player_State_UI_text").GetComponent<Text>();
         //일단 플레이어라는 빈 오브젝트안에 Player_Stat 스크립을 넣음.
         P_S = GameObject.Find("Player").GetComponent<Player_Stat>();
 

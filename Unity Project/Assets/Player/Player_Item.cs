@@ -99,7 +99,9 @@ public class Player_Item : MonoBehaviour
                             Next_item = item.get_E_Item(items);
                         }
                         Weapon =(GameObject)Resources.Load("Item/Item_Prefab/"+ Next_item);
+                        Weapon.GetComponent<Item_stats>().Skill_Set();
                     }
+                    
                     return true;
                 case 1:
                     Armor.GetComponent<Item_stats>().reinforce();
@@ -116,6 +118,7 @@ public class Player_Item : MonoBehaviour
                             Next_item = item.get_E_Item(items);
                         }
                         Armor = (GameObject)Resources.Load("Item/Item_Prefab/" + Next_item);
+                        Armor.GetComponent<Item_stats>().Skill_Set();
                     }
                     return true;
                 case 2:
@@ -133,6 +136,7 @@ public class Player_Item : MonoBehaviour
                             Next_item = item.get_E_Item(items);
                         }
                         Hat = (GameObject)Resources.Load("Item/Item_Prefab/" + Next_item);
+                        Hat.GetComponent<Item_stats>().Skill_Set();
                     }
                     return true;
                 case 3:
@@ -149,7 +153,10 @@ public class Player_Item : MonoBehaviour
                         {
                             Next_item = item.get_E_Item(items);
                         }
+                        Ring.GetComponent<Item_stats>().skill.Stop_Passive();
                         Ring = (GameObject)Resources.Load("Item/Item_Prefab/" + Next_item);
+                        Ring.GetComponent<Item_stats>().Skill_Set();
+                        Ring.GetComponent<Item_stats>().skill.Skill_Action();
                     }
                     return true;
             }

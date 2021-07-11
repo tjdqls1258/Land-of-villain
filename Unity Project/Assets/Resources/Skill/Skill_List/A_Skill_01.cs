@@ -16,7 +16,7 @@ public class A_Skill_01 : MonoBehaviour, Skill
         Invoke("Buffe", 지속시간);
 
     }
-
+    public void Stop_Passive() { }
     void Buffe()
     {
         GameObject Player = GameObject.Find("Player");

@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class W_Skill_01 : MonoBehaviour, Skill 
 {
-
+    public void Stop_Passive() { }
     public void Skill_Action()
     {
         GameObject Player = GameObject.Find("Player");

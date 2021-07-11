@@ -78,27 +78,79 @@ public class Player_Item : MonoBehaviour
         }
     }
 
-    public bool 아이템_강화(int item, string item_name)
+    public bool 아이템_강화(int items, string item_name)
     {
-        if(player_item[item] == item_name)
+        if(player_item[items] == item_name)
         {
-            switch (item)
+            switch (items)
             {
                 case 0:
                     Weapon.GetComponent<Item_stats>().reinforce();
                     Debug.Log("무기강화");
+                    if((Weapon.GetComponent<Item_stats>().Item_stat[0] > 10) &&(Weapon.GetComponent<Item_stats>().tear < 2))
+                    {
+                        string Next_item = "";
+                        if(Weapon.GetComponent<Item_stats>().tear == 0)
+                        {
+                            Next_item = item.get_R_Item(items);
+                        }
+                        if (Weapon.GetComponent<Item_stats>().tear == 1)
+                        {
+                            Next_item = item.get_E_Item(items);
+                        }
+                        Weapon =(GameObject)Resources.Load("Item/Item_Prefab/"+ Next_item);
+                    }
                     return true;
                 case 1:
                     Armor.GetComponent<Item_stats>().reinforce();
                     Debug.Log("아머강화");
+                    if ((Armor.GetComponent<Item_stats>().Item_stat[0] > 10) &&((Armor.GetComponent<Item_stats>().tear < 2)))
+                    {
+                        string Next_item = "";
+                        if (Armor.GetComponent<Item_stats>().tear == 0)
+                        {
+                            Next_item = item.get_R_Item(items);
+                        }
+                        if (Armor.GetComponent<Item_stats>().tear == 1)
+                        {
+                            Next_item = item.get_E_Item(items);
+                        }
+                        Armor = (GameObject)Resources.Load("Item/Item_Prefab/" + Next_item);
+                    }
                     return true;
                 case 2:
                     Hat.GetComponent<Item_stats>().reinforce();
                     Debug.Log("모자강화");
+                    if ((Hat.GetComponent<Item_stats>().Item_stat[0] > 10) && ((Hat.GetComponent<Item_stats>().tear < 2)))
+                    {
+                        string Next_item = "";
+                        if (Hat.GetComponent<Item_stats>().tear == 0)
+                        {
+                            Next_item = item.get_R_Item(items);
+                        }
+                        if (Hat.GetComponent<Item_stats>().tear == 1)
+                        {
+                            Next_item = item.get_E_Item(items);
+                        }
+                        Hat = (GameObject)Resources.Load("Item/Item_Prefab/" + Next_item);
+                    }
                     return true;
                 case 3:
                     Ring.GetComponent<Item_stats>().reinforce();
                     Debug.Log("반지강화");
+                    if ((Ring.GetComponent<Item_stats>().Item_stat[0] > 10) && ((Ring.GetComponent<Item_stats>().tear < 2)))
+                    {
+                        string Next_item = "";
+                        if (Ring.GetComponent<Item_stats>().tear == 0)
+                        {
+                            Next_item = item.get_R_Item(items);
+                        }
+                        if (Ring.GetComponent<Item_stats>().tear == 1)
+                        {
+                            Next_item = item.get_E_Item(items);
+                        }
+                        Ring = (GameObject)Resources.Load("Item/Item_Prefab/" + Next_item);
+                    }
                     return true;
             }
                 

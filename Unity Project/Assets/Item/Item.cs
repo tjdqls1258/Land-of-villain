@@ -10,7 +10,7 @@ public class Item
     public string get_F_Item(int N1)
     {
         int N2; //아이템의 총 개수에서 하나를 가져오기 위한 변수. 
-        N2 = Random.Range(0, N_Item.GetLength(1));
+        N2 = Random.Range(0, F_Item.GetLength(1));
         return F_Item[N1, N2];
     }
 
@@ -31,7 +31,7 @@ public class Item
         int N1 = Random.Range(0, 4);//장비의 종류를 결정해줌.
         int N2; //아이템의 총 개수에서 하나를 가져오기 위한 변수. 
         N2 = Random.Range(0, R_Item.GetLength(1));
-        return N_Item[N1, N2];
+        return R_Item[N1, N2];
     }
 
     //Epic 아이템 이름.(희귀한 아이템)
@@ -42,7 +42,24 @@ public class Item
     {
         int N1 = Random.Range(0, 4);//장비의 종류를 결정해줌.
         int N2; //아이템의 총 개수에서 하나를 가져오기 위한 변수. 
-        N2 = Random.Range(0, R_Item.GetLength(1));
+        N2 = Random.Range(0, E_Item.GetLength(1));
         return E_Item[N1, N2];
     }
+
+
+    //여기서부터 승급시스템을 위한 함수
+    public string get_R_Item(int N1)
+    {
+        int N2; //아이템의 총 개수에서 하나를 가져오기 위한 변수. 
+        N2 = Random.Range(0, F_Item.GetLength(1));
+        return R_Item[N1, N2];
+    }
+
+    public string get_E_Item(int N1)
+    {
+        int N2; //아이템의 총 개수에서 하나를 가져오기 위한 변수. 
+        N2 = Random.Range(0, F_Item.GetLength(1));
+        return E_Item[N1, N2];
+    }
+
 }

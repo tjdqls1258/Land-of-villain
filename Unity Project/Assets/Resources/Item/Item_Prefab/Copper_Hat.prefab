@@ -95,7 +95,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4ca50350593932d42bc761259a6830ee, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Item_stat: 
+  Item_stat: 000000000000000000000000050000000500000000000000
   Item_Name: Copper_Hat
   Item_Kind: 2
   skill_number: H_Skill_01

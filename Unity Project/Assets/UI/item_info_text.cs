@@ -20,7 +20,7 @@ public class item_info_text : MonoBehaviour
     {
         i_name = GameObject.Find("Player").GetComponent<item_info>().Item_name;
         i_stat = GameObject.Find(i_name);
-        I_info_text.text = i_name + "\n" + "\n"
+        I_info_text.text = i_stat.GetComponent<Item_stats>().Item_Name + "\n" + "\n"
             + "reinforce.lv : " + i_stat.GetComponent<Item_stats>().Item_stat[0] + "\n"
             + "equip.hp : " + i_stat.GetComponent<Item_stats>().Item_stat[1] + "\n"
             + "equip.str : " + i_stat.GetComponent<Item_stats>().Item_stat[2] + "\n"

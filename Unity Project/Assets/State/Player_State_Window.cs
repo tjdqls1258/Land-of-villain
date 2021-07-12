@@ -34,9 +34,9 @@ public class Player_State_Window : MonoBehaviour
         + "<Money> : " + P_S.Get_P_State(6) + "\n"
         + "\n" + "\n"
         + "equipment" + "\n"
-        + "weapon : " + P_I.Get_Player_Item(0) + "\n"
-        + "armor : " + P_I.Get_Player_Item(1) + "\n"
-        + "hat : " + P_I.Get_Player_Item(2) + "\n"
-        + "ring : " + P_I.Get_Player_Item(3) + "\n"; 
+        + "weapon : " + P_I.Get_Player_Item(0) + " +" + P_I.Weapon.GetComponent<Item_stats>().reinforce_add.ToString()+"\n"
+        + "armor : " + P_I.Get_Player_Item(1) + " +" +P_I.Armor.GetComponent<Item_stats>().reinforce_add.ToString() + "\n"
+        + "hat : " + P_I.Get_Player_Item(2) + " +" + P_I.Hat.GetComponent<Item_stats>().reinforce_add.ToString() + "\n"
+        + "ring : " + P_I.Get_Player_Item(3) + " +" + P_I.Ring.GetComponent<Item_stats>().reinforce_add.ToString() + "\n"; 
     }
 }

@@ -11,6 +11,8 @@ TagManager:
   - Skill
   - Player_Meele
   - Gate
+  - Undefined
+  - Item
   layers:
   - Default
   - TransparentFX

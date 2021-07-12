@@ -6,7 +6,7 @@ public class Player_Item : MonoBehaviour
 {   //플레이어가 현재 지닌 아이템
     private string [] player_Item =new string [] { "NONE","NONE","NONE","Copper_Ring"};
     //플레이어의 소지금
-    private int player_Money = 0;
+    
     public string Get_Player_Item(int N)
     {
         return player_Item[N];
@@ -16,13 +16,4 @@ public class Player_Item : MonoBehaviour
         player_Item[N1] = N2;
     }
 
-    public int Get_Player_Money()
-    {
-        return player_Money;
-    }
-
-    public void Set_Player_Money(int N)
-    {
-        player_Money = N;
-    }
 }

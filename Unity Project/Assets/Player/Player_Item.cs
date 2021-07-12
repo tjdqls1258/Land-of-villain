@@ -164,4 +164,16 @@ public class Player_Item : MonoBehaviour
         }
         return false;
     }
+
+    private int player_Money = 0;
+
+    public int Get_Player_Money()
+    {
+        return player_Money;
+    }
+
+    public void Set_Player_Money(int N)
+    {
+        player_Money = N;
+    }
 }

@@ -19,7 +19,7 @@ public class Player_Stat : MonoBehaviour
     int LUC=0; //운(치명타)[5]
     */
     //위에 것같은 스탯을 배열로 다룸
-    private int[] P_State = new int[] { 100,100,10,5,5,0 };
+    private int[] P_State = new int[] { 100,100,10,5,5,0,0 };
     
     public void Set_P_State(int N1,int N2)
     { P_State[N1] = N2; }

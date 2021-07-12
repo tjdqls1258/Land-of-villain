@@ -35,6 +35,7 @@ public class Item_stats : MonoBehaviour
     //아이템 강화에 사용되는 함수
     public void reinforce()
     {
+        reinforce_add++;
         for(int i = 0; i< Item_stat.Length; i++) //임의로 모든 스텟 상승
         {
             Item_stat[i]+= reinforce_add;

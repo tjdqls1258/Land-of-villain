@@ -4,6 +4,12 @@ using UnityEngine;
 
 public class Player_Stat : MonoBehaviour
 {
+    public int N_Stages;
+
+    private void Awake()
+    {
+        N_Stages = 1;
+    }
     /*
     int MaxHP=100; //최대 체력[0]
     int HP=100; //체력[1]

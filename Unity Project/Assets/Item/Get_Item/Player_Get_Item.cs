@@ -79,7 +79,7 @@ public class Player_Get_Item : MonoBehaviour
     //Instantiate는 오브젝트를 생성하는 코드임. Instantiate(게임오브젝트,포지션,회전값)
     //현재 Instantiate(Item_Prefab에 있는 프리팹(게임오브젝트),플레이어의 위치,회전값 변경 없음)으로 만듦
     public void Creat_Drop_Item(string N)
-    { Instantiate(Resources.Load("Item_Prefab/" + N), transform.position, Quaternion.identity); }
+    { Instantiate(Resources.Load("Item/Item_Prefab/" + N), transform.position, Quaternion.identity); }
 
     //원래는 OnTriggerstay2D로 만들려 했으나 가만히 있으면 몇 프레임 동안만 호출하여 계속 움직여 줘야하는 문제가 생겨서 아래 코드로 제작
     public void Drop_Item()

@@ -36,10 +36,6 @@ public class Item_stats : MonoBehaviour
     public void reinforce()
     {
         reinforce_add++;
-        for(int i = 0; i< Item_stat.Length; i++) //임의로 모든 스텟 상승
-        {
-            Item_stat[i]+= reinforce_add;
-        }
     }
     //아이템의 이름을 반환하는 함수
     public string Get_Item_Name()

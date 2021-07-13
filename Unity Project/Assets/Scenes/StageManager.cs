@@ -8,6 +8,7 @@ public class StageManager : MonoBehaviour
     public GameObject Player;
     public List<GameObject> FoundObjects;
     public string stage;
+    [SerializeField] private GameObject Player_die_UI;
 
     private int monsternum;
     private bool scenechanger = false;
@@ -98,6 +99,10 @@ public class StageManager : MonoBehaviour
                 SceneManager.LoadScene(stage);
                 scenechanger = true;
             }
+            if(Player.GetComponent<Player_Stat>().Get_P_State(1) <= 0)
+            {
+                Player_die_UI.SetActive(true);
+            }
         }
     }
 
@@ -118,5 +123,19 @@ public class StageManager : MonoBehaviour
     public void monsterdead()
     {
         monsternum -= 1;
+    }
+
+    public void ReturnToStart()
+    {
+        SceneManager.LoadScene("Start_Secen");
+        Destroy(Player.gameObject);
+        Player_die_UI.SetActive(false);
+    }
+
+    public void Restart()
+    {
+        SceneManager.LoadScene("TestSecen");
+        Destroy(Player.gameObject);
+        Player_die_UI.SetActive(false);
     }
 }

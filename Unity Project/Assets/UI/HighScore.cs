@@ -9,14 +9,15 @@ public class HighScore : MonoBehaviour
     Player_Stat player_stat;
 
     // Start is called before the first frame update
-    void Start()
+    void Awake()
     {
-        
+        Highscoretext = gameObject.GetComponent<Text>();
+        player_stat = GameObject.Find("Player").GetComponent<Player_Stat>();
     }
 
     // Update is called once per frame
     void Update()
     {
-        Highscoretext.text = player_stat.GetComponent<Player_Stat>().N_Stages.ToString();
+        Highscoretext.text = "HighScore : " + player_stat.N_Stages.ToString() + " stage";
     }
 }

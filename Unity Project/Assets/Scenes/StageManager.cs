@@ -8,7 +8,7 @@ public class StageManager : MonoBehaviour
     public GameObject Player;
     public List<GameObject> FoundObjects;
     public string stage;
-    [SerializeField] private GameObject Player_die_UI;
+    public GameObject Player_die_UI;
 
     private int monsternum;
     private bool scenechanger = false;
@@ -112,6 +112,7 @@ public class StageManager : MonoBehaviour
     }
     private void OnSceneLoaded(Scene scene, LoadSceneMode mode)
     {
+        Player_die_UI = Player.transform.FindChild("Play_UI").transform.FindChild("Player_die_UI").gameObject;
         isgate = false;
         scenechanger = false;
     }

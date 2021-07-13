@@ -6,9 +6,9 @@ using UnityEngine.SceneManagement;
 public class StageManager : MonoBehaviour
 {
     public GameObject Player;
-    public List<GameObject> FoundObjects;
-    public string stage;
     public GameObject Player_die_UI;
+    public List<GameObject> FoundObjects;
+    public string stage;   
 
     private int monsternum;
     private bool scenechanger = false;
@@ -35,6 +35,7 @@ public class StageManager : MonoBehaviour
         FoundObjects = new List<GameObject>(GameObject.FindGameObjectsWithTag("Monster"));
         monsternum = FoundObjects.Count;
         Player.GetComponent<SkillCooldown>().Load_New_Stage();
+        Player_die_UI = Player.transform.Find("Play_UI").transform.Find("Player_die_UI").gameObject;
     }
 
     void Spawn()
@@ -111,8 +112,7 @@ public class StageManager : MonoBehaviour
         SceneManager.sceneLoaded += OnSceneLoaded;
     }
     private void OnSceneLoaded(Scene scene, LoadSceneMode mode)
-    {
-        Player_die_UI = Player.transform.FindChild("Play_UI").transform.FindChild("Player_die_UI").gameObject;
+    {     
         isgate = false;
         scenechanger = false;
     }

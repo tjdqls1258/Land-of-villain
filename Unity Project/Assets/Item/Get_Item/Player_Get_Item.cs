@@ -5,7 +5,8 @@ using UnityEngine;
 public class Player_Get_Item : MonoBehaviour
 {   //플레이어의 아이템 정보를 가져오기 위해 필요
     Player_Equipment PE;
-    
+    Player_Item PI;
+
     //아이템의 정보를 사용하기 위해 필요.
     Item_stats IS;
     //드롭아이템을 가지고 있을 게임오브젝트
@@ -22,6 +23,7 @@ public class Player_Get_Item : MonoBehaviour
     void Start()
     {   //플레이어의 아이템 정보
         PE = GetComponent<Player_Equipment>();
+        PI = GetComponent<Player_Item>();
     }
 
     // Update is called once per frame
@@ -41,7 +43,7 @@ public class Player_Get_Item : MonoBehaviour
             //충돌을 Drop_Item에서 확인 하기 위한 변수
             Item_Check = true;
         }
-        else if (coll.gameObject.CompareTag("Money"))
+        else if (coll.tag == "Money")
         {   //Money_Stats 받아오기
             MS = coll.GetComponent<Money_Stats>();
             //돈 습득시 게임오브젝트를 삭제를 위한 할당
@@ -49,14 +51,14 @@ public class Player_Get_Item : MonoBehaviour
 
             //가치가 동화일 경우. 기존 소지금에 1을 더해줌
             if (MS.Get_Money_Value() == 0)
-            { PE.Set_Player_Money(PE.Get_Player_Money() + 1); }
+            { PI.Set_Player_Money(PI.Get_Player_Money() + 1); }
             else if (MS.Get_Money_Value() == 1)//가치가 은화일 경우. 기존 소지금에 10을 더해줌
-            { PE.Set_Player_Money(PE.Get_Player_Money() + 10); }
+            { PI.Set_Player_Money(PI.Get_Player_Money() + 10); }
             else if (MS.Get_Money_Value() == 2)//가치가 금화일 경우. 기존 소지금에 100을 더해줌.
-            { PE.Set_Player_Money(PE.Get_Player_Money() + 100); }
+            { PI.Set_Player_Money(PI.Get_Player_Money() + 100); }
             //돈 오브젝트 삭제
             Destroy(DM.gameObject);
-            Debug.Log(PE.Get_Player_Money());
+            Debug.Log(PI.Get_Player_Money());
             //초기화
             MS = null;
             DM = null;
@@ -87,21 +89,27 @@ public class Player_Get_Item : MonoBehaviour
 
         if (Item_Check == true && Input.GetKeyDown(KeyCode.D) == true)
         {   //주우려는 장비 아이템의 종류와 플레이어의 아이템의 종류가 같고 장비가 없을 시
-            if (PE.Get_Player_Item(IS.Get_Item_Kind()) == "NONE")
+            if (PI.Get_Player_Item(IS.Get_Item_Kind()) == "NONE")
             {
                 //플레이어의 아이템의 장비에 맞춰 플레이어 장비에 이름을 할당해줌.
-                PE.Set_Player_Item(IS.Get_Item_Kind(), IS.Get_Item_Name());
+                PI.Set_Player_Item(IS.Get_Item_Kind(), IS.Get_Item_Name());
                 Destroy(DI.gameObject);//그리고 주운 아이템 파괴 처리
 
             }
-            else if (PE.Get_Player_Item(IS.Get_Item_Kind()) != "NONE")//플레이어가 아이템을 가지고 있었다면.
+            else if (PI.Get_Player_Item(IS.Get_Item_Kind()) != "NONE")//플레이어가 아이템을 가지고 있었다면.
             {
-                //플레이어가 가지고 있던 아이템 프리팹을 생성
-                Creat_Drop_Item(PE.Get_Player_Item(IS.Get_Item_Kind()));
-                //플레이어의 아이템의 장비에 맞춰 플레이어 장비에 이름을 할당해줌.
-                PE.Set_Player_Item(IS.Get_Item_Kind(), IS.Get_Item_Name());
-                Destroy(DI.gameObject);//그리고 주운 아이템 파괴 처리
-
+                if (PI.아이템_강화(IS.Get_Item_Kind(), IS.Item_Name))
+                {
+                    Destroy(DI.gameObject);//그리고 주운 아이템 파괴 처리
+                }
+                else
+                {
+                    //플레이어가 가지고 있던 아이템 프리팹을 생성
+                    Creat_Drop_Item(PI.Get_Player_Item(IS.Get_Item_Kind()));
+                    //플레이어의 아이템의 장비에 맞춰 플레이어 장비에 이름을 할당해줌.
+                    PI.Set_Player_Item(IS.Get_Item_Kind(), IS.Get_Item_Name());
+                    Destroy(DI.gameObject);//그리고 주운 아이템 파괴 처리
+                }
 
             }
 

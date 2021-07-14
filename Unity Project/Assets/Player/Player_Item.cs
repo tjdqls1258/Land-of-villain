@@ -86,7 +86,7 @@ public class Player_Item : MonoBehaviour
             {
                 case 0:
                     Weapon.GetComponent<Item_stats>().reinforce();
-                    Debug.Log("무기강화");
+                    //무기 승급
                     if((Weapon.GetComponent<Item_stats>().Item_stat[0] > 10) &&(Weapon.GetComponent<Item_stats>().tear < 2))
                     {
                         string Next_item = "";
@@ -105,7 +105,7 @@ public class Player_Item : MonoBehaviour
                     return true;
                 case 1:
                     Armor.GetComponent<Item_stats>().reinforce();
-                    Debug.Log("아머강화");
+                    //아머 승급
                     if ((Armor.GetComponent<Item_stats>().Item_stat[0] > 10) &&((Armor.GetComponent<Item_stats>().tear < 2)))
                     {
                         string Next_item = "";
@@ -123,7 +123,7 @@ public class Player_Item : MonoBehaviour
                     return true;
                 case 2:
                     Hat.GetComponent<Item_stats>().reinforce();
-                    Debug.Log("모자강화");
+                    //모자 승급
                     if ((Hat.GetComponent<Item_stats>().Item_stat[0] > 10) && ((Hat.GetComponent<Item_stats>().tear < 2)))
                     {
                         string Next_item = "";
@@ -141,7 +141,7 @@ public class Player_Item : MonoBehaviour
                     return true;
                 case 3:
                     Ring.GetComponent<Item_stats>().reinforce();
-                    Debug.Log("반지강화");
+                    //반지 승급
                     if ((Ring.GetComponent<Item_stats>().Item_stat[0] > 10) && ((Ring.GetComponent<Item_stats>().tear < 2)))
                     {
                         string Next_item = "";

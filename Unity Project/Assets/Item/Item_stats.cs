@@ -16,7 +16,7 @@ public class Item_stats : MonoBehaviour
     // 4 = 민첩
     // 5 = 운
     // 그 이상 부가 스텟
-
+    public bool meeleatk;//근접공격여부를 정하는 변수, 근접무기에 true선언하면됨
 
     public string skill_number; // 스킬 이름
     public Skill skill;  //보유 스킬

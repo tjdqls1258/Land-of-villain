@@ -11,7 +11,7 @@ public class SkillCooldown : MonoBehaviour
     bool helmetskilldelay = false;
     bool acceskilldelay = false;
 
-    bool ismeele = false;
+    bool ismeele;
 
     public List<GameObject> FoundObjects;
     public float shortDis;
@@ -47,7 +47,7 @@ public class SkillCooldown : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
+        ismeele = GetComponent<Player_Item>().Weapon.GetComponent<Item_stats>().meeleatk;
     }
 
     #region 스테이지 넘어갈때마다 몬스터 검색

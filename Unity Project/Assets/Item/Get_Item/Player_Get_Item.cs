@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class Player_Get_Item : MonoBehaviour
 {   //플레이어의 아이템 정보를 가져오기 위해 필요
-    Player_Equipment PE;
+    Player_Item PE;
     //Player_Item PI;
 
     //아이템의 정보를 사용하기 위해 필요.
@@ -22,7 +22,7 @@ public class Player_Get_Item : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {   //플레이어의 아이템 정보
-        PE = GetComponent<Player_Equipment>();
+        PE = GetComponent<Player_Item>();
         //PI = GetComponent<Player_Item>();
     }
 
@@ -98,11 +98,18 @@ public class Player_Get_Item : MonoBehaviour
             }
             else if (PE.Get_Player_Item(IS.Get_Item_Kind()) != "NONE")//플레이어가 아이템을 가지고 있었다면.
             {
+                if (PE.아이템_강화(IS.Get_Item_Kind(), IS.Item_Name))
+                {
+                    Destroy(DI.gameObject);//그리고 주운 아이템 파괴 처리
+                }
+                else
+                {
                     //플레이어가 가지고 있던 아이템 프리팹을 생성
                     Creat_Drop_Item(PE.Get_Player_Item(IS.Get_Item_Kind()));
                     //플레이어의 아이템의 장비에 맞춰 플레이어 장비에 이름을 할당해줌.
                     PE.Set_Player_Item(IS.Get_Item_Kind(), IS.Get_Item_Name());
                     Destroy(DI.gameObject);//그리고 주운 아이템 파괴 처리
+                }
                 
 
             }

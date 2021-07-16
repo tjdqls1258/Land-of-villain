@@ -32,7 +32,7 @@ public class Item_Shop : MonoBehaviour
 
     private bool[] Item_Buy = new bool[4] { false,false,false,false };
     //플레이어들의 돈을 가져오기 위해.
-    Player_Equipment PE;
+    Player_Item PE;
     //플레이어의 위치에 아이템을 떨구기 위해.
     GameObject PT;
     // Start is called before the first frame update
@@ -65,7 +65,7 @@ public class Item_Shop : MonoBehaviour
         Button_Text[3] = BS[3].transform.GetChild(0).GetComponent<Text>();
 
         //플레이어의 돈을 가져오기 위해 사용(오브젝트의 이름을 찾아 스크립트를 가져온다.)
-        PE = GameObject.Find("Player").GetComponent<Player_Equipment>();
+        PE = GameObject.Find("Player").GetComponent<Player_Item>();
         //플레이어의 위치를 사용하기 위해.
         PT = GameObject.Find("Player");
     }

@@ -12,17 +12,32 @@ public class Item_List
     //Epic 아이템 이름.(희귀한 아이템)
     private string[,] E_Item = new string[,] { { "Gold_Sword", "NONE" }, { "Gold_Armor", "NONE" }, { "Gold_Hat", "NONE" }, { "Gold_Ring", "NONE" } };
 
-
-    public string[,] Get_N_Item()
+    //아이템 리스트 자체를 불러옴(ex)아이템의 갯수를 잴 때?)
+    public string[,] Get_N_Item_List()
     {
         return N_Item;
     }
-    public string[,] Get_R_Item()
+    public string[,] Get_R_Item_List()
     {
         return R_Item;
     }
-    public string[,] Get_E_Item()
+    public string[,] Get_E_Item_List()
     {
         return E_Item;
+    }
+    //아이템의 이름을 불러옴
+    public string Get_N_Item_Name(int N1,int N2)
+    {
+        return N_Item[N1, N2] ;
+    }
+
+    public string Get_R_Item_Name(int N1,int N2)
+    {
+        return R_Item[N1,N2];
+    }
+
+    public string Get_E_Item_Name(int N1,int N2)
+    {
+        return E_Item[N1,N2];
     }
 }

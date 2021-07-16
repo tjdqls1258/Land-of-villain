@@ -4,7 +4,8 @@ using UnityEngine;
 
 public class Player_Get_Item : MonoBehaviour
 {   //플레이어의 아이템 정보를 가져오기 위해 필요
-    Player_Item PI;
+    Player_Equipment PE;
+    //Player_Item PI;
 
     //아이템의 정보를 사용하기 위해 필요.
     Item_stats IS;
@@ -18,14 +19,11 @@ public class Player_Get_Item : MonoBehaviour
 
     //아이템이 충돌 됬는지 체크하는 변수
     bool Item_Check = false;
-
-    //플레이어가 아이템을 먹을지 안먹을지 판단하는 변수
-    bool Take_Item = false;
-
     // Start is called before the first frame update
     void Start()
     {   //플레이어의 아이템 정보
-        PI = GetComponent<Player_Item>();
+        PE = GetComponent<Player_Equipment>();
+        //PI = GetComponent<Player_Item>();
     }
 
     // Update is called once per frame
@@ -53,14 +51,14 @@ public class Player_Get_Item : MonoBehaviour
 
             //가치가 동화일 경우. 기존 소지금에 1을 더해줌
             if (MS.Get_Money_Value() == 0)
-            { PI.Set_Player_Money(PI.Get_Player_Money() + 1); }
+            { PE.Set_Player_Money(PE.Get_Player_Money() + 1); }
             else if (MS.Get_Money_Value() == 1)//가치가 은화일 경우. 기존 소지금에 10을 더해줌
-            { PI.Set_Player_Money(PI.Get_Player_Money() + 10); }
+            { PE.Set_Player_Money(PE.Get_Player_Money() + 10); }
             else if (MS.Get_Money_Value() == 2)//가치가 금화일 경우. 기존 소지금에 100을 더해줌.
-            { PI.Set_Player_Money(PI.Get_Player_Money() + 100); }
+            { PE.Set_Player_Money(PE.Get_Player_Money() + 100); }
             //돈 오브젝트 삭제
             Destroy(DM.gameObject);
-            Debug.Log(PI.Get_Player_Money());
+            Debug.Log(PE.Get_Player_Money());
             //초기화
             MS = null;
             DM = null;
@@ -77,11 +75,7 @@ public class Player_Get_Item : MonoBehaviour
             Item_Check = false;
         }
     }
-    public void Take_Item_this()
-    {
-        //버튼 이벤트로 교체
-        Take_Item = true;
-    }
+
     //참고로 이 함수는 아이템을 드랍하는(생성하는) 코드이기 때문에 몬스터를 죽이거나,보물방에서 아이템을 드랍하는 식으로 응용할 수 있음,
     //코드를 설명하자면 N에 들어가는 내용이 아이템의 이름임.
     //Instantiate는 오브젝트를 생성하는 코드임. Instantiate(게임오브젝트,포지션,회전값)
@@ -93,33 +87,26 @@ public class Player_Get_Item : MonoBehaviour
     public void Drop_Item()
     {
 
-        if (Item_Check == true && Take_Item == true)
+        if (Item_Check == true && Input.GetKeyDown(KeyCode.D) == true)
         {   //주우려는 장비 아이템의 종류와 플레이어의 아이템의 종류가 같고 장비가 없을 시
-            if (PI.Get_Player_Item(IS.Get_Item_Kind()) == "NONE")
+            if (PE.Get_Player_Item(IS.Get_Item_Kind()) == "NONE")
             {
                 //플레이어의 아이템의 장비에 맞춰 플레이어 장비에 이름을 할당해줌.
-                PI.Set_Player_Item(IS.Get_Item_Kind(), IS.Get_Item_Name());
+                PE.Set_Player_Item(IS.Get_Item_Kind(), IS.Get_Item_Name());
                 Destroy(DI.gameObject);//그리고 주운 아이템 파괴 처리
 
             }
-            else if (PI.Get_Player_Item(IS.Get_Item_Kind()) != "NONE")//플레이어가 아이템을 가지고 있었다면.
+            else if (PE.Get_Player_Item(IS.Get_Item_Kind()) != "NONE")//플레이어가 아이템을 가지고 있었다면.
             {
-                if (PI.아이템_강화(IS.Get_Item_Kind(), IS.Item_Name))
-                {
-                    Destroy(DI.gameObject);//그리고 주운 아이템 파괴 처리
-                }
-                else
-                {
                     //플레이어가 가지고 있던 아이템 프리팹을 생성
-                    Creat_Drop_Item(PI.Get_Player_Item(IS.Get_Item_Kind()));
+                    Creat_Drop_Item(PE.Get_Player_Item(IS.Get_Item_Kind()));
                     //플레이어의 아이템의 장비에 맞춰 플레이어 장비에 이름을 할당해줌.
-                    PI.Set_Player_Item(IS.Get_Item_Kind(), IS.Get_Item_Name());
+                    PE.Set_Player_Item(IS.Get_Item_Kind(), IS.Get_Item_Name());
                     Destroy(DI.gameObject);//그리고 주운 아이템 파괴 처리
-                }
-
+                
 
             }
-            Take_Item = false;
+
         }
     }
 }

@@ -27,7 +27,7 @@ public class Move_monster : MonoBehaviour
         }
         if (!GameManager.isPause)
         {
-            LookAt_Player();
+            //LookAt_Player();
             move();
         }
     }

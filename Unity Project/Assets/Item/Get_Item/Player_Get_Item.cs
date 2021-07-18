@@ -29,8 +29,6 @@ public class Player_Get_Item : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-
-        Drop_Item();
     }
   
     private void OnTriggerEnter2D(Collider2D coll)
@@ -87,7 +85,7 @@ public class Player_Get_Item : MonoBehaviour
     public void Drop_Item()
     {
 
-        if (Item_Check == true && Input.GetKeyDown(KeyCode.D) == true)
+        if (Item_Check == true)
         {   //주우려는 장비 아이템의 종류와 플레이어의 아이템의 종류가 같고 장비가 없을 시
             if (PE.Get_Player_Item(IS.Get_Item_Kind()) == "NONE")
             {

@@ -2368,7 +2368,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 2969960813858965943}
-        m_MethodName: Take_Item_this
+        m_MethodName: Drop_Item
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -2657,7 +2657,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 10913, guid: 0000000000000000f000000000000000, type: 0}
+  m_Sprite: {fileID: 21300000, guid: 790c89dec5513f94ea26d549f6d71f70, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -4532,9 +4532,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 81aa808abc9ca8f4e801d5e7df513c3a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Player: {fileID: 2012668314}
+  Player: {fileID: 8747877978991524226, guid: 92d273cf0eade2743b705dff6d3d5c6b, type: 3}
   FoundObjects: []
-  stage: TestSecen_lv2
+  stage: TestSecen
   Gate: {fileID: 1361088879153880688, guid: 2d74d104ce57ce64eb004b02be3d752d, type: 3}
   clear: 0
   Monster_Prefabs:

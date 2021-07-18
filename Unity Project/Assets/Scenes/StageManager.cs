@@ -6,7 +6,6 @@ using UnityEngine.SceneManagement;
 public class StageManager : MonoBehaviour
 {
     public GameObject Player;
-    public GameObject Player_die_UI;
     public List<GameObject> FoundObjects;
     public string stage;   
 
@@ -34,8 +33,7 @@ public class StageManager : MonoBehaviour
         }
         FoundObjects = new List<GameObject>(GameObject.FindGameObjectsWithTag("Monster"));
         monsternum = FoundObjects.Count;
-        Player.GetComponent<SkillCooldown>().Load_New_Stage();
-        Player_die_UI = Player.transform.Find("Play_UI").transform.Find("Player_die_UI").gameObject;
+        Player.GetComponent<SkillCooldown>().Load_New_Stage();      
     }
 
     void Spawn()
@@ -100,10 +98,6 @@ public class StageManager : MonoBehaviour
                 SceneManager.LoadScene(stage);
                 scenechanger = true;
             }
-            if(Player.GetComponent<Player_Stat>().Get_P_State(1) <= 0)
-            {
-                Player_die_UI.SetActive(true);
-            }
         }
     }
 
@@ -124,19 +118,5 @@ public class StageManager : MonoBehaviour
     public void monsterdead()
     {
         monsternum -= 1;
-    }
-
-    public void ReturnToStart()
-    {
-        SceneManager.LoadScene("Start_Secen");
-        Destroy(Player.gameObject);
-        Player_die_UI.SetActive(false);
-    }
-
-    public void Restart()
-    {
-        SceneManager.LoadScene("TestSecen");
-        Destroy(Player.gameObject);
-        Player_die_UI.SetActive(false);
     }
 }

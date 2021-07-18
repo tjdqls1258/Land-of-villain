@@ -2497,7 +2497,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1971951786}
+      - m_Target: {fileID: 2012668322}
         m_MethodName: ReturnToStart
         m_Mode: 1
         m_Arguments:
@@ -4249,7 +4249,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1971951786}
+      - m_Target: {fileID: 2012668322}
         m_MethodName: Restart
         m_Mode: 1
         m_Arguments:
@@ -4533,7 +4533,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Player: {fileID: 2012668314}
-  Player_die_UI: {fileID: 761847885}
   FoundObjects: []
   stage: TestSecen_lv2
   Gate: {fileID: 1361088879153880688, guid: 2d74d104ce57ce64eb004b02be3d752d, type: 3}
@@ -4737,6 +4736,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   damage: 5
   Player: {fileID: 2012668314}
+  Player_die_UI: {fileID: 761847885}
   isclear: 0
 --- !u!114 &2012668323
 MonoBehaviour:

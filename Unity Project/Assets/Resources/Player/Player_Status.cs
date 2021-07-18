@@ -13,22 +13,23 @@ public class Player_Status : MonoBehaviour
 
     public bool isclear = false;
     private bool isinvincible = false;
+    public static Player_Status Instance;
 
-    // Start is called before the first frame update
-    void Start()
-    {
-        DontDestroyOnLoad(gameObject);
-    }
     private void Awake()
     {
+        if (Instance != null)
+        {
+            Destroy(gameObject);
+            return;
+        }
+
+        Instance = this;
+        DontDestroyOnLoad(gameObject);
         Player_Status.healthMax = 100;
         Player_Status.health = 100;
     }
-    // Update is called once per frame
-    void Update()
-    {
 
-    }
+    // Update is called once per frame
 
     void Get_damange(int damage)
     {

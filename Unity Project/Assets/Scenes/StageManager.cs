@@ -24,7 +24,13 @@ public class StageManager : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        
         Player = GameObject.Find("Player");
+        if(Player == null)
+        {
+            Player = (GameObject)Resources.Load("Player/Player");
+            Instantiate(Player, Vector3.zero, Quaternion.identity);
+        }
         Monster_Many = Random.Range(3, 25);
 
         for(int i= 0; i< Monster_Many; ++i)
@@ -33,7 +39,7 @@ public class StageManager : MonoBehaviour
         }
         FoundObjects = new List<GameObject>(GameObject.FindGameObjectsWithTag("Monster"));
         monsternum = FoundObjects.Count;
-        Player.GetComponent<SkillCooldown>().Load_New_Stage();      
+        Player.GetComponent<SkillCooldown>().Load_New_Stage();       
     }
 
     void Spawn()

@@ -9,7 +9,7 @@ public class Player_Status : MonoBehaviour
     public static int health = 100;     // 플레이어 캐릭터의 현재 체력을 저장할 정수형 변수
     public int damage;
     public GameObject Player;
-    //[SerializeField] private GameObject Player_die_UI;
+    [SerializeField] private GameObject Player_die_UI;
 
     public bool isclear = false;
     private bool isinvincible = false;
@@ -36,7 +36,7 @@ public class Player_Status : MonoBehaviour
         Player.GetComponent<Player_Stat>().Set_P_State(1, Setting_Hp);
         if (Player.GetComponent<Player_Stat>().Get_P_State(1) <= 0) //체력 0 되면 사망
         {
-            
+            Player_die_UI.SetActive(true);
         }
     }
 
@@ -89,5 +89,21 @@ public class Player_Status : MonoBehaviour
     {     
         yield return new WaitForSeconds(0.1f);
         isinvincible = false;
+    }
+
+    public void ReturnToStart()
+    {
+        SceneManager.LoadScene("Start_Secen");
+        Destroy(Player.gameObject);
+        Player_die_UI.SetActive(false);
+        Debug.Log("load start");
+    }
+
+    public void Restart()
+    {
+        SceneManager.LoadScene("TestSecen");
+        Destroy(Player.gameObject);
+        Player_die_UI.SetActive(false);
+        Debug.Log("restart test");
     }
 }

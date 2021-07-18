@@ -12,8 +12,13 @@ public class Move_monster : MonoBehaviour
     private Rigidbody2D rigid;
     private GameObject Player;
 
+    Animator animator;
+    SpriteRenderer rend;
+    float angle;
     void Awake()
     {
+        rend = GetComponent<SpriteRenderer>();
+        animator = GetComponent<Animator>();
         Player = GameObject.Find("Player");
         rigid = GetComponent<Rigidbody2D>();
     }
@@ -27,7 +32,8 @@ public class Move_monster : MonoBehaviour
         }
         if (!GameManager.isPause)
         {
-            //LookAt_Player();
+            LookAt_Player();
+            Set_Ainmate();
             move();
         }
     }
@@ -46,14 +52,43 @@ public class Move_monster : MonoBehaviour
             //트렌스폼 찾으면 플레이어를 바라보는 벡터구함.
         }
 
-        float angle = Mathf.Atan2(vec.y, vec.x) * Mathf.Rad2Deg; //y와 x의 좌표를 탄젠트해서 각도를 구함
+        angle = Mathf.Atan2(vec.y, vec.x) * Mathf.Rad2Deg; //y와 x의 좌표를 탄젠트해서 각도를 구함
         Quaternion angleAxis = Quaternion.AngleAxis(angle - 90f, Vector3.forward); //회전할 Z축 각도 저장
-        Quaternion rotation = Quaternion.Slerp(transform.rotation, angleAxis, rotateSpeed * Time.deltaTime);
-        //회전 속도
-
-        transform.rotation = rotation; // 회전
     }
+    void Set_Ainmate()
+    {
+        float taget_see_angle = angle + 180.0f;
+        Debug.Log(taget_see_angle);
+        if ((taget_see_angle <= 45.0f) || (taget_see_angle > 315.0f))
+        {
+            animator.SetBool("Back", false);
+            animator.SetBool("Foward", false);
+            animator.SetBool("Right", true);
+            rend.flipX = true;
+        }
+        if ((taget_see_angle > 45.0f) && (taget_see_angle <= 135.0f))
+        {
+            animator.SetBool("Back", false);
+            animator.SetBool("Foward", true);
+            animator.SetBool("Right", false);
+            rend.flipX = false;
+        }
+        if ((taget_see_angle > 135.0f) && (taget_see_angle <= 225.0f))
+        {
+            animator.SetBool("Back", false);
+            animator.SetBool("Foward", false);
+            animator.SetBool("Right", true);
+            rend.flipX = false;
+        }
+        if ((taget_see_angle > 225.0f) && (taget_see_angle <= 315.0f))
+        {
+            animator.SetBool("Back", true);
+            animator.SetBool("Foward", false);
+            animator.SetBool("Right", false);
+            rend.flipX = false;
 
+        }
+    }
     void move()
     {
         //플레이어한테 이동

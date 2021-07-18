@@ -108,6 +108,7 @@ public class Move_Monster_2 : MonoBehaviour
             animator.SetBool("Back", false);
             animator.SetBool("Foward", true);
             animator.SetBool("Right", false);
+            rend.flipX = false;
         }
         if ((taget_see_angle > 135.0f) && (taget_see_angle <= 225.0f))
         {
@@ -121,7 +122,8 @@ public class Move_Monster_2 : MonoBehaviour
             animator.SetBool("Back", true);
             animator.SetBool("Foward", false);
             animator.SetBool("Right", false);
-            
+            rend.flipX = false;
+
         }
     }
 }

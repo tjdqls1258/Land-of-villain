@@ -10,6 +10,7 @@ public class SkillCooldown : MonoBehaviour
     bool armorskilldelay = false;
     bool helmetskilldelay = false;
     bool acceskilldelay = false;
+    public bool isdash = false;
 
     bool ismeele;
 
@@ -167,6 +168,20 @@ public class SkillCooldown : MonoBehaviour
             Debug.Log("acceskill cooltime");
         }
     }
+
+    public void DashSkill()
+    {
+        if (!isdash)
+        {
+            isdash = true;          
+            StartCoroutine("Dash");
+            Debug.Log("dash success");
+        }
+        else
+        {
+            Debug.Log("dash cooltime");
+        }
+    }
     #endregion
 
     #region cooldown coroutine
@@ -264,6 +279,19 @@ public class SkillCooldown : MonoBehaviour
             yield return new WaitForFixedUpdate();
         }
         acceskilldelay = false;
+    }
+
+    IEnumerator Dash()
+    {
+        //float Cool_Dwon = acc_CoolTime;
+        //while (Cool_Dwon >= 0.0f)
+        //{
+        //    img_acc_Cool.fillAmount = (Cool_Dwon / acc_CoolTime);
+        //    Cool_Dwon -= Time.deltaTime;
+        //    yield return new WaitForFixedUpdate();
+        //}
+        yield return new WaitForSeconds(0.3f);
+        isdash = false;
     }
     #endregion
 }

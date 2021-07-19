@@ -22,6 +22,8 @@ public class Item_stats : MonoBehaviour
     public Skill skill;  //보유 스킬
     public float CoolTime;//스킬 쿨타임
 
+    GameObject player_s;
+
     public int reinforce_add; //강화 수치
     public void Awake()
     {
@@ -31,6 +33,24 @@ public class Item_stats : MonoBehaviour
     public void Skill_Set()
     {
         this.skill = (Skill)Resources.Load("Skill/Skill_List/" + skill_number, typeof(Skill));
+    }
+    public void Add_Stat()
+    {
+        player_s = GameObject.Find("Player");
+        player_s.GetComponent<Player_Stat>().Add_P_State(0, Item_stat[1]);
+        for (int i = 1; i < Item_stat.Length; i++)
+        {
+            player_s.GetComponent<Player_Stat>().Add_P_State(i, Item_stat[i]);
+        }
+    }
+    public void Delete_Stat()
+    {
+        player_s = GameObject.Find("Player");
+        player_s.GetComponent<Player_Stat>().Miner_P_State(0, Item_stat[1]);
+        for (int i = 1; i < Item_stat.Length; i++)
+        {
+            player_s.GetComponent<Player_Stat>().Miner_P_State(i, Item_stat[i]);
+        }
     }
     //아이템 강화에 사용되는 함수
     public void reinforce()

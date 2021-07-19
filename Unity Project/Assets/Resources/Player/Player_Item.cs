@@ -17,6 +17,7 @@ public class Player_Item : MonoBehaviour
     {
         player_item[N1] = N2;
         Set_Item_Skills();
+        Change_item();
     }
     void Awake()
     {
@@ -37,18 +38,22 @@ public class Player_Item : MonoBehaviour
         {
             Ring.GetComponent<Item_stats>().Skill_Set();
             Ring.GetComponent<Item_stats>().skill.Skill_Action();
+            Ring.GetComponent<Item_stats>().Add_Stat();
         }
         if (Weapon != null)
         {
             Weapon.GetComponent<Item_stats>().Skill_Set();
+            Weapon.GetComponent<Item_stats>().Add_Stat();
         }
         if (Armor != null)
         {
             Armor.GetComponent<Item_stats>().Skill_Set();
+            Armor.GetComponent<Item_stats>().Add_Stat();
         }
         if (Hat != null)
         {
             Hat.GetComponent<Item_stats>().Skill_Set();
+            Hat.GetComponent<Item_stats>().Add_Stat();
         }
     }
 
@@ -61,6 +66,7 @@ public class Player_Item : MonoBehaviour
 
         if (Ring != null)
         {
+            Ring.GetComponent<Item_stats>().skill.Stop_Passive();
             Ring.GetComponent<Item_stats>().Skill_Set();
             Ring.GetComponent<Item_stats>().skill.Skill_Action();
         }
@@ -77,7 +83,18 @@ public class Player_Item : MonoBehaviour
             Hat.GetComponent<Item_stats>().Skill_Set();
         }
     }
+    public void Change_item()
+    {
+        Weapon.GetComponent<Item_stats>().Delete_Stat();
+        Armor.GetComponent<Item_stats>().Delete_Stat();
+        Hat.GetComponent<Item_stats>().Delete_Stat();
+        Ring.GetComponent<Item_stats>().Delete_Stat();
 
+        Weapon.GetComponent<Item_stats>().Add_Stat();
+        Armor.GetComponent<Item_stats>().Add_Stat();
+        Hat.GetComponent<Item_stats>().Add_Stat();
+        Ring.GetComponent<Item_stats>().Add_Stat();
+    }
     public bool 아이템_강화(int items, string item_name)
     {
         if(player_item[items] == item_name)

@@ -5,8 +5,6 @@ using UnityEngine.SceneManagement;
 
 public class Player_Status : MonoBehaviour
 {
-    public static int healthMax = 100;  // 플레이어 캐릭터의 최대 체력을 저장할 정수형 변수
-    public static int health = 100;     // 플레이어 캐릭터의 현재 체력을 저장할 정수형 변수
     public int damage;
     public GameObject Player;
     [SerializeField] private GameObject Player_die_UI;
@@ -25,8 +23,6 @@ public class Player_Status : MonoBehaviour
 
         Instance = this;
         DontDestroyOnLoad(gameObject);
-        Player_Status.healthMax = 100;
-        Player_Status.health = 100;
     }
 
     // Update is called once per frame

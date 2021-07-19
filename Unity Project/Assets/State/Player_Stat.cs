@@ -5,10 +5,11 @@ using UnityEngine;
 public class Player_Stat : MonoBehaviour
 {
     public int N_Stages;
-
+    Player_Item items;
     private void Awake()
     {
         N_Stages = 1;
+        items = this.GetComponent<Player_Item>();
     }
     /*
     int MaxHP=100; //최대 체력[0]
@@ -23,6 +24,10 @@ public class Player_Stat : MonoBehaviour
     
     public void Set_P_State(int N1,int N2)
     { P_State[N1] = N2; }
+    public void Add_P_State(int N1, int N2)
+    { P_State[N1] += N2; }
+    public void Miner_P_State(int N1, int N2)
+    { P_State[N1] -= N2; }
     public int Get_P_State(int N1)
     {
         return P_State[N1];

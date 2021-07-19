@@ -28,16 +28,15 @@ public class Movement2D : MonoBehaviour
         if(x>0 )
         {
             animator.SetBool("LR", true);
-            Debug.Log("오른쪽으로 이동");
             animator.SetBool("Back", false);
             animator.SetBool("Walk", false);
+            Debug.Log("오른쪽으로 이동");
             rend.flipX = false;
             if (y < -0.4)
             {
                 animator.SetBool("Walk", true);
                 animator.SetBool("Back", false);
                 animator.SetBool("LR", false);
-
                 Debug.Log("위로 이동");
 
             }
@@ -79,6 +78,14 @@ public class Movement2D : MonoBehaviour
             animator.SetBool("Back", false);
             animator.SetBool("LR", false);
             animator.SetBool("Walk", false);
+        }
+        if(GetComponent<SkillCooldown>().dashactive)
+        {
+            animator.SetBool("Dash", true);
+        }
+        if (!GetComponent<SkillCooldown>().dashactive)
+        {
+            animator.SetBool("Dash", false);
         }
         // 새로운 위치 = 현재 위치 + (방향 * 속도)
         transform.position += moveDirection * moveSpeed * Time.deltaTime;

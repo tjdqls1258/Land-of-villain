@@ -1,13 +1,17 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-
+using UnityEngine.UI;
 public class Player_Item : MonoBehaviour
 {
     string[] Items;
     Item item;
     public GameObject Weapon, Armor, Ring, Hat;
     private string[] player_item = new string[] { "NONE", "NONE", "NONE", "Copper_Ring" };
+
+    public Image skill1;
+    public Image skill2;
+    public Image skill3;
 
     public string Get_Player_Item(int N)
     {
@@ -17,7 +21,7 @@ public class Player_Item : MonoBehaviour
     {
         player_item[N1] = N2;
         Set_Item_Skills();
-        Change_item();
+        Change_item_state();
     }
     void Awake()
     {
@@ -39,21 +43,25 @@ public class Player_Item : MonoBehaviour
             Ring.GetComponent<Item_stats>().Skill_Set();
             Ring.GetComponent<Item_stats>().skill.Skill_Action();
             Ring.GetComponent<Item_stats>().Add_Stat();
+
         }
         if (Weapon != null)
         {
             Weapon.GetComponent<Item_stats>().Skill_Set();
             Weapon.GetComponent<Item_stats>().Add_Stat();
+            skill1.sprite = Weapon.GetComponent<SpriteRenderer>().sprite;
         }
         if (Armor != null)
         {
             Armor.GetComponent<Item_stats>().Skill_Set();
             Armor.GetComponent<Item_stats>().Add_Stat();
+            skill2.sprite = Armor.GetComponent<SpriteRenderer>().sprite;
         }
         if (Hat != null)
         {
             Hat.GetComponent<Item_stats>().Skill_Set();
             Hat.GetComponent<Item_stats>().Add_Stat();
+            skill3.sprite = Hat.GetComponent<SpriteRenderer>().sprite;
         }
     }
 
@@ -73,17 +81,20 @@ public class Player_Item : MonoBehaviour
         if (Weapon != null)
         {
             Weapon.GetComponent<Item_stats>().Skill_Set();
+            skill1.sprite = Weapon.GetComponent<SpriteRenderer>().sprite;
         }
         if (Armor != null)
         {
             Armor.GetComponent<Item_stats>().Skill_Set();
+            skill2.sprite = Armor.GetComponent<SpriteRenderer>().sprite;
         }
         if (Hat != null)
         {
             Hat.GetComponent<Item_stats>().Skill_Set();
+            skill3.sprite = Hat.GetComponent<SpriteRenderer>().sprite;
         }
     }
-    public void Change_item()
+    public void Change_item_state()
     {
         Weapon.GetComponent<Item_stats>().Delete_Stat();
         Armor.GetComponent<Item_stats>().Delete_Stat();
@@ -102,9 +113,11 @@ public class Player_Item : MonoBehaviour
             switch (items)
             {
                 case 0:
+                    Weapon.GetComponent<Item_stats>().Delete_Stat();
                     Weapon.GetComponent<Item_stats>().reinforce();
+                    Weapon.GetComponent<Item_stats>().Add_Stat();
                     //무기 승급
-                    if((Weapon.GetComponent<Item_stats>().Item_stat[0] > 10) &&(Weapon.GetComponent<Item_stats>().tear < 2))
+                    if ((Weapon.GetComponent<Item_stats>().Item_stat[0] > 10) &&(Weapon.GetComponent<Item_stats>().tear < 2))
                     {
                         string Next_item = "";
                         if(Weapon.GetComponent<Item_stats>().tear == 0)
@@ -117,11 +130,14 @@ public class Player_Item : MonoBehaviour
                         }
                         Weapon =(GameObject)Resources.Load("Item/Item_Prefab/"+ Next_item);
                         Weapon.GetComponent<Item_stats>().Skill_Set();
+                        Change_item_state();
                     }
                     
                     return true;
                 case 1:
+                    Armor.GetComponent<Item_stats>().Delete_Stat();
                     Armor.GetComponent<Item_stats>().reinforce();
+                    Armor.GetComponent<Item_stats>().Add_Stat();
                     //아머 승급
                     if ((Armor.GetComponent<Item_stats>().Item_stat[0] > 10) &&((Armor.GetComponent<Item_stats>().tear < 2)))
                     {
@@ -136,10 +152,13 @@ public class Player_Item : MonoBehaviour
                         }
                         Armor = (GameObject)Resources.Load("Item/Item_Prefab/" + Next_item);
                         Armor.GetComponent<Item_stats>().Skill_Set();
+                        Change_item_state();
                     }
                     return true;
                 case 2:
+                    Hat.GetComponent<Item_stats>().Delete_Stat();
                     Hat.GetComponent<Item_stats>().reinforce();
+                    Hat.GetComponent<Item_stats>().Add_Stat();
                     //모자 승급
                     if ((Hat.GetComponent<Item_stats>().Item_stat[0] > 10) && ((Hat.GetComponent<Item_stats>().tear < 2)))
                     {
@@ -154,10 +173,13 @@ public class Player_Item : MonoBehaviour
                         }
                         Hat = (GameObject)Resources.Load("Item/Item_Prefab/" + Next_item);
                         Hat.GetComponent<Item_stats>().Skill_Set();
+                        Change_item_state();
                     }
                     return true;
                 case 3:
+                    Ring.GetComponent<Item_stats>().Delete_Stat();
                     Ring.GetComponent<Item_stats>().reinforce();
+                    Ring.GetComponent<Item_stats>().Add_Stat();
                     //반지 승급
                     if ((Ring.GetComponent<Item_stats>().Item_stat[0] > 10) && ((Ring.GetComponent<Item_stats>().tear < 2)))
                     {
@@ -174,6 +196,7 @@ public class Player_Item : MonoBehaviour
                         Ring = (GameObject)Resources.Load("Item/Item_Prefab/" + Next_item);
                         Ring.GetComponent<Item_stats>().Skill_Set();
                         Ring.GetComponent<Item_stats>().skill.Skill_Action();
+                        Change_item_state();
                     }
                     return true;
             }

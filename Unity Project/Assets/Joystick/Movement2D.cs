@@ -6,7 +6,9 @@ using UnityEngine.SceneManagement;
 public class Movement2D : MonoBehaviour
 {
     public float moveSpeed;                         // 이동속도
-    private Vector3 moveDirection = Vector3.zero;   // 이동방향
+    private Vector3 moveDirection = Vector3.zero; // 이동방향
+    private float dashtimer = 0.0f;
+    private bool dashactive = false;
     Animator animator;
     SpriteRenderer rend;
 
@@ -20,15 +22,8 @@ public class Movement2D : MonoBehaviour
         float x = Joystick.inputDirection.x;        // 좌우 이동
         float y = Joystick.inputDirection.y;        // 상하 이동
 
-        if(GetComponent<SkillCooldown>().isdash)
-        {
-            x *= 2;
-            y *= 2;
-        }
-
         // 이동방향 설정
         moveDirection = new Vector3(x, y, 0);
-
         
         if(x>0 )
         {
@@ -90,7 +85,24 @@ public class Movement2D : MonoBehaviour
         transform.position = new Vector3(Mathf.Clamp(transform.position.x, -10.0f, 10.0f), Mathf.Clamp(transform.position.y, -10.0f, 10.0f), 0);
     }
 
-
+    public void dashActive()
+    {
+        if (GetComponent<SkillCooldown>().isdash)
+        {
+            dashactive = true;
+            moveSpeed *= 2;
+            dashtimer += Time.deltaTime;
+            if(dashtimer >= 1.0f && dashactive)
+            {
+                moveSpeed /= 2;
+                dashtimer = 0.0f;
+            }
+        }
+        if(!GetComponent<SkillCooldown>().isdash)
+        {
+            dashactive = false;
+        }
+    }
 
     void OnEnable()
     {

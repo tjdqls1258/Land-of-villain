@@ -172,8 +172,7 @@ public class SkillCooldown : MonoBehaviour
     public void DashSkill()
     {
         if (!isdash)
-        {
-            isdash = true;          
+        {         
             StartCoroutine("Dash");
             Debug.Log("dash success");
         }
@@ -290,7 +289,8 @@ public class SkillCooldown : MonoBehaviour
         //    Cool_Dwon -= Time.deltaTime;
         //    yield return new WaitForFixedUpdate();
         //}
-        yield return new WaitForSeconds(0.3f);
+        
+        yield return new WaitForSeconds(2.0f);
         isdash = false;
     }
     #endregion

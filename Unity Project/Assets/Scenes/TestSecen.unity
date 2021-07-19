@@ -5001,7 +5001,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7380e2396a3974f47853581410184a8f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  isdash: 0
+  dashactive: 0
   FoundObjects: []
   shortDis: 0
   Monsterpos: {x: 0, y: 0}

@@ -20,6 +20,12 @@ public class Movement2D : MonoBehaviour
         float x = Joystick.inputDirection.x;        // 좌우 이동
         float y = Joystick.inputDirection.y;        // 상하 이동
 
+        if(GetComponent<SkillCooldown>().isdash)
+        {
+            x *= 2;
+            y *= 2;
+        }
+
         // 이동방향 설정
         moveDirection = new Vector3(x, y, 0);
 
@@ -83,6 +89,8 @@ public class Movement2D : MonoBehaviour
         transform.position += moveDirection * moveSpeed * Time.deltaTime;
         transform.position = new Vector3(Mathf.Clamp(transform.position.x, -10.0f, 10.0f), Mathf.Clamp(transform.position.y, -10.0f, 10.0f), 0);
     }
+
+
 
     void OnEnable()
     {

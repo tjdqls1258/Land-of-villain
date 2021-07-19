@@ -10,7 +10,8 @@ public class SkillCooldown : MonoBehaviour
     bool armorskilldelay = false;
     bool helmetskilldelay = false;
     bool acceskilldelay = false;
-    public bool isdash = false;
+    bool isdash = false;
+    public bool dashactive = false;
 
     bool ismeele;
 
@@ -172,7 +173,10 @@ public class SkillCooldown : MonoBehaviour
     public void DashSkill()
     {
         if (!isdash)
-        {         
+        {
+            isdash = true;
+            dashactive = true;
+            GetComponent<Movement2D>().moveSpeed *= 2;
             StartCoroutine("Dash");
             Debug.Log("dash success");
         }
@@ -289,7 +293,9 @@ public class SkillCooldown : MonoBehaviour
         //    Cool_Dwon -= Time.deltaTime;
         //    yield return new WaitForFixedUpdate();
         //}
-        
+        yield return new WaitForSeconds(1.0f);
+        GetComponent<Movement2D>().moveSpeed /= 2;
+        dashactive = false;
         yield return new WaitForSeconds(2.0f);
         isdash = false;
     }

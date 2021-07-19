@@ -85,25 +85,6 @@ public class Movement2D : MonoBehaviour
         transform.position = new Vector3(Mathf.Clamp(transform.position.x, -10.0f, 10.0f), Mathf.Clamp(transform.position.y, -10.0f, 10.0f), 0);
     }
 
-    public void dashActive()
-    {
-        if (GetComponent<SkillCooldown>().isdash)
-        {
-            dashactive = true;
-            moveSpeed *= 2;
-            dashtimer += Time.deltaTime;
-            if(dashtimer >= 1.0f && dashactive)
-            {
-                moveSpeed /= 2;
-                dashtimer = 0.0f;
-            }
-        }
-        if(!GetComponent<SkillCooldown>().isdash)
-        {
-            dashactive = false;
-        }
-    }
-
     void OnEnable()
     {
         SceneManager.sceneLoaded += OnSceneLoaded;

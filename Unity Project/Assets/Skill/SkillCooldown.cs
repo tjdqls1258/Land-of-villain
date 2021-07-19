@@ -224,17 +224,17 @@ public class SkillCooldown : MonoBehaviour
         Debug.Log("shoot");
         atkdelay = false;
     }
-    IEnumerator MeeleAttacktime()
-    {
-        float Cool_Dwon = mel_ATK;
-        while (Cool_Dwon >= 0.0f)
-        {
-            img_ATK.fillAmount = (Cool_Dwon / mel_ATK);
-            Cool_Dwon -= Time.deltaTime;
-            yield return new WaitForFixedUpdate();
-        }
-        yield return new WaitForSeconds(0.1f);
-    }
+    //IEnumerator MeeleAttacktime()
+    //{
+    //    float Cool_Dwon = mel_ATK;
+    //    while (Cool_Dwon >= 0.0f)
+    //    {
+    //        img_ATK.fillAmount = (Cool_Dwon / mel_ATK);
+    //        Cool_Dwon -= Time.deltaTime;
+    //        yield return new WaitForFixedUpdate();
+    //    }
+    //    yield return new WaitForSeconds(0.1f);
+    //}
 
     IEnumerator WeaponSkill()
     {

@@ -23,7 +23,7 @@ public class Player_Get_Item : MonoBehaviour
     void Start()
     {   //플레이어의 아이템 정보
         PE = GetComponent<Player_Item>();
-        //PI = GetComponent<Player_Item>();
+     
     }
 
     // Update is called once per frame
@@ -91,20 +91,25 @@ public class Player_Get_Item : MonoBehaviour
             {
                 //플레이어의 아이템의 장비에 맞춰 플레이어 장비에 이름을 할당해줌.
                 PE.Set_Player_Item(IS.Get_Item_Kind(), IS.Get_Item_Name());
+                PE.Change_item_state();
                 Destroy(DI.gameObject);//그리고 주운 아이템 파괴 처리
             }
             else if (PE.Get_Player_Item(IS.Get_Item_Kind()) != "NONE")//플레이어가 아이템을 가지고 있었다면.
             {
                 if (PE.아이템_강화(IS.Get_Item_Kind(), IS.Item_Name))
                 {
+                    PE.Delete_State_item();
                     Destroy(DI.gameObject);//그리고 주운 아이템 파괴 처리
+                    PE.Change_item_state();
                 }
                 else
                 {
                     //플레이어가 가지고 있던 아이템 프리팹을 생성
+                    PE.Delete_State_item();
                     Creat_Drop_Item(PE.Get_Player_Item(IS.Get_Item_Kind()));
                     //플레이어의 아이템의 장비에 맞춰 플레이어 장비에 이름을 할당해줌.
                     PE.Set_Player_Item(IS.Get_Item_Kind(), IS.Get_Item_Name());
+                    PE.Change_item_state();
                     Destroy(DI.gameObject);//그리고 주운 아이템 파괴 처리
                 }
                 

@@ -7,7 +7,7 @@ public class Player_Item : MonoBehaviour
     string[] Items;
     Item item;
     public GameObject Weapon, Armor, Ring, Hat;
-    private string[] player_item = new string[] { "NONE", "NONE", "NONE", "Copper_Ring" };
+    private string[] player_item = new string[] { "NONE", "NONE", "NONE", "NONE" };
 
     public Image skill1;
     public Image skill2;
@@ -28,15 +28,15 @@ public class Player_Item : MonoBehaviour
         item = new Item();
 
         //Weapon = (GameObject)Resources.Load("Item/" + item.get_F_Item(0));
-        Weapon = (GameObject)Resources.Load("Item/Item_Prefab/Copper_Sword"); //임시로 넣음
-        Armor = (GameObject)Resources.Load("Item/Item_Prefab/Copper_Armor");
-        Hat = (GameObject)Resources.Load("Item/Item_Prefab/Copper_Hat");
-        Ring = (GameObject)Resources.Load("Item/Item_Prefab/Copper_Ring");
+        //Weapon = (GameObject)Resources.Load("Item/Item_Prefab/Copper_Sword"); //임시로 넣음
+        //Armor = (GameObject)Resources.Load("Item/Item_Prefab/Copper_Armor");
+        //Hat = (GameObject)Resources.Load("Item/Item_Prefab/Copper_Hat");
+        //Ring = (GameObject)Resources.Load("Item/Item_Prefab/Copper_Ring");
 
-        player_item[0] = Weapon.GetComponent<Item_stats>().Item_Name;
-        player_item[1] = Armor.GetComponent<Item_stats>().Item_Name;
-        player_item[2] = Hat.GetComponent<Item_stats>().Item_Name;
-        player_item[3] = Ring.GetComponent<Item_stats>().Item_Name;
+        //player_item[0] = Weapon.GetComponent<Item_stats>().Item_Name;
+        //player_item[1] = Armor.GetComponent<Item_stats>().Item_Name;
+        //player_item[2] = Hat.GetComponent<Item_stats>().Item_Name;
+        //player_item[3] = Ring.GetComponent<Item_stats>().Item_Name;
 
         if (Ring != null)
         {
@@ -67,10 +67,23 @@ public class Player_Item : MonoBehaviour
 
     void Set_Item_Skills()
     {
-        Weapon = (GameObject)Resources.Load("Item/Item_Prefab/" + player_item[0]);
-        Armor = (GameObject)Resources.Load("Item/Item_Prefab/" + player_item[1]);
-        Hat = (GameObject)Resources.Load("Item/Item_Prefab/" + player_item[2]);
-        Ring = (GameObject)Resources.Load("Item/Item_Prefab/" + player_item[3]);
+        if (player_item[0] != "NONE")
+        {
+            Weapon = (GameObject)Resources.Load("Item/Item_Prefab/" + player_item[0]);
+        }
+        if(player_item[1]!="NONE")
+        {
+            Armor = (GameObject)Resources.Load("Item/Item_Prefab/" + player_item[1]);
+        }
+        if (player_item[2] != "NONE")
+        {
+            Hat = (GameObject)Resources.Load("Item/Item_Prefab/" + player_item[2]);
+        }
+        if (player_item[3] != "NONE")
+        {
+            Ring = (GameObject)Resources.Load("Item/Item_Prefab/" + player_item[3]);
+        }
+        
 
         if (Ring != null)
         {
@@ -96,15 +109,26 @@ public class Player_Item : MonoBehaviour
     }
     public void Change_item_state()
     {
-        Weapon.GetComponent<Item_stats>().Delete_Stat();
-        Armor.GetComponent<Item_stats>().Delete_Stat();
-        Hat.GetComponent<Item_stats>().Delete_Stat();
-        Ring.GetComponent<Item_stats>().Delete_Stat();
-
-        Weapon.GetComponent<Item_stats>().Add_Stat();
-        Armor.GetComponent<Item_stats>().Add_Stat();
-        Hat.GetComponent<Item_stats>().Add_Stat();
-        Ring.GetComponent<Item_stats>().Add_Stat();
+        if(Weapon != null)
+        {
+            Weapon.GetComponent<Item_stats>().Delete_Stat();
+            Weapon.GetComponent<Item_stats>().Add_Stat();
+        }
+        if(Armor != null)
+        {
+            Armor.GetComponent<Item_stats>().Delete_Stat();
+            Armor.GetComponent<Item_stats>().Add_Stat();
+        }
+       if(Hat != null)
+        {
+            Hat.GetComponent<Item_stats>().Delete_Stat();
+            Hat.GetComponent<Item_stats>().Add_Stat();
+        }
+        if (Ring != null)
+        {
+            Ring.GetComponent<Item_stats>().Delete_Stat();
+            Ring.GetComponent<Item_stats>().Add_Stat();
+        }
     }
     public bool 아이템_강화(int items, string item_name)
     {

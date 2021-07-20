@@ -21,7 +21,6 @@ public class Player_Item : MonoBehaviour
     {
         player_item[N1] = N2;
         Set_Item_Skills();
-        Change_item_state();
     }
     void Awake()
     {
@@ -113,23 +112,38 @@ public class Player_Item : MonoBehaviour
     {
         if(Weapon != null)
         {
-            Weapon.GetComponent<Item_stats>().Delete_Stat();
             Weapon.GetComponent<Item_stats>().Add_Stat();
         }
         if(Armor != null)
         {
-            Armor.GetComponent<Item_stats>().Delete_Stat();
             Armor.GetComponent<Item_stats>().Add_Stat();
         }
        if(Hat != null)
         {
-            Hat.GetComponent<Item_stats>().Delete_Stat();
             Hat.GetComponent<Item_stats>().Add_Stat();
         }
         if (Ring != null)
         {
-            Ring.GetComponent<Item_stats>().Delete_Stat();
             Ring.GetComponent<Item_stats>().Add_Stat();
+        }
+    }
+    public void Delete_State_item()
+    {
+        if (Weapon != null)
+        {
+            Weapon.GetComponent<Item_stats>().Delete_Stat();
+        }
+        if (Armor != null)
+        {
+            Armor.GetComponent<Item_stats>().Delete_Stat();
+        }
+        if (Hat != null)
+        {
+            Hat.GetComponent<Item_stats>().Delete_Stat();
+        }
+        if (Ring != null)
+        {
+            Ring.GetComponent<Item_stats>().Delete_Stat();
         }
     }
     public bool 아이템_강화(int items, string item_name)

@@ -26,11 +26,12 @@ public class Player_State_Window : MonoBehaviour
 
     public void get_Player_State_Text()
     {
-        P_S_Text.text = "<Max HP / HP> : " + P_S.Get_P_State(0) + " / " + P_S.Get_P_State(1) + "\n"
-        + "<STR> : " + P_S.Get_P_State(2) + "\n"
-        + "<DEF> : " + P_S.Get_P_State(3) + "\n"
-        + "<AGI> : " + P_S.Get_P_State(4) + "\n"
-        + "<LUC> : " + P_S.Get_P_State(5) + "\n"
+        P_S_Text.text =
+        "<Current HP / Max HP> : " + P_S.Get_P_State(1) + " / " + P_S.Get_P_State(0) + "("+ P_S.Get_P_Base_State(0) + " + " + (P_S.Get_P_State(0) - P_S.Get_P_Base_State(0)) +")" + "\n"
+        + "<STR> : " + P_S.Get_P_State(2) + "(" + P_S.Get_P_Base_State(2) + " + " + (P_S.Get_P_State(2) - P_S.Get_P_Base_State(2)) + ")" + "\n"
+        + "<DEF> : " + P_S.Get_P_State(3) + "(" + P_S.Get_P_Base_State(3) + " + " + (P_S.Get_P_State(3) - P_S.Get_P_Base_State(3)) + ")" + "\n"
+        + "<AGI> : " + P_S.Get_P_State(4) + "(" + P_S.Get_P_Base_State(4) + " + " + (P_S.Get_P_State(4) - P_S.Get_P_Base_State(4)) + ")" + "\n"
+        + "<LUC> : " + P_S.Get_P_State(5) + "(" + P_S.Get_P_Base_State(5) + " + " + (P_S.Get_P_State(5) - P_S.Get_P_Base_State(5)) + ")" + "\n"
         + "<Money> : " + P_S.Get_P_State(6) + "\n"
         + "\n" + "\n"
         + "equipment" + "\n"

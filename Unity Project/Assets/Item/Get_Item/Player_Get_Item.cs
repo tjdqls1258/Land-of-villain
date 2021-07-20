@@ -90,6 +90,7 @@ public class Player_Get_Item : MonoBehaviour
             if (PE.Get_Player_Item(IS.Get_Item_Kind()) == "NONE")
             {
                 //플레이어의 아이템의 장비에 맞춰 플레이어 장비에 이름을 할당해줌.
+                PE.Delete_State_item();
                 PE.Set_Player_Item(IS.Get_Item_Kind(), IS.Get_Item_Name());
                 PE.Change_item_state();
                 Destroy(DI.gameObject);//그리고 주운 아이템 파괴 처리
@@ -98,9 +99,7 @@ public class Player_Get_Item : MonoBehaviour
             {
                 if (PE.아이템_강화(IS.Get_Item_Kind(), IS.Item_Name))
                 {
-                    PE.Delete_State_item();
                     Destroy(DI.gameObject);//그리고 주운 아이템 파괴 처리
-                    PE.Change_item_state();
                 }
                 else
                 {

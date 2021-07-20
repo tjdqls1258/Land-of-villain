@@ -16,7 +16,9 @@ public class Player_Stat : MonoBehaviour
    int LUC=0; //운(치명타)[5]
    */
     //위에 것같은 스탯을 배열로 다룸
+    [SerializeField]
     private int[] P_Base_State = new int[] { 100, 100, 10, 5, 5, 0, 0 };
+    [SerializeField]
     private int[] P_State = new int[] { 100, 100, 10, 5, 5, 0, 0 };
     private void Awake()
     {

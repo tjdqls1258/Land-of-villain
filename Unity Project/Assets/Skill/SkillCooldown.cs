@@ -82,7 +82,7 @@ public class SkillCooldown : MonoBehaviour
     #region activate skill
     public void baseatk()
     {
-        if (!atkdelay)
+        if ((!atkdelay))
         {
             atkdelay = true;
             //기본공격 실행
@@ -97,7 +97,7 @@ public class SkillCooldown : MonoBehaviour
 
     public void weaponskill()
     {
-        if (!weaponskilldelay)
+        if ((!weaponskilldelay) && (GetComponent<Player_Item>().Weapon != null))
         {
             weaponskilldelay = true;
             //무기스킬 실행
@@ -116,7 +116,7 @@ public class SkillCooldown : MonoBehaviour
 
     public void armorskill()
     {
-        if (!armorskilldelay)
+        if ((!armorskilldelay) && (GetComponent<Player_Item>().Armor != null))
         {
             armorskilldelay = true;
             //갑옷스킬 실행
@@ -135,7 +135,7 @@ public class SkillCooldown : MonoBehaviour
 
     public void helmetskill()
     {
-        if (!helmetskilldelay)
+        if ((!helmetskilldelay) && (GetComponent<Player_Item>().Hat != null))
         {
             helmetskilldelay = true;
             //투구스킬
@@ -158,7 +158,7 @@ public class SkillCooldown : MonoBehaviour
 
     public void acceskill()
     {
-        if (!acceskilldelay)
+        if ((!acceskilldelay) && (GetComponent<Player_Item>().Ring != null))
         {
             acceskilldelay = true;
             //악세서리스킬 실행

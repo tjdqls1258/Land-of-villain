@@ -82,6 +82,8 @@ public class Player_Item : MonoBehaviour
         if (player_item[3] != "NONE")
         {
             Ring = (GameObject)Resources.Load("Item/Item_Prefab/" + player_item[3]);
+            Ring.GetComponent<Item_stats>().Skill_Set();
+            Ring.GetComponent<Item_stats>().skill.Skill_Action();
         }
         
 

@@ -6,10 +6,12 @@ public class R_Skill_01 : MonoBehaviour, Skill
 {
     public int Healing;
     GameObject Player;
+    private bool Is_Action = false;
     public void Skill_Action()
     {
         Player = GameObject.Find("Player");
         InvokeRepeating("Passive", 0, 1); //0초후에 Passive를 1초간격으로 반복 
+        Is_Action = true;
         // 장비 해제시 중지 시켜줘야함.
     }
 
@@ -34,6 +36,10 @@ public class R_Skill_01 : MonoBehaviour, Skill
     //중지시키는 함수
     public void Stop_Passive()
     {
-        CancelInvoke("Passive");
+        if (Is_Action == true)
+        {
+            CancelInvoke("Passive");
+        }
+        Is_Action = false;
     }
 }

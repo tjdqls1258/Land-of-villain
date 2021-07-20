@@ -55,7 +55,7 @@ public class Item_stats : MonoBehaviour
     //아이템 강화에 사용되는 함수
     public void reinforce()
     {
-        reinforce_add++;
+        reinforce_add++;        
     }
     //아이템의 이름을 반환하는 함수
     public string Get_Item_Name()

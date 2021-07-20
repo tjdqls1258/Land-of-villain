@@ -49,7 +49,11 @@ public class SkillCooldown : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        ismeele = GetComponent<Player_Item>().Weapon.GetComponent<Item_stats>().meeleatk;
+        if (GetComponent<Player_Item>().Weapon != null)
+        {
+            ismeele = GetComponent<Player_Item>().Weapon.GetComponent<Item_stats>().meeleatk;
+        }
+        else { ismeele = false; }
     }
 
     #region 스테이지 넘어갈때마다 몬스터 검색

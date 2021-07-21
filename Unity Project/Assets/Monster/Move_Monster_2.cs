@@ -84,7 +84,10 @@ public class Move_Monster_2 : MonoBehaviour
         {
             animator.SetBool("ATK", true);
 
-            Instantiate(Monster_Bullet, transform.position, angleAxis);
+            //Instantiate(Monster_Bullet, transform.position, angleAxis);
+            GameObject Bullet = Instantiate(Monster_Bullet, transform.position, angleAxis);
+            Bullet.GetComponent<Monster_Bullet>().Set_Damage(
+                GetComponent<Monster_stats>().give_damage());
         }
         else
         {

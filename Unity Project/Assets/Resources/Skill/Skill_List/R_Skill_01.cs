@@ -12,7 +12,7 @@ public class R_Skill_01 : MonoBehaviour, Skill
         Player = GameObject.Find("Player");
         InvokeRepeating("Passive", 0, 1); //0초후에 Passive를 1초간격으로 반복 
         Is_Action = true;
-        // 장비 해제시 중지 시켜줘야함.
+        // 장비 해제시 중지 시켜줘야함.     
     }
 
     public void Passive()

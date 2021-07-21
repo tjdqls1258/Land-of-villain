@@ -7,8 +7,6 @@ public class Movement2D : MonoBehaviour
 {
     public float moveSpeed;                         // 이동속도
     private Vector3 moveDirection = Vector3.zero; // 이동방향
-    private float dashtimer = 0.0f;
-    private bool dashactive = false;
     Animator animator;
     SpriteRenderer rend;
 

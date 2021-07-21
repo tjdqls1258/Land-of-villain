@@ -7,7 +7,7 @@ public class Monster_Bullet : MonoBehaviour
     Rigidbody2D rigid;
     public float Move_speed;
 
-    private int Damage_s = 10;
+    private int Damage_s = 0;
 
     float time;
     void Awake()
@@ -41,5 +41,9 @@ public class Monster_Bullet : MonoBehaviour
     public int Damage()
     {
         return Damage_s;
+    }
+    public void Set_Damage(int dam)
+    {
+        this.Damage_s = dam;
     }
 }

@@ -163,7 +163,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Hp: 10
-  damage: 2
+  damage: 5
   Atk_dir: 1
   Monster_Drop_Tear: 0
   stageManger: {fileID: 0}

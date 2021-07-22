@@ -7,17 +7,21 @@ public class R_Skill_01 : MonoBehaviour, Skill
     public int Healing;
     GameObject Player;
     private bool Is_Action = false;
+
+    Animator animator;
     public void Skill_Action()
     {
         Player = GameObject.Find("Player");
         InvokeRepeating("Passive", 0, 1); //0초후에 Passive를 1초간격으로 반복 
         Is_Action = true;
-        // 장비 해제시 중지 시켜줘야함.     
+        // 장비 해제시 중지 시켜줘야함.
+        animator = Player.GetComponent<Animator>();
     }
 
     public void Passive()
     {
         Debug.Log("패시브 발사 히히");
+        animator.SetBool("Heal", true);
         int N_HP = Player.GetComponent<Player_Stat>().Get_P_State(1);
         if (N_HP + Healing > Player.GetComponent<Player_Stat>().Get_P_State(0))
         {
@@ -41,5 +45,6 @@ public class R_Skill_01 : MonoBehaviour, Skill
             CancelInvoke("Passive");
         }
         Is_Action = false;
+        animator.SetBool("Heal", false);
     }
 }

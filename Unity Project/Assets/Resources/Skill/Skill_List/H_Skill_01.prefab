@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: -8696791271256156538}
   - component: {fileID: 4140533395912226759}
   m_Layer: 0
-  m_Name: Skill_02
+  m_Name: H_Skill_01
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -45,6 +45,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   "\uC9C0\uC18D\uC2DC\uAC04": 3
+  Buffe_Image: {fileID: 3017231592934808461, guid: 40183871d1f7c794687b57e9ca048cf6,
+    type: 3}
 --- !u!212 &4140533395912226759
 SpriteRenderer:
   m_ObjectHideFlags: 0

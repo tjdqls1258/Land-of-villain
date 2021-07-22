@@ -44,3 +44,5 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   "\uC9C0\uC18D\uC2DC\uAC04": 3
+  Buffe_Image: {fileID: 626879378204602481, guid: 6787b07d1541abe44bdc7c283bde4abf,
+    type: 3}

@@ -28,18 +28,33 @@ public class King_Slime_Pattern : MonoBehaviour
         if((HP <= HP*0.75) && (HP > HP * 0.5) && (phase1 == false))
         {
             phase1 = true;
+            this.transform.localScale = new Vector2(0.75f, 0.75f);
+            for(int i = 0; i<5; i++)
+            {
+                Spawn_Slime();
+            }
         }
         else if((HP <= HP * 0.5) && (HP > HP * 0.25) && (phase2 == false))
         {
             phase2 = true;
+            this.transform.localScale = new Vector2(0.5f, 0.5f);
+            for (int i = 0; i < 10; i++)
+            {
+                Spawn_Slime();
+            }
         }
         else if((HP <= HP * 0.25) && (HP > 0) && (phase3 == false))
         {
             phase3 = true;
+            this.transform.localScale = new Vector2(0.25f, 0.25f);
+            for (int i = 0; i < 15; i++)
+            {
+                Spawn_Slime();
+            }
         }
     }
 
-    private void Spawn_Slime(int N1, int N2)
+    private void Spawn_Slime()
     {
         Vector3 spawnPos = GetRandomPosition();
 

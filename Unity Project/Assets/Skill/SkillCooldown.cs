@@ -221,9 +221,7 @@ public class SkillCooldown : MonoBehaviour
         }
         else
         {        
-            Debug.Log(Monsterpos);
             Instantiate(P_bullet, transform.position, transform.rotation);
-            //원거리 공격 추후에 근,원거리무기 판별 조건 필요
         }
         Debug.Log("shoot");
         atkdelay = false;

@@ -17,6 +17,7 @@ public class StageManager : MonoBehaviour
     public bool clear;
 
     public GameObject[] Monster_Prefabs;
+    public GameObject[] Boss_Prefabs;
 
     private List<GameObject> Monster = new List<GameObject>();
 
@@ -33,9 +34,20 @@ public class StageManager : MonoBehaviour
         }
         Monster_Many = Random.Range(3, 25);
 
-        for(int i= 0; i< Monster_Many; ++i)
+        if (Player.GetComponent<Player_Stat>().N_Stages == 5)
         {
-            Spawn();
+            GameObject Boss = Boss_Prefabs[0];
+            Vector3 spawnPos = GetRandomPosition();
+
+            GameObject instance = Instantiate(Boss, spawnPos, Quaternion.identity);
+            Monster.Add(instance);
+        }
+        else
+        {
+            for (int i = 0; i < Monster_Many; ++i)
+            {
+                Spawn();
+            }
         }
         FoundObjects = new List<GameObject>(GameObject.FindGameObjectsWithTag("Monster"));
         monsternum = FoundObjects.Count;

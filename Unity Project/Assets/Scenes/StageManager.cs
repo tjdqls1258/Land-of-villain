@@ -34,7 +34,8 @@ public class StageManager : MonoBehaviour
         }
         Monster_Many = Random.Range(3, 25);
 
-        if (Player.GetComponent<Player_Stat>().N_Stages == 5)
+        int currentStage = Player.GetComponent<Player_Stat>().N_Stages;
+        if ((currentStage % 5) == 0)
         {
             GameObject Boss = Boss_Prefabs[0];
             Vector3 spawnPos = GetRandomPosition();

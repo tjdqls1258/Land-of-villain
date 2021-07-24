@@ -9,6 +9,7 @@ public class A_Skill_01 : MonoBehaviour, Skill
     int reset_stat;
     public GameObject Buffe_Image;
     GameObject Buffe_;
+
     public void Skill_Action()
     {
         
@@ -19,7 +20,8 @@ public class A_Skill_01 : MonoBehaviour, Skill
         Buffe_.transform.parent = Buffe_Panel.transform;
         reset_stat = Player.GetComponent<Player_Stat>().Get_P_State(3);
         Debug.Log("아머 스킬발사 히히");
-        Player.GetComponent<Player_Stat>().Set_P_State(3, (int)(Player.GetComponent<Player_Stat>().Get_P_State(3) * 1.5f));
+
+        Player.GetComponent<Player_Stat>().Set_P_State(3, (int)(reset_stat *1.5f));
         Invoke("Buffe", 지속시간);
 
     }

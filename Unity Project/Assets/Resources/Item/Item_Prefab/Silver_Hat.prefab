@@ -101,7 +101,7 @@ MonoBehaviour:
   Item_stat: 0000000000000000000000000a0000000a00000000000000
   meeleatk: 0
   skill_number: H_Skill_01
-  CoolTime: 3
+  CoolTime: 6
   reinforce_add: 0
 --- !u!61 &5103535797099141256
 BoxCollider2D:

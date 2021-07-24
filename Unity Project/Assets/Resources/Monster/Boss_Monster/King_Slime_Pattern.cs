@@ -8,6 +8,8 @@ public class King_Slime_Pattern : MonoBehaviour
     private GameObject King_Slime;
     [SerializeField]
     private GameObject Slime;
+    private GameObject stagemanager;
+
     private float HP;
     private float MaxHP;
 
@@ -20,6 +22,7 @@ public class King_Slime_Pattern : MonoBehaviour
     // Start is called before the first frame update
     void Awake()
     {
+        stagemanager = GameObject.Find("StageManager");
         MaxHP = King_Slime.GetComponent<Monster_stats>().Hp;
     }
 
@@ -29,12 +32,13 @@ public class King_Slime_Pattern : MonoBehaviour
         HP = King_Slime.GetComponent<Monster_stats>().Hp;
         if ((HP <= (MaxHP * 0.75)) && (HP > (MaxHP * 0.5)) && (phase1 == false))
         {           
-                phase1 = true;
-                this.transform.localScale *= new Vector2(0.75f, 0.75f);
-                for (int i = 0; i < 5; i++)
-                {
-                    Spawn_Slime();
-                }
+            phase1 = true;
+            this.transform.localScale *= new Vector2(0.75f, 0.75f);
+            for (int i = 0; i < 5; i++)
+            {
+                Spawn_Slime();
+            }
+            stagemanager.GetComponent<StageManager>().Monster_Check();
         }
         else if((HP <= (MaxHP * 0.5)) && (HP > (MaxHP * 0.25)) && (phase2 == false))
         {
@@ -44,6 +48,7 @@ public class King_Slime_Pattern : MonoBehaviour
             {
                 Spawn_Slime();
             }
+            stagemanager.GetComponent<StageManager>().Monster_Check();
         }
         else if((HP <= (MaxHP * 0.25)) && (MaxHP > 0) && (phase3 == false))
         {
@@ -53,6 +58,7 @@ public class King_Slime_Pattern : MonoBehaviour
             {
                 Spawn_Slime();
             }
+            stagemanager.GetComponent<StageManager>().Monster_Check();
         }
     }
 

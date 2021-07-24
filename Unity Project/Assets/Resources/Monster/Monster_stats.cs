@@ -5,7 +5,7 @@ using UnityEditor;
 
 public class Monster_stats : MonoBehaviour
 {
-    public int Hp;
+    public float Hp;
     public int damage;
     public float Atk_dir;
     Drop_Item item_Drop;

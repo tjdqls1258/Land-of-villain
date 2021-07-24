@@ -9,6 +9,7 @@ public class King_Slime_Pattern : MonoBehaviour
     [SerializeField]
     private GameObject Slime;
     private float HP;
+    private float MaxHP;
 
     private bool phase1 = false;
     private bool phase2 = false;
@@ -19,34 +20,35 @@ public class King_Slime_Pattern : MonoBehaviour
     // Start is called before the first frame update
     void Awake()
     {
-        HP = GetComponent<Monster_stats>().Hp;
+        MaxHP = King_Slime.GetComponent<Monster_stats>().Hp;
     }
 
     // Update is called once per frame
     void Update()
     {
-        if((HP <= HP*0.75) && (HP > HP * 0.5) && (phase1 == false))
-        {
-            phase1 = true;
-            this.transform.localScale = new Vector2(0.75f, 0.75f);
-            for(int i = 0; i<5; i++)
-            {
-                Spawn_Slime();
-            }
+        HP = King_Slime.GetComponent<Monster_stats>().Hp;
+        if ((HP <= (MaxHP * 0.75)) && (HP > (MaxHP * 0.5)) && (phase1 == false))
+        {           
+                phase1 = true;
+                this.transform.localScale *= new Vector2(0.75f, 0.75f);
+                for (int i = 0; i < 5; i++)
+                {
+                    Spawn_Slime();
+                }
         }
-        else if((HP <= HP * 0.5) && (HP > HP * 0.25) && (phase2 == false))
+        else if((HP <= (MaxHP * 0.5)) && (HP > (MaxHP * 0.25)) && (phase2 == false))
         {
             phase2 = true;
-            this.transform.localScale = new Vector2(0.5f, 0.5f);
+            this.transform.localScale *= new Vector2(0.67f, 0.67f);
             for (int i = 0; i < 10; i++)
             {
                 Spawn_Slime();
             }
         }
-        else if((HP <= HP * 0.25) && (HP > 0) && (phase3 == false))
+        else if((HP <= (MaxHP * 0.25)) && (MaxHP > 0) && (phase3 == false))
         {
             phase3 = true;
-            this.transform.localScale = new Vector2(0.25f, 0.25f);
+            this.transform.localScale *= new Vector2(0.5f, 0.5f);
             for (int i = 0; i < 15; i++)
             {
                 Spawn_Slime();

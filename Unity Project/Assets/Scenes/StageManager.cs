@@ -50,9 +50,14 @@ public class StageManager : MonoBehaviour
                 Spawn();
             }
         }
+        Monster_Check();      
+    }
+
+    public void Monster_Check()
+    {
         FoundObjects = new List<GameObject>(GameObject.FindGameObjectsWithTag("Monster"));
         monsternum = FoundObjects.Count;
-        Player.GetComponent<SkillCooldown>().Load_New_Stage();       
+        Player.GetComponent<SkillCooldown>().Load_New_Stage();
     }
 
     void Spawn()

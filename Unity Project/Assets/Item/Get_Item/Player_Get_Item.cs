@@ -23,7 +23,6 @@ public class Player_Get_Item : MonoBehaviour
     void Start()
     {   //플레이어의 아이템 정보
         PE = GetComponent<Player_Item>();
-     
     }
 
     // Update is called once per frame

@@ -27,17 +27,53 @@ public class Player_State_Window : MonoBehaviour
     public void get_Player_State_Text()
     {
         P_S_Text.text =
-        "<Current HP / Max HP> : " + P_S.Get_P_State(1) + " / " + P_S.Get_P_State(0) + "("+ P_S.Get_P_Base_State(0) + " + " + (P_S.Get_P_State(0) - P_S.Get_P_Base_State(0)) +")" + "\n"
+        "<Current HP / Max HP> : " + P_S.Get_P_State(1) + " / " + P_S.Get_P_State(0) + "(" + P_S.Get_P_Base_State(0) + " + " + (P_S.Get_P_State(0) - P_S.Get_P_Base_State(0)) + ")" + "\n"
         + "<STR> : " + P_S.Get_P_State(2) + "(" + P_S.Get_P_Base_State(2) + " + " + (P_S.Get_P_State(2) - P_S.Get_P_Base_State(2)) + ")" + "\n"
         + "<DEF> : " + P_S.Get_P_State(3) + "(" + P_S.Get_P_Base_State(3) + " + " + (P_S.Get_P_State(3) - P_S.Get_P_Base_State(3)) + ")" + "\n"
         + "<AGI> : " + P_S.Get_P_State(4) + "(" + P_S.Get_P_Base_State(4) + " + " + (P_S.Get_P_State(4) - P_S.Get_P_Base_State(4)) + ")" + "\n"
         + "<LUC> : " + P_S.Get_P_State(5) + "(" + P_S.Get_P_Base_State(5) + " + " + (P_S.Get_P_State(5) - P_S.Get_P_Base_State(5)) + ")" + "\n"
         + "<Money> : " + P_S.Get_P_State(6) + "\n"
         + "\n" + "\n"
-        + "equipment" + "\n"
-        + "weapon : " + P_I.Get_Player_Item(0) + " +" + P_I.Weapon.GetComponent<Item_stats>().reinforce_add.ToString()+"\n"
-        + "armor : " + P_I.Get_Player_Item(1) + " +" +P_I.Armor.GetComponent<Item_stats>().reinforce_add.ToString() + "\n"
-        + "hat : " + P_I.Get_Player_Item(2) + " +" + P_I.Hat.GetComponent<Item_stats>().reinforce_add.ToString() + "\n"
-        + "ring : " + P_I.Get_Player_Item(3) + " +" + P_I.Ring.GetComponent<Item_stats>().reinforce_add.ToString() + "\n"; 
+        + "equipment" + "\n";
+        if (P_I.Weapon)
+        {
+            P_S_Text.text = P_S_Text.text
+          + "weapon : " + P_I.Get_Player_Item(0) + " +" + P_I.Weapon.GetComponent<Item_stats>().reinforce_add.ToString() + "\n";
+        }
+        else 
+        {
+            P_S_Text.text = P_S_Text.text
+             + "weapon : NOPE\n";
+        }
+        if (P_I.Armor)
+        {
+            P_S_Text.text = P_S_Text.text
+           + "armor : " + P_I.Get_Player_Item(1) + " +" + P_I.Armor.GetComponent<Item_stats>().reinforce_add.ToString() + "\n";
+        }
+        else
+        {
+            P_S_Text.text = P_S_Text.text
+             + "armor : NOPE\n";
+        }
+        if (P_I.Hat)
+        {
+            P_S_Text.text = P_S_Text.text
+            + "hat : " + P_I.Get_Player_Item(2) + " +" + P_I.Hat.GetComponent<Item_stats>().reinforce_add.ToString() + "\n";
+        }
+        else
+        {
+            P_S_Text.text = P_S_Text.text
+             + "hat : NOPE\n";
+        }
+        if (P_I.Ring)
+        {
+            P_S_Text.text = P_S_Text.text
+           + "ring : " + P_I.Get_Player_Item(3) + " +" + P_I.Ring.GetComponent<Item_stats>().reinforce_add.ToString() + "\n";
+        }
+        else
+        {
+            P_S_Text.text = P_S_Text.text
+             + "ring : NOPE\n";
+        }
     }
 }

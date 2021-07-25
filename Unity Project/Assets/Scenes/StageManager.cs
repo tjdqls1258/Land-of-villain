@@ -43,6 +43,10 @@ public class StageManager : MonoBehaviour
             GameObject instance = Instantiate(Boss, spawnPos, Quaternion.identity);
             Monster.Add(instance);
         }
+        else if((currentStage % 5) == 1)
+        {
+
+        }
         else
         {
             for (int i = 0; i < Monster_Many; ++i)

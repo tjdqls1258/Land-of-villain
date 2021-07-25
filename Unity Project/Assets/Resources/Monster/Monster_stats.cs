@@ -36,7 +36,9 @@ public class Monster_stats : MonoBehaviour
     }
     void die()
     {
-        Drop_item_it = item_Drop.drop_Item(Monster_Drop_Tear);
+        /*Drop_item_it = item_Drop.drop_Item(Monster_Drop_Tear);
+
+
         GameObject item = (GameObject)Resources.Load("Item/Item_Prefab/" + Drop_item_it);
         //GameObject item = (GameObject)Resources.Load("Item/Copper_Sword", typeof(GameObject));
         //리소스파일 속 item파일에 있는 Drop_item_it와 같은 이름을 가진 프리팹
@@ -44,6 +46,9 @@ public class Monster_stats : MonoBehaviour
         {
             Instantiate(item, this.transform.position, Quaternion.identity); 
         }
+        */
+        //아이템 드롭의 수정에 따라 수정함.
+        item_Drop.drop_Item(Monster_Drop_Tear,this.transform);
         stageManger.GetComponent<StageManager>().monsterdead();
     }
     void OnTriggerEnter2D(Collider2D other)

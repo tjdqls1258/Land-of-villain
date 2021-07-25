@@ -489,7 +489,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1379939854}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -571.943, y: -487.961, z: 46.765255}
+  m_LocalPosition: {x: -572.84, y: -487.94, z: 46.765255}
   m_LocalScale: {x: 2.5899904, y: 1.9834936, z: 1}
   m_Children: []
   m_Father: {fileID: 616064337}
@@ -948,24 +948,28 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: 0, y: 5}
-  m_SizeDelta: {x: 20, y: -10}
+  m_AnchoredPosition: {x: -0.3500061, y: 4.470001}
+  m_SizeDelta: {x: 19.298615, y: -8.947937}
   m_Pivot: {x: 0.5, y: 0.5}
---- !u!111 &2139720870
-Animation:
+--- !u!95 &2139720870
+Animator:
+  serializedVersion: 3
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2139720868}
   m_Enabled: 1
-  serializedVersion: 3
-  m_Animation: {fileID: 7400000, guid: 3ee89d7394623ce4886c61c4383dc221, type: 2}
-  m_Animations: []
-  m_WrapMode: 0
-  m_PlayAutomatically: 1
-  m_AnimatePhysics: 0
-  m_CullingType: 0
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: ab2e65c55ab6025428556609370d162b, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!114 &2139720871
 MonoBehaviour:
   m_ObjectHideFlags: 0

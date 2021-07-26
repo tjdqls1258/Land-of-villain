@@ -37,7 +37,11 @@ public class Minotauros_King_Pattern : MonoBehaviour
         yield return new WaitForSeconds(0.7f);
 
         this.GetComponent<Move_monster>().enabled = false;
-        transform.position = Vector3.MoveTowards(this.transform.position, Rush_Target, ((basespeed * 3) * Time.deltaTime));
+        while (this.transform.position != Rush_Target)
+        {
+            yield return null;
+            transform.position = Vector3.MoveTowards(this.transform.position, Rush_Target, ((basespeed * 3)));
+        }
         yield return new WaitForSeconds(0.1f);
 
         this.GetComponent<Move_monster>().enabled = true ;

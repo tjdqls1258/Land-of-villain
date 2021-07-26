@@ -70,8 +70,8 @@ public class SkillCooldown : MonoBehaviour
     }
     public void Load_New_Stage()
     {
-        this.FoundObjects = new List<GameObject>(GameObject.FindGameObjectsWithTag("Monster"));
-        this.Monster = FoundObjects[0];
+        FoundObjects = new List<GameObject>(GameObject.FindGameObjectsWithTag("Monster"));
+        Monster = FoundObjects[0];
     }
     public GameObject Get_Monster()
     {

@@ -44,7 +44,7 @@ public class StageManager : MonoBehaviour
             Monster.Add(instance);
             Monster_Check();
         }
-        //else if((currentStage % 5) == 1)
+        //else if(((currentStage % 5) == 1) && (currentStage != 1))
         //{
         //    //상점 
         //}

@@ -42,19 +42,21 @@ public class StageManager : MonoBehaviour
 
             GameObject instance = Instantiate(Boss, spawnPos, Quaternion.identity);
             Monster.Add(instance);
+            Monster_Check();
         }
-        else if((currentStage % 5) == 1)
-        {
-
-        }
+        //else if((currentStage % 5) == 1)
+        //{
+        //    //상점 
+        //}
         else
         {
             for (int i = 0; i < Monster_Many; ++i)
             {
                 Spawn();
             }
+            Monster_Check();
         }
-        Monster_Check();      
+    
     }
 
     public void Monster_Check()

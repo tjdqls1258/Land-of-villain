@@ -6,8 +6,7 @@ public class Move_monster : MonoBehaviour
 {
     [SerializeField]
     private float rotateSpeed;
-    [SerializeField]
-    private float moveSpeed;
+    public float moveSpeed;
 
     private Rigidbody2D rigid;
     private GameObject Player;

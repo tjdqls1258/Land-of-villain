@@ -4761,6 +4761,7 @@ MonoBehaviour:
   - {fileID: 5436700300560640486, guid: d18fb17948b0fd647a5ad8ade0420d25, type: 3}
   Boss_Prefabs:
   - {fileID: 8894061094939128250, guid: 9ca50cfe21dccb849b75327f82dd0725, type: 3}
+  - {fileID: 9146172725990912296, guid: fb527522b94495544a71f97e3651eb06, type: 3}
 --- !u!4 &1971951787
 Transform:
   m_ObjectHideFlags: 0
@@ -4882,7 +4883,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 0.16, y: 0.3}
+  m_Size: {x: 0.13, y: 0.25}
   m_EdgeRadius: 0
 --- !u!50 &2012668319
 Rigidbody2D:

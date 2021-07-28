@@ -11,6 +11,7 @@ public class Player_Status : MonoBehaviour
 
     public bool isclear = false;
     private bool isinvincible = false;
+    private bool Boom = false;
     public static Player_Status Instance;
 
     private void Awake()
@@ -55,15 +56,25 @@ public class Player_Status : MonoBehaviour
             GetComponent<Player_Stat>().N_Stages++;
             Destroy(other.gameObject);
         }
-        if ((other.gameObject.tag == "Boom") && (isinvincible == false)) //몬스터 원거리 공격과 충돌시
+        if ((other.gameObject.tag == "Boom") && (Boom == false)) 
+        {
+            Boom = true;
+            //충돌한 객체의 컴퍼넌트에서 데미지 받아옴
+            Get_damange(other.GetComponent<Boom>().Damage());
+            StartCoroutine("CollisionBoom");
+        }
+        if ((other.gameObject.tag == "Monster_Skill") && (isinvincible == false))
         {
             isinvincible = true;
             //충돌한 객체의 컴퍼넌트에서 데미지 받아옴
-            Get_damange(other.GetComponent<Boom>().Damage());
+            Get_damange(other.GetComponent<Skill_damage>().Damage());
             StartCoroutine("CollisionINvincible");
         }
     }
-
+    public bool isinvincible_Check()
+    {
+        return isinvincible;
+    }
     void OnTriggerStay2D(Collider2D other)
     {
         if ((other.gameObject.tag == "Monster") && (isinvincible == false))
@@ -98,7 +109,11 @@ public class Player_Status : MonoBehaviour
         yield return new WaitForSeconds(0.1f);
         isinvincible = false;
     }
-
+    IEnumerator CollisionBoom()
+    {
+        yield return new WaitForSeconds(0.1f);
+        Boom = false;
+    }
     public void ReturnToStart()
     {
         GameManager.isPause = false;

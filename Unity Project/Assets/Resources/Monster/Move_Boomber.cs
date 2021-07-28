@@ -15,6 +15,7 @@ public class Move_Boomber : MonoBehaviour
     SpriteRenderer rend;
     float angle;
 
+    public GameObject stageManger;
     public GameObject BOOM_eff;
     GameObject explote;
 
@@ -24,6 +25,7 @@ public class Move_Boomber : MonoBehaviour
         Move_ = true;
         rend = GetComponent<SpriteRenderer>();
         animator = GetComponent<Animator>();
+        stageManger = GameObject.Find("StageManager");
         Player = GameObject.Find("Player");
         rigid = GetComponent<Rigidbody2D>();
     }
@@ -53,9 +55,8 @@ public class Move_Boomber : MonoBehaviour
     }
     void BOOM()
     {
+        stageManger.GetComponent<StageManager>().monsterdead();
         explote = Instantiate(BOOM_eff, transform.position, Quaternion.identity);
-        explote.GetComponent<Boom>().Set_Damage(
-            50 + Player.GetComponent<Player_Stat>().N_Stages);
         animator.SetBool("ATK_2", true);
         Invoke("Destroy_Self",0.6f);
     }

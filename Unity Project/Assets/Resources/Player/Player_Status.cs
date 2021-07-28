@@ -48,14 +48,22 @@ public class Player_Status : MonoBehaviour
             Get_damange(other.GetComponent<Monster_Bullet>().Damage());
             StartCoroutine("CollisionINvincible");
             Destroy(other.gameObject);
-        }        
+        }
         if (other.gameObject.tag == "Gate")
         {
             isclear = true;
             GetComponent<Player_Stat>().N_Stages++;
             Destroy(other.gameObject);
         }
+        if ((other.gameObject.tag == "Boom") && (isinvincible == false)) //몬스터 원거리 공격과 충돌시
+        {
+            isinvincible = true;
+            //충돌한 객체의 컴퍼넌트에서 데미지 받아옴
+            Get_damange(other.GetComponent<Boom>().Damage());
+            StartCoroutine("CollisionINvincible");
+        }
     }
+
     void OnTriggerStay2D(Collider2D other)
     {
         if ((other.gameObject.tag == "Monster") && (isinvincible == false))
@@ -64,6 +72,7 @@ public class Player_Status : MonoBehaviour
             Get_damange(other.GetComponent<Monster_stats>().give_damage());
             StartCoroutine("CollisionINvincible");
         }
+        
     }
 
     void OnEnable()

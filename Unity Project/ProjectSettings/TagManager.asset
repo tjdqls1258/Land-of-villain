@@ -13,6 +13,7 @@ TagManager:
   - Gate
   - Undefined
   - Item
+  - Boom
   layers:
   - Default
   - TransparentFX

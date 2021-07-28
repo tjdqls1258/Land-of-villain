@@ -65,7 +65,10 @@ public class Aterans : MonoBehaviour
 
         Instantiate(Dangers, Danger, Quaternion.identity);
         yield return new WaitForSeconds(.25f);
-        Instantiate(Skill01, Danger, Quaternion.identity);
+        
+        GameObject Skill = Instantiate(Skill01, Danger, Quaternion.identity);
+        Skill.GetComponent<Skill_damage>().Set_Damage(
+            gameObject.GetComponent<Monster_stats>().give_damage());
         animator.SetBool("Paten1", false);
         yield return new WaitForSeconds(1f);
         Patan = false;
@@ -79,7 +82,8 @@ public class Aterans : MonoBehaviour
         Instantiate(Dangers, Danger, Quaternion.identity);
         yield return new WaitForSeconds(.25f);
 
-        Instantiate(Skill03, Danger, Quaternion.identity);
+        GameObject Skill = Instantiate(Skill03, Danger, Quaternion.identity);
+        Skill.GetComponent<Skill_damage>().Set_Damage(gameObject.GetComponent<Monster_stats>().give_damage());
         animator.SetBool("Paten2", false);
         yield return new WaitForSeconds(1f);
         Patan = false;
@@ -92,7 +96,9 @@ public class Aterans : MonoBehaviour
 
         Instantiate(Dangers, Danger, Quaternion.identity);
         yield return new WaitForSeconds(.25f);
-        Instantiate(Skill02, Danger, Quaternion.identity);
+
+        GameObject Skill = Instantiate(Skill02, Danger, Quaternion.identity);
+        Skill.GetComponent<Skill_damage>().Set_Damage(gameObject.GetComponent<Monster_stats>().give_damage());
         animator.SetBool("Paten3", false);
         yield return new WaitForSeconds(1f);
         Patan = false;

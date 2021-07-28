@@ -10,12 +10,13 @@ GameObject:
   m_Component:
   - component: {fileID: 1908040921549510890}
   - component: {fileID: 1908040921549510889}
+  - component: {fileID: -3644489137340567029}
   - component: {fileID: 1908040921549510888}
   - component: {fileID: 1908040921549510903}
   - component: {fileID: 1200899232}
   m_Layer: 0
   m_Name: Aterans
-  m_TagString: Untagged
+  m_TagString: Monster
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -53,6 +54,23 @@ MonoBehaviour:
   Player: {fileID: 0}
   Patan: 0
   animator: {fileID: 0}
+--- !u!114 &-3644489137340567029
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1908040921549510902}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8dabfc865e2173c4f9eb2d7c849d5050, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Hp: 10000
+  damage: 65
+  Atk_dir: 0
+  Monster_Drop_Tear: 0
+  stageManger: {fileID: 0}
 --- !u!212 &1908040921549510888
 SpriteRenderer:
   m_ObjectHideFlags: 0

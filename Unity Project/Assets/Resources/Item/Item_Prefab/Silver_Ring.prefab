@@ -100,7 +100,7 @@ MonoBehaviour:
   tear: 0
   Item_stat: 000000000000000000000000000000000a00000000000000
   meeleatk: 0
-  skill_number: R_Skill_01
+  skill_number: R_Skill_02
   CoolTime: 1
   reinforce_add: 0
 --- !u!61 &7637063077376782384

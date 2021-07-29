@@ -5,13 +5,32 @@ using UnityEngine;
 
 public class Player_State_Window : MonoBehaviour
 {   //이 코드는 캔버스나, Player_State_Window_UI에 직접 넣는게 아닌 하나의 통합 UI에 넣는 코드임을 고려해서 작성함
-    private Text P_S_Text;
+    [SerializeField]
+    private Text HP;
+    [SerializeField]
+    private Text STR;
+    [SerializeField]
+    private Text DEF;
+    [SerializeField]
+    private Text AGI;
+    [SerializeField]
+    private Text LUK;
+    [SerializeField]
+    private Text Money;
+    [SerializeField]
+    private Text Weapon;
+    [SerializeField]
+    private Text Armor;
+    [SerializeField]
+    private Text Hat;
+    [SerializeField]
+    private Text Ring;
+
     Player_Stat P_S;
     Player_Item P_I;
 
     void Start()
     {      
-        P_S_Text = GameObject.Find("Player_State_UI_text").GetComponent<Text>();
         //일단 플레이어라는 빈 오브젝트안에 Player_Stat 스크립을 넣음.
         P_S = GameObject.Find("Player").GetComponent<Player_Stat>();
         P_I = GameObject.Find("Player").GetComponent<Player_Item>();
@@ -26,54 +45,47 @@ public class Player_State_Window : MonoBehaviour
 
     public void get_Player_State_Text()
     {
-        P_S_Text.text =
-        "<Current HP / Max HP> : " + P_S.Get_P_State(1) + " / " + P_S.Get_P_State(0) + "(" + P_S.Get_P_Base_State(0) + " + " + (P_S.Get_P_State(0) - P_S.Get_P_Base_State(0)) + ")" + "\n"
-        + "<STR> : " + P_S.Get_P_State(2) + "(" + P_S.Get_P_Base_State(2) + " + " + (P_S.Get_P_State(2) - P_S.Get_P_Base_State(2)) + ")" + "\n"
-        + "<DEF> : " + P_S.Get_P_State(3) + "(" + P_S.Get_P_Base_State(3) + " + " + (P_S.Get_P_State(3) - P_S.Get_P_Base_State(3)) + ")" + "\n"
-        + "<AGI> : " + P_S.Get_P_State(4) + "(" + P_S.Get_P_Base_State(4) + " + " + (P_S.Get_P_State(4) - P_S.Get_P_Base_State(4)) + ")" + "\n"
-        + "<LUC> : " + P_S.Get_P_State(5) + "(" + P_S.Get_P_Base_State(5) + " + " + (P_S.Get_P_State(5) - P_S.Get_P_Base_State(5)) + ")" + "\n"
-        + "<Money> : " + P_S.Get_P_State(6) + "\n"
-        + "\n" + "\n"
-        + "equipment" + "\n";
+        HP.text = P_S.Get_P_State(1) + " / " + P_S.Get_P_State(0) + " (" + P_S.Get_P_Base_State(0) + " + " + (P_S.Get_P_State(0) - P_S.Get_P_Base_State(0)) + ")";
+        STR.text = P_S.Get_P_State(2) + " (" + P_S.Get_P_Base_State(2) + " + " + (P_S.Get_P_State(2) - P_S.Get_P_Base_State(2)) + ")";
+        DEF.text = P_S.Get_P_State(3) + " (" + P_S.Get_P_Base_State(3) + " + " + (P_S.Get_P_State(3) - P_S.Get_P_Base_State(3)) + ")";
+        AGI.text = P_S.Get_P_State(4) + " (" + P_S.Get_P_Base_State(4) + " + " + (P_S.Get_P_State(4) - P_S.Get_P_Base_State(4)) + ")";
+        LUK.text = P_S.Get_P_State(5) + " (" + P_S.Get_P_Base_State(5) + " + " + (P_S.Get_P_State(5) - P_S.Get_P_Base_State(5)) + ")";
+        Money.text = P_S.Get_P_State(6).ToString();
+
         if (P_I.Weapon)
         {
-            P_S_Text.text = P_S_Text.text
-          + "weapon : " + P_I.Get_Player_Item(0) + " +" + P_I.Weapon.GetComponent<Item_stats>().reinforce_add.ToString() + "\n";
+            Weapon.text = P_I.Get_Player_Item(0) + " +" + P_I.Weapon.GetComponent<Item_stats>().reinforce_add.ToString();
         }
         else
         {
-            P_S_Text.text = P_S_Text.text
-             + "weapon : NOPE\n";
+            Weapon.text = "NOPE";
         }
+
         if (P_I.Armor)
         {
-            P_S_Text.text = P_S_Text.text
-           + "armor : " + P_I.Get_Player_Item(1) + " +" + P_I.Armor.GetComponent<Item_stats>().reinforce_add.ToString() + "\n";
+            Armor.text = P_I.Get_Player_Item(1) + " +" + P_I.Armor.GetComponent<Item_stats>().reinforce_add.ToString();
         }
         else
         {
-            P_S_Text.text = P_S_Text.text
-             + "armor : NOPE\n";
+            Armor.text = "NOPE";
         }
+
         if (P_I.Hat)
         {
-            P_S_Text.text = P_S_Text.text
-            + "hat : " + P_I.Get_Player_Item(2) + " +" + P_I.Hat.GetComponent<Item_stats>().reinforce_add.ToString() + "\n";
+            Hat.text = P_I.Get_Player_Item(2) + " +" + P_I.Hat.GetComponent<Item_stats>().reinforce_add.ToString();
         }
         else
         {
-            P_S_Text.text = P_S_Text.text
-             + "hat : NOPE\n";
+            Hat.text = "NOPE";
         }
+
         if (P_I.Ring)
         {
-            P_S_Text.text = P_S_Text.text
-           + "ring : " + P_I.Get_Player_Item(3) + " +" + P_I.Ring.GetComponent<Item_stats>().reinforce_add.ToString() + "\n";
+            Ring.text = P_I.Get_Player_Item(3) + " +" + P_I.Ring.GetComponent<Item_stats>().reinforce_add.ToString();
         }
         else
         {
-            P_S_Text.text = P_S_Text.text
-             + "ring : NOPE\n";
+            Ring.text = "NOPE";
         }
     }
 }

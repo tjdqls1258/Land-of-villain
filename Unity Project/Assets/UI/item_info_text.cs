@@ -5,14 +5,28 @@ using UnityEngine.UI;
 
 public class item_info_text : MonoBehaviour
 {
-    private Text I_info_text;
+    [SerializeField]
+    private Text I_name_text;
+    [SerializeField]
+    private Text I_reinforce_text;
+    [SerializeField]
+    private Text I_hp_text;
+    [SerializeField]
+    private Text I_str_text;
+    [SerializeField]
+    private Text I_def_text;
+    [SerializeField]
+    private Text I_dex_text;
+    [SerializeField]
+    private Text I_luk_text;
+
     private string i_name;
     private GameObject i_stat;
 
     // Start is called before the first frame update
     void Start()
     {
-        I_info_text = GameObject.Find("Item_info_text").GetComponent<Text>();
+        
     }
 
     // Update is called once per frame
@@ -20,12 +34,12 @@ public class item_info_text : MonoBehaviour
     {
         i_name = GameObject.Find("Player").GetComponent<item_info>().Item_name;
         i_stat = GameObject.Find(i_name);
-        I_info_text.text = i_stat.GetComponent<Item_stats>().Item_Name + "\n" + "\n"
-            + "reinforce.lv : " + i_stat.GetComponent<Item_stats>().reinforce_add.ToString() + "\n"
-            + "equip.hp : " + i_stat.GetComponent<Item_stats>().Item_stat[1] + "\n"
-            + "equip.str : " + i_stat.GetComponent<Item_stats>().Item_stat[2] + "\n"
-            + "equip.def : " + i_stat.GetComponent<Item_stats>().Item_stat[3] + "\n"
-            + "equip.dex : " + i_stat.GetComponent<Item_stats>().Item_stat[4] + "\n"
-            + "equip.luk : " + i_stat.GetComponent<Item_stats>().Item_stat[5];
+        I_name_text.text = i_stat.GetComponent<Item_stats>().Item_Name;
+        I_reinforce_text.text = " LV " + i_stat.GetComponent<Item_stats>().reinforce_add.ToString();
+        I_hp_text.text = " + " + i_stat.GetComponent<Item_stats>().Item_stat[1].ToString();
+        I_str_text.text = " + " + i_stat.GetComponent<Item_stats>().Item_stat[2].ToString();
+        I_def_text.text = " + " + i_stat.GetComponent<Item_stats>().Item_stat[3].ToString();
+        I_dex_text.text = " + " + i_stat.GetComponent<Item_stats>().Item_stat[4].ToString();
+        I_luk_text.text = " + " + i_stat.GetComponent<Item_stats>().Item_stat[5].ToString();
     }
 }

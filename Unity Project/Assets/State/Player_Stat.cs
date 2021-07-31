@@ -48,6 +48,7 @@ public class Player_Stat : MonoBehaviour
     {
         if(N_Stages > Save_Stages)
         {
+            Save_Stages = N_Stages;
             PlayerPrefs.SetInt(Hight_Stages, N_Stages);
         }
     }

@@ -34,6 +34,7 @@ public class Player_Status : MonoBehaviour
         Player.GetComponent<Player_Stat>().Set_P_State(1, Setting_Hp);
         if (Player.GetComponent<Player_Stat>().Get_P_State(1) <= 0) //체력 0 되면 사망
         {
+            GetComponent<Player_Stat>().Return_Hight_Score();
             GameManager.isPause = true;
             Player_die_UI.SetActive(true);
             Time.timeScale = 0.0f;

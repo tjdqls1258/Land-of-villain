@@ -18,6 +18,6 @@ public class HighScore : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        Highscoretext.text = "HighScore : " + player_stat.N_Stages.ToString() + " stage";
+        Highscoretext.text = "HighScore : " + player_stat.Save_Stages.ToString() + " stage";
     }
 }

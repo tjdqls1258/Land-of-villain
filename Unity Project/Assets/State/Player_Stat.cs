@@ -5,6 +5,9 @@ using UnityEngine;
 public class Player_Stat : MonoBehaviour
 {
     public int N_Stages;
+
+    public int Save_Stages = 0;
+    private string Hight_Stages;
     Player_Item items;
 
     /*
@@ -22,6 +25,7 @@ public class Player_Stat : MonoBehaviour
     private int[] P_State = new int[] { 100, 100, 10, 5, 5, 0, 0 };
     private void Awake()
     {
+        Save_Stages = PlayerPrefs.GetInt(Hight_Stages, 0);
         N_Stages = 1;
         items = this.GetComponent<Player_Item>();
     }
@@ -39,5 +43,12 @@ public class Player_Stat : MonoBehaviour
     public int Get_P_Base_State(int N1)
     {
         return P_Base_State[N1];
+    }
+    public void Return_Hight_Score()
+    {
+        if(N_Stages > Save_Stages)
+        {
+            PlayerPrefs.SetInt(Hight_Stages, N_Stages);
+        }
     }
 }

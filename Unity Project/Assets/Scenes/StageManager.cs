@@ -44,10 +44,12 @@ public class StageManager : MonoBehaviour
             Monster.Add(instance);
             Monster_Check();
         }
-        //else if(((currentStage % 5) == 1) && (currentStage != 1))
-        //{
-        //    //상점 
-        //}
+        else if(((currentStage % 5) == 1) && (currentStage != 1))
+        {
+            //상점 
+            Instantiate(Resources.Load("Item/Item_Shop_UI/Canvas"), new Vector2(this.transform.position.x,this.transform.position.y), Quaternion.identity);
+
+        }
         else
         {
             for (int i = 0; i < Monster_Many; ++i)

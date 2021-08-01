@@ -26,8 +26,7 @@ public class Item_Shop : MonoBehaviour
     private string[] Item_Name = new string[4] { "","","",""};
 
     private int[] Item_Price = new int[4] { 0,0,0,0};
-    //아이템 샵이 새로운 라운드로 넘어가 열리는 것을 알리기 위한 변수.
-    private bool Shop_Open = false;
+
     //아이템이 구매 되었는지 안 되었는지 확인하기 위한 변수.
 
     private bool[] Item_Buy = new bool[4] { false,false,false,false };
@@ -35,8 +34,11 @@ public class Item_Shop : MonoBehaviour
     Player_Item PE;
     //플레이어의 위치에 아이템을 떨구기 위해.
     GameObject PT;
-    // Start is called before the first frame update
+    //아이템 샵을 나가기 위한 버튼을 가져옴.
 
+    private Button Exit_Button;
+
+    //일시정지 추가하여 사용할 예정.
     void Start()
     {   //아이템 이름 텍스트 찾아 텍스트 컴포넌트 넣기
         T_Item_Name[0] = GameObject.Find("Item_Name1").GetComponent<Text>();
@@ -53,11 +55,13 @@ public class Item_Shop : MonoBehaviour
         BS[1] = GameObject.Find("Item_Buy_Button2").GetComponent<Button>();
         BS[2] = GameObject.Find("Item_Buy_Button3").GetComponent<Button>();
         BS[3] = GameObject.Find("Item_Buy_Button4").GetComponent<Button>();
+        Exit_Button = GameObject.Find("Item_Shop_Exit").GetComponent<Button>();
         //버튼을 누를 시 사용될 함수를 설정해줌.
         BS[0].onClick.AddListener(onButton1);
         BS[1].onClick.AddListener(onButton2);
         BS[2].onClick.AddListener(onButton3);
         BS[3].onClick.AddListener(onButton4);
+        Exit_Button.onClick.AddListener(Item_Shop_Exit);
         //버튼안에 텍스트를 가져오기 위함. 참고로 버튼의 텍스트는 버튼의 자식클래스이기 때문에 GetChild를 사용함.
         Button_Text[0] = BS[0].transform.GetChild(0).GetComponent<Text>();
         Button_Text[1] = BS[1].transform.GetChild(0).GetComponent<Text>();
@@ -68,28 +72,35 @@ public class Item_Shop : MonoBehaviour
         PE = GameObject.Find("Player").GetComponent<Player_Item>();
         //플레이어의 위치를 사용하기 위해.
         PT = GameObject.Find("Player");
+        //아이템 초기화.
+        Open_Item_Shop();
     }
 
     // Update is called once per frame
     void Update()
     {
-        Open_Item_Shop();
+
+
+        //플레이어의 소지금을 표현하기 위함.
+        P_Money.text = "Player Money : " + PE.Get_Player_Money().ToString();
 
     }
 
     //버튼을 누를 시 사용되는 함수(사용법: Start()함수 안에 B_1.onClick.AddListener(onButton1);)
     public void onButton1()
-    {   //소지금이 아이템의 가격보다 크거나 같고, 아이템이 구매가 되기 전이라면
+    {
+        //소지금이 아이템의 가격보다 크거나 같고, 아이템이 구매가 되기 전이라면
         if (PE.Get_Player_Money() >= Item_Price[0] && Item_Buy[0] == false)
         {   
             //참고로 아이템의 이름이 NONE과 프리팹이 없는 이름일 경우 경우 오류가 발생하니 나중에 아이템 리스트를 꽉채워야하고 프리팹에 이름에 맞는 아이템을 넣어놔야함..
-           Instantiate(Resources.Load("Item_Prefab/" + Item_Name[0]), PT.transform.position, Quaternion.identity);
+           Instantiate(Resources.Load("Item/Item_Prefab/" + Item_Name[0]), PT.transform.position, Quaternion.identity);
             //품절이기에 버튼 텍스트를 NONE으로 만듦.
             Button_Text[0].text = "NONE";
             //아이템의 가격만큼 소지금에서 뺌.
             PE.Set_Player_Money(PE.Get_Player_Money() - Item_Price[0]);
             Item_Buy[0] = true;
         }
+
     }
     public void onButton2()
     {
@@ -97,7 +108,7 @@ public class Item_Shop : MonoBehaviour
         if (PE.Get_Player_Money() >= Item_Price[1] && Item_Buy[1] == false)
         {   
 
-            Instantiate(Resources.Load("Item_Prefab/" + Item_Name[1]), PT.transform.position, Quaternion.identity);
+            Instantiate(Resources.Load("Item/Item_Prefab/" + Item_Name[1]), PT.transform.position, Quaternion.identity);
             //품절이기에 버튼 텍스트를 NONE으로 만듦.
             Button_Text[1].text = "NONE";
             //아이템의 가격만큼 소지금에서 뺌.
@@ -110,7 +121,7 @@ public class Item_Shop : MonoBehaviour
         //소지금이 아이템의 가격보다 크거나 같고, 아이템이 구매가 되기 전이라면
         if (PE.Get_Player_Money() >= Item_Price[2] && Item_Buy[2] == false)
         {   
-            Instantiate(Resources.Load("Item_Prefab/" + Item_Name[2]), PT.transform.position, Quaternion.identity);
+            Instantiate(Resources.Load("Item/Item_Prefab/" + Item_Name[2]), PT.transform.position, Quaternion.identity);
             //품절이기에 버튼 텍스트를 NONE으로 만듦.
             Button_Text[2].text = "NONE";
             //아이템의 가격만큼 소지금에서 뺌.
@@ -124,7 +135,7 @@ public class Item_Shop : MonoBehaviour
         //소지금이 아이템의 가격보다 크거나 같고, 아이템이 구매가 되기 전이라면
         if (PE.Get_Player_Money() >= Item_Price[3] && Item_Buy[3] == false)
         {   
-            Instantiate(Resources.Load("Item_Prefab/" + Item_Name[3]), PT.transform.position, Quaternion.identity);
+            Instantiate(Resources.Load("Item/Item_Prefab/" + Item_Name[3]), PT.transform.position, Quaternion.identity);
             //품절이기에 버튼 텍스트를 NONE으로 만듦.
             Button_Text[3].text = "NONE";
             //아이템의 가격만큼 소지금에서 뺌.
@@ -134,37 +145,25 @@ public class Item_Shop : MonoBehaviour
         }
     }
     public void Open_Item_Shop()
-    {   //아이템 상점이 새롭게 열리면 가격 정해줌을 멈춰줘야하니까. 만약에 이 스크립을 프리팹으로 만들어 생성/제거를 한다면 Start()에 넣어서 한번만 실행 시키는 것이 좀더 좋다고 생각함.
-        if (Shop_Open == false)
-        {
-            int N1;
-            //아이템의 이름과 가격을 정해줌.            
-            for (int i = 0; i < 4; i++)
-            {
-                N1 = Item_Select_Rank();
-                Item_Name[i] = Item_Select_Name(N1);
-                Item_Price[i] = Item_Select_Price(N1);
-            }
-            //텍스트에 아이템의 이름과 가격을 넣어줌.
-            Copy_Item_Name_And_Price();
-            //전에 아이템을 구매 했을 수도 있으니 버튼 텍스트를 Buy으로 만듦.
-            for (int i = 0; i < 4; i++)
-            {
-                Button_Text[i].text = "BUY";
-            }
-            //아이템 상점아이템을 한번만 실행시켜 주기 위해.
-            Shop_Open = true;
-        }
-        //플레이어의 소지금을 표현하기 위함.
-        P_Money.text = "Player Money : "+PE.Get_Player_Money().ToString();
-
-
-    }
-    //라운드가 넘어가서 다음번 상점을 열었을 때 상품 품목을 초기화 시켜주는 코드.
-    public void On_Shop_Open()
     {
-        Shop_Open = false;
+        int N1;
+        //아이템의 이름과 가격을 정해줌.            
+        for (int i = 0; i < 4; i++)
+        {
+            N1 = Item_Select_Rank();
+            Item_Name[i] = Item_Select_Name(N1);
+            Item_Price[i] = Item_Select_Price(N1);
+        }
+        //텍스트에 아이템의 이름과 가격을 넣어줌.
+        Copy_Item_Name_And_Price();
+        //전에 아이템을 구매 했을 수도 있으니 버튼 텍스트를 Buy으로 만듦.
+        for (int i = 0; i < 4; i++)
+        {
+            Button_Text[i].text = "BUY";
+        }
+
     }
+
     public int Item_Select_Rank()//아이템의 등급을 정해줌.
     {
 
@@ -244,5 +243,10 @@ public class Item_Shop : MonoBehaviour
         }
 
     }
-
+    public void Item_Shop_Exit()
+    {
+        //현재 스테이지를 다음 스테이지로 넘겨주고, 현재 게임오브젝트를 Destroy함 
+        //다음스테이지로 넘겨주는 방법이 안보임
+        Destroy(gameObject);
+    }
 }

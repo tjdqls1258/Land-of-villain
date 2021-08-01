@@ -47,14 +47,14 @@ public class Drop_Money : MonoBehaviour
             //돈이 생성되는 구간은 몬스터가 죽은 자리 + (-1,1)사이의 값
             for (int i = 0; i < G; i++)
             {
-                Instantiate(Resources.Load("Money_Prefab/Gold_Coin"), new Vector2(TS.position.x+Random.Range(-1,1), TS.position.y + Random.Range(-1, 1)), Quaternion.identity);
+                Instantiate(Resources.Load("Money_Prefab/Gold_Coin"), new Vector2(TS.position.x+Random.Range(-0.01f,0.01f), TS.position.y + Random.Range(-0.01f, 0.01f)), Quaternion.identity);
             }
 
             for (int i = 0; i < S; i++)
-            { Instantiate(Resources.Load("Money_Prefab/Silver_Coin"), new Vector2(TS.position.x + Random.Range(-1, 1), TS.position.y + Random.Range(-1, 1)), Quaternion.identity); }
+            { Instantiate(Resources.Load("Money_Prefab/Silver_Coin"), new Vector2(TS.position.x + Random.Range(-0.01f, 0.01f), TS.position.y + Random.Range(-0.01f, 0.01f)), Quaternion.identity); }
 
             for (int i = 0; i < C; i++)
-            { Instantiate(Resources.Load("Money_Prefab/Copper_Coin"), new Vector2(TS.position.x + Random.Range(-1, 1), TS.position.y + Random.Range(-1, 1)), Quaternion.identity); }
+            { Instantiate(Resources.Load("Money_Prefab/Copper_Coin"), new Vector2(TS.position.x + Random.Range(-0.01f, 0.01f), TS.position.y + Random.Range(-0.01f, 0.01f)), Quaternion.identity); }
         }
     }
 }

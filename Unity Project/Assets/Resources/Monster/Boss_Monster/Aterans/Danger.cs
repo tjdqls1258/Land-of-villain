@@ -7,10 +7,9 @@ public class Danger : MonoBehaviour
     GameObject Skills;
     Vector3 this_transform;
     int Damages;
-    public void Patan_Ative(GameObject Skills, int Damage)
+    public void Patan_Ative(GameObject Skills, int Damage, Vector3 Target)
     {
-        GameObject Player = GameObject.Find("Player");
-        GameObject this_gameObject = Instantiate(gameObject, Player.transform.position, Quaternion.identity);
+        GameObject this_gameObject = Instantiate(gameObject, Target, Quaternion.identity);
         this_transform = this_gameObject.transform.position;
         this.Skills = Skills;
         Damages = Damage;

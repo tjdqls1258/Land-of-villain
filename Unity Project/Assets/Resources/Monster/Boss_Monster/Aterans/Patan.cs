@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Aterans : MonoBehaviour
+public class Patan : MonoBehaviour
 {
     public GameObject[] Skill_Prefabs;
     public GameObject Dangers;
@@ -10,7 +10,7 @@ public class Aterans : MonoBehaviour
 
     int selection;
 
-    public bool Patan = false;
+    public bool Patans = false;
 
     public Animator animator;
 
@@ -23,7 +23,7 @@ public class Aterans : MonoBehaviour
     }
     private void Update()
     {
-        if(!Patan)
+        if (!Patans)
         {
             Skill_01();
         }
@@ -32,8 +32,8 @@ public class Aterans : MonoBehaviour
     void Skill_01() //무조건 플레이어를 조준하는 방식
     {
         selection = Random.Range(0, Skill_Prefabs.Length);
-        animator.SetBool("Paten"+(selection+1).ToString(), true);
-        Patan = true;
+        //animator.SetBool("Paten" + (selection + 1).ToString(), true); //몬스터 애니메이션 작동
+        Patans = true;
         GameObject Prefab = Skill_Prefabs[selection];
 
         Dangers.GetComponent<Danger>().Patan_Ative(Prefab);
@@ -45,8 +45,8 @@ public class Aterans : MonoBehaviour
     IEnumerator Next_Patan()
     {
         yield return new WaitForSeconds(1f);
-        animator.SetBool("Paten" + (selection + 1).ToString(), false);
+        //animator.SetBool("Paten" + (selection + 1).ToString(), false); //몬스터 애니메이션 작동
         yield return new WaitForSeconds(.1f);
-        Patan = false;
+        Patans = false;
     }
 }

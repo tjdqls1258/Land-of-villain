@@ -50,6 +50,10 @@ MonoBehaviour:
   Skill01: {fileID: 4905380818384409061, guid: 55a7d4101ee3af34293d8cb8aa3e5e91, type: 3}
   Skill02: {fileID: 3810150193276982884, guid: 8fc6b872406b12a40848cb079953e1bd, type: 3}
   Skill03: {fileID: 7101873612281294978, guid: 9f2e72f9c9e5f1346b69c16d82001730, type: 3}
+  Skill_Prefabs:
+  - {fileID: 4905380818384409061, guid: 55a7d4101ee3af34293d8cb8aa3e5e91, type: 3}
+  - {fileID: 3810150193276982884, guid: 8fc6b872406b12a40848cb079953e1bd, type: 3}
+  - {fileID: 7101873612281294978, guid: 9f2e72f9c9e5f1346b69c16d82001730, type: 3}
   Dangers: {fileID: 8201752240193606117, guid: f86a74d595682fc44a9489231e075f25, type: 3}
   Player: {fileID: 0}
   Patan: 0

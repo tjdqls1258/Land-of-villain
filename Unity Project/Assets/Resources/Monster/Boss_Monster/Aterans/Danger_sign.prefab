@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 6657104261004684885}
   - component: {fileID: 1697189723399226402}
   - component: {fileID: -4892724774416054323}
+  - component: {fileID: -8694280609921910738}
   m_Layer: 0
   m_Name: Danger_sign
   m_TagString: Untagged
@@ -95,3 +96,15 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   life_time: 0.2
+--- !u!114 &-8694280609921910738
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8201752240193606117}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 26f431230e06caa499706aab796e9138, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 

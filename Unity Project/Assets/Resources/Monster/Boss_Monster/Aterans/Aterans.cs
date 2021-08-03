@@ -36,9 +36,9 @@ public class Aterans : MonoBehaviour
         Patan = true;
         GameObject Prefab = Skill_Prefabs[selection];
 
-        Dangers.GetComponent<Danger>().Patan_Ative(Prefab);
+        Dangers.GetComponent<Danger>().Patan_Ative(Prefab, gameObject.GetComponent<Monster_stats>().give_damage());
 
-        Prefab.GetComponent<Skill_damage>().Set_Damage(gameObject.GetComponent<Monster_stats>().give_damage());
+        
         StartCoroutine("Next_Patan");
 
     }

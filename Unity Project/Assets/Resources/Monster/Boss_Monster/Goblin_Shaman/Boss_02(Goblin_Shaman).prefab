@@ -176,3 +176,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a8b34bf0789527f4da4406b824621f92, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  Goblin_Skill: {fileID: 516016050740715372, guid: 5769211dfb58aa9449d980d389d9eacd,
+    type: 3}
+  Dangers: {fileID: 1382301597999344926, guid: 65f2a9df84b2f4743a7604c4f2fd64d1, type: 3}
+  Player: {fileID: 0}
+  Goblin_ispattern: 0

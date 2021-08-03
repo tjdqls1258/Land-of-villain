@@ -13,7 +13,7 @@ public class Danger : MonoBehaviour
         this_transform = this_gameObject.transform.position;
         this.Skills = Skills;
         Damages = Damage;
-        Invoke("Do_Skill",0.25f);
+        Invoke("Do_Skill",0.2f);
     }
     void Do_Skill()
     {

@@ -10,6 +10,7 @@ public class H_Skill_01 : MonoBehaviour, Skill
     private bool Is_Action = false;
 
     GameObject Buffe_;
+
     public void Skill_Action()
     {
         GameObject Player = GameObject.Find("Player");

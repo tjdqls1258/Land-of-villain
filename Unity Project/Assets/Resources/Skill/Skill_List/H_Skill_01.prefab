@@ -47,6 +47,7 @@ MonoBehaviour:
   "\uC9C0\uC18D\uC2DC\uAC04": 3
   Buffe_Image: {fileID: 3017231592934808461, guid: 40183871d1f7c794687b57e9ca048cf6,
     type: 3}
+  skill_name: b
 --- !u!212 &4140533395912226759
 SpriteRenderer:
   m_ObjectHideFlags: 0

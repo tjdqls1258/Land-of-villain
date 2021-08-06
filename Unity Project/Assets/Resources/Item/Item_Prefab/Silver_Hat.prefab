@@ -103,6 +103,7 @@ MonoBehaviour:
   skill_number: H_Skill_01
   CoolTime: 6
   reinforce_add: 0
+  item_skill_name: AGI_UP
 --- !u!61 &5103535797099141256
 BoxCollider2D:
   m_ObjectHideFlags: 0

@@ -12,6 +12,7 @@ public class R_Skill_01 : MonoBehaviour, Skill
     GameObject Buffe_;
 
     Animator animator;
+
     public void Skill_Action()
     {
         Player = GameObject.Find("Player");

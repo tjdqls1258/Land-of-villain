@@ -99,9 +99,11 @@ MonoBehaviour:
   Item_Kind: 3
   tear: 0
   Item_stat: 000000000000000000000000000000000500000000000000
+  meeleatk: 0
   skill_number: R_Skill_01
   CoolTime: 1
   reinforce_add: 0
+  item_skill_name: Heal
 --- !u!61 &6926489641483766387
 BoxCollider2D:
   m_ObjectHideFlags: 0

@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 3969529550504819938}
   - component: {fileID: -5833658441949502116}
   m_Layer: 0
-  m_Name: Skill_01
+  m_Name: W_Skill_01
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -43,3 +43,4 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 56a71a6017c6c0849993bce1b9dcabe2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  skill_name: e

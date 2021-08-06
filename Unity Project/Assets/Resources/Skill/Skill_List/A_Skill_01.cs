@@ -13,7 +13,6 @@ public class A_Skill_01 : MonoBehaviour, Skill
     public GameObject Buffe_Image;
     GameObject Buffe_;
 
-
     public void Skill_Action()
     {
         

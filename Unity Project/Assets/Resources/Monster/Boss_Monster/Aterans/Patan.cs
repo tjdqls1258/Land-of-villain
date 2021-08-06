@@ -32,7 +32,10 @@ public class Patan : MonoBehaviour
     void Skill_01() //무조건 플레이어를 조준하는 방식
     {
         selection = Random.Range(0, Skill_Prefabs.Length);
-        //animator.SetBool("Paten" + (selection + 1).ToString(), true); //몬스터 애니메이션 작동
+        if (animator != null)
+        {
+            animator.SetBool("Paten" + (selection + 1).ToString(), true); //몬스터 애니메이션 작동
+        }
         Patans = true;
         GameObject Prefab = Skill_Prefabs[selection];
 
@@ -45,8 +48,11 @@ public class Patan : MonoBehaviour
     IEnumerator Next_Patan()
     {
         yield return new WaitForSeconds(1f);
-        //animator.SetBool("Paten" + (selection + 1).ToString(), false); //몬스터 애니메이션 작동
-        yield return new WaitForSeconds(.1f);
+        if (animator != null)
+        {
+            animator.SetBool("Paten" + (selection + 1).ToString(), false); //몬스터 애니메이션 작동
+        }
+            yield return new WaitForSeconds(.1f);
         Patans = false;
     }
 }

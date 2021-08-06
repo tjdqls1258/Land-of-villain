@@ -103,6 +103,7 @@ MonoBehaviour:
   skill_number: R_Skill_02
   CoolTime: 1
   reinforce_add: 0
+  item_skill_name: Undying
 --- !u!61 &7637063077376782384
 BoxCollider2D:
   m_ObjectHideFlags: 0

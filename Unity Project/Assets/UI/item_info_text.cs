@@ -19,6 +19,8 @@ public class item_info_text : MonoBehaviour
     private Text I_dex_text;
     [SerializeField]
     private Text I_luk_text;
+    [SerializeField]
+    private Text I_skill_name_text;
 
     private string i_name;
     private GameObject i_stat;
@@ -32,7 +34,7 @@ public class item_info_text : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        i_name = GameObject.Find("Player").GetComponent<item_info>().Item_name;
+        i_name = GameObject.Find("Player").GetComponent<item_info>().Item_name;        
         i_stat = GameObject.Find(i_name);
         I_name_text.text = i_stat.GetComponent<Item_stats>().Item_Name;
         I_reinforce_text.text = " LV " + i_stat.GetComponent<Item_stats>().reinforce_add.ToString();
@@ -41,5 +43,6 @@ public class item_info_text : MonoBehaviour
         I_def_text.text = " + " + i_stat.GetComponent<Item_stats>().Item_stat[3].ToString();
         I_dex_text.text = " + " + i_stat.GetComponent<Item_stats>().Item_stat[4].ToString();
         I_luk_text.text = " + " + i_stat.GetComponent<Item_stats>().Item_stat[5].ToString();
+        I_skill_name_text.text = i_stat.GetComponent<Item_stats>().item_skill_name.ToString();
     }
 }

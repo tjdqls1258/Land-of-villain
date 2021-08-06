@@ -25,6 +25,7 @@ public class Item_stats : MonoBehaviour
     GameObject player_s;
 
     public int reinforce_add; //강화 수치
+    public string item_skill_name;
     public void Awake()
     {
         this.transform.parent = null; //아이템 상속 해제
@@ -63,4 +64,7 @@ public class Item_stats : MonoBehaviour
     //아이템의 종류를 반환하는 함수
     public int Get_Item_Kind()
     { return Item_Kind; }
+
+    public string Get_Item_Skill_Name()
+    { return item_skill_name; }
 }

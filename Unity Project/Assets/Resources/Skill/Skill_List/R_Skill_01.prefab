@@ -46,3 +46,4 @@ MonoBehaviour:
   Healing: 5
   Buffe_Image: {fileID: 5497490924447962814, guid: 3339b0ee4c915734d820a85f9eea9d3b,
     type: 3}
+  skill_name: c

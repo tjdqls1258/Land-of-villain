@@ -12,7 +12,7 @@ public class R_Skill_02 : MonoBehaviour, Skill
 
     public float 스킬지속시간;
     public float 스킬쿨타임;
-   
+
     public void Skill_Action()
     {
         Player = GameObject.Find("Player");

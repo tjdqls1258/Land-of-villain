@@ -103,6 +103,7 @@ MonoBehaviour:
   skill_number: A_Skill_01
   CoolTime: 6
   reinforce_add: 0
+  item_skill_name: DEF_UP
 --- !u!61 &4328777743349385066
 BoxCollider2D:
   m_ObjectHideFlags: 0

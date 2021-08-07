@@ -8,6 +8,8 @@ public class Dendallia_Paten : MonoBehaviour
     public GameObject Dangers;
     public GameObject Player;
 
+    public GameObject[] Spwan_Monster;
+
     int selection;
 
     public bool Patan = false;
@@ -39,6 +41,7 @@ public class Dendallia_Paten : MonoBehaviour
                     Skill_02();
                     break;
                 case 2:
+                    Skill_03();
                     break;
                 default:
                     break; 
@@ -67,6 +70,28 @@ public class Dendallia_Paten : MonoBehaviour
         Warring.GetComponent<Danger>().Patan_Ative(Prefabs, gameObject.GetComponent<Monster_stats>().give_damage(), Player.transform.position);
 
         StartCoroutine("Warp_To_Player", Warring.transform.position);
+    }
+    void Skill_03()
+    {
+        animator.SetBool("Paten" + (selection + 1).ToString(), true);
+        GameObject stageManger = GameObject.Find("StageManager");
+
+        int i = Random.Range(0, Spwan_Monster.Length);
+        Instantiate(Spwan_Monster[i],this.gameObject.transform.position,Quaternion.identity);
+
+        stageManger.GetComponent<StageManager>().Monster_Check();
+        StartCoroutine("Base");
+    }
+    IEnumerator Base()
+    {
+        yield return new WaitForSeconds(1f);
+        animator.SetBool("Paten" + (selection + 1).ToString(), false);
+
+        yield return new WaitForSeconds(.1f);
+        selection = Random.Range(0, Skill_Prefabs.Length);
+        Prefab = Skill_Prefabs[selection];
+        Patan = false;
+
     }
     IEnumerator Warp_To_Player(Vector3 Warp_Point)
     {

@@ -26,7 +26,7 @@ public class Fly_Bulle : MonoBehaviour
         foreach (Transform child in allChildren)
         {
             if (child.name == transform.name)
-                return;
+                continue;
             child.GetComponent<Monster_Bullet>().Set_Damage(Damage);
             Debug.Log(child.name);
         }

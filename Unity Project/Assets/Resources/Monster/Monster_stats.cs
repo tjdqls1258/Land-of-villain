@@ -40,8 +40,8 @@ public class Monster_stats : MonoBehaviour
 
 
         GameObject item = (GameObject)Resources.Load("Item/Item_Prefab/" + Drop_item_it);
-        //GameObject item = (GameObject)Resources.Load("Item/Copper_Sword", typeof(GameObject));
-        //리소스파일 속 item파일에 있는 Drop_item_it와 같은 이름을 가진 프리팹
+        GameObject item = (GameObject)Resources.Load("Item/Copper_Sword", typeof(GameObject));
+        리소스파일 속 item파일에 있는 Drop_item_it와 같은 이름을 가진 프리팹
         if (item != null) //있으면 소환 없으면 아무것도 안함
         {
             Instantiate(item, this.transform.position, Quaternion.identity); 

@@ -34,8 +34,12 @@ public class item_info_text : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        i_name = GameObject.Find("Player").GetComponent<item_info>().Item_name;        
+        i_name = GameObject.Find("Player").GetComponent<item_info>().Item_name;
         i_stat = GameObject.Find(i_name);
+        if (i_stat == null)
+        {
+            return;
+        }
         I_name_text.text = i_stat.GetComponent<Item_stats>().Item_Name;
         I_reinforce_text.text = " LV " + i_stat.GetComponent<Item_stats>().reinforce_add.ToString();
         I_hp_text.text = " + " + i_stat.GetComponent<Item_stats>().Item_stat[1].ToString();

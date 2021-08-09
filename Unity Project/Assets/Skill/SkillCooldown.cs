@@ -220,8 +220,10 @@ public class SkillCooldown : MonoBehaviour
                 transform.position, Quaternion.AngleAxis(angle - 90, Vector3.forward));
         }
         else
-        {        
-            Instantiate(P_bullet, transform.position, transform.rotation);
+        {
+            GameObject Bullet = Instantiate((GameObject)Resources.Load(("Skill/SuRuTan"), typeof(GameObject)),
+                transform.position, transform.rotation);
+            Bullet.GetComponent<Player_bullet>().Set_Damage(GetComponent<Player_Stat>().Get_P_State(2));
         }
         Debug.Log("shoot");
         atkdelay = false;

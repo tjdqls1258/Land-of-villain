@@ -15,7 +15,7 @@ public class Queen_Bee_Paten01 : MonoBehaviour
         StartPoint = transform.position; //시작지점
         Find_Player();
         GameObject Bulltes = Instantiate(Bullte, transform.position, angleAxis);
-        Bullte.GetComponent<Skill_damage>().Set_Damage(GetComponent<Skill_damage>().Damage());
+        Bulltes.GetComponent<Skill_damage>().Set_Damage(GetComponent<Skill_damage>().Damage());
 
     }
 

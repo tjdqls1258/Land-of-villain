@@ -15,6 +15,7 @@ TagManager:
   - Item
   - Boom
   - Monster_Skill
+  - Player_Boom
   layers:
   - Default
   - TransparentFX

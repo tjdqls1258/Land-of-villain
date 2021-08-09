@@ -21,7 +21,7 @@ public class Queen_Bee_Paten02 : MonoBehaviour
         {
             Find_Player();
             GameObject Bulltes = Instantiate(Bullte, transform.position, angleAxis);
-            Bullte.GetComponent<Monster_Bullet>().Set_Damage(GetComponent<Skill_damage>().Damage());
+            Bulltes.GetComponent<Monster_Bullet>().Set_Damage(GetComponent<Skill_damage>().Damage());
             yield return new WaitForSeconds(.2f);
         }
         Destroy(gameObject);

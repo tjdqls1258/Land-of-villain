@@ -72,6 +72,16 @@ public class Monster_stats : MonoBehaviour
             }
             Destroy(other.gameObject);
         }
+        if (other.gameObject.tag == "Player_Boom")
+        {
+            //충돌한 객체의 컴퍼넌트에서 데미지 받아옴
+            Get_damange(other.GetComponent<Player_bullet>().Damage());
+
+            if (Hp <= 0)
+            {
+                Destroy(gameObject);
+            }
+        }
         if (other.gameObject.tag == "Skill")
         {
             Get_damange(other.GetComponent<Skill_Danamge>().Damage());

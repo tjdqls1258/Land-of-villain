@@ -57,3 +57,4 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Skill_type: 2
+  Skill_CollTime: 1

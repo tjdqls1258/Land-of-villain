@@ -43,6 +43,9 @@ public class Dendallia_Paten : MonoBehaviour
                 case 2:
                     Skill_03();
                     break;
+                case 3:
+                    Skill_04();
+                    break;
                 default:
                     break; 
             }
@@ -82,9 +85,29 @@ public class Dendallia_Paten : MonoBehaviour
         stageManger.GetComponent<StageManager>().Monster_Check();
         StartCoroutine("Base");
     }
+    void Skill_04() //테스트용 (여왕벌)
+    {
+        animator.SetBool("Paten" + (selection + 1).ToString(), true);
+        GameObject stageManger = GameObject.Find("StageManager");
+
+        Instantiate(Prefab, this.gameObject.transform.position, Quaternion.identity);
+
+        StartCoroutine("Base2");
+    }
+    IEnumerator Base2()
+    {
+        yield return new WaitForSeconds(Prefab.GetComponent<Skill_damage>().Skill_CollTime);
+        animator.SetBool("Paten" + (selection + 1).ToString(), false);
+
+        yield return new WaitForSeconds(.1f);
+        selection = Random.Range(0, Skill_Prefabs.Length);
+        Prefab = Skill_Prefabs[selection];
+        Patan = false;
+
+    }
     IEnumerator Base()
     {
-        yield return new WaitForSeconds(1f);
+        yield return new WaitForSeconds(Prefab.GetComponent<Skill_damage>().Skill_CollTime);
         animator.SetBool("Paten" + (selection + 1).ToString(), false);
 
         yield return new WaitForSeconds(.1f);
@@ -95,7 +118,7 @@ public class Dendallia_Paten : MonoBehaviour
     }
     IEnumerator Warp_To_Player(Vector3 Warp_Point)
     {
-        yield return new WaitForSeconds(1f);
+        yield return new WaitForSeconds(Prefab.GetComponent<Skill_damage>().Skill_CollTime);
         animator.SetBool("Paten" + (selection + 1).ToString(), false);
         gameObject.transform.position = Warp_Point;
 
@@ -108,7 +131,7 @@ public class Dendallia_Paten : MonoBehaviour
         //이거 몬스터 공격 방식에 따라 위치선정하면 될듯?
     IEnumerator Next_Patan()
     {
-        yield return new WaitForSeconds(1f);
+        yield return new WaitForSeconds(Prefab.GetComponent<Skill_damage>().Skill_CollTime);
         animator.SetBool("Paten" + (selection + 1).ToString(), false);
         yield return new WaitForSeconds(.1f);
         selection = Random.Range(0, Skill_Prefabs.Length);

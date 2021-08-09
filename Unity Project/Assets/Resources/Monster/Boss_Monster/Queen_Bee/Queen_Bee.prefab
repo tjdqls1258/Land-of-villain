@@ -1,6 +1,6 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
---- !u!1 &6314360772976099637
+--- !u!1 &1826987928640650468
 GameObject:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -8,40 +8,78 @@ GameObject:
   m_PrefabAsset: {fileID: 0}
   serializedVersion: 6
   m_Component:
-  - component: {fileID: 7063980084709842957}
-  - component: {fileID: 6319669219059619572}
-  - component: {fileID: 7519184520824965099}
-  - component: {fileID: 7847821948933148337}
-  - component: {fileID: 5914874069654313005}
-  - component: {fileID: 2224682582836377681}
+  - component: {fileID: 1826987928640650488}
+  - component: {fileID: 8494254667804122409}
+  - component: {fileID: 5641979802456479257}
+  - component: {fileID: 1826987928640650490}
+  - component: {fileID: 1826987928640650469}
+  - component: {fileID: 225315002151018674}
   m_Layer: 0
-  m_Name: M_Skill02
-  m_TagString: Monster_Skill
+  m_Name: Queen_Bee
+  m_TagString: Monster
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!4 &7063980084709842957
+--- !u!4 &1826987928640650488
 Transform:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6314360772976099637}
+  m_GameObject: {fileID: 1826987928640650468}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -1.31694, y: -0.32165977, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalPosition: {x: -1.743, y: 0.459, z: 0}
+  m_LocalScale: {x: 1.4513683, y: 1.6856228, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!212 &6319669219059619572
+--- !u!114 &8494254667804122409
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1826987928640650468}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a168d28fb32e0e34f841e46ad45e4ba6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Skill_Prefabs:
+  - {fileID: 2342707352406647249, guid: 0fa495bd3a9bb894dabd3fba5887a83d, type: 3}
+  - {fileID: 8176985918678128510, guid: 97cc9abefd873234e9f41b14f171f42b, type: 3}
+  Dangers: {fileID: 1382301597999344926, guid: 65f2a9df84b2f4743a7604c4f2fd64d1, type: 3}
+  Player: {fileID: 0}
+  Spwan_Monster:
+  - {fileID: 5711713831556045367, guid: 7ccc2b13f088a1d4abcab36241232167, type: 3}
+  Patan: 0
+  animator: {fileID: 0}
+--- !u!114 &5641979802456479257
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1826987928640650468}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8dabfc865e2173c4f9eb2d7c849d5050, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Hp: 5000
+  damage: 30
+  Atk_dir: 0
+  Monster_Drop_Tear: 0
+  stageManger: {fileID: 0}
+--- !u!212 &1826987928640650490
 SpriteRenderer:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6314360772976099637}
+  m_GameObject: {fileID: 1826987928640650468}
   m_Enabled: 1
   m_CastShadows: 0
   m_ReceiveShadows: 0
@@ -74,29 +112,29 @@ SpriteRenderer:
   m_SortingLayerID: 1395904143
   m_SortingLayer: 2
   m_SortingOrder: 1
-  m_Sprite: {fileID: 1208040086343421634, guid: 7e4b49d029370b0448ee4b5989f595d9,
+  m_Sprite: {fileID: 6683615111705859281, guid: 916bb8914b16ee44285a8806c95cd454,
     type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
-  m_Size: {x: 0.32, y: 0.32}
+  m_Size: {x: 1.28, y: 1.92}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
-  m_SpriteSortPoint: 0
---- !u!95 &7519184520824965099
+  m_SpriteSortPoint: 1
+--- !u!95 &1826987928640650469
 Animator:
   serializedVersion: 3
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6314360772976099637}
+  m_GameObject: {fileID: 1826987928640650468}
   m_Enabled: 1
   m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: 926f4a205c5b2f746b9ebd4292a13e12, type: 2}
+  m_Controller: {fileID: 9100000, guid: 00bd3504a90cb2e428e39d9445f515ff, type: 2}
   m_CullingMode: 0
   m_UpdateMode: 0
   m_ApplyRootMotion: 0
@@ -105,55 +143,29 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
---- !u!114 &7847821948933148337
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6314360772976099637}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 3996c33f5d4a97c4eb8e6308610f95b3, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
---- !u!114 &5914874069654313005
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6314360772976099637}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 1bf831552b50ae94aba513d98529553d, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  Skill_type: 0
-  Skill_CollTime: 1
---- !u!61 &2224682582836377681
+--- !u!61 &225315002151018674
 BoxCollider2D:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6314360772976099637}
+  m_GameObject: {fileID: 1826987928640650468}
   m_Enabled: 1
   m_Density: 1
   m_Material: {fileID: 0}
-  m_IsTrigger: 1
+  m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 0.32, y: 0.32}
-    newSize: {x: 0.32, y: 0.32}
+    oldSize: {x: 0.96, y: 0.96}
+    newSize: {x: 1.28, y: 1.92}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 0.32, y: 0.32}
+  m_Size: {x: 0.8, y: 0.9}
   m_EdgeRadius: 0

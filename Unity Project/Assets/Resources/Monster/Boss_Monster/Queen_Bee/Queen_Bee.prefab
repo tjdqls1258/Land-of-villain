@@ -50,6 +50,8 @@ MonoBehaviour:
   Skill_Prefabs:
   - {fileID: 2342707352406647249, guid: 0fa495bd3a9bb894dabd3fba5887a83d, type: 3}
   - {fileID: 8176985918678128510, guid: 97cc9abefd873234e9f41b14f171f42b, type: 3}
+  - {fileID: 5834477906267445221, guid: 797c047b2517aa648a6a70acd2ae5433, type: 3}
+  - {fileID: 8977386685496514990, guid: 4f2591b5042f811478e125b8774a3d1a, type: 3}
   Dangers: {fileID: 1382301597999344926, guid: 65f2a9df84b2f4743a7604c4f2fd64d1, type: 3}
   Player: {fileID: 0}
   Spwan_Monster:

@@ -11,7 +11,10 @@ public class Setting_all : MonoBehaviour
         {
             if (child.name == transform.name)
                 continue;
-            child.GetComponent<Skill_Danamge>().Set_Damage(Damage);
+            if (!(child.GetComponent<Skill_Danamge>() == null))
+            {
+                child.GetComponent<Skill_Danamge>().Set_Damage(Damage);
+            }
         }
     }
 }

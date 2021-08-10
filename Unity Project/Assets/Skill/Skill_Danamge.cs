@@ -8,9 +8,9 @@ public class Skill_Danamge : MonoBehaviour
     // Start is called before the first frame update
     float time;
     public float 지속시간;
-    void Start()
+    void Awake()
     {
-        transform.position += transform.up * 0.5f; 
+        //transform.position += transform.up * 0.5f; 
         time = 0;
         GameObject Players = GameObject.Find("Player");
         Skill_Damage = (int)(Players.GetComponent<Player_Stat>().Get_P_State(2) * Skill_Damage);

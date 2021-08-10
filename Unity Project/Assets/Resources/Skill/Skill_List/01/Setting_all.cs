@@ -2,10 +2,8 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Set_Chiled : MonoBehaviour
+public class Setting_all : MonoBehaviour
 {
-    // Start is called before the first frame update
-
     public void Set_all_Bullte(int Damage)
     {
         Transform[] allChildren = GetComponentsInChildren<Transform>();
@@ -13,7 +11,7 @@ public class Set_Chiled : MonoBehaviour
         {
             if (child.name == transform.name)
                 continue;
-            child.GetComponent<Monster_Bullet>().Set_Damage(Damage);
+            child.GetComponent<Skill_Danamge>().Set_Damage(Damage);
         }
     }
 }

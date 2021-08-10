@@ -15,6 +15,10 @@ public class Skill_Danamge : MonoBehaviour
         GameObject Players = GameObject.Find("Player");
         Skill_Damage = (int)(Players.GetComponent<Player_Stat>().Get_P_State(2) * Skill_Damage);
     }
+    public void Set_Damage(int dam)
+    {
+        Skill_Damage = dam;
+    }
     public int Damage()
     {
         return Skill_Damage;

@@ -221,7 +221,7 @@ public class SkillCooldown : MonoBehaviour
         }
         else
         {
-            GameObject Bullet = Instantiate((GameObject)Resources.Load(("Skill/SuRuTan"), typeof(GameObject)),
+            GameObject Bullet = Instantiate(GetComponent<Player_Item>().Weapon.GetComponent<Item_stats>().Bullte,
                 transform.position, transform.rotation);
             Bullet.GetComponent<Player_bullet>().Set_Damage(GetComponent<Player_Stat>().Get_P_State(2));
         }

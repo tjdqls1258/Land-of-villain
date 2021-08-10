@@ -7,7 +7,7 @@ public class Turring : MonoBehaviour
     public float Rota_Speed;
     private void Awake()
     {
-        Set_all_Bullte(GetComponent<Skill_damage>().Damage());
+        //Set_all_Bullte(GetComponent<Skill_damage>().Damage());
     }
     void Update()
     {

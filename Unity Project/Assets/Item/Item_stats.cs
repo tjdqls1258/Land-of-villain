@@ -26,6 +26,8 @@ public class Item_stats : MonoBehaviour
 
     public int reinforce_add; //강화 수치
     public string item_skill_name;
+
+    public GameObject Bullte;
     public void Awake()
     {
         this.transform.parent = null; //아이템 상속 해제

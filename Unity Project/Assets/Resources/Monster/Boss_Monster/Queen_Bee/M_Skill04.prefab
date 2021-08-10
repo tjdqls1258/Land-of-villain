@@ -45,7 +45,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Skill_type: 3
-  Skill_CollTime: 1
+  Skill_CollTime: 4
 --- !u!114 &4119330444430113486
 MonoBehaviour:
   m_ObjectHideFlags: 0

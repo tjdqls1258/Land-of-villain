@@ -57,4 +57,11 @@ public class Player_bullet : MonoBehaviour
     {
         return Damage_s;
     }
+    private void OnTriggerEnter2D(Collider2D collision)
+    {
+        if (collision.tag == "Monster")
+        {
+            Destroy(gameObject);
+        }
+    }
 }

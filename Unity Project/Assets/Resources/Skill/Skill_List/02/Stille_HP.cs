@@ -29,4 +29,8 @@ public class Stille_HP : MonoBehaviour
             }
         }
     }
+    public void set_Max_healing(int healing)
+    {
+        this.MAX_healing = healing;
+    }
 }

@@ -17,6 +17,14 @@ public class Stille_HP : MonoBehaviour
     {
         if (collision.tag == "Monster")
         {
+            if (Player.GetComponent<Player_Item>().Ring != null)
+            {
+                string PlayerRing = Player.GetComponent<Player_Item>().Ring.GetComponent<Item_stats>().Get_Item_Name();
+                if (PlayerRing == "Blood_Ring")
+                {
+                    set_Max_healing(12);
+                }
+            }
             int Healing = Random.Range(1, MAX_healing);
             if (N_HP + Healing > Player.GetComponent<Player_Stat>().Get_P_State(0))
             {

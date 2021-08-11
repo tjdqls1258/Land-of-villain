@@ -7,12 +7,7 @@ public class Blood_Nife_Skill : MonoBehaviour, Skill
     GameObject Player;
     public void Skill_Action()
     {
-        Player = GameObject.Find("Player");
-        string PlayerRing =  Player.GetComponent<Player_Item>().Ring.GetComponent<Item_stats>().Get_Item_Name();
-        if(PlayerRing == "Blood_Ring")
-        {
-            Player.GetComponent<Player_Item>().Weapon.GetComponent<Stille_HP>().set_Max_healing(12);
-        }
+        
         //InvokeRepeating("Passive", 0, 1); //0초후에 Passive를 1초간격으로 반복 
         //Is_Action = true;
 

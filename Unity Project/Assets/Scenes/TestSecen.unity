@@ -12137,7 +12137,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cb34e985ee44bab4ca55cc4450c47482, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Weapon: {fileID: 5712794810030491242, guid: f7c70ef0eb08f3449a204672e801373f, type: 3}
+  Weapon: {fileID: 2503971553283345678, guid: 7892fd23c7e19cf4d928154418b943b3, type: 3}
   Armor: {fileID: 4077069383671983443, guid: cc6cb8343a4993241bee36e06079dfe1, type: 3}
   Ring: {fileID: 6101161922935019872, guid: 1ee4f8cea1073d94886dbd3a5c1faf30, type: 3}
   Hat: {fileID: 7555473747519820800, guid: 47a71d1f8edcdb24c98b29a9615991c0, type: 3}

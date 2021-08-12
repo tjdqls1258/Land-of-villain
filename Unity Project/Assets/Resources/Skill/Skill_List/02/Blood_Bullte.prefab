@@ -109,6 +109,7 @@ GameObject:
   - component: {fileID: 3726874179763681922}
   - component: {fileID: 7445050016454763168}
   - component: {fileID: 4809127191578275455}
+  - component: {fileID: -7572483410724410884}
   m_Layer: 0
   m_Name: Blood_Bullte
   m_TagString: Player_ATk
@@ -255,3 +256,15 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   MAX_healing: 6
+--- !u!114 &-7572483410724410884
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6662096789849456747}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 46354990e41d160408bf55cc5b6d8041, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 

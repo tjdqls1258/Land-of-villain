@@ -228,25 +228,58 @@ public class SkillCooldown : MonoBehaviour
         Debug.Log("shoot");
         atkdelay = false;
     }
-    //IEnumerator MeeleAttacktime()
-    //{
-    //    float Cool_Dwon = mel_ATK;
-    //    while (Cool_Dwon >= 0.0f)
-    //    {
-    //        img_ATK.fillAmount = (Cool_Dwon / mel_ATK);
-    //        Cool_Dwon -= Time.deltaTime;
-    //        yield return new WaitForFixedUpdate();
-    //    }
-    //    yield return new WaitForSeconds(0.1f);
-    //}
+    public void Wepon_CoolTime_Delet(int HowMany)
+    {
+        if (Weapon_CoolTime - HowMany <= 0)
+        {
+            Weapon_CoolTime = 0;
+        }
+        else
+        {
+            Weapon_CoolTime = Weapon_CoolTime - HowMany;
+        }
+    }
+    public void Amor_CoolTime_Delet(int HowMany)
+    {
+        if (Amor_CoolTime - HowMany <= 0)
+        {
+            Amor_CoolTime = 0;
+        }
+        else
+        {
+            Amor_CoolTime = Amor_CoolTime - HowMany;
+        }
+    }
 
+    public void Hat_CoolTime_Delet(int HowMany)
+    {
+        if (helmat_CoolTime - HowMany <= 0)
+        {
+            helmat_CoolTime = 0;
+        }
+        else
+        {
+            helmat_CoolTime = helmat_CoolTime - HowMany;
+        }
+    }
+    public void Ring_CoolTime_Delet(int HowMany)
+    {
+        if (acc_CoolTime - HowMany <= 0)
+        {
+            acc_CoolTime = 0;
+        }
+        else
+        {
+            acc_CoolTime = acc_CoolTime - HowMany;
+        }
+    }
     IEnumerator WeaponSkill()
     {
         float Cool_Dwon = Weapon_CoolTime;
-        while (Cool_Dwon >= 0.0f)
+        while (Weapon_CoolTime >= 0.0f)
         {
-            img_Weapon_Cool.fillAmount = (Cool_Dwon / Weapon_CoolTime);
-            Cool_Dwon -= Time.deltaTime;
+            img_Weapon_Cool.fillAmount = (Weapon_CoolTime / Cool_Dwon);
+            Weapon_CoolTime -= Time.deltaTime;
             yield return new WaitForFixedUpdate();
         }
         weaponskilldelay = false;
@@ -255,10 +288,10 @@ public class SkillCooldown : MonoBehaviour
     IEnumerator ArmorSkill()
     {
         float Cool_Dwon = Amor_CoolTime;
-        while (Cool_Dwon >= 0.0f)
+        while (Amor_CoolTime >= 0.0f)
         {
-            img_Amor_Cool.fillAmount = (Cool_Dwon / Amor_CoolTime);
-            Cool_Dwon -= Time.deltaTime;
+            img_Amor_Cool.fillAmount = (Amor_CoolTime / Cool_Dwon);
+            Amor_CoolTime -= Time.deltaTime;
             yield return new WaitForFixedUpdate();
         }
         armorskilldelay = false;
@@ -267,10 +300,10 @@ public class SkillCooldown : MonoBehaviour
     IEnumerator HelmetSkill()
     {
         float Cool_Dwon = helmat_CoolTime;
-        while (Cool_Dwon >= 0.0f)
+        while (helmat_CoolTime >= 0.0f)
         {
-            img_helmat_Cool.fillAmount = (Cool_Dwon / helmat_CoolTime);
-            Cool_Dwon -= Time.deltaTime;
+            img_helmat_Cool.fillAmount = (helmat_CoolTime / Cool_Dwon );
+            helmat_CoolTime -= Time.deltaTime;
             yield return new WaitForFixedUpdate();
         }
         helmetskilldelay = false;
@@ -279,10 +312,10 @@ public class SkillCooldown : MonoBehaviour
     IEnumerator AcceSkill()
     {
         float Cool_Dwon = acc_CoolTime;
-        while (Cool_Dwon >= 0.0f)
+        while (acc_CoolTime >= 0.0f)
         {
-            img_acc_Cool.fillAmount = (Cool_Dwon / acc_CoolTime);
-            Cool_Dwon -= Time.deltaTime;
+            img_acc_Cool.fillAmount = (acc_CoolTime/Cool_Dwon);
+            acc_CoolTime -= Time.deltaTime;
             yield return new WaitForFixedUpdate();
         }
         acceskilldelay = false;

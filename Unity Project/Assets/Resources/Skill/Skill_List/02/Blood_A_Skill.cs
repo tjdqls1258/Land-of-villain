@@ -11,14 +11,17 @@ public class Blood_A_Skill : MonoBehaviour, Skill
 
     public GameObject Buffe_Image;
     GameObject Buffe_;
+    public void Passive()
+    {
 
+    }
     public void Skill_Action()
     {
 
         GameObject Player = GameObject.Find("Player");
         if (Player.GetComponent<Player_Item>().Ring != null)
         {
-            if (Player.GetComponent<Player_Item>().Ring.GetComponent<Item_stats>().Get_Item_Name() == "Blood_Ring")
+            if (Player.GetComponent<Player_Item>().Ring.GetComponent<Item_stats>().Get_Item_Name() == "Blood Ring")
             {
                 지속시간 = 4;
             }

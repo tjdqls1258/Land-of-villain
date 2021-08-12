@@ -26,6 +26,10 @@ public class H_Skill_01 : MonoBehaviour, Skill
         Invoke("Buffe", 지속시간);
         
     }
+    public void Passive()
+    {
+
+    }
     public void Stop_Passive() 
     {
 

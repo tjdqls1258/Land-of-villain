@@ -15,6 +15,11 @@ public class R_Skill_02 : MonoBehaviour, Skill
 
     public void Skill_Action()
     {
+        
+    }
+
+    public void Passive()
+    {
         Player = GameObject.Find("Player");
         P_MaxHP = Player.GetComponent<Player_Stat>().Get_P_Base_State(0);
         InvokeRepeating("Checktrigger", 0, 0.01f);

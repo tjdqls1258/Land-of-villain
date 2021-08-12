@@ -6,6 +6,7 @@ public class FireBottle_Skill : MonoBehaviour, Skill
 {
     public GameObject FireBottle;
     public void Stop_Passive() { }
+    public void Passive() { }
     public void Skill_Action()
     {
         GameObject Player = GameObject.Find("Player");

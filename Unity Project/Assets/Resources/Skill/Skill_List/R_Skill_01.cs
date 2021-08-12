@@ -15,13 +15,19 @@ public class R_Skill_01 : MonoBehaviour, Skill
 
     public void Skill_Action()
     {
+        
+    }
+
+
+    public void Passive()
+    {
         Player = GameObject.Find("Player");
         InvokeRepeating("Passive", 0, 1); //0초후에 Passive를 1초간격으로 반복 
         Is_Action = true;
 
         GameObject Buffe_Panel = Player.transform.Find("Play_UI").transform.
            Find("BuffPanel").gameObject;
-        if(Buffe_ != null)
+        if (Buffe_ != null)
         {
             Destroy(Buffe_);
         }
@@ -29,10 +35,7 @@ public class R_Skill_01 : MonoBehaviour, Skill
         Buffe_.transform.parent = Buffe_Panel.transform;
         // 장비 해제시 중지 시켜줘야함.
         animator = Player.GetComponent<Animator>();
-    }
 
-    public void Passive()
-    {
         Debug.Log("패시브 발사 히히");
         animator.SetBool("Heal", true);
         int N_HP = Player.GetComponent<Player_Stat>().Get_P_State(1);

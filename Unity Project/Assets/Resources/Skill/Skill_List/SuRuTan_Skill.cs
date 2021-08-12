@@ -6,6 +6,7 @@ public class SuRuTan_Skill : MonoBehaviour, Skill
 {
     public GameObject SuRuTans;
     public void Stop_Passive() { }
+    public void Passive() { }
     public void Skill_Action()
     {
         GameObject Player = GameObject.Find("Player");

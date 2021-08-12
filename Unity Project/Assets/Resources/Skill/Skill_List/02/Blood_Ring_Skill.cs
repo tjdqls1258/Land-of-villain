@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Blood_Hood_Skill : MonoBehaviour, Skill
+public class Blood_Ring_Skill : MonoBehaviour, Skill
 {
     public float 지속시간;
     int reset_stat;
@@ -14,18 +14,11 @@ public class Blood_Hood_Skill : MonoBehaviour, Skill
     public void Skill_Action()
     {
         GameObject Player = GameObject.Find("Player");
-        if (Player.GetComponent<Player_Item>().Ring != null)
-        {
-            if (Player.GetComponent<Player_Item>().Ring.GetComponent<Item_stats>().Get_Item_Name() == "Blood Ring")
-            {
-                지속시간 = 4;
-            }
-        }
         GameObject Buffe_Panel = Player.transform.Find("Play_UI").transform.
         Find("BuffPanel").gameObject;
-        int Delete_Hp =(int)(Player.GetComponent<Player_Stat>().Get_P_State(0) * 0.05f);
-        
-        if((Player.GetComponent<Player_Stat>().Get_P_State(1) - Delete_Hp) < 0 )
+        int Delete_Hp = (int)(Player.GetComponent<Player_Stat>().Get_P_State(0) * 0.2f);
+
+        if ((Player.GetComponent<Player_Stat>().Get_P_State(1) - Delete_Hp) < 0)
         {
             return;
         }
@@ -33,9 +26,9 @@ public class Blood_Hood_Skill : MonoBehaviour, Skill
         Buffe_.transform.parent = Buffe_Panel.transform;
         Is_Action = true;
         Player.GetComponent<Player_Stat>().Set_P_State(1, Player.GetComponent<Player_Stat>().Get_P_State(1) - Delete_Hp);
-        reset_stat = (int)(Player.GetComponent<Player_Stat>().Get_P_State(4) * 0.5f);
-        Debug.Log("모자 스킬발사 히히");
-        Player.GetComponent<Player_Stat>().Set_P_State(4, Player.GetComponent<Player_Stat>().Get_P_State(4) + reset_stat);
+        reset_stat = (int)(Player.GetComponent<Player_Stat>().Get_P_State(3));
+        Debug.Log("반지 스킬발사 히히");
+        Player.GetComponent<Player_Stat>().Set_P_State(3, Player.GetComponent<Player_Stat>().Get_P_State(3) + reset_stat);
         Invoke("Buffe", 지속시간);
 
     }
@@ -50,9 +43,9 @@ public class Blood_Hood_Skill : MonoBehaviour, Skill
     void Buffe()
     {
         GameObject Player = GameObject.Find("Player");
-        Player.GetComponent<Player_Stat>().Set_P_State(4, Player.GetComponent<Player_Stat>().Get_P_State(4) - reset_stat);
+        Player.GetComponent<Player_Stat>().Set_P_State(3, Player.GetComponent<Player_Stat>().Get_P_State(3) - reset_stat);
         Is_Action = false;
         Destroy(Buffe_);
-        Debug.Log("모자 스킬종료 희희");
+        Debug.Log("반지 스킬종료 희희");
     }
 }

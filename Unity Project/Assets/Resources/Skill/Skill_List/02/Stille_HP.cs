@@ -20,7 +20,7 @@ public class Stille_HP : MonoBehaviour
             if (Player.GetComponent<Player_Item>().Ring != null)
             {
                 string PlayerRing = Player.GetComponent<Player_Item>().Ring.GetComponent<Item_stats>().Get_Item_Name();
-                if (PlayerRing == "Blood_Ring")
+                if (PlayerRing == "Blood Ring")
                 {
                     set_Max_healing(12);
                 }

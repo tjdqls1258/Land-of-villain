@@ -12,6 +12,7 @@ public class Player_Item : MonoBehaviour
     public Image skill1;
     public Image skill2;
     public Image skill3;
+    public Image skill4;
 
     public string Get_Player_Item(int N)
     {
@@ -40,8 +41,9 @@ public class Player_Item : MonoBehaviour
         if (Ring != null)
         {
             Ring.GetComponent<Item_stats>().Skill_Set();
-            Ring.GetComponent<Item_stats>().skill.Skill_Action();
+            Ring.GetComponent<Item_stats>().skill.Passive();
             Ring.GetComponent<Item_stats>().Add_Stat();
+            skill4.sprite = Ring.GetComponent<SpriteRenderer>().sprite;
 
         }
         if (Weapon != null)
@@ -82,7 +84,7 @@ public class Player_Item : MonoBehaviour
         {           
             Ring = (GameObject)Resources.Load("Item/Item_Prefab/" + player_item[3]);
             Ring.GetComponent<Item_stats>().Skill_Set();
-            Ring.GetComponent<Item_stats>().skill.Skill_Action();
+            Ring.GetComponent<Item_stats>().skill.Passive();
         }
         
 
@@ -90,7 +92,8 @@ public class Player_Item : MonoBehaviour
         {
             Ring.GetComponent<Item_stats>().skill.Stop_Passive();
             Ring.GetComponent<Item_stats>().Skill_Set();
-            Ring.GetComponent<Item_stats>().skill.Skill_Action();
+            Ring.GetComponent<Item_stats>().skill.Passive();
+            skill4.sprite = Ring.GetComponent<SpriteRenderer>().sprite;
         }
         if (Weapon != null)
         {

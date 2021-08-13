@@ -17,12 +17,15 @@ public class Player_Stat : MonoBehaviour
    int DEF=5; //방어력[3]
    int AGI=5; //민첩성(이동속도를 담당(추후에 가능하면 공격속도도?))[4]
    int LUC=0; //운(치명타)[5]
+   int Money=0 //돈[6]
    */
     //위에 것같은 스탯을 배열로 다룸
     [SerializeField]
     private int[] P_Base_State = new int[] { 100, 100, 10, 5, 5, 0, 0 };
+    //이거 
     [SerializeField]
     private int[] P_State = new int[] { 100, 100, 10, 5, 5, 0, 0 };
+    
     private void Awake()
     {
         Save_Stages = PlayerPrefs.GetInt(Hight_Stages, 0);

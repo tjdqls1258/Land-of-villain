@@ -31,7 +31,7 @@ public class Item_Shop : MonoBehaviour
 
     private bool[] Item_Buy = new bool[4] { false,false,false,false };
     //플레이어들의 돈을 가져오기 위해.
-    Player_Item PE;
+    Player_Stat PS;
     //플레이어의 위치에 아이템을 떨구기 위해.
     GameObject PT;
     //아이템 샵을 나가기 위한 버튼을 가져옴.
@@ -69,7 +69,8 @@ public class Item_Shop : MonoBehaviour
         Button_Text[3] = BS[3].transform.GetChild(0).GetComponent<Text>();
 
         //플레이어의 돈을 가져오기 위해 사용(오브젝트의 이름을 찾아 스크립트를 가져온다.)
-        PE = GameObject.Find("Player").GetComponent<Player_Item>();
+        PS= GameObject.Find("Player").GetComponent<Player_Stat>();
+
         //플레이어의 위치를 사용하기 위해.
         PT = GameObject.Find("Player");
         //아이템 초기화.
@@ -82,66 +83,40 @@ public class Item_Shop : MonoBehaviour
 
 
         //플레이어의 소지금을 표현하기 위함.
-        P_Money.text = "Player Money : " + PE.Get_Player_Money().ToString();
-
+        P_Money.text = "Player Money : " + PS.Get_P_State(6);
     }
 
     //버튼을 누를 시 사용되는 함수(사용법: Start()함수 안에 B_1.onClick.AddListener(onButton1);)
     public void onButton1()
     {
-        //소지금이 아이템의 가격보다 크거나 같고, 아이템이 구매가 되기 전이라면
-        if (PE.Get_Player_Money() >= Item_Price[0] && Item_Buy[0] == false)
-        {   
-            //참고로 아이템의 이름이 NONE과 프리팹이 없는 이름일 경우 경우 오류가 발생하니 나중에 아이템 리스트를 꽉채워야하고 프리팹에 이름에 맞는 아이템을 넣어놔야함..
-           Instantiate(Resources.Load("Item/Item_Prefab/" + Item_Name[0]), PT.transform.position, Quaternion.identity);
-            //품절이기에 버튼 텍스트를 NONE으로 만듦.
-            Button_Text[0].text = "NONE";
-            //아이템의 가격만큼 소지금에서 뺌.
-            PE.Set_Player_Money(PE.Get_Player_Money() - Item_Price[0]);
-            Item_Buy[0] = true;
-        }
+        Basic_Button(0);
 
     }
     public void onButton2()
     {
-        //소지금이 아이템의 가격보다 크거나 같고, 아이템이 구매가 되기 전이라면
-        if (PE.Get_Player_Money() >= Item_Price[1] && Item_Buy[1] == false)
-        {   
-
-            Instantiate(Resources.Load("Item/Item_Prefab/" + Item_Name[1]), PT.transform.position, Quaternion.identity);
-            //품절이기에 버튼 텍스트를 NONE으로 만듦.
-            Button_Text[1].text = "NONE";
-            //아이템의 가격만큼 소지금에서 뺌.
-            PE.Set_Player_Money(PE.Get_Player_Money() - Item_Price[1]);
-            Item_Buy[1] = true;
-        }
+        Basic_Button(1);
     }
     public void onButton3()
     {
-        //소지금이 아이템의 가격보다 크거나 같고, 아이템이 구매가 되기 전이라면
-        if (PE.Get_Player_Money() >= Item_Price[2] && Item_Buy[2] == false)
-        {   
-            Instantiate(Resources.Load("Item/Item_Prefab/" + Item_Name[2]), PT.transform.position, Quaternion.identity);
-            //품절이기에 버튼 텍스트를 NONE으로 만듦.
-            Button_Text[2].text = "NONE";
-            //아이템의 가격만큼 소지금에서 뺌.
-            PE.Set_Player_Money(PE.Get_Player_Money() - Item_Price[2]);
-
-            Item_Buy[2] = true;
-        }
+        Basic_Button(2);
     }
     public void onButton4()
     {
+        Basic_Button(3);
+    }
+    //위에 쓰이는 내용을 통합하여 사용하기 위한 메소드
+    public void Basic_Button(int i)
+    {
         //소지금이 아이템의 가격보다 크거나 같고, 아이템이 구매가 되기 전이라면
-        if (PE.Get_Player_Money() >= Item_Price[3] && Item_Buy[3] == false)
-        {   
-            Instantiate(Resources.Load("Item/Item_Prefab/" + Item_Name[3]), PT.transform.position, Quaternion.identity);
+        if (PS.Get_P_State(6) >= Item_Price[3] && Item_Buy[3] == false)
+        {
+            Instantiate(Resources.Load("Item/Item_Prefab/" + Item_Name[i]), PT.transform.position, Quaternion.identity);
             //품절이기에 버튼 텍스트를 NONE으로 만듦.
-            Button_Text[3].text = "NONE";
+            Button_Text[i].text = "NONE";
             //아이템의 가격만큼 소지금에서 뺌.
-            PE.Set_Player_Money(PE.Get_Player_Money() - Item_Price[3]);
+            PS.Miner_P_State(6, Item_Price[3]);
 
-            Item_Buy[3] = true;
+            Item_Buy[i] = true;
         }
     }
     public void Open_Item_Shop()

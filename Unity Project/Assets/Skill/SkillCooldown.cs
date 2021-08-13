@@ -161,9 +161,14 @@ public class SkillCooldown : MonoBehaviour
         if ((!acceskilldelay) && (GetComponent<Player_Item>().Ring != null))
         {
             acceskilldelay = true;
+            if (item_skill.Ring == null)
+            {
+                return;
+            }
             //악세서리스킬 실행
+            item_skill.Ring.GetComponent<Item_stats>().Skill_Set();
             item_skill.Ring.GetComponent<Item_stats>().skill.Skill_Action();
-            Amor_CoolTime = item_skill.Ring.GetComponent<Item_stats>().CoolTime;
+            acc_CoolTime = item_skill.Ring.GetComponent<Item_stats>().CoolTime;
 
             StartCoroutine("AcceSkill");
             Debug.Log("acceskill success");
@@ -197,6 +202,8 @@ public class SkillCooldown : MonoBehaviour
         yield return new WaitForSeconds(0.3f);
         Monster = null;
         shortDis = 1000f;
+        float angle = Mathf.Atan2(Monsterpos.y - transform.position.y
+                , Monsterpos.x - transform.position.x) * Mathf.Rad2Deg;
         foreach (GameObject found in FoundObjects)
         {
             if (found == null)
@@ -213,17 +220,16 @@ public class SkillCooldown : MonoBehaviour
             }
         }
         if (ismeele)
-        {
-            float angle = Mathf.Atan2(Monsterpos.y - transform.position.y
-                , Monsterpos.x - transform.position.x) * Mathf.Rad2Deg; //몬스터를 바라보는 각도       
+        {     
             Instantiate((GameObject)Resources.Load(("Skill/P_Meele_Atk"), typeof(GameObject)),
                 transform.position, Quaternion.AngleAxis(angle - 90, Vector3.forward));
         }
         else
         {
+            
             GameObject Bullet = Instantiate(GetComponent<Player_Item>().Weapon.GetComponent<Item_stats>().Bullte,
-                transform.position, transform.rotation);
-            Bullet.GetComponent<Player_bullet>().Set_Damage(GetComponent<Player_Stat>().Get_P_State(2));
+                transform.position, Quaternion.AngleAxis(angle - 90, Vector3.forward));
+            Bullet.GetComponent<Set_Damage>().SetDamage(GetComponent<Player_Stat>().Get_P_State(2));
         }
         Debug.Log("shoot");
         atkdelay = false;

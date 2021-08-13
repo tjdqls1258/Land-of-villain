@@ -40,7 +40,7 @@ public class Skill_Setting : MonoBehaviour
     {
         yield return new WaitForSecondsRealtime(distance);
         GameObject Boom_Eff = Instantiate(Boom, transform.position, Quaternion.identity);
-        Boom_Eff.GetComponent<Player_bullet>().Set_Damage((int)(GetComponent<Skill_Danamge>().Damage() * add));
+        Boom_Eff.GetComponent<Set_Damage>().SetDamage((int)(GetComponent<Skill_Danamge>().Damage() * add));
         Destroy(gameObject);
     }
     public void Set_Distance(float dis)

@@ -107,6 +107,7 @@ GameObject:
   - component: {fileID: 7321618949093798857}
   - component: {fileID: 7262779383219799836}
   - component: {fileID: 5631235067249124391}
+  - component: {fileID: -8688345096464715929}
   m_Layer: 0
   m_Name: Gas_Skill_Buttle
   m_TagString: Player_ATk
@@ -179,3 +180,15 @@ MonoBehaviour:
   distance: 1
   Boom: {fileID: 1875844513953478205, guid: 1e19e628c778fc549abf5904e2e350b9, type: 3}
   add: 0.3
+--- !u!114 &-8688345096464715929
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7752901075142353025}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c2b2ce99ec4752845850a4d179b37198, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 

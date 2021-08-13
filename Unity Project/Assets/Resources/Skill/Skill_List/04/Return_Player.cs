@@ -2,11 +2,12 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class return_Bulle : MonoBehaviour
+public class Return_Player : MonoBehaviour
 {
     Rigidbody2D rigid;
     public float Move_speed;
     public float distance;
+    GameObject Player;
 
     private int Damage_s = 0;
 
@@ -14,20 +15,32 @@ public class return_Bulle : MonoBehaviour
     void Awake()
     {
         rigid = GetComponent<Rigidbody2D>();
+        Player = GameObject.Find("Player");
         StartCoroutine("Do_It");
     }
 
     // Update is called once per frame
     void Update()
     {
-        rigid.AddForce(transform.up * Move_speed, ForceMode2D.Force);
+        
     }
     IEnumerator Do_It()
     {
-        yield return new WaitForSeconds(distance);
+        float time = 0;
+        while (distance > time)
+        {
+            time += Time.deltaTime;
+            rigid.AddForce(transform.up * Move_speed, ForceMode2D.Force);
+            yield return null;
+        }
         rigid.velocity = Vector3.zero;
-        transform.Rotate(new Vector3(0, 0, 180));
-        yield return new WaitForSeconds(distance);
+        time = 0;
+        while (distance > time)
+        {
+            time += Time.deltaTime;
+            transform.position = Vector3.MoveTowards(transform.position, Player.transform.position, Move_speed * 5.0f * Time.deltaTime);
+            yield return null;
+        }
         Destroy(gameObject);
     }
     public int Damage()

@@ -9,8 +9,6 @@ public class Player_bullet : MonoBehaviour
     public float Move_speed;
     public float Destory_self_this;
     private Vector3 monsterpos;
-
-    int Damage_s;
     float time;
     //private Vector2 movedir;
     // Start is called before the first frame update
@@ -47,14 +45,5 @@ public class Player_bullet : MonoBehaviour
                 Destroy(gameObject);
             }
         }
-    }
-
-    public void Set_Damage(int Damage_s)
-    {
-        this.Damage_s = Damage_s;
-    }
-    public int Damage()
-    {
-        return Damage_s;
     }
 }

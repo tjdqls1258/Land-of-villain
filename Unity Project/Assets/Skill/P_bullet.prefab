@@ -14,6 +14,7 @@ GameObject:
   - component: {fileID: 6117802458992952914}
   - component: {fileID: -9219878660563558800}
   - component: {fileID: 5935105000185676443}
+  - component: {fileID: -7449555139668030653}
   m_Layer: 0
   m_Name: P_bullet
   m_TagString: Player_ATk
@@ -156,5 +157,17 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 46354990e41d160408bf55cc5b6d8041, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &-7449555139668030653
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4263445422830632123}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c2b2ce99ec4752845850a4d179b37198, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 

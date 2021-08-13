@@ -12137,10 +12137,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cb34e985ee44bab4ca55cc4450c47482, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Weapon: {fileID: 2503971553283345678, guid: 7892fd23c7e19cf4d928154418b943b3, type: 3}
-  Armor: {fileID: 4077069383671983443, guid: cc6cb8343a4993241bee36e06079dfe1, type: 3}
-  Ring: {fileID: 6101161922935019872, guid: 1ee4f8cea1073d94886dbd3a5c1faf30, type: 3}
-  Hat: {fileID: 7555473747519820800, guid: 47a71d1f8edcdb24c98b29a9615991c0, type: 3}
+  Weapon: {fileID: 2120257699088777795, guid: afb0a291a2101524a88ce2c185722a4b, type: 3}
+  Armor: {fileID: 2614284012806349672, guid: 3e1a30b00f3a9be418b2e1cd9e227fa2, type: 3}
+  Ring: {fileID: 6090716113000505539, guid: 13a056366e13a54458607300a5ea7b9f, type: 3}
+  Hat: {fileID: 7015057282773779543, guid: e22424e8b86ee114e8bdfe29391c4217, type: 3}
   skill1: {fileID: 2121935082}
   skill2: {fileID: 520473161}
   skill3: {fileID: 458170011}

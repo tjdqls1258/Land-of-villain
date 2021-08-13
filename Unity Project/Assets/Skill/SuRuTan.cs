@@ -33,7 +33,7 @@ public class SuRuTan : MonoBehaviour
     {      
         yield return new WaitForSecondsRealtime(distance);
         GameObject Boom_Eff = Instantiate(Boom, transform.position, Quaternion.identity);
-        Boom_Eff.GetComponent<Player_bullet>().Set_Damage((int)(GetComponent<Player_bullet>().Damage() * add));
+        Boom_Eff.GetComponent<Set_Damage>().SetDamage((int)(GetComponent<Set_Damage>().Damage() * add));
         Destroy(gameObject);
     }
     public void Set_Distance(float dis)

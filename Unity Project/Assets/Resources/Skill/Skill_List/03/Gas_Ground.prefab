@@ -15,6 +15,7 @@ GameObject:
   - component: {fileID: 1894437318578139325}
   - component: {fileID: 7369981908127125460}
   - component: {fileID: 4226190066093484894}
+  - component: {fileID: -3815189333407795572}
   m_Layer: 0
   m_Name: Gas_Ground
   m_TagString: Player_Boom
@@ -167,5 +168,17 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: e77bb5efb5e4e3a409ad032f1e7c916c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &-3815189333407795572
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1875844513953478205}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c2b2ce99ec4752845850a4d179b37198, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 

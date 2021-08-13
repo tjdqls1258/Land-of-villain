@@ -64,7 +64,7 @@ public class Monster_stats : MonoBehaviour
         if (other.gameObject.tag == "Player_ATk")
         {
             //충돌한 객체의 컴퍼넌트에서 데미지 받아옴
-            Get_damange(other.GetComponent<Player_bullet>().Damage());
+            Get_damange(other.GetComponent<Set_Damage>().Damage());
 
             if (Hp <= 0)
             {
@@ -75,7 +75,7 @@ public class Monster_stats : MonoBehaviour
         if (other.gameObject.tag == "Player_Boom")
         {
             //충돌한 객체의 컴퍼넌트에서 데미지 받아옴
-            Get_damange(other.GetComponent<Player_bullet>().Damage());
+            Get_damange(other.GetComponent<Set_Damage>().Damage());
 
             if (Hp <= 0)
             {

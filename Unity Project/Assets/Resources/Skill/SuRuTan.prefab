@@ -107,6 +107,7 @@ GameObject:
   - component: {fileID: 7644965503663927313}
   - component: {fileID: 6859739216627712402}
   - component: {fileID: 49210232901038043}
+  - component: {fileID: 6541006301866185217}
   m_Layer: 0
   m_Name: SuRuTan
   m_TagString: Player_ATk
@@ -179,3 +180,15 @@ MonoBehaviour:
   distance: 1
   Boom: {fileID: 440851170629837406, guid: 447a64c4dc704684a82072c5521c4995, type: 3}
   add: 0.5
+--- !u!114 &6541006301866185217
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7211411211070169945}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c2b2ce99ec4752845850a4d179b37198, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 

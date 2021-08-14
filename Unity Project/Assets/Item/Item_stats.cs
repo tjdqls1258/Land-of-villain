@@ -21,7 +21,7 @@ public class Item_stats : MonoBehaviour
     public string skill_number; // 스킬 이름
     public Skill skill;  //보유 스킬
     public float CoolTime;//스킬 쿨타임
-
+    public string Item_Information;//아이템 설명.
     GameObject player_s;
 
     public int reinforce_add; //강화 수치
@@ -69,4 +69,9 @@ public class Item_stats : MonoBehaviour
 
     public string Get_Item_Skill_Name()
     { return item_skill_name; }
+
+    public string Get_Item_Information()
+    {
+        return Item_Information;
+    }
 }

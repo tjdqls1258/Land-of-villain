@@ -38,6 +38,10 @@ public class R_Skill_01 : MonoBehaviour, Skill
 
         Debug.Log("패시브 발사 히히");
         animator.SetBool("Heal", true);
+        InvokeRepeating("Helling", 0f, 3f);
+    }
+    void Helling()
+    {
         int N_HP = Player.GetComponent<Player_Stat>().Get_P_State(1);
         if (N_HP + Healing > Player.GetComponent<Player_Stat>().Get_P_State(0))
         {
@@ -48,7 +52,7 @@ public class R_Skill_01 : MonoBehaviour, Skill
         {
             Player.GetComponent<Player_Stat>().Set_P_State(1, N_HP + Healing);
         }
-        if(Player != null)
+        if (Player != null)
         {
             CancelInvoke("Stop_Passive");
         }

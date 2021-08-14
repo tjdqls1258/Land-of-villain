@@ -4,16 +4,17 @@ using UnityEngine;
 
 public class Bullte_Setting : MonoBehaviour
 {
-   public void Setting(int damage)
+
+    public void Setting(int damage)
     {
         Transform[] allChildren = GetComponentsInChildren<Transform>();
         foreach (Transform child in allChildren)
         {
             if (child.name == transform.name)
                 continue;
-            if (!(child.GetComponent<Skill_Danamge>() == null))
+            if (!(child.GetComponent<Set_Damage>() == null))
             {
-                child.GetComponent<Skill_Danamge>().Set_Damage(damage);
+                child.GetComponent<Set_Damage>().SetDamage(damage);
             }
         }
     }

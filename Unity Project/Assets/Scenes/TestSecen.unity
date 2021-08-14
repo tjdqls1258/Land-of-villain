@@ -1251,7 +1251,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 1, y: 0}
   m_AnchorMax: {x: 1, y: 0}
-  m_AnchoredPosition: {x: -253.9, y: 47.3}
+  m_AnchoredPosition: {x: -253.8999, y: 47.30005}
   m_SizeDelta: {x: 65, y: 65}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &157180025
@@ -1459,7 +1459,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 1, y: 0}
   m_AnchorMax: {x: 1, y: 0}
-  m_AnchoredPosition: {x: -125.13, y: 317}
+  m_AnchoredPosition: {x: -125.12988, y: 317}
   m_SizeDelta: {x: 44.730858, y: 44.730858}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &175599201
@@ -12137,7 +12137,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cb34e985ee44bab4ca55cc4450c47482, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Weapon: {fileID: 2120257699088777795, guid: afb0a291a2101524a88ce2c185722a4b, type: 3}
+  Weapon: {fileID: 4128203024357813081, guid: de12c157b0c4d50488808564316585bd, type: 3}
   Armor: {fileID: 2614284012806349672, guid: 3e1a30b00f3a9be418b2e1cd9e227fa2, type: 3}
   Ring: {fileID: 6090716113000505539, guid: 13a056366e13a54458607300a5ea7b9f, type: 3}
   Hat: {fileID: 7015057282773779543, guid: e22424e8b86ee114e8bdfe29391c4217, type: 3}

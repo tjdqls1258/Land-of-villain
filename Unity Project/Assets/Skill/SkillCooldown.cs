@@ -40,10 +40,13 @@ public class SkillCooldown : MonoBehaviour
     public Image img_helmat_Cool;
     public Image img_acc_Cool;
 
+    bool Drag_ATK;
+
     void Awake()
     {
         item_skill = GetComponent<Player_Item>();             
         rigid = GetComponent<Rigidbody2D>();
+        Drag_ATK = false;
     }
 
     // Update is called once per frame
@@ -54,6 +57,19 @@ public class SkillCooldown : MonoBehaviour
             ismeele = GetComponent<Player_Item>().Weapon.GetComponent<Item_stats>().meeleatk;
         }
         else { ismeele = false; }
+
+        if(Drag_ATK == true)
+        {
+            baseatk();
+        }
+    }
+    public bool Get_Drag_ATK()
+    {
+        return Drag_ATK;
+    }
+    public void Set_Drag_ATK(bool Drag_ATK)
+    {
+        this.Drag_ATK = Drag_ATK;
     }
 
     #region 스테이지 넘어갈때마다 몬스터 검색
@@ -202,8 +218,8 @@ public class SkillCooldown : MonoBehaviour
         yield return new WaitForSeconds(0.3f);
         Monster = null;
         shortDis = 1000f;
-        float angle = Mathf.Atan2(Monsterpos.y - transform.position.y
-                , Monsterpos.x - transform.position.x) * Mathf.Rad2Deg;
+        float angle = Mathf.Atan2(Joystick_ATK.inputDirection.y
+                , Joystick_ATK.inputDirection.x) * Mathf.Rad2Deg;
         foreach (GameObject found in FoundObjects)
         {
             if (found == null)

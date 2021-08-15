@@ -102,8 +102,10 @@ MonoBehaviour:
   meeleatk: 0
   skill_number: FireBottle_Skill01
   CoolTime: 3
+  Item_Information: 
   reinforce_add: 0
   item_skill_name: Burring
+  ATK_Speed: 1.5
   Bullte: {fileID: 832421447178272844, guid: c95aa9b071eaad848a0d7aff98f156ab, type: 3}
 --- !u!61 &57553741558261858
 BoxCollider2D:

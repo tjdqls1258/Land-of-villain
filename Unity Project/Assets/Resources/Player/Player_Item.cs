@@ -160,7 +160,7 @@ public class Player_Item : MonoBehaviour
                     Weapon.GetComponent<Item_stats>().reinforce();
                     Weapon.GetComponent<Item_stats>().Add_Stat();
                     //무기 승급
-                    if ((Weapon.GetComponent<Item_stats>().Item_stat[0] > 10) &&(Weapon.GetComponent<Item_stats>().tear < 2))
+                    if ((Weapon.GetComponent<Item_stats>().Item_stat[0] > 5) &&(Weapon.GetComponent<Item_stats>().tear < 2))
                     {
                         string Next_item = "";
                         if(Weapon.GetComponent<Item_stats>().tear == 0)
@@ -182,7 +182,7 @@ public class Player_Item : MonoBehaviour
                     Armor.GetComponent<Item_stats>().reinforce();
                     Armor.GetComponent<Item_stats>().Add_Stat();
                     //아머 승급
-                    if ((Armor.GetComponent<Item_stats>().Item_stat[0] > 10) &&((Armor.GetComponent<Item_stats>().tear < 2)))
+                    if ((Armor.GetComponent<Item_stats>().Item_stat[0] > 5) &&((Armor.GetComponent<Item_stats>().tear < 2)))
                     {
                         string Next_item = "";
                         if (Armor.GetComponent<Item_stats>().tear == 0)
@@ -203,7 +203,7 @@ public class Player_Item : MonoBehaviour
                     Hat.GetComponent<Item_stats>().reinforce();
                     Hat.GetComponent<Item_stats>().Add_Stat();
                     //모자 승급
-                    if ((Hat.GetComponent<Item_stats>().Item_stat[0] > 10) && ((Hat.GetComponent<Item_stats>().tear < 2)))
+                    if ((Hat.GetComponent<Item_stats>().Item_stat[0] > 5) && ((Hat.GetComponent<Item_stats>().tear < 2)))
                     {
                         string Next_item = "";
                         if (Hat.GetComponent<Item_stats>().tear == 0)
@@ -224,7 +224,7 @@ public class Player_Item : MonoBehaviour
                     Ring.GetComponent<Item_stats>().reinforce();
                     Ring.GetComponent<Item_stats>().Add_Stat();
                     //반지 승급
-                    if ((Ring.GetComponent<Item_stats>().Item_stat[0] > 10) && ((Ring.GetComponent<Item_stats>().tear < 2)))
+                    if ((Ring.GetComponent<Item_stats>().Item_stat[0] > 5) && ((Ring.GetComponent<Item_stats>().tear < 2)))
                     {
                         string Next_item = "";
                         if (Ring.GetComponent<Item_stats>().tear == 0)

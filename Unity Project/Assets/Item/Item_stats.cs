@@ -27,6 +27,8 @@ public class Item_stats : MonoBehaviour
     public int reinforce_add; //강화 수치
     public string item_skill_name;
 
+    public float ATK_Speed;
+
     public GameObject Bullte;
     public void Awake()
     {
@@ -59,6 +61,12 @@ public class Item_stats : MonoBehaviour
     public void reinforce()
     {
         reinforce_add++;
+        Delete_Stat();
+        for (int i = 0; i< Item_stat.Length;i++)
+        {
+            Item_stat[i] += (int)(Item_stat[i] * 0.1f);
+        }
+        Add_Stat();
     }
     //아이템의 이름을 반환하는 함수
     public string Get_Item_Name()

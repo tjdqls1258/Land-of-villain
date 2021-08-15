@@ -17,6 +17,7 @@ public class Movement2D : MonoBehaviour
     }
     private void Update()
     {
+        moveSpeed = gameObject.GetComponent<Player_Stat>().Get_P_State(4) * 0.05f;
         float x = Joystick.inputDirection.x;        // 좌우 이동
         float y = Joystick.inputDirection.y;        // 상하 이동
 

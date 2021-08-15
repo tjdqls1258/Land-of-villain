@@ -102,7 +102,11 @@ MonoBehaviour:
   meeleatk: 1
   skill_number: W_Skill_01
   CoolTime: 3
+  Item_Information: 
   reinforce_add: 0
+  item_skill_name: 
+  ATK_Speed: 0.3
+  Bullte: {fileID: 0}
 --- !u!61 &6484538440035860599
 BoxCollider2D:
   m_ObjectHideFlags: 0

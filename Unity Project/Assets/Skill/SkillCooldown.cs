@@ -215,7 +215,7 @@ public class SkillCooldown : MonoBehaviour
     #region cooldown coroutine
     IEnumerator BaseAttack()
     {
-        yield return new WaitForSeconds(0.3f);
+        
         Monster = null;
         shortDis = 1000f;
         float angle = Mathf.Atan2(Joystick_ATK.inputDirection.y
@@ -248,6 +248,9 @@ public class SkillCooldown : MonoBehaviour
             Bullet.GetComponent<Set_Damage>().SetDamage(GetComponent<Player_Stat>().Get_P_State(2));
         }
         Debug.Log("shoot");
+        yield return new WaitForSeconds(
+            gameObject.GetComponent<Player_Item>().Weapon.GetComponent<Item_stats>().ATK_Speed
+            - (gameObject.GetComponent<Player_Stat>().Get_P_State(7) * 0.01f));
         atkdelay = false;
     }
     public void Wepon_CoolTime_Delet(int HowMany)

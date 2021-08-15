@@ -102,8 +102,11 @@ MonoBehaviour:
   meeleatk: 1
   skill_number: W_Skill_01
   CoolTime: 3
+  Item_Information: 
   reinforce_add: 0
   item_skill_name: Power_Slash
+  ATK_Speed: 0.4
+  Bullte: {fileID: 0}
 --- !u!61 &3391523102318890359
 BoxCollider2D:
   m_ObjectHideFlags: 0

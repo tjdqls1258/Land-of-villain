@@ -18,13 +18,14 @@ public class Player_Stat : MonoBehaviour
    int AGI=5; //민첩성(이동속도를 담당(추후에 가능하면 공격속도도?))[4]
    int LUC=0; //운(치명타)[5]
    int Money=0 //돈[6]
+   [7] 공격속도 - 높을수록 빨라짐 0가 기본 속도
    */
     //위에 것같은 스탯을 배열로 다룸
     [SerializeField]
-    private int[] P_Base_State = new int[] { 100, 100, 10, 5, 5, 0, 0 };
+    private int[] P_Base_State = new int[] { 100, 100, 10, 5, 5, 0, 0, 0,0};
     //이거 
     [SerializeField]
-    private int[] P_State = new int[] { 100, 100, 10, 5, 5, 0, 0 };
+    private int[] P_State = new int[] { 100, 100, 10, 5, 5, 0, 0, 0,0};
     
     private void Awake()
     {

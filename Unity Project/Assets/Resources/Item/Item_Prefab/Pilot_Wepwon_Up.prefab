@@ -102,8 +102,10 @@ MonoBehaviour:
   meeleatk: 0
   skill_number: Pilot_Wepwon_Up_Skill
   CoolTime: 3
+  Item_Information: 
   reinforce_add: 0
   item_skill_name: BoomerangX3
+  ATK_Speed: 1.3
   Bullte: {fileID: 1150267946516009127, guid: e115d31b24d724143b2f288b25b53efb, type: 3}
 --- !u!61 &4799868552382377533
 BoxCollider2D:

@@ -5,7 +5,6 @@ using UnityEngine.SceneManagement;
 
 public class Player_Status : MonoBehaviour
 {
-    public int damage;
     public GameObject Player;
     [SerializeField] private GameObject Player_die_UI;
 
@@ -98,11 +97,6 @@ public class Player_Status : MonoBehaviour
     void OnDisable()
     {
         SceneManager.sceneLoaded -= OnSceneLoaded;
-    }
-
-    public int Damage()
-    {
-        return damage;
     }
 
     IEnumerator CollisionINvincible()

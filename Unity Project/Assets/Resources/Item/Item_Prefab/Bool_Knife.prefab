@@ -102,8 +102,10 @@ MonoBehaviour:
   meeleatk: 0
   skill_number: Blood_Nife
   CoolTime: 3
+  Item_Information: 
   reinforce_add: 0
   item_skill_name: Power_Slash
+  ATK_Speed: 0.5
   Bullte: {fileID: 6662096789849456747, guid: 66598fd79fd36504e859b3a8e5dba71e, type: 3}
 --- !u!61 &5372679547780918596
 BoxCollider2D:

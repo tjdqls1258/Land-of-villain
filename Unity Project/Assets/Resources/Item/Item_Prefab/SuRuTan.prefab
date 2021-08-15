@@ -102,8 +102,10 @@ MonoBehaviour:
   meeleatk: 0
   skill_number: SuRuTan_Skill
   CoolTime: 3
+  Item_Information: 
   reinforce_add: 0
   item_skill_name: Fire_in
+  ATK_Speed: 2
   Bullte: {fileID: 7211411211070169945, guid: c76fa969499020d49b6e14da05fb50ac, type: 3}
 --- !u!61 &8680786654310435676
 BoxCollider2D:

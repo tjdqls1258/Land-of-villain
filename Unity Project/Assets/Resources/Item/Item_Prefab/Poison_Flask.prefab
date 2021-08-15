@@ -102,8 +102,10 @@ MonoBehaviour:
   meeleatk: 0
   skill_number: Poison_Flask_Skill
   CoolTime: 3
+  Item_Information: 
   reinforce_add: 0
   item_skill_name: More Biggier
+  ATK_Speed: 2
   Bullte: {fileID: 5455522379831902594, guid: c6bdec3d903eafa4aa8367cd1a337737, type: 3}
 --- !u!61 &2843917429549032992
 BoxCollider2D:

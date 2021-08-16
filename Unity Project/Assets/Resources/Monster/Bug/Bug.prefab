@@ -138,7 +138,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   rotateSpeed: 10
-  moveSpeed: 0.001
+  moveSpeed: 0.5
   stageManger: {fileID: 0}
   BOOM_eff: {fileID: 2157326397884553664, guid: 2bce4711c4c14fc40a3ec294025de9db,
     type: 3}

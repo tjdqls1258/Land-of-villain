@@ -57,7 +57,6 @@ public class Move_monster : MonoBehaviour
     void Set_Ainmate()
     {
         float taget_see_angle = angle + 180.0f;
-        Debug.Log(taget_see_angle);
         if ((taget_see_angle <= 45.0f) || (taget_see_angle > 315.0f))
         {
             animator.SetBool("Back", false);
@@ -92,7 +91,7 @@ public class Move_monster : MonoBehaviour
     {
         //플레이어한테 이동
         transform.position = Vector3.MoveTowards(transform.position, 
-            Player.transform.position, moveSpeed);
+            Player.transform.position, moveSpeed * Time.deltaTime);
     }
 
   

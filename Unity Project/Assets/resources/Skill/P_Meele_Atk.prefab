@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 6334668763001154944}
   - component: {fileID: 7536656560894211744}
   - component: {fileID: 1808980934920512935}
+  - component: {fileID: 7056160525731037544}
   m_Layer: 0
   m_Name: P_Meele_Atk
   m_TagString: Player_Meele
@@ -123,3 +124,15 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Skill_Damage: 2
   "\uC9C0\uC18D\uC2DC\uAC04": 0.1
+--- !u!114 &7056160525731037544
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3626654304565270336}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c2b2ce99ec4752845850a4d179b37198, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 

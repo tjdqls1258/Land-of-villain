@@ -75,7 +75,7 @@ public class Move_Monster_2 : MonoBehaviour
         if (Vector3.Distance(transform.position, Player.transform.position) > monster_Stats.Atk_dir)
         {
             transform.position = Vector3.MoveTowards(transform.position,
-                Player.transform.position, moveSpeed);
+                Player.transform.position, moveSpeed * Time.deltaTime);
         }
     }
     void Fire()
@@ -98,7 +98,6 @@ public class Move_Monster_2 : MonoBehaviour
     {
         
         float taget_see_angle = angle + 180.0f;
-        Debug.Log(taget_see_angle);
         if ((taget_see_angle <= 45.0f) || (taget_see_angle > 315.0f))
         {
             animator.SetBool("Back", false);

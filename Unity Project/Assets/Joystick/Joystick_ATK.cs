@@ -8,15 +8,16 @@ public class Joystick_ATK : MonoBehaviour, IBeginDragHandler, IDragHandler, IEnd
     private RectTransform lever;
     private RectTransform rectTransform;
 
-    [SerializeField, Range(10, 150)]
-    private float leverRange;
-
     public static Vector2 inputDirection;
+
+    float Back_Radius;
 
     private void Awake()
     {
         rectTransform = GetComponent<RectTransform>();
+        Back_Radius = rectTransform.rect.width * 0.5f;
     }
+
 
     public void OnBeginDrag(PointerEventData eventData)
     {
@@ -43,9 +44,20 @@ public class Joystick_ATK : MonoBehaviour, IBeginDragHandler, IDragHandler, IEnd
 
     private void ControlJoystickLever(PointerEventData eventData)
     {
-        var inputPos = eventData.position - rectTransform.anchoredPosition;
-        var inputVector = inputPos.magnitude < leverRange ? inputPos : inputPos.normalized * leverRange;
-        lever.anchoredPosition = inputVector;
-        inputDirection = inputVector / leverRange; // 이동 범위 정규화
+        Vector2 inputPos = new Vector2(eventData.position.x - rectTransform.position.x, 
+            eventData.position.y - rectTransform.position.y);
+        inputPos = Vector2.ClampMagnitude(inputPos, Back_Radius);
+
+        Debug.Log(eventData.position);
+
+        float FSpr = (rectTransform.position - lever.position).sqrMagnitude / (Back_Radius * Back_Radius);
+
+        Vector2 vecNormal = inputPos.normalized;
+
+       
+
+        //var inputVector = inputPos.magnitude < leverRange ? inputPos : inputPos.normalized * leverRange;
+        lever.anchoredPosition = inputPos;
+        inputDirection = inputPos / FSpr; // 이동 범위 정규화
     }
 }

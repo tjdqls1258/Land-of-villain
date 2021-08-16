@@ -15,27 +15,24 @@ public class Player_bullet : MonoBehaviour
     void Awake()
     { 
         Player = GameObject.Find("Player");
-        monsterpos = GameObject.Find("Player").GetComponent<SkillCooldown>().Monsterpos;
+        //monsterpos = GameObject.Find("Player").GetComponent<SkillCooldown>().Monsterpos;
 
-        if (Player.GetComponent<SkillCooldown>().Get_Monster() != null)
-        {
-            float angle = Mathf.Atan2(monsterpos.y - transform.position.y
-                , monsterpos.x - transform.position.x) * Mathf.Rad2Deg; //몬스터를 바라보는 각도
-            this.transform.rotation = Quaternion.AngleAxis(angle - 90, Vector3.forward); 
-            // 회전
-        }
-        //Damage_s += Player.GetComponent<Player_Stat>().Get_P_State(2); 
+        //if (Player.GetComponent<SkillCooldown>().Get_Monster() != null)
+        //{
+        //    float angle = Mathf.Atan2(monsterpos.y - transform.position.y
+        //        , monsterpos.x - transform.position.x) * Mathf.Rad2Deg; //몬스터를 바라보는 각도
+        //    this.transform.rotation = Quaternion.AngleAxis(angle - 90, Vector3.forward); 
+        //    // 회전
+        //}
+        ////Damage_s += Player.GetComponent<Player_Stat>().Get_P_State(2); 
 
-        rigid = GetComponent<Rigidbody2D>();
+        //rigid = GetComponent<Rigidbody2D>();
     }
 
     // Update is called once per frame
     void Update()
     {
-        if (rigid)
-        {
-            rigid.AddForce(transform.up * Move_speed, ForceMode2D.Force);
-        }
+        transform.position = Vector3.MoveTowards(transform.position, transform.position + transform.up, Move_speed * Time.deltaTime);
         //Debug.DrawLine(transform.up * 10f, Player.transform.position, Color.black);
         if (!GameManager.isPause)
         {

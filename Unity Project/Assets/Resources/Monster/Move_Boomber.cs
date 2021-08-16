@@ -90,7 +90,7 @@ public class Move_Boomber : MonoBehaviour
     {
         //플레이어한테 이동
         transform.position = Vector3.MoveTowards(transform.position,
-            Player.transform.position, moveSpeed);
+            Player.transform.position, moveSpeed *Time.deltaTime);
     }
 
 

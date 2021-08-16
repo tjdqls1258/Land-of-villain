@@ -30,7 +30,7 @@ public class Return_Player : MonoBehaviour
         while (distance > time)
         {
             time += Time.deltaTime;
-            rigid.AddForce(transform.up * Move_speed, ForceMode2D.Force);
+            transform.position = Vector3.MoveTowards(transform.position, transform.position+ transform.up , Move_speed * Time.deltaTime);
             yield return null;
         }
         rigid.velocity = Vector3.zero;
@@ -38,7 +38,7 @@ public class Return_Player : MonoBehaviour
         while (distance > time)
         {
             time += Time.deltaTime;
-            transform.position = Vector3.MoveTowards(transform.position, Player.transform.position, Move_speed * 5.0f * Time.deltaTime);
+            transform.position = Vector3.MoveTowards(transform.position, Player.transform.position, Move_speed * Time.deltaTime);
             yield return null;
         }
         Destroy(gameObject);

@@ -147,7 +147,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   rotateSpeed: 10
-  moveSpeed: 0.001
+  moveSpeed: 1
   Monster_Bullet: {fileID: 1260675018369206476, guid: 9a5f6e88fa7dbc8448d38f625349f512,
     type: 3}
 --- !u!114 &6581931007420916285

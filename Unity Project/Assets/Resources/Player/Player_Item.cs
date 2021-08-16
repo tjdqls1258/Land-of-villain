@@ -25,60 +25,65 @@ public class Player_Item : MonoBehaviour
     }
     void Awake()
     {
+        DontDestroyOnLoad(gameObject);
         item = new Item();
 
-        //Weapon = (GameObject)Resources.Load("Item/" + item.get_F_Item(0));
-        //Weapon = (GameObject)Resources.Load("Item/Item_Prefab/Copper_Sword"); //임시로 넣음
-        //Armor = (GameObject)Resources.Load("Item/Item_Prefab/Copper_Armor");
-        //Hat = (GameObject)Resources.Load("Item/Item_Prefab/Copper_Hat");
-        //Ring = (GameObject)Resources.Load("Item/Item_Prefab/Copper_Ring");
-
-        //player_item[0] = Weapon.GetComponent<Item_stats>().Item_Name;
-        //player_item[1] = Armor.GetComponent<Item_stats>().Item_Name;
-        //player_item[2] = Hat.GetComponent<Item_stats>().Item_Name;
-        //player_item[3] = Ring.GetComponent<Item_stats>().Item_Name;
+        for (int i = 0; i < GetComponent<Player_Stat>().Lenge; i++)
+        {
+            GameObject.Find("Player").GetComponent<Player_Stat>().Set_P_State(i, GetComponent<Player_Stat>().Get_P_Base_State(i));
+        }
 
         if (Ring != null)
         {
             Ring.GetComponent<Item_stats>().Skill_Set();
             Ring.GetComponent<Item_stats>().skill.Passive();
-            Ring.GetComponent<Item_stats>().Add_Stat();
             skill4.sprite = Ring.GetComponent<SpriteRenderer>().sprite;
 
         }
         if (Weapon != null)
         {
             Weapon.GetComponent<Item_stats>().Skill_Set();
-            Weapon.GetComponent<Item_stats>().Add_Stat();
+            Weapon.GetComponent<Item_stats>().skill.Passive();
             skill1.sprite = Weapon.GetComponent<SpriteRenderer>().sprite;
         }
         if (Armor != null)
         {
             Armor.GetComponent<Item_stats>().Skill_Set();
-            Armor.GetComponent<Item_stats>().Add_Stat();
+            Armor.GetComponent<Item_stats>().skill.Passive();
             skill2.sprite = Armor.GetComponent<SpriteRenderer>().sprite;
         }
         if (Hat != null)
         {
             Hat.GetComponent<Item_stats>().Skill_Set();
-            Hat.GetComponent<Item_stats>().Add_Stat();
+            Hat.GetComponent<Item_stats>().skill.Passive();
             skill3.sprite = Hat.GetComponent<SpriteRenderer>().sprite;
         }
+        if (Ring != null) { Ring.GetComponent<Item_stats>().Add_Stat(); }
+        if (Hat != null) { Hat.GetComponent<Item_stats>().Add_Stat(); }
+        if (Armor != null) { Armor.GetComponent<Item_stats>().Add_Stat(); }
+        if (Weapon != null) { Weapon.GetComponent<Item_stats>().Add_Stat(); }
     }
+
 
     void Set_Item_Skills()
     {
         if (player_item[0] != "NONE")
         {
             Weapon = (GameObject)Resources.Load("Item/Item_Prefab/" + player_item[0]);
+            Weapon.GetComponent<Item_stats>().Skill_Set();
+            Weapon.GetComponent<Item_stats>().skill.Passive();
         }
         if(player_item[1]!="NONE")
         {
             Armor = (GameObject)Resources.Load("Item/Item_Prefab/" + player_item[1]);
+            Armor.GetComponent<Item_stats>().Skill_Set();
+            Armor.GetComponent<Item_stats>().skill.Passive();
         }
         if (player_item[2] != "NONE")
         {
             Hat = (GameObject)Resources.Load("Item/Item_Prefab/" + player_item[2]);
+            Hat.GetComponent<Item_stats>().Skill_Set();
+            Hat.GetComponent<Item_stats>().skill.Passive();
         }
         if (player_item[3] != "NONE")
         {           
@@ -97,17 +102,23 @@ public class Player_Item : MonoBehaviour
         }
         if (Weapon != null)
         {
+            Weapon.GetComponent<Item_stats>().skill.Stop_Passive();
             Weapon.GetComponent<Item_stats>().Skill_Set();
+            Weapon.GetComponent<Item_stats>().skill.Passive();
             skill1.sprite = Weapon.GetComponent<SpriteRenderer>().sprite;
         }
         if (Armor != null)
         {
+            Armor.GetComponent<Item_stats>().skill.Stop_Passive();
             Armor.GetComponent<Item_stats>().Skill_Set();
+            Armor.GetComponent<Item_stats>().skill.Passive();
             skill2.sprite = Armor.GetComponent<SpriteRenderer>().sprite;
         }
         if (Hat != null)
         {
+            Hat.GetComponent<Item_stats>().skill.Stop_Passive();
             Hat.GetComponent<Item_stats>().Skill_Set();
+            Hat.GetComponent<Item_stats>().skill.Passive();
             skill3.sprite = Hat.GetComponent<SpriteRenderer>().sprite;
         }
     }

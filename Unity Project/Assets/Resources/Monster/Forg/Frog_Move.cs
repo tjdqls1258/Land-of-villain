@@ -77,7 +77,7 @@ public class Frog_Move : MonoBehaviour
         if ((Vector3.Distance(transform.position, Player.transform.position) > monster_Stats.Atk_dir) && (ATK))
         {
             transform.position = Vector3.MoveTowards(transform.position,
-                Player.transform.position, moveSpeed);
+                Player.transform.position, moveSpeed * Time.deltaTime);
         }
     }
     void Fire()

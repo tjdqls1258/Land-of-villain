@@ -103,11 +103,11 @@ public class SkillCooldown : MonoBehaviour
             atkdelay = true;
             //기본공격 실행
             StartCoroutine("BaseAttack");
-            Debug.Log("atk success");
+           // Debug.Log("atk success");
         }
         else
         {
-            Debug.Log("atk cooltime");
+           // Debug.Log("atk cooltime");
         }
     }
 
@@ -215,34 +215,15 @@ public class SkillCooldown : MonoBehaviour
     #region cooldown coroutine
     IEnumerator BaseAttack()
     {
-        
-        Monster = null;
-        shortDis = 1000f;
         float angle = Mathf.Atan2(Joystick_ATK.inputDirection.y
                 , Joystick_ATK.inputDirection.x) * Mathf.Rad2Deg;
-        foreach (GameObject found in FoundObjects)
-        {
-            if (found == null)
-            {
-                continue;
-            }
-            float Distance = Vector3.Distance(gameObject.transform.position, found.transform.position);
-
-            if (Distance < shortDis) // 위에서 잡은 기준으로 거리 재기
-            {
-                Monster = found;
-                shortDis = Distance;
-                Monsterpos = Monster.transform.position;
-            }
-        }
         if (ismeele)
-        {     
+        {
             Instantiate((GameObject)Resources.Load(("Skill/P_Meele_Atk"), typeof(GameObject)),
                 transform.position, Quaternion.AngleAxis(angle - 90, Vector3.forward));
         }
         else
         {
-            
             GameObject Bullet = Instantiate(GetComponent<Player_Item>().Weapon.GetComponent<Item_stats>().Bullte,
                 transform.position, Quaternion.AngleAxis(angle - 90, Vector3.forward));
             Bullet.GetComponent<Set_Damage>().SetDamage(GetComponent<Player_Stat>().Get_P_State(2));

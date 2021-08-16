@@ -9,6 +9,7 @@ public class Player_Stat : MonoBehaviour
     public int Save_Stages = 0;
     private string Hight_Stages;
     Player_Item items;
+    public float 이동속도배율;
 
     /*
    int MaxHP=100; //최대 체력[0]
@@ -26,9 +27,11 @@ public class Player_Stat : MonoBehaviour
     //이거 
     [SerializeField]
     private int[] P_State = new int[] { 100, 100, 10, 5, 5, 0, 0, 0,0};
-    
+
+    public int Lenge;
     private void Awake()
     {
+        Lenge = P_State.Length;
         Save_Stages = PlayerPrefs.GetInt(Hight_Stages, 0);
         N_Stages = 1;
         items = this.GetComponent<Player_Item>();
@@ -37,9 +40,9 @@ public class Player_Stat : MonoBehaviour
     public void Set_P_State(int N1,int N2)
     { P_State[N1] = N2; }
     public void Add_P_State(int N1, int N2)
-    { P_State[N1] += N2; }
+    { P_State[N1] = P_State[N1] + N2; }
     public void Miner_P_State(int N1, int N2)
-    { P_State[N1] -= N2; }
+    { P_State[N1] = P_State[N1] - N2; }
     public int Get_P_State(int N1)
     {
         return P_State[N1];
@@ -55,5 +58,10 @@ public class Player_Stat : MonoBehaviour
             Save_Stages = N_Stages;
             PlayerPrefs.SetInt(Hight_Stages, N_Stages);
         }
+    }
+    public void Reset_Speed()
+    {
+        GameObject Player = GameObject.Find("Player");
+        Player.GetComponent<Movement2D>().moveSpeed = Player.GetComponent<Player_Stat>().Get_P_State(4) * 이동속도배율;
     }
 }

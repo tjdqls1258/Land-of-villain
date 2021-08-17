@@ -6,11 +6,14 @@ public class Item_List
 {
     //아이템을 늘리려면 동일한 배열의 수만큼 배열값을 할당해 줘야함. Copper_Sword2는 예시로 넣어둠
     //Normal 아이템 이름.(일반적인 아이템)
-    private string[,] N_Item = new string[,] { { "Copper_Sword", "NONE" }, { "Copper_Armor", "NONE" }, { "Copper_Hat", "NONE" }, { "Copper_Ring", "NONE" } };
+    private string[,] N_Item = new string[,] { { "Copper Sword", "Poison Flask", "Boomerang" }, { "Copper Armor", "Alchemist Gown", "Pilot Amor" }, 
+        { "Copper Hat", "Poison Flask", "Pilot Gogle" }, { "Copper Ring", "Alchemist Card","Pilot Toy" } };
     //Rare 아이템 이름.(좋은 아이템)
-    private string[,] R_Item = new string[,] { { "Silver_Sword", "NONE" }, { "Silver_Armor", "NONE" }, { "Silver_Hat", "NONE" }, { "Silver_Ring", "NONE" } };
+    private string[,] R_Item = new string[,] { { "Silver Sword", "Blood Knife","Blood Folk","FireBottle" }, { "Silver Armor", "Blood Rope","Butler Sweeter","NONE" }, 
+        { "Silver Hat", "Blood Hood","Butler Glass","NONE" }, { "Silver Ring", "Blood Ring","Pocket Watch","NONE" } };
     //Epic 아이템 이름.(희귀한 아이템)
-    private string[,] E_Item = new string[,] { { "Gold_Sword", "NONE" }, { "Gold_Armor", "NONE" }, { "Gold_Hat", "NONE" }, { "Gold_Ring", "NONE" } };
+    private string[,] E_Item = new string[,] { { "Gold Sword", "SuRuTan","Boomerang Up" }, { "Gold Armor", "NONE","NONE" }, 
+        { "Gold Hat", "NONE","NONE" }, { "Gold Ring", "NONE","NONE" } };
 
     //아이템 리스트 자체를 불러옴(ex)아이템의 갯수를 잴 때?)
     public string[,] Get_N_Item_List()

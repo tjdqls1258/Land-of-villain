@@ -217,21 +217,23 @@ public class SkillCooldown : MonoBehaviour
     {
         float angle = Mathf.Atan2(Joystick_ATK.inputDirection.y
                 , Joystick_ATK.inputDirection.x) * Mathf.Rad2Deg;
-        if (ismeele)
+        if (GameObject.Find("Player").GetComponent<Player_Item>().Weapon == null)
         {
-            Instantiate((GameObject)Resources.Load(("Skill/P_Meele_Atk"), typeof(GameObject)),
-                transform.position, Quaternion.AngleAxis(angle - 90, Vector3.forward));
+            GameObject Bullet = Instantiate(P_bullet,
+                   transform.position, Quaternion.AngleAxis(angle - 90, Vector3.forward));
+            Bullet.GetComponent<Set_Damage>().SetDamage(GetComponent<Player_Stat>().Get_P_State(2));
+            yield return new WaitForSeconds(0.5f);
         }
         else
         {
             GameObject Bullet = Instantiate(GetComponent<Player_Item>().Weapon.GetComponent<Item_stats>().Bullte,
                 transform.position, Quaternion.AngleAxis(angle - 90, Vector3.forward));
             Bullet.GetComponent<Set_Damage>().SetDamage(GetComponent<Player_Stat>().Get_P_State(2));
+            Debug.Log("shoot");
+            yield return new WaitForSeconds(
+                gameObject.GetComponent<Player_Item>().Weapon.GetComponent<Item_stats>().ATK_Speed
+                - (gameObject.GetComponent<Player_Stat>().Get_P_State(7) * 0.01f));
         }
-        Debug.Log("shoot");
-        yield return new WaitForSeconds(
-            gameObject.GetComponent<Player_Item>().Weapon.GetComponent<Item_stats>().ATK_Speed
-            - (gameObject.GetComponent<Player_Stat>().Get_P_State(7) * 0.01f));
         atkdelay = false;
     }
     public void Wepon_CoolTime_Delet(int HowMany)

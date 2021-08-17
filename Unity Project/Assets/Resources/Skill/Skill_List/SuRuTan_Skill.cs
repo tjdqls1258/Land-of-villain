@@ -20,12 +20,12 @@ public class SuRuTan_Skill : MonoBehaviour, Skill
         Instantiate(SuRuTan1, Player.transform.position, Quaternion.AngleAxis(angle - 90, Vector3.forward)); 
         
         GameObject SuRuTan2 = SuRuTans;
-        SuRuTan2.GetComponent<SuRuTan>().Set_Distance(0.8f);
+        SuRuTan2.GetComponent<SuRuTan>().Set_Distance(1f);
         SuRuTan2.GetComponent<Set_Damage>().SetDamage(Player.GetComponent<Player_Stat>().Get_P_State(2));
         Instantiate(SuRuTans, Player.transform.position, Quaternion.AngleAxis(angle - 90, Vector3.forward));
 
         GameObject SuRuTan3 = SuRuTans;
-        SuRuTan3.GetComponent<SuRuTan>().Set_Distance(1.0f);
+        SuRuTan3.GetComponent<SuRuTan>().Set_Distance(1.5f);
         SuRuTan3.GetComponent<Set_Damage>().SetDamage(Player.GetComponent<Player_Stat>().Get_P_State(2));
         Instantiate(SuRuTans, Player.transform.position, Quaternion.AngleAxis(angle - 90, Vector3.forward));
        

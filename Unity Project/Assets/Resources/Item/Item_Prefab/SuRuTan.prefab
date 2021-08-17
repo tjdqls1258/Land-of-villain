@@ -97,7 +97,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Item_Name: SuRuTan
   Item_Kind: 0
-  tear: 0
+  tear: 2
   Item_stat: 00000000000000000f000000000000000000000000000000
   meeleatk: 0
   skill_number: SuRuTan_Skill

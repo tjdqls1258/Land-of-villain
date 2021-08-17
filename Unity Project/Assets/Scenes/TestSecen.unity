@@ -514,6 +514,11 @@ PrefabInstance:
       propertyPath: Armor
       value: 
       objectReference: {fileID: 0}
+    - target: {fileID: 4418388569791640783, guid: e7c5321d6b629534a9d7ed98bf1aaf57,
+        type: 3}
+      propertyPath: Weapon
+      value: 
+      objectReference: {fileID: 0}
     - target: {fileID: 6061211258396465120, guid: e7c5321d6b629534a9d7ed98bf1aaf57,
         type: 3}
       propertyPath: m_RootOrder

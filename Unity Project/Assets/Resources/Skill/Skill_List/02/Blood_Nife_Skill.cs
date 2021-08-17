@@ -4,7 +4,6 @@ using UnityEngine;
 
 public class Blood_Nife_Skill : MonoBehaviour, Skill
 {
-    GameObject Player;
     public void Skill_Action()
     {
         

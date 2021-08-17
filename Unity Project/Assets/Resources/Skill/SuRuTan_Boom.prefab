@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 1669624681678451471}
   - component: {fileID: -5316708092397409251}
   - component: {fileID: 5736546979417594182}
+  - component: {fileID: 3935749751230392877}
   m_Layer: 0
   m_Name: SuRuTan_Boom
   m_TagString: Player_Boom
@@ -112,3 +113,16 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c2b2ce99ec4752845850a4d179b37198, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &3935749751230392877
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 440851170629837406}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1ace381185e6dcd4a95c881e128d2445, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  life_time: 0.3

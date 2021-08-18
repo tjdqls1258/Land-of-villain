@@ -11,8 +11,10 @@ public class Poison_Flask_Skill : MonoBehaviour, Skill
     {
         GameObject Player = GameObject.Find("Player");
 
+        float angle = Mathf.Atan2(Joystick.inputDirection.y
+            , Joystick.inputDirection.x) * Mathf.Rad2Deg;
 
-        GameObject FireBottles = Instantiate(FireBottle, Player.transform.position, Quaternion.identity);
+        GameObject FireBottles = Instantiate(FireBottle, Player.transform.position, Quaternion.AngleAxis(angle - 90, Vector3.forward));
         FireBottles.GetComponent<Transform>().localScale = new Vector3(
             FireBottles.GetComponent<Transform>().localScale.x *2,
             FireBottles.GetComponent<Transform>().localScale.y *2,

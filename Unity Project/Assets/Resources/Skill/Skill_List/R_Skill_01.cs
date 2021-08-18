@@ -21,8 +21,7 @@ public class R_Skill_01 : MonoBehaviour, Skill
 
     public void Passive()
     {
-        Player = GameObject.Find("Player");
-        InvokeRepeating("Passive", 0, 1); //0초후에 Passive를 1초간격으로 반복 
+        Player = GameObject.Find("Player"); 
         Is_Action = true;
 
         GameObject Buffe_Panel = Player.transform.Find("Play_UI").transform.

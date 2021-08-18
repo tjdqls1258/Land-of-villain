@@ -14,9 +14,10 @@ public class Monster_stats : MonoBehaviour
     public int Monster_Drop_Tear;
 
     public GameObject stageManger;
-
+    public SpriteRenderer renderer;
     private void Awake()
     {
+        renderer = GetComponent<SpriteRenderer>();
         GameObject Player = GameObject.Find("Player");
         stageManger = GameObject.Find("StageManager");
         item_Drop = new Drop_Item();
@@ -29,12 +30,18 @@ public class Monster_stats : MonoBehaviour
     {
 
         Hp -= damage; //만약 방어력 추가되면 여기에 공식 추가해서 처리
+        renderer.color = new Color(1, 0, 0);
+        Invoke("Back", 0.1f);
         if (Hp <= 0) //체력 0 되면 사망
         {
             die();
         }
     }
-    void die()
+    void Back()
+    {
+        renderer.color = new Color(1, 1, 1);
+    }
+    public void die()
     {
         //아이템 드롭의 수정에 따라 수정함.
         item_Drop.drop_Item(Monster_Drop_Tear,this.transform);

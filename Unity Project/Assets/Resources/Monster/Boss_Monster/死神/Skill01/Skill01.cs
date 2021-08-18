@@ -10,19 +10,20 @@ public class Skill01 : MonoBehaviour
     private void Awake()
     {
         GameObject Player = GameObject.Find("Player");
+        GameObject Boss = GameObject.Find("死神(Clone)");
         float Distance = Vector2.Distance(Player.transform.position, transform.position);
 
         if(Distance > ATK_Distance)
         {
             //원거리 공격
             GameObject ATKs = Instantiate(ATK, transform.position, Quaternion.identity);
-            ATKs.GetComponent<Skill_damage>().Set_Damage(gameObject.GetComponent<Skill_damage>().Damage());
+            ATKs.GetComponent<Skill_damage>().Set_Damage(Boss.GetComponent<Monster_stats>().damage);
         }
         else
         {
             //근거리 공격
             GameObject Melee_ATKs = Instantiate(Melee_ATK, transform.position, Quaternion.identity);
-            Melee_ATKs.GetComponent<Skill_damage>().Set_Damage(gameObject.GetComponent<Skill_damage>().Damage());
+            Melee_ATKs.GetComponent<Skill_damage>().Set_Damage(Boss.GetComponent<Monster_stats>().damage);
         }
     }
 }

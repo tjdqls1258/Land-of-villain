@@ -13,13 +13,14 @@ public class Skill04 : MonoBehaviour
     IEnumerator Do_It()
     {
         GameObject Player = GameObject.Find("Player");
-
+        Vector2 target = Player.transform.position;
         GameObject Danger_Singes = Instantiate(Danger_signe, Player.transform.position, Quaternion.identity);
         yield return new WaitForSeconds(0.5f);
-        GameObject.Find("死神(Clone)").transform.position = Danger_signe.transform.position;
-        GameObject Skill01ss = Instantiate(Skill01s, Danger_signe.transform.position, Quaternion.identity);
+        Destroy(Danger_Singes);
+        GameObject.Find("死神(Clone)").transform.position = target;
+        GameObject Skill01ss = Instantiate(Skill01s, target, Quaternion.identity);
         Skill01ss.GetComponent<Skill_damage>().Set_Damage(gameObject.GetComponent<Skill_damage>().Damage());
-        Destroy(Danger_signe);
+        
         Destroy(gameObject);
     }
 }

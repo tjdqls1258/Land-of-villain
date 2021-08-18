@@ -20,11 +20,12 @@ public class Dendallia_Paten : MonoBehaviour
 
     public void Start()
     {
-
+        Patan = true;
         Player = GameObject.Find("Player");
         animator = GetComponent<Animator>();
         selection = Random.Range(0, Skill_Prefabs.Length);
         Prefab = Skill_Prefabs[selection];
+        StartCoroutine("Start_tum");
         //Paten1();
     }
     private void Update()
@@ -90,8 +91,8 @@ public class Dendallia_Paten : MonoBehaviour
         animator.SetBool("Paten" + (selection + 1).ToString(), true);
         GameObject stageManger = GameObject.Find("StageManager");
 
-        Instantiate(Prefab, this.gameObject.transform.position, Quaternion.identity);
-
+        GameObject Skill =  Instantiate(Prefab, this.gameObject.transform.position, Quaternion.identity);
+        Skill.GetComponent<Skill_damage>().Set_Damage(gameObject.GetComponent<Monster_stats>().damage);
         StartCoroutine("Base2");
     }
     IEnumerator Base2()
@@ -136,6 +137,11 @@ public class Dendallia_Paten : MonoBehaviour
         yield return new WaitForSeconds(.1f);
         selection = Random.Range(0, Skill_Prefabs.Length);
         Prefab = Skill_Prefabs[selection];
+        Patan = false;
+    }
+    IEnumerator Start_tum()
+    {
+        yield return new WaitForSeconds(.2f);
         Patan = false;
     }
 }

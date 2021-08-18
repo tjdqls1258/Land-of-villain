@@ -11,6 +11,8 @@ public class Monster_stats : MonoBehaviour
     Drop_Item item_Drop;
     private string Drop_item_it;
 
+    float current_HP;
+
     public int Monster_Drop_Tear;
 
     public GameObject stageManger;
@@ -22,6 +24,7 @@ public class Monster_stats : MonoBehaviour
         stageManger = GameObject.Find("StageManager");
         item_Drop = new Drop_Item();
         Hp += (Player.GetComponent<Player_Stat>().N_Stages) * 10;
+        current_HP = Hp;
         damage += Player.GetComponent<Player_Stat>().N_Stages;
 
     }
@@ -30,6 +33,7 @@ public class Monster_stats : MonoBehaviour
     {
 
         Hp -= damage; //만약 방어력 추가되면 여기에 공식 추가해서 처리
+        gameObject.GetComponent<Monster_HP_Bar>().Get_damage(Hp, current_HP);
         renderer.color = new Color(1, 0, 0);
         Invoke("Back", 0.1f);
         if (Hp <= 0) //체력 0 되면 사망

@@ -23,7 +23,7 @@ public class Minotauros_King_Pattern : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if((Vector3.Distance(this.transform.position, Player.transform.position) <= 1.0f) && (rushcool == false))
+        if((Vector3.Distance(this.transform.position, Player.transform.position) <= 1.5f) && (rushcool == false))
         {
             StartCoroutine("Rush");
         }
@@ -40,7 +40,7 @@ public class Minotauros_King_Pattern : MonoBehaviour
         while (this.transform.position != Rush_Target)
         {
             yield return null;
-            transform.position = Vector3.MoveTowards(this.transform.position, Rush_Target, ((basespeed * 3)));
+            transform.position = Vector3.MoveTowards(this.transform.position, Rush_Target, ((basespeed * 2 * Time.deltaTime)));
         }
         yield return new WaitForSeconds(0.1f);
 

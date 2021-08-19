@@ -65,6 +65,5 @@ public class R_Skill_01 : MonoBehaviour, Skill
         }
         Destroy(Buffe_);
         Is_Action = false;
-        animator.SetBool("Heal", false);
     }
 }

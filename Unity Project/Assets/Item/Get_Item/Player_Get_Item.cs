@@ -29,8 +29,8 @@ public class Player_Get_Item : MonoBehaviour
     void Update()
     {
     }
-  
-    private void OnTriggerEnter2D(Collider2D coll)
+
+    private void OnTriggerStay2D(Collider2D coll)
     {
         if (coll.gameObject.CompareTag("Item"))
         {   //Item_stats 받아오기
@@ -61,8 +61,8 @@ public class Player_Get_Item : MonoBehaviour
             DM = null;
         }
 
-
     }
+
     private void OnTriggerExit2D(Collider2D coll)
     {
         if (coll.gameObject.CompareTag("Item"))

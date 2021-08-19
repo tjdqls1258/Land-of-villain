@@ -30,6 +30,7 @@ public class Joystick_ATK : MonoBehaviour, IBeginDragHandler, IDragHandler, IEnd
         ControlJoystickLever(eventData);
         GameObject.Find("Player").
         GetComponent<SkillCooldown>().Set_Drag_ATK(true);
+        
         //Debug.Log("Drag");
     }
 

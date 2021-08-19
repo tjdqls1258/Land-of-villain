@@ -40,12 +40,15 @@ public class SkillCooldown : MonoBehaviour
     public Image img_helmat_Cool;
     public Image img_acc_Cool;
 
+    Animator animator;
+
     bool Drag_ATK;
 
     void Awake()
     {
         item_skill = GetComponent<Player_Item>();             
         rigid = GetComponent<Rigidbody2D>();
+        animator = GetComponent<Animator>();
         Drag_ATK = false;
     }
 
@@ -69,6 +72,18 @@ public class SkillCooldown : MonoBehaviour
     }
     public void Set_Drag_ATK(bool Drag_ATK)
     {
+        animator.SetBool("ATK", Drag_ATK);
+        if (gameObject.GetComponent<Player_Item>().Weapon == null)
+        {
+            animator.SetFloat("ATK_Speed",
+                0.7f);
+        }
+        else
+        {
+            animator.SetFloat("ATK_Speed",
+                gameObject.GetComponent<Player_Item>().Weapon.GetComponent<Item_stats>().ATK_Speed
+                    - (gameObject.GetComponent<Player_Stat>().Get_P_State(7) * 0.01f));
+        }
         this.Drag_ATK = Drag_ATK;
     }
 
@@ -103,7 +118,7 @@ public class SkillCooldown : MonoBehaviour
             atkdelay = true;
             //기본공격 실행
             StartCoroutine("BaseAttack");
-           // Debug.Log("atk success");
+            // Debug.Log("atk success");
         }
         else
         {
@@ -116,11 +131,15 @@ public class SkillCooldown : MonoBehaviour
         if ((!weaponskilldelay) && (GetComponent<Player_Item>().Weapon != null))
         {
             weaponskilldelay = true;
+            
+            if (item_skill.Weapon == null)
+            {
+                return;
+            }
             //무기스킬 실행
             item_skill.Weapon.GetComponent<Item_stats>().Skill_Set();
             item_skill.Weapon.GetComponent<Item_stats>().skill.Skill_Action();
             Weapon_CoolTime = item_skill.Weapon.GetComponent<Item_stats>().CoolTime;
-
             StartCoroutine("WeaponSkill");
             Debug.Log("weaponskill success");
         }
@@ -135,11 +154,15 @@ public class SkillCooldown : MonoBehaviour
         if ((!armorskilldelay) && (GetComponent<Player_Item>().Armor != null))
         {
             armorskilldelay = true;
+            if (item_skill.Armor == null)
+            {
+                return;
+            }
             //갑옷스킬 실행
             item_skill.Armor.GetComponent<Item_stats>().Skill_Set();
             item_skill.Armor.GetComponent<Item_stats>().skill.Skill_Action();
             Amor_CoolTime = item_skill.Armor.GetComponent<Item_stats>().CoolTime;
-
+            animator.SetBool("ATK", false);
             StartCoroutine("ArmorSkill");
             Debug.Log("armorskill success");
         }
@@ -155,7 +178,7 @@ public class SkillCooldown : MonoBehaviour
         {
             helmetskilldelay = true;
             //투구스킬
-            if(item_skill.Hat == null)
+            if (item_skill.Hat == null)
             {
                 return;
             }
@@ -212,6 +235,10 @@ public class SkillCooldown : MonoBehaviour
     }
     #endregion
 
+    void animaton_ATK_End()
+    {
+        animator.SetBool("ATK", false);
+    }
     #region cooldown coroutine
     IEnumerator BaseAttack()
     {

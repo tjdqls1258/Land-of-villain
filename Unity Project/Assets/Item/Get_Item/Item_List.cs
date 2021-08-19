@@ -6,8 +6,8 @@ public class Item_List
 {
     //아이템을 늘리려면 동일한 배열의 수만큼 배열값을 할당해 줘야함. Copper_Sword2는 예시로 넣어둠
     //Normal 아이템 이름.(일반적인 아이템)
-    private string[,] N_Item = new string[,] { { "Copper Sword", "Poison Flask", "Boomerang" }, { "Copper Armor", "Alchemist Gown", "Pilot Amor" }, 
-        { "Copper Hat", "Poison Flask", "Pilot Gogle" }, { "Copper Ring", "Alchemist Card","Pilot Toy" } };
+    private string[,] N_Item = new string[,] { { "Copper Sword", "Poison Flask", "Boomerang","Fire Stafe" }, { "Copper Armor", "Alchemist Gown", "Pilot Amor","NONE" }, 
+        { "Copper Hat", "Poison Flask", "Pilot Gogle","NONE" }, { "Copper Ring", "Alchemist Card","Pilot Toy","NONE" } };
     //Rare 아이템 이름.(좋은 아이템)
     private string[,] R_Item = new string[,] { { "Silver Sword", "Blood Knife","Blood Folk","FireBottle" }, { "Silver Armor", "Blood Rope","Butler Sweeter","NONE" }, 
         { "Silver Hat", "Blood Hood","Butler Glass","NONE" }, { "Silver Ring", "Blood Ring","Pocket Watch","NONE" } };

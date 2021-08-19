@@ -5,7 +5,7 @@ using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 public class SkillCooldown : MonoBehaviour
 {
-    bool atkdelay = false;
+    public bool atkdelay = false;
     bool weaponskilldelay = false;
     bool armorskilldelay = false;
     bool helmetskilldelay = false;

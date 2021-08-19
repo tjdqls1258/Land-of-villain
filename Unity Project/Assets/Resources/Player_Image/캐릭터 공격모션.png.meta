@@ -1,55 +1,40 @@
 fileFormatVersion: 2
-guid: d6124e6b533806d48939fe8f8023ae01
+guid: c2384ce18f49a2f4d87fa9be0fcee36d
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: 4362596593370561295
-    second: Player_Dash_0
+      213: -3975150240306222366
+    second: "\uCE90\uB9AD\uD130 \uACF5\uACA9\uBAA8\uC158_0"
   - first:
-      213: -7013346302494649841
-    second: Player_Dash_1
+      213: 6012986121474507421
+    second: "\uCE90\uB9AD\uD130 \uACF5\uACA9\uBAA8\uC158_1"
   - first:
-      213: 3730361889779731226
-    second: Player_Dash_2
+      213: -1441124099281505723
+    second: "\uCE90\uB9AD\uD130 \uACF5\uACA9\uBAA8\uC158_2"
   - first:
-      213: 6818786511131252245
-    second: Player_Dash_3
+      213: -2393951705416327590
+    second: "\uCE90\uB9AD\uD130 \uACF5\uACA9\uBAA8\uC158_3"
   - first:
-      213: -881431080207798916
-    second: Player_Dash_4
+      213: 2717776378738697239
+    second: "\uCE90\uB9AD\uD130 \uACF5\uACA9\uBAA8\uC158_4"
   - first:
-      213: -5926257415308744596
-    second: Player_Dash_5
+      213: -6990849481419112736
+    second: "\uCE90\uB9AD\uD130 \uACF5\uACA9\uBAA8\uC158_5"
   - first:
-      213: 7846598580265253894
-    second: Player_Dash_6
+      213: 6949525585719520264
+    second: "\uCE90\uB9AD\uD130 \uACF5\uACA9\uBAA8\uC158_6"
   - first:
-      213: 7253046873124638721
-    second: Player_Dash_7
+      213: -7076487352391987518
+    second: "\uCE90\uB9AD\uD130 \uACF5\uACA9\uBAA8\uC158_7"
   - first:
-      213: 5644836714227981756
-    second: Player_Dash_8
+      213: 8671385356165203000
+    second: "\uCE90\uB9AD\uD130 \uACF5\uACA9\uBAA8\uC158_8"
   - first:
-      213: 2559809229642420939
-    second: Player_Dash_9
+      213: -5271631631116512462
+    second: "\uCE90\uB9AD\uD130 \uACF5\uACA9\uBAA8\uC158_9"
   - first:
-      213: -2844710938531755153
-    second: Player_Dash_10
-  - first:
-      213: 6570831573814006935
-    second: Player_Dash_11
-  - first:
-      213: -5563595317791882801
-    second: Player_Dash_12
-  - first:
-      213: -8102659603341146049
-    second: Player_Dash_13
-  - first:
-      213: -1289405408100040859
-    second: Player_Dash_14
-  - first:
-      213: 1491087559882464549
-    second: Player_Dash_15
+      213: -2622109242105064538
+    second: "\uCE90\uB9AD\uD130 \uACF5\uACA9\uBAA8\uC158_10"
   externalObjects: {}
   serializedVersion: 11
   mipmaps:
@@ -132,7 +117,43 @@ TextureImporter:
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
   - serializedVersion: 3
+    buildTarget: Windows Store Apps
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: iPhone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
     buildTarget: Android
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: WebGL
     maxTextureSize: 2048
     resizeAlgorithm: 0
     textureFormat: -1
@@ -147,7 +168,7 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Player_Dash_0
+      name: "\uCE90\uB9AD\uD130 \uACF5\uACA9\uBAA8\uC158_0"
       rect:
         serializedVersion: 2
         x: 0
@@ -161,14 +182,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: f0b7e26dc7e0b8c30800000000000000
-      internalID: 4362596593370561295
+      spriteID: 2ea2dbdeaed65d8c0800000000000000
+      internalID: -3975150240306222366
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Player_Dash_1
+      name: "\uCE90\uB9AD\uD130 \uACF5\uACA9\uBAA8\uC158_1"
       rect:
         serializedVersion: 2
         x: 32
@@ -182,14 +203,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: f02d10932b69bae90800000000000000
-      internalID: -7013346302494649841
+      spriteID: d9287d1f40b627350800000000000000
+      internalID: 6012986121474507421
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Player_Dash_2
+      name: "\uCE90\uB9AD\uD130 \uACF5\uACA9\uBAA8\uC158_2"
       rect:
         serializedVersion: 2
         x: 64
@@ -203,35 +224,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: a1bc9fbdf58e4c330800000000000000
-      internalID: 3730361889779731226
+      spriteID: 54232116449100ce0800000000000000
+      internalID: -1441124099281505723
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Player_Dash_3
-      rect:
-        serializedVersion: 2
-        x: 96
-        y: 96
-        width: 32
-        height: 32
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 5161433543231ae50800000000000000
-      internalID: 6818786511131252245
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Player_Dash_4
+      name: "\uCE90\uB9AD\uD130 \uACF5\uACA9\uBAA8\uC158_3"
       rect:
         serializedVersion: 2
         x: 0
@@ -245,14 +245,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: c7da9324a1784c3f0800000000000000
-      internalID: -881431080207798916
+      spriteID: a5e183d8b99f6ced0800000000000000
+      internalID: -2393951705416327590
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Player_Dash_5
+      name: "\uCE90\uB9AD\uD130 \uACF5\uACA9\uBAA8\uC158_4"
       rect:
         serializedVersion: 2
         x: 32
@@ -266,14 +266,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: c686ff88744b1cda0800000000000000
-      internalID: -5926257415308744596
+      spriteID: 714eaa1973b77b520800000000000000
+      internalID: 2717776378738697239
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Player_Dash_6
+      name: "\uCE90\uB9AD\uD130 \uACF5\uACA9\uBAA8\uC158_5"
       rect:
         serializedVersion: 2
         x: 64
@@ -287,35 +287,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 60c7bcfe5d7b4ec60800000000000000
-      internalID: 7846598580265253894
+      spriteID: 0ee3acd8f638bfe90800000000000000
+      internalID: -6990849481419112736
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Player_Dash_7
-      rect:
-        serializedVersion: 2
-        x: 96
-        y: 64
-        width: 32
-        height: 32
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 1001adbe3bff7a460800000000000000
-      internalID: 7253046873124638721
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Player_Dash_8
+      name: "\uCE90\uB9AD\uD130 \uACF5\uACA9\uBAA8\uC158_6"
       rect:
         serializedVersion: 2
         x: 0
@@ -329,14 +308,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: cbd54ae751d765e40800000000000000
-      internalID: 5644836714227981756
+      spriteID: 80cec4633bca17060800000000000000
+      internalID: 6949525585719520264
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Player_Dash_9
+      name: "\uCE90\uB9AD\uD130 \uACF5\uACA9\uBAA8\uC158_7"
       rect:
         serializedVersion: 2
         x: 32
@@ -350,14 +329,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: bc25a919ee4468320800000000000000
-      internalID: 2559809229642420939
+      spriteID: 2ce812fee344bcd90800000000000000
+      internalID: -7076487352391987518
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Player_Dash_10
+      name: "\uCE90\uB9AD\uD130 \uACF5\uACA9\uBAA8\uC158_8"
       rect:
         serializedVersion: 2
         x: 64
@@ -371,35 +350,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: f6b852c297e8588d0800000000000000
-      internalID: -2844710938531755153
+      spriteID: 83440c8d903f65870800000000000000
+      internalID: 8671385356165203000
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Player_Dash_11
-      rect:
-        serializedVersion: 2
-        x: 96
-        y: 32
-        width: 32
-        height: 32
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 794da1ca088403b50800000000000000
-      internalID: 6570831573814006935
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Player_Dash_12
+      name: "\uCE90\uB9AD\uD130 \uACF5\uACA9\uBAA8\uC158_9"
       rect:
         serializedVersion: 2
         x: 0
@@ -413,14 +371,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: fc10df029832ac2b0800000000000000
-      internalID: -5563595317791882801
+      spriteID: 233569836f667d6b0800000000000000
+      internalID: -5271631631116512462
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Player_Dash_13
+      name: "\uCE90\uB9AD\uD130 \uACF5\uACA9\uBAA8\uC158_10"
       rect:
         serializedVersion: 2
         x: 32
@@ -434,50 +392,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: f3881fe35029d8f80800000000000000
-      internalID: -8102659603341146049
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Player_Dash_14
-      rect:
-        serializedVersion: 2
-        x: 64
-        y: 0
-        width: 32
-        height: 32
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 56fbab6ec9c1b1ee0800000000000000
-      internalID: -1289405408100040859
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Player_Dash_15
-      rect:
-        serializedVersion: 2
-        x: 96
-        y: 0
-        width: 32
-        height: 32
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 52d5ccf4c3861b410800000000000000
-      internalID: 1491087559882464549
+      spriteID: 6a31f0e69856c9bd0800000000000000
+      internalID: -2622109242105064538
       vertices: []
       indices: 
       edges: []

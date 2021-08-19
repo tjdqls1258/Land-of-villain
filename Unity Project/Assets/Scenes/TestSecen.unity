@@ -549,8 +549,7 @@ PrefabInstance:
         type: 3}
       propertyPath: Weapon
       value: 
-      objectReference: {fileID: 2529004906459016490, guid: 936699147572b7f4cbdf62ea59718872,
-        type: 3}
+      objectReference: {fileID: 0}
     - target: {fileID: 6061211258396465113, guid: e7c5321d6b629534a9d7ed98bf1aaf57,
         type: 3}
       propertyPath: m_SortingOrder

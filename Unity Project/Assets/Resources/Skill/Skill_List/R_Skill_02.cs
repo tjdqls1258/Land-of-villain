@@ -27,6 +27,7 @@ public class R_Skill_02 : MonoBehaviour, Skill
 
     public void Stop_Passive()
     {
+        Player = GameObject.Find("Player");
         Player.GetComponent<BoxCollider2D>().enabled = true;
     }
     public void Checktrigger()

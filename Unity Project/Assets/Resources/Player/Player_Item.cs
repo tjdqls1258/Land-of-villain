@@ -71,25 +71,25 @@ public class Player_Item : MonoBehaviour
         {
             Weapon = (GameObject)Resources.Load("Item/Item_Prefab/" + player_item[0]);
             Weapon.GetComponent<Item_stats>().Skill_Set();
-            Weapon.GetComponent<Item_stats>().skill.Passive();
+            //Weapon.GetComponent<Item_stats>().skill.Passive();
         }
         if(player_item[1]!="NONE")
         {
             Armor = (GameObject)Resources.Load("Item/Item_Prefab/" + player_item[1]);
             Armor.GetComponent<Item_stats>().Skill_Set();
-            Armor.GetComponent<Item_stats>().skill.Passive();
+            //Armor.GetComponent<Item_stats>().skill.Passive();
         }
         if (player_item[2] != "NONE")
         {
             Hat = (GameObject)Resources.Load("Item/Item_Prefab/" + player_item[2]);
             Hat.GetComponent<Item_stats>().Skill_Set();
-            Hat.GetComponent<Item_stats>().skill.Passive();
+            //Hat.GetComponent<Item_stats>().skill.Passive();
         }
         if (player_item[3] != "NONE")
         {           
             Ring = (GameObject)Resources.Load("Item/Item_Prefab/" + player_item[3]);
             Ring.GetComponent<Item_stats>().Skill_Set();
-            Ring.GetComponent<Item_stats>().skill.Passive();
+            //Ring.GetComponent<Item_stats>().skill.Passive();
         }
         
 
@@ -169,7 +169,6 @@ public class Player_Item : MonoBehaviour
                 case 0:
                     Weapon.GetComponent<Item_stats>().Delete_Stat();
                     Weapon.GetComponent<Item_stats>().reinforce();
-                    Weapon.GetComponent<Item_stats>().Add_Stat();
                     //무기 승급
                     if ((Weapon.GetComponent<Item_stats>().Item_stat[0] > 5) &&(Weapon.GetComponent<Item_stats>().tear < 2))
                     {
@@ -185,13 +184,16 @@ public class Player_Item : MonoBehaviour
                         Weapon =(GameObject)Resources.Load("Item/Item_Prefab/"+ Next_item);
                         Weapon.GetComponent<Item_stats>().Skill_Set();
                         Change_item_state();
+                        return true;
+                        
                     }
-                    
+                    Weapon.GetComponent<Item_stats>().Add_Stat();
+
                     return true;
                 case 1:
                     Armor.GetComponent<Item_stats>().Delete_Stat();
                     Armor.GetComponent<Item_stats>().reinforce();
-                    Armor.GetComponent<Item_stats>().Add_Stat();
+                    
                     //아머 승급
                     if ((Armor.GetComponent<Item_stats>().Item_stat[0] > 5) &&((Armor.GetComponent<Item_stats>().tear < 2)))
                     {
@@ -207,12 +209,14 @@ public class Player_Item : MonoBehaviour
                         Armor = (GameObject)Resources.Load("Item/Item_Prefab/" + Next_item);
                         Armor.GetComponent<Item_stats>().Skill_Set();
                         Change_item_state();
+                        return true;
                     }
+                    Armor.GetComponent<Item_stats>().Add_Stat();
                     return true;
                 case 2:
                     Hat.GetComponent<Item_stats>().Delete_Stat();
                     Hat.GetComponent<Item_stats>().reinforce();
-                    Hat.GetComponent<Item_stats>().Add_Stat();
+                    
                     //모자 승급
                     if ((Hat.GetComponent<Item_stats>().Item_stat[0] > 5) && ((Hat.GetComponent<Item_stats>().tear < 2)))
                     {
@@ -228,12 +232,14 @@ public class Player_Item : MonoBehaviour
                         Hat = (GameObject)Resources.Load("Item/Item_Prefab/" + Next_item);
                         Hat.GetComponent<Item_stats>().Skill_Set();
                         Change_item_state();
+                        return true;
                     }
+                    Hat.GetComponent<Item_stats>().Add_Stat();
                     return true;
                 case 3:
                     Ring.GetComponent<Item_stats>().Delete_Stat();
                     Ring.GetComponent<Item_stats>().reinforce();
-                    Ring.GetComponent<Item_stats>().Add_Stat();
+                    
                     //반지 승급
                     if ((Ring.GetComponent<Item_stats>().Item_stat[0] > 5) && ((Ring.GetComponent<Item_stats>().tear < 2)))
                     {
@@ -251,7 +257,9 @@ public class Player_Item : MonoBehaviour
                         Ring.GetComponent<Item_stats>().Skill_Set();
                         Ring.GetComponent<Item_stats>().skill.Skill_Action();
                         Change_item_state();
+                        return true;
                     }
+                    Ring.GetComponent<Item_stats>().Add_Stat();
                     return true;
             }
                 

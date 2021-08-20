@@ -44,6 +44,8 @@ public class SkillCooldown : MonoBehaviour
 
     bool Drag_ATK;
 
+    public float Dash_Cool;
+
     void Awake()
     {
         item_skill = GetComponent<Player_Item>();             
@@ -366,17 +368,28 @@ public class SkillCooldown : MonoBehaviour
 
     IEnumerator Dash()
     {
-        //float Cool_Dwon = acc_CoolTime;
+        //float Cool_Dwon = Dash_Cool;
+        //float Time = 0;
         //while (Cool_Dwon >= 0.0f)
         //{
-        //    img_acc_Cool.fillAmount = (Cool_Dwon / acc_CoolTime);
+        //    Time += Time.deltaTime;
+        //    if((Time >= 1.0f) &&(dashactive == true))
+        //    {
+        //        GetComponent<Movement2D>().moveSpeed /= 2;
+        //        dashactive = false;
+        //    }
+        //    
+        //    
+        //    img_acc_Cool.fillAmount = (Cool_Dwon / Dash_Cool);
         //    Cool_Dwon -= Time.deltaTime;
         //    yield return new WaitForFixedUpdate();
         //}
+        //isdash = false;
+
         yield return new WaitForSeconds(1.0f);
         GetComponent<Movement2D>().moveSpeed /= 2;
         dashactive = false;
-        yield return new WaitForSeconds(2.0f);
+        yield return new WaitForSeconds(Dash_Cool - 1.0f);
         isdash = false;
     }
     #endregion

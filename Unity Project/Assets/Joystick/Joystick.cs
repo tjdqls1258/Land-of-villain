@@ -22,6 +22,7 @@ public class Joystick : MonoBehaviour, IBeginDragHandler, IDragHandler, IEndDrag
     public void OnBeginDrag(PointerEventData eventData)
     {
         ControlJoystickLever(eventData);
+        GameObject.Find("Player").GetComponent<Player_Stat>().Reset_Speed();
         // Debug.Log("Begin");
     }
 

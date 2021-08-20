@@ -47,6 +47,7 @@ public class Item_stats : MonoBehaviour
         {
             player_s.GetComponent<Player_Stat>().Add_P_State(i, Item_stat[i]);
         }
+        player_s.GetComponent<Player_Stat>().Reset_Speed();
     }
     public void Delete_Stat()
     {
@@ -56,6 +57,7 @@ public class Item_stats : MonoBehaviour
         {
             player_s.GetComponent<Player_Stat>().Miner_P_State(i, Item_stat[i]);
         }
+        player_s.GetComponent<Player_Stat>().Reset_Speed();
     }
     //아이템 강화에 사용되는 함수
     public void reinforce()

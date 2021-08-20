@@ -99,14 +99,14 @@ MonoBehaviour:
   Item_Kind: 0
   tear: 2
   Item_stat: 000000000000000014000000000000000000000000000000
-  meeleatk: 1
+  meeleatk: 0
   skill_number: HandGun_Skill
   CoolTime: 3
   Item_Information: 
   reinforce_add: 0
   item_skill_name: 
   ATK_Speed: 0.3
-  Bullte: {fileID: 3626654304565270336, guid: 141420b2f5b4d0844ba48940533c98b0, type: 3}
+  Bullte: {fileID: 7358419363960929659, guid: ef484ac038ef1a449a47dbba350b450b, type: 3}
 --- !u!61 &8012180621869118171
 BoxCollider2D:
   m_ObjectHideFlags: 0

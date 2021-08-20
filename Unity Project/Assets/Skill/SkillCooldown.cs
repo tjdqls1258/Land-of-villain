@@ -80,9 +80,17 @@ public class SkillCooldown : MonoBehaviour
         }
         else
         {
-            animator.SetFloat("ATK_Speed",
-                gameObject.GetComponent<Player_Item>().Weapon.GetComponent<Item_stats>().ATK_Speed
-                    - (gameObject.GetComponent<Player_Stat>().Get_P_State(7) * 0.01f));
+            if (1 + (1 - gameObject.GetComponent<Player_Item>().Weapon.GetComponent<Item_stats>().ATK_Speed) <= 0)
+            {
+                animator.SetFloat("ATK_Speed",
+                (gameObject.GetComponent<Player_Item>().Weapon.GetComponent<Item_stats>().ATK_Speed * 0.2f)
+                    );
+            }
+            else 
+            {
+                animator.SetFloat("ATK_Speed",
+                1 + (1 - gameObject.GetComponent<Player_Item>().Weapon.GetComponent<Item_stats>().ATK_Speed));
+            }
         }
         this.Drag_ATK = Drag_ATK;
     }

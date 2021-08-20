@@ -1,6 +1,6 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
---- !u!1 &1325043656200051516
+--- !u!1 &4362053785487356125
 GameObject:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -8,54 +8,54 @@ GameObject:
   m_PrefabAsset: {fileID: 0}
   serializedVersion: 6
   m_Component:
-  - component: {fileID: 5989046359732822567}
-  - component: {fileID: 4743452692685847466}
-  - component: {fileID: 3252503709426417917}
+  - component: {fileID: 8870104504598005511}
+  - component: {fileID: 6976878724490041123}
+  - component: {fileID: 2493196979394098714}
   m_Layer: 0
-  m_Name: Blood_Folk_Bullte_M
+  m_Name: Mod2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!4 &5989046359732822567
+--- !u!4 &8870104504598005511
 Transform:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1325043656200051516}
+  m_GameObject: {fileID: 4362053785487356125}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -19.319271, y: -18.511686, z: -52.62437}
+  m_LocalPosition: {x: 2.9667757, y: -0.10818607, z: -12.699709}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &4743452692685847466
+--- !u!114 &6976878724490041123
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1325043656200051516}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 4ab66a2b92fb96144955a0dbb1dff78a, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  Folk_Bullte: {fileID: 6841667882352116596, guid: d52d2ab073dbc66408fab23fb12de239,
-    type: 3}
-  distance: 0.3
---- !u!114 &3252503709426417917
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1325043656200051516}
+  m_GameObject: {fileID: 4362053785487356125}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: c2b2ce99ec4752845850a4d179b37198, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &2493196979394098714
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4362053785487356125}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4ab66a2b92fb96144955a0dbb1dff78a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Folk_Bullte: {fileID: 7513320176201619778, guid: b7911f1d6fdfa6d468ed82d2062bc067,
+    type: 3}
+  distance: 0.2

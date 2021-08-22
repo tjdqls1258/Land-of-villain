@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Arrow_Save_Skill : MonoBehaviour
+public class Arrow_Save_Skill : MonoBehaviour, Skill
 {
     public float 지속시간;
     int reset_stat;

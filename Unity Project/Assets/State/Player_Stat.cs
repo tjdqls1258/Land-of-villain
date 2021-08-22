@@ -62,6 +62,14 @@ public class Player_Stat : MonoBehaviour
     public void Reset_Speed()
     {
         GameObject Player = GameObject.Find("Player");
-        Player.GetComponent<Movement2D>().moveSpeed = Player.GetComponent<Player_Stat>().Get_P_State(4) * 이동속도배율;
+
+        float add =  Mathf.FloorToInt(Player.GetComponent<Player_Stat>().Get_P_State(4) / 20)*0.1f;
+
+        Player.GetComponent<Movement2D>().moveSpeed = 0.7f + Player.GetComponent<Player_Stat>().Get_P_State(4) * add;
+        
+        if (Player.GetComponent<Movement2D>().moveSpeed >= 1.5f)
+        {
+            Player.GetComponent<Movement2D>().moveSpeed = 1.5f;
+        }
     }
 }

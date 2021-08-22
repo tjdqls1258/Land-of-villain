@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class Item_stats : MonoBehaviour
 {
-    
+
     public string Item_Name;//아이템의 이름
     public int Item_Kind; //아이템 종류
     public int tear;//아이템 등급  0 , 1 , 2 =  N ,  R ,  E

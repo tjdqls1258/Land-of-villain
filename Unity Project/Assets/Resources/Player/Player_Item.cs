@@ -95,7 +95,10 @@ public class Player_Item : MonoBehaviour
 
         if (Ring != null)
         {
-            Ring.GetComponent<Item_stats>().skill.Stop_Passive();
+            if (Ring.GetComponent<Item_stats>().skill != null)
+            {
+                Ring.GetComponent<Item_stats>().skill.Stop_Passive();
+            }
             Ring.GetComponent<Item_stats>().Skill_Set();
             Ring.GetComponent<Item_stats>().skill.Passive();
             skill4.sprite = Ring.GetComponent<SpriteRenderer>().sprite;

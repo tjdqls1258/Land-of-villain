@@ -29,7 +29,11 @@ public class Player_Status : MonoBehaviour
 
     void Get_damange(int damage)
     {
-        int Setting_Hp = Player.GetComponent<Player_Stat>().Get_P_State(1) - damage;
+        int Setting_Hp = Player.GetComponent<Player_Stat>().Get_P_State(1) - (damage - (int)(Player.GetComponent<Player_Stat>().Get_P_State(3)* 0.2f));
+        if(Setting_Hp < 1)
+        {
+            Setting_Hp = 1;
+        }
         Player.GetComponent<Player_Stat>().Set_P_State(1, Setting_Hp);
         if (Player.GetComponent<Player_Stat>().Get_P_State(1) <= 0) //체력 0 되면 사망
         {
@@ -38,6 +42,14 @@ public class Player_Status : MonoBehaviour
             Player_die_UI.SetActive(true);
             Time.timeScale = 0.0f;
         }
+    }
+
+    public void Player_Die()
+    {
+        GetComponent<Player_Stat>().Return_Hight_Score();
+        GameManager.isPause = true;
+        Player_die_UI.SetActive(true);
+        Time.timeScale = 0.0f;
     }
 
     void OnTriggerEnter2D(Collider2D other)

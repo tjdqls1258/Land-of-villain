@@ -31,8 +31,15 @@ public class Monster_stats : MonoBehaviour
 
     void Get_damange(int damage)
     {
+        int Critcal = GameObject.Find("Player").GetComponent<Player_Stat>().Get_P_State(5);
+        int Add_Damage = 0;
+        if(Critcal > Random.Range(0, 100))
+        {
+            Add_Damage += (int)(GameObject.Find("Player").GetComponent<Player_Stat>().Get_P_State(2) * 0.5f);
+        }
 
-        Hp -= damage; //만약 방어력 추가되면 여기에 공식 추가해서 처리
+
+        Hp -= (damage+ Add_Damage); //만약 방어력 추가되면 여기에 공식 추가해서 처리
         gameObject.GetComponent<Monster_HP_Bar>().Get_damage(Hp, current_HP);
         renderer.color = new Color(1, 0, 0);
         Invoke("Back", 0.1f);

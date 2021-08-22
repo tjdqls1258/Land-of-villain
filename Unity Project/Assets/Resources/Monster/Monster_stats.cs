@@ -17,6 +17,8 @@ public class Monster_stats : MonoBehaviour
 
     public GameObject stageManger;
     public SpriteRenderer renderer;
+
+    Monster_Debuff MD = new Monster_Debuff();//몬스터 디버프를 사용하기 위함.
     private void Awake()
     {
         renderer = GetComponent<SpriteRenderer>();
@@ -26,10 +28,9 @@ public class Monster_stats : MonoBehaviour
         Hp += (Player.GetComponent<Player_Stat>().N_Stages) * 10;
         current_HP = Hp;
         damage += Player.GetComponent<Player_Stat>().N_Stages;
-
     }
 
-    void Get_damange(int damage)
+    public void Get_damange(int damage)
     {
         int Critcal = GameObject.Find("Player").GetComponent<Player_Stat>().Get_P_State(5);
         int Add_Damage = 0;

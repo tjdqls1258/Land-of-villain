@@ -56,6 +56,10 @@ public class Move_monster : MonoBehaviour
     }
     void Set_Ainmate()
     {
+        if(animator == null)
+        {
+            return;
+        }
         float taget_see_angle = angle + 180.0f;
         if ((taget_see_angle <= 45.0f) || (taget_see_angle > 315.0f))
         {

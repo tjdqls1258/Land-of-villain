@@ -70,7 +70,14 @@ public class StageManager : MonoBehaviour
 
     void Spawn()
     {
-        int selection = Random.Range(0, Monster_Prefabs.Length);
+        int currentStage = Player.GetComponent<Player_Stat>().N_Stages;
+        int Lengths = 2;
+        if(currentStage >= 15)
+        {
+            Lengths = 5;
+        }
+
+        int selection = Random.Range(0, Lengths);
 
         GameObject Prefab = Monster_Prefabs[selection];
 

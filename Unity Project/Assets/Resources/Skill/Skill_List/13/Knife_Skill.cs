@@ -21,8 +21,8 @@ public class Knife_Skill : MonoBehaviour, Skill
     {
         GameObject Skill01 = Instantiate(Skills, Player.transform.position, Quaternion.AngleAxis(Rotate_Speed, Vector3.forward));
         Skill01.GetComponent<Set_Damage>().SetDamage(Player.GetComponent<Player_Stat>().Get_P_State(2));
-        Rotate_Speed += 10;
-        if(Rotate_Speed == 730)
+        Rotate_Speed += 20;
+        if(Rotate_Speed >= 730)
         {
             Player.GetComponent<Player_Stat>().Set_P_State(4, Move_Speed);
             CancelInvoke("Skill");

@@ -62,6 +62,8 @@ public class Player_Item : MonoBehaviour
         if (Hat != null) { Hat.GetComponent<Item_stats>().Add_Stat(); }
         if (Armor != null) { Armor.GetComponent<Item_stats>().Add_Stat(); }
         if (Weapon != null) { Weapon.GetComponent<Item_stats>().Add_Stat(); }
+
+        gameObject.GetComponent<Player_Stat>().Reset_Speed();
     }
 
 
@@ -124,6 +126,7 @@ public class Player_Item : MonoBehaviour
             Hat.GetComponent<Item_stats>().skill.Passive();
             skill3.sprite = Hat.GetComponent<SpriteRenderer>().sprite;
         }
+        gameObject.GetComponent<Player_Stat>().Reset_Speed();
     }
     public void Change_item_state()
     {
@@ -143,6 +146,7 @@ public class Player_Item : MonoBehaviour
         {
             Ring.GetComponent<Item_stats>().Add_Stat();
         }
+        gameObject.GetComponent<Player_Stat>().Reset_Speed();
     }
     public void Delete_State_item()
     {
@@ -162,6 +166,7 @@ public class Player_Item : MonoBehaviour
         {
             Ring.GetComponent<Item_stats>().Delete_Stat();
         }
+        gameObject.GetComponent<Player_Stat>().Reset_Speed();
     }
     public bool 아이템_강화(int items, string item_name)
     {

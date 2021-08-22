@@ -9,7 +9,6 @@ public class Player_Stat : MonoBehaviour
     public int Save_Stages = 0;
     private string Hight_Stages;
     Player_Item items;
-    public float 이동속도배율;
 
     /*
    int MaxHP=100; //최대 체력[0]
@@ -62,6 +61,11 @@ public class Player_Stat : MonoBehaviour
     public void Reset_Speed()
     {
         GameObject Player = GameObject.Find("Player");
-        Player.GetComponent<Movement2D>().moveSpeed = Player.GetComponent<Player_Stat>().Get_P_State(4) * 이동속도배율;
+
+        Player.GetComponent<Movement2D>().moveSpeed = 0.7f + (Mathf.FloorToInt(Player.GetComponent<Player_Stat>().Get_P_State(4) / 20) * 0.1f);
+        if (Player.GetComponent<Movement2D>().moveSpeed >= 1.5f)
+        {
+            Player.GetComponent<Movement2D>().moveSpeed = 1.5f;
+        }
     }
 }

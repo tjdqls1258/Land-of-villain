@@ -29,11 +29,12 @@ public class Player_Status : MonoBehaviour
 
     void Get_damange(int damage)
     {
-        int Setting_Hp = Player.GetComponent<Player_Stat>().Get_P_State(1) - (damage - (int)(Player.GetComponent<Player_Stat>().Get_P_State(3)* 0.2f));
+        int Setting_Hp = (damage - (int)(Player.GetComponent<Player_Stat>().Get_P_State(3)* 0.2f));
         if(Setting_Hp < 1)
         {
             Setting_Hp = 1;
         }
+        Setting_Hp = Player.GetComponent<Player_Stat>().Get_P_State(1) - Setting_Hp;
         Player.GetComponent<Player_Stat>().Set_P_State(1, Setting_Hp);
         if (Player.GetComponent<Player_Stat>().Get_P_State(1) <= 0) //체력 0 되면 사망
         {

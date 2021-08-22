@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 4467617830113541285}
   - component: {fileID: 4360093356746244215}
   m_Layer: 0
-  m_Name: Blood_Folk
+  m_Name: Blood Folk
   m_TagString: Item
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -95,6 +95,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4ca50350593932d42bc761259a6830ee, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  ATK_Sound: {fileID: 8300000, guid: a58e438b7cfa445498120af0e6169082, type: 3}
   Item_Name: Blood Folk
   Item_Kind: 0
   tear: 1

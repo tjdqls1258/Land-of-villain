@@ -97,7 +97,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Item_Name: SMG
   Item_Kind: 0
-  tear: 0
+  tear: 1
   Item_stat: 00000000000000000a000000000000000000000000000000
   meeleatk: 1
   skill_number: SMG_Skill

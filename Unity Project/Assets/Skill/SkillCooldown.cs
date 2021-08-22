@@ -12,6 +12,8 @@ public class SkillCooldown : MonoBehaviour
     bool acceskilldelay = false;
     bool isdash = false;
     public bool dashactive = false;
+    public AudioClip ATK_Sound;
+    AudioSource audioSource;
 
     bool ismeele;
 
@@ -52,6 +54,7 @@ public class SkillCooldown : MonoBehaviour
         rigid = GetComponent<Rigidbody2D>();
         animator = GetComponent<Animator>();
         Drag_ATK = false;
+        this.audioSource = GetComponent<AudioSource>();
     }
 
     // Update is called once per frame
@@ -128,6 +131,11 @@ public class SkillCooldown : MonoBehaviour
             atkdelay = true;
             //기본공격 실행
             StartCoroutine("BaseAttack");
+            if (!audioSource.isPlaying)
+            {
+                this.audioSource.clip = ATK_Sound;
+                this.audioSource.Play();
+            }
             // Debug.Log("atk success");
         }
         else

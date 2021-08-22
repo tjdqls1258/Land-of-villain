@@ -37,12 +37,18 @@ public class StageManager : MonoBehaviour
         int currentStage = Player.GetComponent<Player_Stat>().N_Stages;
         if ((currentStage % 5) == 0)
         {
-            GameObject Boss = Boss_Prefabs[((currentStage/5)-1)];
+            int bossnum = 0;
+            if(bossnum > 6)
+            {
+                bossnum = 0;
+            }
+            GameObject Boss = Boss_Prefabs[bossnum];
             Vector3 spawnPos = GetRandomPosition();
 
             GameObject instance = Instantiate(Boss, spawnPos, Quaternion.identity);
             Monster.Add(instance);
             Monster_Check();
+            bossnum++;
         }
         else if(((currentStage % 5) == 1) && (currentStage != 1))
         {

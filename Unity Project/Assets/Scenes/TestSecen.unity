@@ -779,6 +779,11 @@ PrefabInstance:
       propertyPath: "\uC774\uB3D9\uC18D\uB3C4\uBC30\uC728"
       value: 0.15
       objectReference: {fileID: 0}
+    - target: {fileID: 6061211258396465112, guid: e7c5321d6b629534a9d7ed98bf1aaf57,
+        type: 3}
+      propertyPath: P_State.Array.data[1]
+      value: 100
+      objectReference: {fileID: 0}
     - target: {fileID: 6061211258396465113, guid: e7c5321d6b629534a9d7ed98bf1aaf57,
         type: 3}
       propertyPath: m_Size.x

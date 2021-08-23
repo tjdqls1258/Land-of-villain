@@ -22,7 +22,6 @@ public class StageManager : MonoBehaviour
     private List<GameObject> Monster = new List<GameObject>();
 
     private int Monster_Many;
-    private int bossnum = 0;
     // Start is called before the first frame update
     void Start()
     {
@@ -38,17 +37,12 @@ public class StageManager : MonoBehaviour
         int currentStage = Player.GetComponent<Player_Stat>().N_Stages;
         if ((currentStage % 5) == 0)
         {      
-            if(bossnum > 6)
-            {
-                bossnum = 0;
-            }
-            GameObject Boss = Boss_Prefabs[bossnum];
+            GameObject Boss = Boss_Prefabs[(((currentStage / 5) - 1) / ((Boss_Prefabs.Length) + 1))];
             Vector3 spawnPos = GetRandomPosition();
 
             GameObject instance = Instantiate(Boss, spawnPos, Quaternion.identity);
             Monster.Add(instance);
             Monster_Check();
-            bossnum++;
         }
         else if(((currentStage % 5) == 1) && (currentStage != 1))
         {

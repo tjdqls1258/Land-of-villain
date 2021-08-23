@@ -66,7 +66,7 @@ public class Item_stats : MonoBehaviour
         Delete_Stat();
         for (int i = 0; i< Item_stat.Length;i++)
         {
-            Item_stat[i] += (int)(Item_stat[i] * 0.1f);
+            Item_stat[i] += (int)Mathf.Ceil((Item_stat[i] * 0.1f));
         }
         Add_Stat();
     }

@@ -16,6 +16,7 @@ GameObject:
   - component: {fileID: 4754884290728903821}
   - component: {fileID: 6809225259116474496}
   - component: {fileID: 3941190688164712098}
+  - component: {fileID: 8408042170734439849}
   m_Layer: 0
   m_Name: Bug
   m_TagString: Monster
@@ -203,6 +204,22 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   HPBar: {fileID: 6336107779303710071}
+--- !u!58 &8408042170734439849
+CircleCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5711713831556045367}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  serializedVersion: 2
+  m_Radius: 0.08
 --- !u!1001 &1295071982545143553
 PrefabInstance:
   m_ObjectHideFlags: 0

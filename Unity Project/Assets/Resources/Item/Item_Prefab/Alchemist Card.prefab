@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 806866056172243026}
   - component: {fileID: 9082326517880334722}
   m_Layer: 0
-  m_Name: Alchemist_Card
+  m_Name: Alchemist Card
   m_TagString: Item
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -101,9 +101,11 @@ MonoBehaviour:
   Item_stat: 000000000000000000000000000000000a00000000000000
   meeleatk: 0
   skill_number: Alchemist_Card_Skill
-  CoolTime: 1
+  CoolTime: 8
+  Item_Information: 
   reinforce_add: 0
   item_skill_name: Undying
+  ATK_Speed: 0
   Bullte: {fileID: 0}
 --- !u!61 &9082326517880334722
 BoxCollider2D:

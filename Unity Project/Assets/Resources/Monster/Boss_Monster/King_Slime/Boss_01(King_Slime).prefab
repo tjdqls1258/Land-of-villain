@@ -17,6 +17,7 @@ GameObject:
   - component: {fileID: 2143095116229906446}
   - component: {fileID: -7727241567556242182}
   - component: {fileID: 6055885203454208940}
+  - component: {fileID: 3901630667543145877}
   m_Layer: 0
   m_Name: Boss_01(King_Slime)
   m_TagString: Monster
@@ -215,6 +216,22 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   HPBar: {fileID: 2571207000256946914}
+--- !u!58 &3901630667543145877
+CircleCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8894061094939128250}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: -0.02}
+  serializedVersion: 2
+  m_Radius: 0.08
 --- !u!1001 &7330072709902547092
 PrefabInstance:
   m_ObjectHideFlags: 0

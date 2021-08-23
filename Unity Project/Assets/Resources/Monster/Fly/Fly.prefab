@@ -16,6 +16,7 @@ GameObject:
   - component: {fileID: 3352544042274405338}
   - component: {fileID: 8790251698895739697}
   - component: {fileID: 1992970229499328364}
+  - component: {fileID: 5584298176659217815}
   m_Layer: 0
   m_Name: Fly
   m_TagString: Monster
@@ -203,6 +204,22 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   HPBar: {fileID: 5549785571194747233}
+--- !u!58 &5584298176659217815
+CircleCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4513201067994968065}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  serializedVersion: 2
+  m_Radius: 0.08
 --- !u!1001 &798168464869040919
 PrefabInstance:
   m_ObjectHideFlags: 0

@@ -44,6 +44,8 @@ public class SkillCooldown : MonoBehaviour
 
     Animator animator;
 
+    public Slider Save_slider;
+
     bool Drag_ATK;
 
     public float Dash_Cool;
@@ -55,6 +57,8 @@ public class SkillCooldown : MonoBehaviour
         animator = GetComponent<Animator>();
         Drag_ATK = false;
         this.audioSource = GetComponent<AudioSource>();
+        audioSource.volume = PlayerPrefs.GetFloat("E_Sound");
+        Save_slider.value = PlayerPrefs.GetFloat("E_Sound_Slider");
     }
 
     // Update is called once per frame
@@ -401,4 +405,10 @@ public class SkillCooldown : MonoBehaviour
         isdash = false;
     }
     #endregion
+
+    public void save_sound_Setting()
+    {
+        PlayerPrefs.SetFloat("E_Sound",audioSource.volume);
+        PlayerPrefs.SetFloat("E_Sound_Slider", Save_slider.value);
+    }
 }

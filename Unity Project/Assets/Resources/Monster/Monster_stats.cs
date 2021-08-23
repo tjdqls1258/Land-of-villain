@@ -18,9 +18,12 @@ public class Monster_stats : MonoBehaviour
     public GameObject stageManger;
     public SpriteRenderer renderer;
 
+    bool Take_Damage;
+
     Monster_Debuff MD = new Monster_Debuff();//몬스터 디버프를 사용하기 위함.
     private void Awake()
     {
+        Take_Damage = false;
         renderer = GetComponent<SpriteRenderer>();
         GameObject Player = GameObject.Find("Player");
         stageManger = GameObject.Find("StageManager");
@@ -59,45 +62,110 @@ public class Monster_stats : MonoBehaviour
         item_Drop.drop_Item(Monster_Drop_Tear,this.transform);
         stageManger.GetComponent<StageManager>().monsterdead();
     }
-    void OnTriggerEnter2D(Collider2D other)
+    private void OnTriggerStay2D(Collider2D other)
     {
-        if(other.gameObject.tag == "Player_Meele")
+        if(!Take_Damage)
         {
-            Get_damange(other.GetComponent<Set_Damage>().Damage());
-            if (Hp <= 0)
+            if (other.gameObject.tag == "Player_Meele")
             {
-                Destroy(gameObject);
+                Get_damange(other.GetComponent<Set_Damage>().Damage());
+                if (Hp <= 0)
+                {
+                    Destroy(gameObject);
+                }
+                Take_Damage = true;
+                StartCoroutine("Take_Damages");
             }
-        }
-        if (other.gameObject.tag == "Player_ATk")
-        {
-            //충돌한 객체의 컴퍼넌트에서 데미지 받아옴
-            Get_damange(other.GetComponent<Set_Damage>().Damage());
+            if (other.gameObject.tag == "Player_ATk")
+            {
+                //충돌한 객체의 컴퍼넌트에서 데미지 받아옴
+                Get_damange(other.GetComponent<Set_Damage>().Damage());
 
-            if (Hp <= 0)
-            {
-                Destroy(gameObject);
+                if (Hp <= 0)
+                {
+                    Destroy(gameObject);
+                }
+                Destroy(other.gameObject);
+                Take_Damage = true;
+                StartCoroutine("Take_Damages");
             }
-            Destroy(other.gameObject);
-        }
-        if (other.gameObject.tag == "Player_Boom")
-        {
-            //충돌한 객체의 컴퍼넌트에서 데미지 받아옴
-            Get_damange(other.GetComponent<Set_Damage>().Damage());
+            if (other.gameObject.tag == "Player_Boom")
+            {
+                //충돌한 객체의 컴퍼넌트에서 데미지 받아옴
+                Get_damange(other.GetComponent<Set_Damage>().Damage());
 
-            if (Hp <= 0)
+                if (Hp <= 0)
+                {
+                    Destroy(gameObject);
+                }
+                Take_Damage = true;
+                StartCoroutine("Take_Damages");
+            }
+            if (other.gameObject.tag == "Skill")
             {
-                Destroy(gameObject);
+                Get_damange(other.GetComponent<Skill_Danamge>().Damage());
+                if (Hp <= 0)
+                {
+                    Destroy(gameObject);
+                }
+                Take_Damage = true;
+                StartCoroutine("Take_Damages");
             }
         }
-        if (other.gameObject.tag == "Skill")
+    }
+    private void OnTriggerEnter2D(Collider2D other)
+    {
+        if (!Take_Damage)
         {
-            Get_damange(other.GetComponent<Skill_Danamge>().Damage());
-            if (Hp <= 0)
+            if (other.gameObject.tag == "Player_Meele")
             {
-                Destroy(gameObject);
+                Get_damange(other.GetComponent<Set_Damage>().Damage());
+                if (Hp <= 0)
+                {
+                    Destroy(gameObject);
+                }
+                Take_Damage = true;
+                StartCoroutine("Take_Damages");
+            }
+            if (other.gameObject.tag == "Player_ATk")
+            {
+                //충돌한 객체의 컴퍼넌트에서 데미지 받아옴
+                Get_damange(other.GetComponent<Set_Damage>().Damage());
+
+                if (Hp <= 0)
+                {
+                    Destroy(gameObject);
+                }
+                Destroy(other.gameObject);
+            }
+            if (other.gameObject.tag == "Player_Boom")
+            {
+                //충돌한 객체의 컴퍼넌트에서 데미지 받아옴
+                Get_damange(other.GetComponent<Set_Damage>().Damage());
+
+                if (Hp <= 0)
+                {
+                    Destroy(gameObject);
+                }
+                Take_Damage = true;
+                StartCoroutine("Take_Damages");
+            }
+            if (other.gameObject.tag == "Skill")
+            {
+                Get_damange(other.GetComponent<Skill_Danamge>().Damage());
+                if (Hp <= 0)
+                {
+                    Destroy(gameObject);
+                }
+                Take_Damage = true;
+                StartCoroutine("Take_Damages");
             }
         }
+    }
+    IEnumerator Take_Damages()
+    {
+        yield return new WaitForSeconds(0.3f);
+        Take_Damage = false;
     }
 
     public int give_damage()

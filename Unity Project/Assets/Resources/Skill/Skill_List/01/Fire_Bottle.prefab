@@ -70,7 +70,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   distance: 1
   Boom: {fileID: 5552480482079968534, guid: 3abbe708282cda540b4ac9cb0cb7058a, type: 3}
-  add: 0.3
+  add: 0.2
 --- !u!114 &346812116607969233
 MonoBehaviour:
   m_ObjectHideFlags: 0

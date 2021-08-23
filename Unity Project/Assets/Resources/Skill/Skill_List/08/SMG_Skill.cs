@@ -15,7 +15,6 @@ public class SMG_Skill : MonoBehaviour, Skill
     int ATK_Damage;
     float ATK_Speed;
 
-    bool Skill_Ative = false;
 
     public void Skill_Action()
     {
@@ -23,11 +22,7 @@ public class SMG_Skill : MonoBehaviour, Skill
 
         switch (Mod)
         {
-            case 0: //조정간 안전 상태
-                Skill_Ative = true;
-                ATK_Damage = Player.GetComponent<Player_Item>().Weapon.GetComponent<Item_stats>().Item_stat[2];
-                ATK_Speed = Player.GetComponent<Player_Item>().Weapon.GetComponent<Item_stats>().ATK_Speed;
-                break;
+
             case 1://초기화
                 Player.GetComponent<Player_Item>().Weapon.GetComponent<Item_stats>().Bullte = Mod1;
                 Mod3_State_End();
@@ -54,16 +49,14 @@ public class SMG_Skill : MonoBehaviour, Skill
 
     public void Passive()
     {
-
+        Player = GameObject.Find("Player");
+        ATK_Damage = Player.GetComponent<Player_Item>().Weapon.GetComponent<Item_stats>().Item_stat[2];
+        ATK_Speed = Player.GetComponent<Player_Item>().Weapon.GetComponent<Item_stats>().ATK_Speed;
+        Mod = 1;
     }
     //중지시키는 함수
     public void Stop_Passive()
     {
-        if (Skill_Ative)
-        {
-            Player.GetComponent<Player_Item>().Weapon.GetComponent<Item_stats>().Item_stat[2] = ATK_Damage;
-            Player.GetComponent<Player_Item>().Weapon.GetComponent<Item_stats>().ATK_Speed = ATK_Speed;
-        }
     }
 
     public void Mod2_State()

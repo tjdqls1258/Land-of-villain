@@ -98,14 +98,14 @@ MonoBehaviour:
   Item_Name: SMG
   Item_Kind: 0
   tear: 1
-  Item_stat: 00000000000000000a000000000000000000000000000000
+  Item_stat: 000000000000000000000000000000000000000000000000
   meeleatk: 1
   skill_number: SMG_Skill
   CoolTime: 1
   Item_Information: 
   reinforce_add: 0
   item_skill_name: Mod
-  ATK_Speed: 0.5
+  ATK_Speed: 0.3
   Bullte: {fileID: 7513320176201619778, guid: b7911f1d6fdfa6d468ed82d2062bc067, type: 3}
 --- !u!61 &6997275652965930081
 BoxCollider2D:

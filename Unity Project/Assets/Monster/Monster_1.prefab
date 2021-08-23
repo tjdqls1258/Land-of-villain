@@ -16,6 +16,7 @@ GameObject:
   - component: {fileID: 6581931007420916285}
   - component: {fileID: -8346250709832203562}
   - component: {fileID: 7378664013599748443}
+  - component: {fileID: 1408740217879879852}
   m_Layer: 0
   m_Name: Monster_1
   m_TagString: Monster
@@ -202,6 +203,22 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   HPBar: {fileID: 3838954557854779473}
+--- !u!58 &1408740217879879852
+CircleCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5436700300560640486}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: -0.09}
+  serializedVersion: 2
+  m_Radius: 0.24
 --- !u!1001 &8309653390378111527
 PrefabInstance:
   m_ObjectHideFlags: 0

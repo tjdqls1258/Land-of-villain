@@ -28,11 +28,6 @@ public class Player_Item : MonoBehaviour
         DontDestroyOnLoad(gameObject);
         item = new Item();
 
-        for (int i = 0; i < GetComponent<Player_Stat>().Lenge; i++)
-        {
-            GameObject.Find("Player").GetComponent<Player_Stat>().Set_P_State(i, GetComponent<Player_Stat>().Get_P_Base_State(i));
-        }
-
         if (Ring != null)
         {
             Ring.GetComponent<Item_stats>().Skill_Set();
@@ -106,21 +101,30 @@ public class Player_Item : MonoBehaviour
         }
         if (Weapon != null)
         {
-            Weapon.GetComponent<Item_stats>().skill.Stop_Passive();
+            if (Weapon.GetComponent<Item_stats>().skill != null)
+            {
+                Weapon.GetComponent<Item_stats>().skill.Stop_Passive();
+            }
             Weapon.GetComponent<Item_stats>().Skill_Set();
             Weapon.GetComponent<Item_stats>().skill.Passive();
             skill1.sprite = Weapon.GetComponent<SpriteRenderer>().sprite;
         }
         if (Armor != null)
         {
-            Armor.GetComponent<Item_stats>().skill.Stop_Passive();
+            if (Armor.GetComponent<Item_stats>().skill != null)
+            {
+                Armor.GetComponent<Item_stats>().skill.Stop_Passive();
+            }
             Armor.GetComponent<Item_stats>().Skill_Set();
             Armor.GetComponent<Item_stats>().skill.Passive();
             skill2.sprite = Armor.GetComponent<SpriteRenderer>().sprite;
         }
         if (Hat != null)
         {
-            Hat.GetComponent<Item_stats>().skill.Stop_Passive();
+            if (Hat.GetComponent<Item_stats>().skill != null)
+            {
+                Hat.GetComponent<Item_stats>().skill.Stop_Passive();
+            }
             Hat.GetComponent<Item_stats>().Skill_Set();
             Hat.GetComponent<Item_stats>().skill.Passive();
             skill3.sprite = Hat.GetComponent<SpriteRenderer>().sprite;

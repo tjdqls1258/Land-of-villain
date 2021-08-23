@@ -31,6 +31,7 @@ public class Military_Armor_Skill : MonoBehaviour, Skill
         if (Player != null)
         {
             Player.GetComponent<SkillCooldown>().Dash_Cool = Dash_First;
+            Destroy(Buffe_);
         }
     }
 }

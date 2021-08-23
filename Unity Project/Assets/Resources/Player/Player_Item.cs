@@ -20,6 +20,7 @@ public class Player_Item : MonoBehaviour
     }
     public void Set_Player_Item(int N1, string N2)
     {
+        UnPassive();
         player_item[N1] = N2;
         Set_Item_Skills();
     }
@@ -67,37 +68,42 @@ public class Player_Item : MonoBehaviour
         {
             Weapon = (GameObject)Resources.Load("Item/Item_Prefab/" + player_item[0]);
             Weapon.GetComponent<Item_stats>().Skill_Set();
-            //Weapon.GetComponent<Item_stats>().skill.Passive();
+            Weapon.GetComponent<Item_stats>().skill.Passive();
+            skill1.sprite = Weapon.GetComponent<SpriteRenderer>().sprite;
         }
         if(player_item[1]!="NONE")
         {
             Armor = (GameObject)Resources.Load("Item/Item_Prefab/" + player_item[1]);
             Armor.GetComponent<Item_stats>().Skill_Set();
-            //Armor.GetComponent<Item_stats>().skill.Passive();
+            Armor.GetComponent<Item_stats>().skill.Passive();
+            skill2.sprite = Armor.GetComponent<SpriteRenderer>().sprite;
         }
         if (player_item[2] != "NONE")
         {
             Hat = (GameObject)Resources.Load("Item/Item_Prefab/" + player_item[2]);
             Hat.GetComponent<Item_stats>().Skill_Set();
-            //Hat.GetComponent<Item_stats>().skill.Passive();
+            Hat.GetComponent<Item_stats>().skill.Passive();
+            skill3.sprite = Hat.GetComponent<SpriteRenderer>().sprite;
         }
         if (player_item[3] != "NONE")
         {           
             Ring = (GameObject)Resources.Load("Item/Item_Prefab/" + player_item[3]);
             Ring.GetComponent<Item_stats>().Skill_Set();
-            //Ring.GetComponent<Item_stats>().skill.Passive();
+            Ring.GetComponent<Item_stats>().skill.Passive();
+            skill4.sprite = Ring.GetComponent<SpriteRenderer>().sprite;
         }
-        
 
+        this.GetComponent<Player_Stat>().Reset_Speed();
+    }
+    public void UnPassive()
+    {
         if (Ring != null)
         {
             if (Ring.GetComponent<Item_stats>().skill != null)
             {
                 Ring.GetComponent<Item_stats>().skill.Stop_Passive();
             }
-            Ring.GetComponent<Item_stats>().Skill_Set();
-            Ring.GetComponent<Item_stats>().skill.Passive();
-            skill4.sprite = Ring.GetComponent<SpriteRenderer>().sprite;
+            
         }
         if (Weapon != null)
         {
@@ -105,9 +111,7 @@ public class Player_Item : MonoBehaviour
             {
                 Weapon.GetComponent<Item_stats>().skill.Stop_Passive();
             }
-            Weapon.GetComponent<Item_stats>().Skill_Set();
-            Weapon.GetComponent<Item_stats>().skill.Passive();
-            skill1.sprite = Weapon.GetComponent<SpriteRenderer>().sprite;
+            
         }
         if (Armor != null)
         {
@@ -115,21 +119,15 @@ public class Player_Item : MonoBehaviour
             {
                 Armor.GetComponent<Item_stats>().skill.Stop_Passive();
             }
-            Armor.GetComponent<Item_stats>().Skill_Set();
-            Armor.GetComponent<Item_stats>().skill.Passive();
-            skill2.sprite = Armor.GetComponent<SpriteRenderer>().sprite;
+           
         }
         if (Hat != null)
         {
             if (Hat.GetComponent<Item_stats>().skill != null)
             {
                 Hat.GetComponent<Item_stats>().skill.Stop_Passive();
-            }
-            Hat.GetComponent<Item_stats>().Skill_Set();
-            Hat.GetComponent<Item_stats>().skill.Passive();
-            skill3.sprite = Hat.GetComponent<SpriteRenderer>().sprite;
+            }         
         }
-        this.GetComponent<Player_Stat>().Reset_Speed();
     }
     public void Change_item_state()
     {

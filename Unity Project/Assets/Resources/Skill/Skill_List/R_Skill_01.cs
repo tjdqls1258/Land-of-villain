@@ -6,7 +6,6 @@ public class R_Skill_01 : MonoBehaviour, Skill
 {
     public int Healing;
     GameObject Player;
-    private bool Is_Action = false;
 
     public GameObject Buffe_Image;
     GameObject Buffe_;
@@ -22,7 +21,6 @@ public class R_Skill_01 : MonoBehaviour, Skill
     public void Passive()
     {
         Player = GameObject.Find("Player"); 
-        Is_Action = true;
 
         GameObject Buffe_Panel = Player.transform.Find("Play_UI").transform.
            Find("BuffPanel").gameObject;
@@ -51,19 +49,13 @@ public class R_Skill_01 : MonoBehaviour, Skill
         {
             Player.GetComponent<Player_Stat>().Set_P_State(1, N_HP + Healing);
         }
-        if (Player != null)
-        {
-            CancelInvoke("Stop_Passive");
-        }
     }
     //중지시키는 함수
     public void Stop_Passive()
     {
-        if (Is_Action == true)
-        {
-            CancelInvoke("Passive");
-        }
         Destroy(Buffe_);
-        Is_Action = false;
+        CancelInvoke("Passive");
+
+       
     }
 }

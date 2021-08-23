@@ -24,6 +24,10 @@ public class Pocket_Watch_Skill : MonoBehaviour, Skill
     //중지시키는 함수
     public void Stop_Passive()
     {
-        Player.GetComponent<Player_Stat>().Set_P_State(4, (int)(Player.GetComponent<Player_Stat>().Get_P_State(4) - Add_Speed));
+        if (Player != null)
+        {
+            Player.GetComponent<Player_Stat>().Set_P_State(4, (int)(Player.GetComponent<Player_Stat>().Get_P_State(4) - Add_Speed));
+
+        }
     }
 }

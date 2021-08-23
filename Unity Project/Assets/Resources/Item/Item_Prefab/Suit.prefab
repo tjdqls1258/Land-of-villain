@@ -100,11 +100,11 @@ MonoBehaviour:
   tear: 2
   Item_stat: 00000000c8000000000000000a0000000f00000005000000
   meeleatk: 0
-  skill_number: DEF UP
+  skill_number: Suit_Skill
   CoolTime: 6
   Item_Information: 
   reinforce_add: 0
-  item_skill_name: 
+  item_skill_name: DEF_UP
   ATK_Speed: 0
   Bullte: {fileID: 0}
 --- !u!61 &8667202751168664819

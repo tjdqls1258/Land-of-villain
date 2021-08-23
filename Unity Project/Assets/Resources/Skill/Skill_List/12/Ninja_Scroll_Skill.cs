@@ -13,6 +13,7 @@ public class Ninja_Scroll_Skill : MonoBehaviour, Skill
     //액티브 스킬
     public void Skill_Action()
     {
+        Player = GameObject.Find("Player");
         GameObject Buffe_Panel = Player.transform.Find("Play_UI").transform.
             Find("BuffPanel").gameObject;
         Buffe_ = Instantiate(Buffe_Image, Vector3.zero, Quaternion.identity);
@@ -23,8 +24,6 @@ public class Ninja_Scroll_Skill : MonoBehaviour, Skill
     }
     void Buffe()
     {
-
-        GameObject Player = GameObject.Find("Player");
         Player.GetComponent<BoxCollider2D>().enabled = true;
         Destroy(Buffe_);
         Debug.Log("아머 스킬종료 희희");

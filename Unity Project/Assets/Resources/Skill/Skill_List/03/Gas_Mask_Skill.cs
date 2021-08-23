@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Gas_Mask_Skill : MonoBehaviour
+public class Gas_Mask_Skill : MonoBehaviour,Skill
 {
     public GameObject Buffe_Image;
     GameObject Buffe_;

@@ -16,6 +16,6 @@ public class Set_Rottion : MonoBehaviour
     void Update()
     {
         this.transform.position = Player.transform.position;
-        this.transform.Rotate(new Vector3(0, 0, Rotate_Speed));
+        this.transform.Rotate(new Vector3(0, 0, Rotate_Speed * Time.deltaTime));
     }
 }

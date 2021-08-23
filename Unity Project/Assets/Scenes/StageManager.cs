@@ -22,6 +22,7 @@ public class StageManager : MonoBehaviour
     private List<GameObject> Monster = new List<GameObject>();
 
     private int Monster_Many;
+    private int bossnum = 0;
     // Start is called before the first frame update
     void Start()
     {
@@ -36,8 +37,7 @@ public class StageManager : MonoBehaviour
 
         int currentStage = Player.GetComponent<Player_Stat>().N_Stages;
         if ((currentStage % 5) == 0)
-        {
-            int bossnum = 0;
+        {      
             if(bossnum > 6)
             {
                 bossnum = 0;

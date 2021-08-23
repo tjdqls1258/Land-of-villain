@@ -30,7 +30,7 @@ public class Skill02 : MonoBehaviour
     {
         while (Distance + 1.0f > gameObject.transform.localScale.y)
         {
-            gameObject.transform.localScale += new Vector3(0,0.01f,0.0f);
+            gameObject.transform.localScale += new Vector3(0, Distance * 0.05f,0.0f);
             yield return null;
         }
         yield return new WaitForSeconds(0.1f);

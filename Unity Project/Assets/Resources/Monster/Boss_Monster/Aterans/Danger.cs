@@ -13,7 +13,7 @@ public class Danger : MonoBehaviour
         this_transform = Target;
         this.Skills = Skills;
         Damages = Damage;
-        Invoke("Do_Skill",0.2f);
+        Invoke("Do_Skill",0.5f);
     }
 
     void Do_Skill()

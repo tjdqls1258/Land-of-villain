@@ -116,15 +116,7 @@ public class SkillCooldown : MonoBehaviour
     {
         SceneManager.sceneLoaded -= OnSceneLoaded;
     }
-    public void Load_New_Stage()
-    {
-        FoundObjects = new List<GameObject>(GameObject.FindGameObjectsWithTag("Monster"));
-        Monster = FoundObjects[0];
-    }
-    public GameObject Get_Monster()
-    {
-        return Monster;
-    }
+   
     #endregion
 
     #region activate skill

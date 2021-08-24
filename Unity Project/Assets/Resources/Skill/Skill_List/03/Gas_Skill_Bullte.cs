@@ -37,7 +37,7 @@ public class Gas_Skill_Bullte : MonoBehaviour
             Boom_Eff.GetComponent<Transform>().localScale.x * 2,
             Boom_Eff.GetComponent<Transform>().localScale.y * 2,
             1);
-        Boom_Eff.GetComponent<Set_Damage>().SetDamage((int)(GetComponent<Set_Damage>().Damage() * add));
+        Boom_Eff.GetComponent<Set_Damage>().SetDamage((int)(gameObject.GetComponent<Set_Damage>().Damage() * add));
         Destroy(gameObject);
     }
     public void Set_Distance(float dis)

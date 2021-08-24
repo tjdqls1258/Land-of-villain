@@ -17,6 +17,7 @@ GameObject:
   - component: {fileID: 8790251698895739697}
   - component: {fileID: 1992970229499328364}
   - component: {fileID: 5584298176659217815}
+  - component: {fileID: 1940350269645570950}
   m_Layer: 0
   m_Name: Fly
   m_TagString: Monster
@@ -220,6 +221,18 @@ CircleCollider2D:
   m_Offset: {x: 0, y: 0}
   serializedVersion: 2
   m_Radius: 0.08
+--- !u!114 &1940350269645570950
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4513201067994968065}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 11f32bc8f1a992c4492d42d3911b7b78, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &798168464869040919
 PrefabInstance:
   m_ObjectHideFlags: 0

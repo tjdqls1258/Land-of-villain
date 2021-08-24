@@ -81,7 +81,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: eb9ce5695ec586548a3c921557ce5705, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  distance: 0.4
+  distance: 10
   Boom: {fileID: 5552480482079968534, guid: 3abbe708282cda540b4ac9cb0cb7058a, type: 3}
   add: 0.5
   Move_speed: 0

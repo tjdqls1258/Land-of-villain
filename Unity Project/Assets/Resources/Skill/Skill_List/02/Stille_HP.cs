@@ -22,10 +22,10 @@ public class Stille_HP : MonoBehaviour
                 string PlayerRing = Player.GetComponent<Player_Item>().Ring.GetComponent<Item_stats>().Get_Item_Name();
                 if (PlayerRing == "Blood Ring")
                 {
-                    set_Max_healing(12);
+                    set_Max_healing(4);
                 }
             }
-            int Healing = Random.Range(1, MAX_healing);
+            int Healing = Random.Range(0, MAX_healing);
             if (N_HP + Healing > Player.GetComponent<Player_Stat>().Get_P_State(0))
             {
                 Player.GetComponent<Player_Stat>().Set_P_State(

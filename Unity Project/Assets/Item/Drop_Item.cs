@@ -32,11 +32,11 @@ public class Drop_Item : MonoBehaviour
     public string Get_Rare_Monster()
     {
         int N1 = Random.Range(0, 100);//일반 아이템을 줄지 좋은 아이템을 줄지 결정하는 코드 7(Nomal):3(Rare)
-        if (N1 >= 30 && N1 <= 50)//20%
+        if (N1 >= 10 && N1 <= 50)//40%
         {return get_N_Item();}
-        else if (N1 > 50 && N1 <= 60)
-        { return get_R_Item(); } //10%
-        else if (N1 == 100) //1%
+        else if (N1 > 40 && N1 <= 65)
+        { return get_R_Item(); } //25%
+        else if (N1 >= 95) //5%
         { return get_E_Item(); }
         else
         {return "NONE";}

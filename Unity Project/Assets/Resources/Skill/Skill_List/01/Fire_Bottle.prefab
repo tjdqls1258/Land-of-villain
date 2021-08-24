@@ -70,7 +70,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   distance: 1
   Boom: {fileID: 5552480482079968534, guid: 3abbe708282cda540b4ac9cb0cb7058a, type: 3}
-  add: 0.2
+  add: 0.1
 --- !u!114 &346812116607969233
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -83,7 +83,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c9cf23a5e82c4534aa69d2094e8a39b7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Move_speed: 0.5
+  Move_speed: 1
   Destory_self_this: 10
 --- !u!114 &2209457523730302384
 MonoBehaviour:

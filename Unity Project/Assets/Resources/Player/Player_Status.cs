@@ -12,6 +12,7 @@ public class Player_Status : MonoBehaviour
     private bool isinvincible = false;
     private bool Boom = false;
     public static Player_Status Instance;
+    public float Debuff_DEF = 0;
 
     private void Awake()
     {
@@ -27,7 +28,7 @@ public class Player_Status : MonoBehaviour
 
     // Update is called once per frame
 
-    void Get_damange(int damage)
+    public void Get_damange(int damage)
     {
         int Setting_Hp = (damage - (int)(Player.GetComponent<Player_Stat>().Get_P_State(3)* 0.2f));
         if(Setting_Hp < 1)
@@ -66,6 +67,7 @@ public class Player_Status : MonoBehaviour
         if (other.gameObject.tag == "Gate")
         {
             isclear = true;
+            GetComponent<Player_Stat>().Set_P_State(1, GetComponent<Player_Stat>().Get_P_State(0));
             GetComponent<Player_Stat>().N_Stages++;
             Destroy(other.gameObject);
         }

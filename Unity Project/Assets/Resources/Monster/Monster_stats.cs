@@ -61,6 +61,7 @@ public class Monster_stats : MonoBehaviour
         //아이템 드롭의 수정에 따라 수정함.
         item_Drop.drop_Item(Monster_Drop_Tear,this.transform);
         stageManger.GetComponent<StageManager>().monsterdead();
+        Destroy(gameObject);
     }
     private void OnTriggerStay2D(Collider2D other)
     {
@@ -69,10 +70,7 @@ public class Monster_stats : MonoBehaviour
             if (other.gameObject.tag == "Player_Meele")
             {
                 Get_damange(other.GetComponent<Set_Damage>().Damage());
-                if (Hp <= 0)
-                {
-                    Destroy(gameObject);
-                }
+                
                 Take_Damage = true;
                 StartCoroutine("Take_Damages");
             }
@@ -81,10 +79,7 @@ public class Monster_stats : MonoBehaviour
                 //충돌한 객체의 컴퍼넌트에서 데미지 받아옴
                 Get_damange(other.GetComponent<Set_Damage>().Damage());
 
-                if (Hp <= 0)
-                {
-                    Destroy(gameObject);
-                }
+                
                 Destroy(other.gameObject);
                 Take_Damage = true;
                 StartCoroutine("Take_Damages");
@@ -94,20 +89,15 @@ public class Monster_stats : MonoBehaviour
                 //충돌한 객체의 컴퍼넌트에서 데미지 받아옴
                 Get_damange(other.GetComponent<Set_Damage>().Damage());
 
-                if (Hp <= 0)
-                {
-                    Destroy(gameObject);
-                }
+                
                 Take_Damage = true;
                 StartCoroutine("Take_Damages");
             }
             if (other.gameObject.tag == "Skill")
             {
                 Get_damange(other.GetComponent<Skill_Danamge>().Damage());
-                if (Hp <= 0)
-                {
-                    Destroy(gameObject);
-                }
+                
+
                 Take_Damage = true;
                 StartCoroutine("Take_Damages");
             }

@@ -65,7 +65,6 @@ public class StageManager : MonoBehaviour
     {
         FoundObjects = new List<GameObject>(GameObject.FindGameObjectsWithTag("Monster"));
         monsternum = FoundObjects.Count;
-        Player.GetComponent<SkillCooldown>().Load_New_Stage();
     }
 
     void Spawn()
@@ -130,6 +129,8 @@ public class StageManager : MonoBehaviour
     {
         if (Player != null)
         {
+            FoundObjects = new List<GameObject>(GameObject.FindGameObjectsWithTag("Monster"));
+            monsternum = FoundObjects.Count;
             clear = Player.GetComponent<Player_Status>().isclear;
             if ((monsternum <= 0) && (isgate == false))
             {

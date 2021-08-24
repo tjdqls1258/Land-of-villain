@@ -35,7 +35,7 @@ public class R_Skill_01 : MonoBehaviour, Skill
 
         Debug.Log("패시브 발사 히히");
         animator.SetBool("Heal", true);
-        InvokeRepeating("Helling", 0f, 3f);
+        InvokeRepeating("Helling", 0f, 5f);
     }
     void Helling()
     {

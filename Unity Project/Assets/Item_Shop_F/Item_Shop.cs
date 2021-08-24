@@ -27,6 +27,8 @@ public class Item_Shop : MonoBehaviour
 
     private int[] Item_Price = new int[4] { 0,0,0,0};
 
+    private Image[] item_Images = new Image[4];
+
     //아이템이 구매 되었는지 안 되었는지 확인하기 위한 변수.
 
     private bool[] Item_Buy = new bool[4] { false,false,false,false };
@@ -45,6 +47,12 @@ public class Item_Shop : MonoBehaviour
         T_Item_Name[1] = GameObject.Find("Item_Name2").GetComponent<Text>();
         T_Item_Name[2] = GameObject.Find("Item_Name3").GetComponent<Text>();
         T_Item_Name[3] = GameObject.Find("Item_Name4").GetComponent<Text>();
+        //아이템 이미지 
+        item_Images[0] = GameObject.Find("Item_Image1").GetComponent<Image>();
+        item_Images[1] = GameObject.Find("Item_Image2").GetComponent<Image>();
+        item_Images[2] = GameObject.Find("Item_Image3").GetComponent<Image>();
+        item_Images[3] = GameObject.Find("Item_Image4").GetComponent<Image>();
+
         //아이템 가격 텍스트 찾아 텍스트 컴포넌트 넣기
         T_Item_Price[0] = GameObject.Find("Item_Price1").GetComponent<Text>();
         T_Item_Price[1] = GameObject.Find("Item_Price2").GetComponent<Text>();
@@ -127,7 +135,12 @@ public class Item_Shop : MonoBehaviour
         {
             N1 = Item_Select_Rank();
             Item_Name[i] = Item_Select_Name(N1);
-            Item_Price[i] = Item_Select_Price(N1);
+            if (Item_Name[i] != "NONE")
+            {
+                Item_Price[i] = Item_Select_Price(N1);
+                GameObject image_GameObject = (GameObject)(Resources.Load("Item/Item_Prefab/" + Item_Name[i]));
+                item_Images[i].sprite = image_GameObject.GetComponent<SpriteRenderer>().sprite;
+            }
         }
         //텍스트에 아이템의 이름과 가격을 넣어줌.
         Copy_Item_Name_And_Price();

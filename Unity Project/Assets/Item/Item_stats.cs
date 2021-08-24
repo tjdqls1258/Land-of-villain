@@ -43,7 +43,7 @@ public class Item_stats : MonoBehaviour
     {
         player_s = GameObject.Find("Player");
         player_s.GetComponent<Player_Stat>().Add_P_State(0, Item_stat[1]);
-        for (int i = 1; i < Item_stat.Length; i++)
+        for (int i = 2; i < Item_stat.Length; i++)
         {
             player_s.GetComponent<Player_Stat>().Add_P_State(i, Item_stat[i]);
         }
@@ -53,7 +53,7 @@ public class Item_stats : MonoBehaviour
     {
         player_s = GameObject.Find("Player");
         player_s.GetComponent<Player_Stat>().Miner_P_State(0, Item_stat[1]);
-        for (int i = 1; i < Item_stat.Length; i++)
+        for (int i = 2; i < Item_stat.Length; i++)
         {
             player_s.GetComponent<Player_Stat>().Miner_P_State(i, Item_stat[i]);
         }

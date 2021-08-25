@@ -16,7 +16,7 @@ public class Monster_stats : MonoBehaviour
     public int Monster_Drop_Tear;
 
     public GameObject stageManger;
-    public SpriteRenderer renderer;
+    SpriteRenderer renderer;
 
     bool Take_Damage;
 

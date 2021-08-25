@@ -6,6 +6,7 @@ using UnityEngine.SceneManagement;
 public class Player_Status : MonoBehaviour
 {
     public GameObject Player;
+    SpriteRenderer renderer;
     [SerializeField] private GameObject Player_die_UI;
 
     public bool isclear = false;
@@ -24,6 +25,7 @@ public class Player_Status : MonoBehaviour
 
         Instance = this;
         DontDestroyOnLoad(gameObject);
+        renderer = GetComponent<SpriteRenderer>();
     }
 
     // Update is called once per frame
@@ -44,8 +46,13 @@ public class Player_Status : MonoBehaviour
             Player_die_UI.SetActive(true);
             Time.timeScale = 0.0f;
         }
+        renderer.color = new Color(1, 0, 0);
+        Invoke("Back", 0.1f);
     }
-
+    void Back()
+    {
+        renderer.color = new Color(1, 1, 1);
+    }
     public void Player_Die()
     {
         GetComponent<Player_Stat>().Return_Hight_Score();
@@ -116,7 +123,7 @@ public class Player_Status : MonoBehaviour
 
     IEnumerator CollisionINvincible()
     {     
-        yield return new WaitForSeconds(0.1f);
+        yield return new WaitForSeconds(0.2f);
         isinvincible = false;
     }
     IEnumerator CollisionBoom()

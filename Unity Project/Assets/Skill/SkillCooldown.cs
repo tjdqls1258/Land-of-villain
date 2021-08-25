@@ -12,6 +12,7 @@ public class SkillCooldown : MonoBehaviour
     bool acceskilldelay = false;
     bool isdash = false;
     public bool dashactive = false;
+    public bool Don_Restart = false;
     public AudioClip ATK_Sound;
     AudioSource audioSource;
 
@@ -238,6 +239,7 @@ public class SkillCooldown : MonoBehaviour
         {
             isdash = true;
             dashactive = true;
+            Don_Restart = true;
             GetComponent<Movement2D>().moveSpeed *= 2;
             StartCoroutine("Dash");
             Debug.Log("dash success");
@@ -389,18 +391,12 @@ public class SkillCooldown : MonoBehaviour
         //    yield return new WaitForFixedUpdate();
         //}
         //isdash = false;
-
         yield return new WaitForSeconds(1.0f);
         GetComponent<Movement2D>().moveSpeed /= 2;
+        Don_Restart = false;
         dashactive = false;
         yield return new WaitForSeconds(Dash_Cool - 1.0f);
         isdash = false;
     }
     #endregion
-
-    public void save_sound_Setting()
-    {
-        PlayerPrefs.SetFloat("E_Sound",audioSource.volume);
-        PlayerPrefs.SetFloat("E_Sound_Slider", Save_slider.value);
-    }
 }

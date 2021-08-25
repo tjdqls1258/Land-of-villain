@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 3922022750420508531}
   - component: {fileID: 4259058488073495436}
   - component: {fileID: 756384811658837499}
+  - component: {fileID: 4432977008535136724}
   m_Layer: 0
   m_Name: Bee_Bullte3
   m_TagString: Untagged
@@ -29,9 +30,9 @@ Transform:
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
+  - {fileID: 5482421423758070441}
   - {fileID: 7694943887608986844}
   - {fileID: 2784827301303671601}
-  - {fileID: 5482421423758070441}
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -47,7 +48,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ec5ff7169302b4f4cab3eb44629c20ed, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Rota_Speed: 100
+  Rota_Speed: 1
 --- !u!114 &756384811658837499
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -62,6 +63,18 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Skill_type: 3
   Skill_CollTime: 0
+--- !u!114 &4432977008535136724
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5243060690790728821}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6d97c9e4e6afbcb43b0c583e3e7109c3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &138961956539410416
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -72,7 +85,7 @@ PrefabInstance:
     - target: {fileID: 5618460528348525913, guid: 2611ffd76c9ca944e9c45c93d3dfba05,
         type: 3}
       propertyPath: m_RootOrder
-      value: 2
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 5618460528348525913, guid: 2611ffd76c9ca944e9c45c93d3dfba05,
         type: 3}
@@ -147,7 +160,7 @@ PrefabInstance:
     - target: {fileID: 5618460528348525913, guid: 2611ffd76c9ca944e9c45c93d3dfba05,
         type: 3}
       propertyPath: m_RootOrder
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 5618460528348525913, guid: 2611ffd76c9ca944e9c45c93d3dfba05,
         type: 3}
@@ -232,7 +245,7 @@ PrefabInstance:
     - target: {fileID: 5618460528348525913, guid: 2611ffd76c9ca944e9c45c93d3dfba05,
         type: 3}
       propertyPath: m_RootOrder
-      value: 1
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 5618460528348525913, guid: 2611ffd76c9ca944e9c45c93d3dfba05,
         type: 3}

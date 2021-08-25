@@ -70,7 +70,7 @@ public class Player_Stat : MonoBehaviour
             Player.GetComponent<Movement2D>().moveSpeed = 1.0f + add;
             if(Player.GetComponent<SkillCooldown>().atkdelay)
             {
-                Player.GetComponent<Movement2D>().moveSpeed = 1.0f + add - 0.15f;
+                Player.GetComponent<Movement2D>().moveSpeed = 1.0f + add - 0.1f;
             }
             if (Player.GetComponent<Movement2D>().moveSpeed >= 1.5f)
             {

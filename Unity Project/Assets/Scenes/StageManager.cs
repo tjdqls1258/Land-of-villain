@@ -13,6 +13,7 @@ public class StageManager : MonoBehaviour
     private bool scenechanger = false;
 
     public GameObject Gate;
+    public GameObject Point;
     private bool isgate = false;
     public bool clear;
 
@@ -136,6 +137,7 @@ public class StageManager : MonoBehaviour
             {
                 Instantiate(Gate, Player.transform.position + (Vector3.up)
                     , Quaternion.identity);
+                Instantiate(Point, Player.transform.position, Quaternion.identity);
                 isgate = true;
             }
             if ((clear == true) && (scenechanger == false))

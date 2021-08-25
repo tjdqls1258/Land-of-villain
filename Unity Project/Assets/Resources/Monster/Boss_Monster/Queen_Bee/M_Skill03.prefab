@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 5834477906267445224}
   - component: {fileID: 6686309284993998388}
   - component: {fileID: -2447060864517814663}
+  - component: {fileID: 7659841170644089828}
   m_Layer: 0
   m_Name: M_Skill03
   m_TagString: Monster_Skill
@@ -59,3 +60,16 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Bullte: {fileID: 5243060690790728821, guid: 1b64c803fc8064f4bb2d3e5737e6da35, type: 3}
+--- !u!114 &7659841170644089828
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5834477906267445221}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1ace381185e6dcd4a95c881e128d2445, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  life_time: 1

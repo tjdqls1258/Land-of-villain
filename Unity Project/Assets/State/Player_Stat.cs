@@ -23,10 +23,10 @@ public class Player_Stat : MonoBehaviour
    */
     //위에 것같은 스탯을 배열로 다룸
     [SerializeField]
-    private int[] P_Base_State = new int[] { 100, 100, 10, 5, 5, 0, 0, 0,0};
+    private int[] P_Base_State = new int[] { 100, 100, 10, 5, 5, 0, 0, 0, 0 };
     //이거 
     [SerializeField]
-    private int[] P_State = new int[] { 100, 100, 10, 5, 5, 0, 0, 0,0};
+    private int[] P_State = new int[] { 100, 100, 10, 5, 5, 0, 0, 0, 0 };
 
     public int Lenge;
     private void Awake()
@@ -36,8 +36,8 @@ public class Player_Stat : MonoBehaviour
         N_Stages = 1;
         items = this.GetComponent<Player_Item>();
     }
-   
-    public void Set_P_State(int N1,int N2)
+
+    public void Set_P_State(int N1, int N2)
     { P_State[N1] = N2; }
     public void Add_P_State(int N1, int N2)
     { P_State[N1] = P_State[N1] + N2; }
@@ -53,23 +53,26 @@ public class Player_Stat : MonoBehaviour
     }
     public void Return_Hight_Score()
     {
-        if(N_Stages > Save_Stages)
+        if (N_Stages > Save_Stages)
         {
             Save_Stages = N_Stages;
             PlayerPrefs.SetInt(Hight_Stages, N_Stages);
         }
     }
     public void Reset_Speed()
+
     {
         GameObject Player = GameObject.Find("Player");
-
-        float add =  Mathf.FloorToInt(Player.GetComponent<Player_Stat>().Get_P_State(4) / 20)*0.1f;
-
-        Player.GetComponent<Movement2D>().moveSpeed = 1.0f + add;
-        
-        if (Player.GetComponent<Movement2D>().moveSpeed >= 1.5f)
+        if (!Player.GetComponent<SkillCooldown>().Don_Restart)
         {
-            Player.GetComponent<Movement2D>().moveSpeed = 1.5f;
+            float add = Mathf.FloorToInt(Player.GetComponent<Player_Stat>().Get_P_State(4) / 20) * 0.1f;
+
+            Player.GetComponent<Movement2D>().moveSpeed = 1.0f + add;
+
+            if (Player.GetComponent<Movement2D>().moveSpeed >= 1.5f)
+            {
+                Player.GetComponent<Movement2D>().moveSpeed = 1.5f;
+            }
         }
     }
 }

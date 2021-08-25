@@ -18,7 +18,7 @@ public class Monster_Bullet : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        rigid.AddForce(transform.up * Move_speed, ForceMode2D.Force);
+        transform.position = Vector3.MoveTowards(transform.position, transform.position + transform.up, Move_speed * Time.deltaTime); ;
         if (!GameManager.isPause)
         {
             time += Time.deltaTime;

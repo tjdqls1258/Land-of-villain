@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 7468824433460780091}
   - component: {fileID: 1822489777171535275}
   - component: {fileID: -2720952669045501584}
+  - component: {fileID: 8526529810247281654}
   m_Layer: 0
   m_Name: M_Skill02
   m_TagString: Monster_Bullet
@@ -59,3 +60,16 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Bullte: {fileID: 5504471993783612262, guid: 7db6b57f1a3680e4f9aa530f148aa599, type: 3}
+--- !u!114 &8526529810247281654
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8176985918678128510}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1ace381185e6dcd4a95c881e128d2445, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  life_time: 1

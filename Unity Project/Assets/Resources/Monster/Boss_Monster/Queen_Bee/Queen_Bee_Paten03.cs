@@ -9,7 +9,7 @@ public class Queen_Bee_Paten03 : MonoBehaviour
     void Awake()
     {
         GameObject Bulltes = Instantiate(Bullte, transform.position, Quaternion.identity);
-        Bullte.GetComponent<Skill_damage>().Set_Damage(GetComponent<Skill_damage>().Damage());
+        Bulltes.GetComponent<Setting_Skill_M>().Set_all_Bullte(GetComponent<Skill_damage>().Damage());
     }
 
 }

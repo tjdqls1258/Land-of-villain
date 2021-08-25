@@ -54,6 +54,7 @@ MonoBehaviour:
   - {fileID: 6314360772976099637, guid: e48535cb4326b7b449154986323651a2, type: 3}
   - {fileID: 6765471911132185297, guid: 37ba60abe390b234f8b7c2fb9b15e73b, type: 3}
   - {fileID: 3596346323296885031, guid: ce60a89bdc8563d43a06dac033c34d12, type: 3}
+  - {fileID: 4746342585160701159, guid: c78244afc9208dc44a762b911654d500, type: 3}
   Dangers: {fileID: 1382301597999344926, guid: 65f2a9df84b2f4743a7604c4f2fd64d1, type: 3}
   Player: {fileID: 0}
   Spwan_Monster:
@@ -116,7 +117,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 1395904143
   m_SortingLayer: 2
-  m_SortingOrder: 1
+  m_SortingOrder: 2
   m_Sprite: {fileID: -5488827223876553941, guid: e6978aee812bfea4f8da7e7f35953b8b,
     type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}

@@ -30,6 +30,9 @@ public class Item_stats : MonoBehaviour
     public float ATK_Speed;
 
     public GameObject Bullte;
+
+    public string 스킬_설명;
+
     public void Awake()
     {
         this.transform.parent = null; //아이템 상속 해제

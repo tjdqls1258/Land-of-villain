@@ -101,12 +101,14 @@ MonoBehaviour:
   Item_stat: 000000000000000000000000000000000a00000000000000
   meeleatk: 0
   skill_number: Firearms_Clip_Skill
-  CoolTime: 1
+  CoolTime: 6
   Item_Information: 
   reinforce_add: 0
   item_skill_name: "\uC5B4\uB77C... \uD558\uB098\uAC00 \uBE44\uB124..?"
   ATK_Speed: 0
   Bullte: {fileID: 0}
+  "\uC2A4\uD0AC_\uC124\uBA85": "\uD070\uC77C\uC774\uB2E4. \uCC3E\uC544\uC57C\uD574....
+    (AGI 20\uD37C \uC99D\uAC00)"
 --- !u!61 &5208048493682267568
 BoxCollider2D:
   m_ObjectHideFlags: 0

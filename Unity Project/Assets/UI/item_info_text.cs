@@ -21,6 +21,8 @@ public class item_info_text : MonoBehaviour
     private Text I_luk_text;
     [SerializeField]
     private Text I_skill_name_text;
+    [SerializeField]
+    private Text 아이템_설명;
 
     private string i_name;
     private GameObject i_stat;
@@ -48,5 +50,6 @@ public class item_info_text : MonoBehaviour
         I_dex_text.text = " + " + i_stat.GetComponent<Item_stats>().Item_stat[4].ToString();
         I_luk_text.text = " + " + i_stat.GetComponent<Item_stats>().Item_stat[5].ToString();
         I_skill_name_text.text = i_stat.GetComponent<Item_stats>().item_skill_name.ToString();
+        아이템_설명.text = i_stat.GetComponent<Item_stats>().스킬_설명.ToString();
     }
 }

@@ -7,6 +7,7 @@ public class Find_Gate : MonoBehaviour
     GameObject Gate;
     float angle;
     Vector2 vec;
+
     void Awake()
     {
         vec = Vector2.zero;
@@ -16,8 +17,17 @@ public class Find_Gate : MonoBehaviour
     void Update()
     {
         Gate = GameObject.Find("Gate(Clone)");
+        GameObject child = GameObject.Find("Find_Gate");
         if (Gate != null)
         {
+            if(Vector2.Distance(Gate.transform.position, gameObject.transform.position) <= 1f)
+            {
+                child.GetComponent<SpriteRenderer>().color = new Color(1, 1, 1, 0);
+            }
+            else
+            {
+                child.GetComponent<SpriteRenderer>().color = new Color(1, 1, 1, 1);
+            }
             vec = new Vector2(Gate.transform.position.x - transform.position.x, Gate.transform.position.y - transform.position.y);
             angle = Mathf.Atan2(vec.y, vec.x) * Mathf.Rad2Deg;
 

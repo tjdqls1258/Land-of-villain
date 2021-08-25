@@ -107,6 +107,10 @@ MonoBehaviour:
   item_skill_name: Blood_AGI_UP
   ATK_Speed: 0
   Bullte: {fileID: 0}
+  "\uC2A4\uD0AC_\uC124\uBA85": "\uD604\uC7AC \uCCB4\uB825\uC758 5%\uB97C \uC18C\uBAA8\uD574
+    2\uCD08 \uB3D9\uC548 \uC774\uB3D9\uC18D\uB3C4 1.5\uBC30 \uC99D\uAC00\uD569\uB2C8\uB2E4.
+    (\uCD5C\uB300 \uC774\uC18D 1.5, \uCFE8\uD0C0\uC784 7\uCD08) Blood Ring(\uC774)\uAC00
+    \uC788\uC744 \uACBD\uC6B0 \uC9C0\uC18D\uC2DC\uAC04 2\uBC30"
 --- !u!61 &7808464833079489313
 BoxCollider2D:
   m_ObjectHideFlags: 0

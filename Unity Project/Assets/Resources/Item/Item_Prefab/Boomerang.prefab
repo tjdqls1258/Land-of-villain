@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 1884425892599256511}
   - component: {fileID: 1775773045413489005}
   m_Layer: 0
-  m_Name: Pilot_Wepwon
+  m_Name: Boomerang
   m_TagString: Item
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -101,12 +101,14 @@ MonoBehaviour:
   Item_stat: 00000000000000000a000000000000000000000000000000
   meeleatk: 0
   skill_number: Pilot_Wepwon_Skill
-  CoolTime: 3
+  CoolTime: 8
   Item_Information: 
   reinforce_add: 0
   item_skill_name: BoomerangX3
   ATK_Speed: 2
   Bullte: {fileID: 3989445725683253162, guid: e2adb2eb6517f4547be2bf72e9a84ba1, type: 3}
+  "\uC2A4\uD0AC_\uC124\uBA85": "\uBD80\uCC44\uAF34 \uBAA8\uC591\uC73C\uB85C \uBD80\uBA54\uB791\uC744
+    3\uAC1C \uB358\uC9D1\uB2C8\uB2E4. (\uCFE8\uD0C0\uC784 8\uCD08)"
 --- !u!61 &1775773045413489005
 BoxCollider2D:
   m_ObjectHideFlags: 0

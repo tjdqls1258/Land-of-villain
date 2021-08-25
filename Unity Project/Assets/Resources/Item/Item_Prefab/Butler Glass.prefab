@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 7541295679752188740}
   - component: {fileID: 7738655564483609497}
   m_Layer: 0
-  m_Name: Butler_Glass
+  m_Name: Butler Glass
   m_TagString: Item
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -107,6 +107,8 @@ MonoBehaviour:
   item_skill_name: AGI_UP
   ATK_Speed: 0
   Bullte: {fileID: 0}
+  "\uC2A4\uD0AC_\uC124\uBA85": "\uD50C\uB808\uC774\uC5B4\uC758 \uD589\uC6B4(LUK)
+    50% \uC99D\uAC00 \uC2DC\uD0B5\uB2C8\uB2E4."
 --- !u!61 &7738655564483609497
 BoxCollider2D:
   m_ObjectHideFlags: 0

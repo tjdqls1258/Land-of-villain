@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 3426603176674738627}
   - component: {fileID: 5556981016521075828}
   m_Layer: 0
-  m_Name: Black_Cow_Armor
+  m_Name: Black Cow Armor
   m_TagString: Item
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -107,6 +107,9 @@ MonoBehaviour:
   item_skill_name: 
   ATK_Speed: 0
   Bullte: {fileID: 0}
+  "\uC2A4\uD0AC_\uC124\uBA85": "\uAC80\uC740 \uC18C\uAC00 \uB354 \uC77C\uC744 \uC798\uD560\uAECD\uB2C8\uB2E4?
+    (\uC18C\uC9C0\uAE08 -10,  \uBC29\uC5B4\uB825 100\uD37C \uC0C1\uC2B9, \uCFE8\uD0C0\uC784
+    10\uCD08, \uC9C0\uC18D\uC2DC\uAC04 5\uCD08)"
 --- !u!61 &5556981016521075828
 BoxCollider2D:
   m_ObjectHideFlags: 0

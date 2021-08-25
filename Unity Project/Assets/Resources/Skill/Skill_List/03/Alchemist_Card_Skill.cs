@@ -16,7 +16,7 @@ public class Alchemist_Card_Skill : MonoBehaviour, Skill
     {
         GameObject Player = GameObject.Find("Player");
 
-        if (Player.GetComponent<Player_Stat>().Get_P_State(1) + 50 > Player.GetComponent<Player_Stat>().Get_P_State(0))
+        if (Player.GetComponent<Player_Stat>().Get_P_State(1) + 10 > Player.GetComponent<Player_Stat>().Get_P_State(0))
         {
             Player.GetComponent<Player_Stat>().Set_P_State(1, Player.GetComponent<Player_Stat>().Get_P_State(0));
         }

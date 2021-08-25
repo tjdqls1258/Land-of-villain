@@ -33,9 +33,10 @@ public class StageManager : MonoBehaviour
             Player = (GameObject)Resources.Load("Player/Player");
             Instantiate(Player, Vector3.zero, Quaternion.identity);
         }
-        Monster_Many = Random.Range(3, 25);
+        
 
         int currentStage = Player.GetComponent<Player_Stat>().N_Stages;
+        Monster_Many = Random.Range(3 + currentStage, 10 + currentStage);
         if ((currentStage % 5) == 0)
         {      
             GameObject Boss = Boss_Prefabs[(((currentStage / 5) - 1) % (Boss_Prefabs.Length))];
@@ -135,8 +136,15 @@ public class StageManager : MonoBehaviour
             clear = Player.GetComponent<Player_Status>().isclear;
             if ((monsternum <= 0) && (isgate == false))
             {
-                Instantiate(Gate, Player.transform.position + (Vector3.up)
-                    , Quaternion.identity);
+                if(Vector2.Distance(Player.transform.position,Vector2.zero) >= 1)
+                {
+                    Instantiate(Gate, Vector3.zero, Quaternion.identity);
+                }
+                else if (Vector2.Distance(Player.transform.position, Vector2.zero) < 1)
+                {
+                    Instantiate(Gate, new Vector2(0,2), Quaternion.identity);
+                }
+                
                 Instantiate(Point, Player.transform.position, Quaternion.identity);
                 isgate = true;
             }

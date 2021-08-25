@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 8566575877902367759}
   - component: {fileID: 1473089371345473976}
   m_Layer: 0
-  m_Name: Butler_Sweeter
+  m_Name: Butler Sweeter
   m_TagString: Item
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -107,6 +107,9 @@ MonoBehaviour:
   item_skill_name: DEF_UP
   ATK_Speed: 0
   Bullte: {fileID: 0}
+  "\uC2A4\uD0AC_\uC124\uBA85": "\uBB34\uC5B8\uAC00\uC758 \uC0AC\uBA85\uAC10\uC774
+    \uC0DD\uAE41\uB2C8\uB2E4. (AGI  50% , \uACF5\uACA9\uB825 20% \uC99D\uAC00)(\uCD5C\uB300
+    \uC774\uB3D9\uC18D\uB3C4 1.5)"
 --- !u!61 &1473089371345473976
 BoxCollider2D:
   m_ObjectHideFlags: 0

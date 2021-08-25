@@ -30,7 +30,8 @@ public class Joystick_ATK : MonoBehaviour, IBeginDragHandler, IDragHandler, IEnd
         ControlJoystickLever(eventData);
         GameObject.Find("Player").
         GetComponent<SkillCooldown>().Set_Drag_ATK(true);
-        
+        GameObject.Find("Player").GetComponent<Player_Stat>().Reset_Speed();
+
         //Debug.Log("Drag");
     }
 
@@ -40,6 +41,7 @@ public class Joystick_ATK : MonoBehaviour, IBeginDragHandler, IDragHandler, IEnd
         inputDirection = Vector2.zero;
         GameObject.Find("Player").
         GetComponent<SkillCooldown>().Set_Drag_ATK(false);
+        GameObject.Find("Player").GetComponent<Player_Stat>().Reset_Speed();
         // Debug.Log("End");
     }
 
@@ -55,9 +57,7 @@ public class Joystick_ATK : MonoBehaviour, IBeginDragHandler, IDragHandler, IEnd
 
         Vector2 vecNormal = inputPos.normalized;
 
-       
-
-        //var inputVector = inputPos.magnitude < leverRange ? inputPos : inputPos.normalized * leverRange;
+      
         lever.anchoredPosition = inputPos;
         inputDirection = inputPos / FSpr; // 이동 범위 정규화
     }

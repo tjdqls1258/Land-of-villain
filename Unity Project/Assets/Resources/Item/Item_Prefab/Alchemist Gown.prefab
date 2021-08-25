@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 6448649505923927643}
   - component: {fileID: 4318341997760324588}
   m_Layer: 0
-  m_Name: Alchemist_Gown
+  m_Name: Alchemist Gown
   m_TagString: Item
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -101,10 +101,15 @@ MonoBehaviour:
   Item_stat: 0000000078000000000000000f0000000a00000000000000
   meeleatk: 0
   skill_number: Alchemist_Gown_Skill
-  CoolTime: 6
+  CoolTime: 9
+  Item_Information: 
   reinforce_add: 0
   item_skill_name: Cooldown
+  ATK_Speed: 0
   Bullte: {fileID: 0}
+  "\uC2A4\uD0AC_\uC124\uBA85": "\uC0AC\uC6A9\uC2DC \uC790\uC2E0\uAC10\uC774 \uC0C1\uC2B9\uD569\uB2C8\uB2E4.
+    (\uC2A4\uD0AC \uCFE8\uD0C0\uC784 3\uCD08 \uAC10\uC18C, \uCFE8\uD0C0\uC784 : 
+    9\uCD08)"
 --- !u!61 &4318341997760324588
 BoxCollider2D:
   m_ObjectHideFlags: 0

@@ -68,7 +68,10 @@ public class Player_Stat : MonoBehaviour
             float add = Mathf.FloorToInt(Player.GetComponent<Player_Stat>().Get_P_State(4) / 20) * 0.1f;
 
             Player.GetComponent<Movement2D>().moveSpeed = 1.0f + add;
-
+            if(Player.GetComponent<SkillCooldown>().atkdelay)
+            {
+                Player.GetComponent<Movement2D>().moveSpeed = 1.0f + add - 0.15f;
+            }
             if (Player.GetComponent<Movement2D>().moveSpeed >= 1.5f)
             {
                 Player.GetComponent<Movement2D>().moveSpeed = 1.5f;

@@ -107,6 +107,8 @@ MonoBehaviour:
   item_skill_name: Undying
   ATK_Speed: 0
   Bullte: {fileID: 0}
+  "\uC2A4\uD0AC_\uC124\uBA85": "\uBB3C\uC57D\uC744 \uC81C\uC870\uD574\uC11C \uBA39\uC2B5\uB2C8\uB2E4.
+    (\uCCB4\uB825 10 \uD68C\uBCF5) \uCFE8\uD0C0\uC784 8\uCD08"
 --- !u!61 &9082326517880334722
 BoxCollider2D:
   m_ObjectHideFlags: 0

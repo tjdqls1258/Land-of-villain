@@ -101,12 +101,15 @@ MonoBehaviour:
   Item_stat: 000000000000000000000000000000000500000000000000
   meeleatk: 0
   skill_number: Arrow_Save_Skill
-  CoolTime: 1
+  CoolTime: 7
   Item_Information: 
   reinforce_add: 0
   item_skill_name: "\uC18D\uC0AC"
   ATK_Speed: 0
   Bullte: {fileID: 0}
+  "\uC2A4\uD0AC_\uC124\uBA85": "\uB2E4\uC74C \uACF5\uACA9\uC774 \uC218\uC6D4\uD574\uC9D1\uB2C8\uB2E4.
+    (\uACF5\uACA9\uC18D\uB3C4 1 \uC0C1\uC2B9,  \uCFE8\uD0C0\uC784 7\uCD08,  \uC9C0\uC18D\uC2DC\uAC04
+    2\uCD08)"
 --- !u!61 &7709648308720253340
 BoxCollider2D:
   m_ObjectHideFlags: 0

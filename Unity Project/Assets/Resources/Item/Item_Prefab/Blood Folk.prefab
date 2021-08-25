@@ -95,19 +95,20 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4ca50350593932d42bc761259a6830ee, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  ATK_Sound: {fileID: 8300000, guid: a58e438b7cfa445498120af0e6169082, type: 3}
   Item_Name: Blood Folk
   Item_Kind: 0
   tear: 1
   Item_stat: 00000000000000000a000000000000000000000000000000
   meeleatk: 0
   skill_number: Blood_FolK_Skill
-  CoolTime: 3
+  CoolTime: 5
   Item_Information: 
   reinforce_add: 0
   item_skill_name: "\uC5D0\uB77C\uBAA8\uB974\uACA0\uB2E4"
   ATK_Speed: 1
   Bullte: {fileID: 1325043656200051516, guid: e1ce73c1819dd8c45a06b238e77825a3, type: 3}
+  "\uC2A4\uD0AC_\uC124\uBA85": " \uBD80\uCC44\uAF34 \uBAA8\uC591\uC73C\uB85C \uD3EC\uD06C\uB97C
+    \uC5F0\uC18D 3\uBC88 \uB0A0\uB9BD\uB2C8\uB2E4. \uCFE8\uD0C0\uC784 5\uCD08"
 --- !u!61 &4360093356746244215
 BoxCollider2D:
   m_ObjectHideFlags: 0

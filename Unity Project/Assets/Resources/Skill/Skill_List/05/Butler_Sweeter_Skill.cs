@@ -17,7 +17,7 @@ public class Butler_Sweeter_Skill : MonoBehaviour, Skill
     public void Passive()
     {
         Player = GameObject.Find("Player");
-        Add_Luk = (int)(Player.GetComponent<Player_Stat>().Get_P_State(5) * 0.5f);
+        Add_Luk = (int)(Player.GetComponent<Player_Stat>().Get_P_State(5) * 0.2f);
         Add_ATK = (int)(Player.GetComponent<Player_Stat>().Get_P_State(2) * 0.2f);
 
         Player.GetComponent<Player_Stat>().Set_P_State(5, (int)(Player.GetComponent<Player_Stat>().Get_P_State(5) + Add_Luk));

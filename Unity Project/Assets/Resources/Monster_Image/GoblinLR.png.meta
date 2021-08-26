@@ -1,55 +1,61 @@
 fileFormatVersion: 2
-guid: 81a30a3b254f5ea4e9e7df981a7ada23
+guid: 1d821bdf4ea1d3f46acb0f5336e859c6
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -999534879012410773
-    second: minotaurous_0
+      213: -8499919651151358501
+    second: GoblinLR_0
   - first:
-      213: -9058492197046255540
-    second: minotaurous_1
+      213: -699547808190472829
+    second: GoblinLR_1
   - first:
-      213: 8419320596264316782
-    second: minotaurous_2
+      213: 7885604269556141651
+    second: GoblinLR_2
   - first:
-      213: 7297040859581828969
-    second: minotaurous_3
+      213: 6236127578118994400
+    second: GoblinLR_3
   - first:
-      213: 8357154181142644346
-    second: minotaurous_4
+      213: -4014233590206075130
+    second: GoblinLR_4
   - first:
-      213: 4641704990417095623
-    second: minotaurous_5
+      213: -5773369160914300272
+    second: GoblinLR_5
   - first:
-      213: -5389865561735738962
-    second: minotaurous_6
+      213: 3745217746582073097
+    second: GoblinLR_6
   - first:
-      213: -3441159751925972590
-    second: minotaurous_7
+      213: -4387911437382203371
+    second: GoblinLR_7
   - first:
-      213: -1785896247472764421
-    second: minotaurous_8
+      213: -6856916280151457218
+    second: GoblinLR_8
   - first:
-      213: -4589613539116696835
-    second: minotaurous_9
+      213: -1674484941239388049
+    second: GoblinLR_9
   - first:
-      213: -6605987177915997969
-    second: minotaurous_10
+      213: 6704894541993962305
+    second: GoblinLR_10
   - first:
-      213: -6498543594990132219
-    second: minotaurous_11
+      213: 6687495356575935024
+    second: GoblinLR_11
   - first:
-      213: 5669928356667859267
-    second: minotaurous_12
+      213: -4757898885641236894
+    second: GoblinLR_12
   - first:
-      213: -3020244793043716324
-    second: minotaurous_13
+      213: 8572106177640158776
+    second: GoblinLR_13
   - first:
-      213: -7541341923111797899
-    second: minotaurous_14
+      213: -7563918285441277607
+    second: GoblinLR_14
   - first:
-      213: -5658370890261005747
-    second: minotaurous_15
+      213: -6562938058267193385
+    second: GoblinLR_15
+  - first:
+      213: -1144165681368905366
+    second: GoblinLR_16
+  - first:
+      213: -6764737601460784352
+    second: GoblinLR_17
   externalObjects: {}
   serializedVersion: 11
   mipmaps:
@@ -183,13 +189,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: minotaurous_0
+      name: GoblinLR_0
       rect:
         serializedVersion: 2
         x: 0
-        y: 192
-        width: 48
-        height: 64
+        y: 144
+        width: 32
+        height: 48
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -197,20 +203,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: b6a2ad3c250f022f0800000000000000
-      internalID: -999534879012410773
+      spriteID: bd5d2cd9c183a0a80800000000000000
+      internalID: -8499919651151358501
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: minotaurous_1
+      name: GoblinLR_1
       rect:
         serializedVersion: 2
-        x: 48
-        y: 192
-        width: 48
-        height: 64
+        x: 32
+        y: 144
+        width: 32
+        height: 48
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -218,20 +224,41 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: c40096a3755c94280800000000000000
-      internalID: -9058492197046255540
+      spriteID: 38d576d89f4ba46f0800000000000000
+      internalID: -699547808190472829
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: minotaurous_2
+      name: GoblinLR_2
+      rect:
+        serializedVersion: 2
+        x: 64
+        y: 144
+        width: 32
+        height: 48
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 35e823ead4b4f6d60800000000000000
+      internalID: 7885604269556141651
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GoblinLR_3
       rect:
         serializedVersion: 2
         x: 96
-        y: 192
-        width: 48
-        height: 64
+        y: 144
+        width: 32
+        height: 48
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -239,20 +266,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: e6fe67e897f67d470800000000000000
-      internalID: 8419320596264316782
+      spriteID: 0e9bccbedfc2b8650800000000000000
+      internalID: 6236127578118994400
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: minotaurous_3
+      name: GoblinLR_4
       rect:
         serializedVersion: 2
-        x: 144
-        y: 192
-        width: 48
-        height: 64
+        x: 128
+        y: 144
+        width: 32
+        height: 48
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -260,41 +287,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 96fc2ea100c444560800000000000000
-      internalID: 7297040859581828969
+      spriteID: 60f635a61d39a48c0800000000000000
+      internalID: -4014233590206075130
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: minotaurous_4
-      rect:
-        serializedVersion: 2
-        x: 192
-        y: 192
-        width: 48
-        height: 64
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: a768d2c13739af370800000000000000
-      internalID: 8357154181142644346
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: minotaurous_5
+      name: GoblinLR_5
       rect:
         serializedVersion: 2
         x: 0
-        y: 128
-        width: 48
-        height: 64
+        y: 96
+        width: 32
+        height: 48
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -302,20 +308,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 7cb08f19816aa6040800000000000000
-      internalID: 4641704990417095623
+      spriteID: 0921286365fd0efa0800000000000000
+      internalID: -5773369160914300272
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: minotaurous_6
+      name: GoblinLR_6
       rect:
         serializedVersion: 2
-        x: 48
-        y: 128
-        width: 48
-        height: 64
+        x: 32
+        y: 96
+        width: 32
+        height: 48
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -323,20 +329,41 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: ea941ad04d95335b0800000000000000
-      internalID: -5389865561735738962
+      spriteID: 90f638f82bfa9f330800000000000000
+      internalID: 3745217746582073097
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: minotaurous_7
+      name: GoblinLR_7
+      rect:
+        serializedVersion: 2
+        x: 64
+        y: 96
+        width: 32
+        height: 48
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 518c5fcbbc10b13c0800000000000000
+      internalID: -4387911437382203371
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GoblinLR_8
       rect:
         serializedVersion: 2
         x: 96
-        y: 128
-        width: 48
-        height: 64
+        y: 96
+        width: 32
+        height: 48
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -344,20 +371,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 291c41b007b8e30d0800000000000000
-      internalID: -3441159751925972590
+      spriteID: e32caf209f657d0a0800000000000000
+      internalID: -6856916280151457218
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: minotaurous_8
+      name: GoblinLR_9
       rect:
         serializedVersion: 2
-        x: 144
-        y: 128
-        width: 48
-        height: 64
+        x: 128
+        y: 96
+        width: 32
+        height: 48
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -365,41 +392,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: bf9cea333d83737e0800000000000000
-      internalID: -1785896247472764421
+      spriteID: f687fa751d803c8e0800000000000000
+      internalID: -1674484941239388049
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: minotaurous_9
-      rect:
-        serializedVersion: 2
-        x: 192
-        y: 128
-        width: 48
-        height: 64
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: dfa30a09dca6e40c0800000000000000
-      internalID: -4589613539116696835
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: minotaurous_10
+      name: GoblinLR_10
       rect:
         serializedVersion: 2
         x: 0
-        y: 64
-        width: 48
-        height: 64
+        y: 48
+        width: 32
+        height: 48
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -407,20 +413,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: fe0288569a1d254a0800000000000000
-      internalID: -6605987177915997969
+      spriteID: 14b6108df029c0d50800000000000000
+      internalID: 6704894541993962305
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: minotaurous_11
+      name: GoblinLR_11
       rect:
         serializedVersion: 2
-        x: 48
-        y: 64
-        width: 48
-        height: 64
+        x: 32
+        y: 48
+        width: 32
+        height: 48
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -428,20 +434,41 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 5042937f70980d5a0800000000000000
-      internalID: -6498543594990132219
+      spriteID: 03a68cd4891cecc50800000000000000
+      internalID: 6687495356575935024
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: minotaurous_12
+      name: GoblinLR_12
+      rect:
+        serializedVersion: 2
+        x: 64
+        y: 48
+        width: 32
+        height: 48
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 26e80240c2c88fdb0800000000000000
+      internalID: -4757898885641236894
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GoblinLR_13
       rect:
         serializedVersion: 2
         x: 96
-        y: 64
-        width: 48
-        height: 64
+        y: 48
+        width: 32
+        height: 48
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -449,20 +476,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 3412a11ccc1afae40800000000000000
-      internalID: 5669928356667859267
+      spriteID: 8365c2fc62d36f670800000000000000
+      internalID: 8572106177640158776
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: minotaurous_13
+      name: GoblinLR_14
       rect:
         serializedVersion: 2
-        x: 144
-        y: 64
-        width: 48
-        height: 64
+        x: 128
+        y: 48
+        width: 32
+        height: 48
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -470,41 +497,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: c17f7e7dc5fe516d0800000000000000
-      internalID: -3020244793043716324
+      spriteID: 951e03e0560970790800000000000000
+      internalID: -7563918285441277607
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: minotaurous_14
-      rect:
-        serializedVersion: 2
-        x: 192
-        y: 64
-        width: 48
-        height: 64
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 57bf8270a75c75790800000000000000
-      internalID: -7541341923111797899
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: minotaurous_15
+      name: GoblinLR_15
       rect:
         serializedVersion: 2
         x: 0
         y: 0
-        width: 48
-        height: 64
+        width: 32
+        height: 48
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -512,8 +518,50 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: d4af49697ad6971b0800000000000000
-      internalID: -5658370890261005747
+      spriteID: 7df8712ab92cbe4a0800000000000000
+      internalID: -6562938058267193385
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GoblinLR_16
+      rect:
+        serializedVersion: 2
+        x: 32
+        y: 0
+        width: 32
+        height: 48
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a6940d5ff5b1f10f0800000000000000
+      internalID: -1144165681368905366
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GoblinLR_17
+      rect:
+        serializedVersion: 2
+        x: 64
+        y: 0
+        width: 32
+        height: 48
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 023b33a1ef2de12a0800000000000000
+      internalID: -6764737601460784352
       vertices: []
       indices: 
       edges: []

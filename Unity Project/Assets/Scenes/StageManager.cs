@@ -78,9 +78,13 @@ public class StageManager : MonoBehaviour
         {
             Lengths = 3;
         }
+        if (currentStage >= 8)
+        {
+            Lengths = 5;
+        }
         if (currentStage >=15)
         {
-            Lengths = 6;
+            Lengths = 8;
         }
 
         int selection = Random.Range(0, Lengths);

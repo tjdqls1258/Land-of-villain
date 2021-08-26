@@ -5,14 +5,14 @@ using UnityEditor;
 
 public class Monster_stats : MonoBehaviour
 {
-    public float Hp;
+    public int Hp;
     public int damage;
     public float Atk_dir;
     Drop_Item item_Drop;
     Drop_Money Money_drop;
     private string Drop_item_it;
 
-    public float current_HP;
+    public int current_HP;
 
     public int Monster_Drop_Tear;
 
@@ -30,7 +30,7 @@ public class Monster_stats : MonoBehaviour
         stageManger = GameObject.Find("StageManager");
         item_Drop = new Drop_Item();
         Money_drop = new Drop_Money();
-        Hp += (Player.GetComponent<Player_Stat>().N_Stages) * 10;
+        Hp += (int)((Player.GetComponent<Player_Stat>().N_Stages) * (Hp*0.5f));
         current_HP = Hp;
         damage += Player.GetComponent<Player_Stat>().N_Stages;
     }

@@ -38,18 +38,22 @@ public class Minotauros_King_Pattern : MonoBehaviour
     {
         rushcool = true;
         this.GetComponent<Move_monster>().moveSpeed = 0.0f;
-        Rush_Target = Player.transform.position * 3.0f;
-        yield return new WaitForSeconds(0.53f);
+        Rush_Target = (Player.transform.position - transform.position).normalized;
+        float Distances = Vector2.Distance(transform.position, Player.transform.position);
 
+        yield return new WaitForSeconds(0.53f);
+        float time = 0; 
         this.GetComponent<Move_monster>().enabled = false;
-        while (this.transform.position != Rush_Target)
+        while (Distances * 1.2 >= time)
         {
             yield return null;
-            transform.position = Vector3.MoveTowards(this.transform.position, Rush_Target, ((basespeed * 5 * Time.deltaTime)));
+            time += Time.deltaTime;
+            //transform.position = Vector3.MoveTowards(this.transform.position, Rush_Target, ((basespeed * 5 * Time.deltaTime)));
+            transform.position += Rush_Target * 3.0f * Time.deltaTime;
         }
         yield return new WaitForSeconds(0.1f);
 
-        for (int i = 0; i < 5; i++)
+        for (int i = 0; i < 3; i++)
         {
             Spawn_mino_normal();
         }

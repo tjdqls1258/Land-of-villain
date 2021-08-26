@@ -94,19 +94,19 @@ public class Goblin_Shaman_Pattern : MonoBehaviour
             GameObject Danger_check_w = Instantiate(Dangers, Danger - new Vector3(0.32f, 0, 0), Quaternion.identity);
             GameObject Danger_check_e = Instantiate(Dangers, Danger + new Vector3(0.32f, 0, 0), Quaternion.identity);
             GameObject Danger_check_s = Instantiate(Dangers, Danger - new Vector3(0, 0.32f, 0), Quaternion.identity);
-            Danger_check_e.GetComponent<Danger>().Patan_Ative(Goblin_Skill, GetComponent<Monster_stats>().give_damage(), Danger + new Vector3(0.32f, 0, 0), 0.4f);
-            Danger_check_n.GetComponent<Danger>().Patan_Ative(Goblin_Skill, GetComponent<Monster_stats>().give_damage(), Danger + new Vector3(0, 0.32f, 0), 0.4f);
-            Danger_check_w.GetComponent<Danger>().Patan_Ative(Goblin_Skill, GetComponent<Monster_stats>().give_damage(), Danger - new Vector3(0.32f, 0, 0), 0.4f);
-            Danger_check_s.GetComponent<Danger>().Patan_Ative(Goblin_Skill, GetComponent<Monster_stats>().give_damage(), Danger - new Vector3(0, 0.32f, 0), 0.4f);
+            Danger_check_e.GetComponent<Danger>().Patan_Ative(Goblin_Skill, GetComponent<Monster_stats>().give_damage(), Danger + new Vector3(0.32f, 0, 0), 0.3f);
+            Danger_check_n.GetComponent<Danger>().Patan_Ative(Goblin_Skill, GetComponent<Monster_stats>().give_damage(), Danger + new Vector3(0, 0.32f, 0), 0.3f);
+            Danger_check_w.GetComponent<Danger>().Patan_Ative(Goblin_Skill, GetComponent<Monster_stats>().give_damage(), Danger - new Vector3(0.32f, 0, 0), 0.3f);
+            Danger_check_s.GetComponent<Danger>().Patan_Ative(Goblin_Skill, GetComponent<Monster_stats>().give_damage(), Danger - new Vector3(0, 0.32f, 0), 0.3f);
 
             GameObject Danger_check_n_ = Instantiate(Dangers, Danger + new Vector3(0.32f, 0.32f, 0), Quaternion.identity);
             GameObject Danger_check_w_ = Instantiate(Dangers, Danger + new Vector3(0.32f, -0.32f, 0), Quaternion.identity);
             GameObject Danger_check_e_ = Instantiate(Dangers, Danger + new Vector3(-0.32f, -0.32f, 0), Quaternion.identity);
             GameObject Danger_check_s_ = Instantiate(Dangers, Danger + new Vector3(-0.32f, 0.32f, 0), Quaternion.identity);
-            Danger_check_w_.GetComponent<Danger>().Patan_Ative(Goblin_Skill, GetComponent<Monster_stats>().give_damage(), Danger + new Vector3(0.32f, -0.32f, 0), 0.4f);
-            Danger_check_n_.GetComponent<Danger>().Patan_Ative(Goblin_Skill, GetComponent<Monster_stats>().give_damage(), Danger + new Vector3(0.32f, 0.32f, 0), 0.4f);
-            Danger_check_e_.GetComponent<Danger>().Patan_Ative(Goblin_Skill, GetComponent<Monster_stats>().give_damage(), Danger + new Vector3(-0.32f, -0.32f, 0), 0.4f);
-            Danger_check_s_.GetComponent<Danger>().Patan_Ative(Goblin_Skill, GetComponent<Monster_stats>().give_damage(), Danger + new Vector3(-0.32f, 0.32f, 0), 0.4f);
+            Danger_check_w_.GetComponent<Danger>().Patan_Ative(Goblin_Skill, GetComponent<Monster_stats>().give_damage(), Danger + new Vector3(0.32f, -0.32f, 0), 0.3f);
+            Danger_check_n_.GetComponent<Danger>().Patan_Ative(Goblin_Skill, GetComponent<Monster_stats>().give_damage(), Danger + new Vector3(0.32f, 0.32f, 0), 0.3f);
+            Danger_check_e_.GetComponent<Danger>().Patan_Ative(Goblin_Skill, GetComponent<Monster_stats>().give_damage(), Danger + new Vector3(-0.32f, -0.32f, 0), 0.3f);
+            Danger_check_s_.GetComponent<Danger>().Patan_Ative(Goblin_Skill, GetComponent<Monster_stats>().give_damage(), Danger + new Vector3(-0.32f, 0.32f, 0), 0.3f);
         }
         else
         {

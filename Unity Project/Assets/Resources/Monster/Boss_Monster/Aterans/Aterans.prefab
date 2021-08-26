@@ -70,7 +70,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8dabfc865e2173c4f9eb2d7c849d5050, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Hp: 10000
+  Hp: 5000
   damage: 65
   Atk_dir: 0
   current_HP: 0

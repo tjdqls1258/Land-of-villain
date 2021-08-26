@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 5989046359732822567}
   - component: {fileID: 4743452692685847466}
   - component: {fileID: 3252503709426417917}
+  - component: {fileID: -7310804440725178691}
   m_Layer: 0
   m_Name: Blood_Folk_Bullte_M
   m_TagString: Untagged
@@ -57,5 +58,17 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: c2b2ce99ec4752845850a4d179b37198, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &-7310804440725178691
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1325043656200051516}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 53261f70f16fdf34e8af64aa379ec9a6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 

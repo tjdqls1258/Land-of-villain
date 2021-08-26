@@ -17,9 +17,14 @@ public class Monster_HP_Bar : MonoBehaviour
         Hp.text = GetComponent<Monster_stats>().Hp.ToString() + "/" + GetComponent<Monster_stats>().current_HP.ToString();
     }
 
-    public void Get_damage(float hp, float currentHP, int damage)
+    public void Get_damage(float hp, float currentHP, int damage, bool Hit)
     {
         Damage.text = "-"+damage.ToString();
+        if(Hit)
+        {
+            Damage.color = new Color(1, 0.5f, 0, 1);
+            Damage.text += "!";
+        }
         Hp.text = GetComponent<Monster_stats>().Hp.ToString() + "/" + GetComponent<Monster_stats>().current_HP.ToString();
         HPBar.fillAmount = hp/ currentHP;
         StartCoroutine("Damages");

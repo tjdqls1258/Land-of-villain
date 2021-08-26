@@ -42,6 +42,7 @@ public class SkillCooldown : MonoBehaviour
     public Image img_Amor_Cool;
     public Image img_helmat_Cool;
     public Image img_acc_Cool;
+    public Image img_Daush_Cool;
 
     Animator animator;
 
@@ -374,29 +375,31 @@ public class SkillCooldown : MonoBehaviour
 
     IEnumerator Dash()
     {
-        //float Cool_Dwon = Dash_Cool;
-        //float Time = 0;
-        //while (Cool_Dwon >= 0.0f)
-        //{
-        //    Time += Time.deltaTime;
-        //    if((Time >= 1.0f) &&(dashactive == true))
-        //    {
-        //        GetComponent<Movement2D>().moveSpeed /= 2;
-        //        dashactive = false;
-        //    }
-        //    
-        //    
-        //    img_acc_Cool.fillAmount = (Cool_Dwon / Dash_Cool);
-        //    Cool_Dwon -= Time.deltaTime;
-        //    yield return new WaitForFixedUpdate();
-        //}
-        //isdash = false;
-        yield return new WaitForSeconds(1.0f);
-        GetComponent<Movement2D>().moveSpeed /= 2;
-        Don_Restart = false;
-        dashactive = false;
-        yield return new WaitForSeconds(Dash_Cool - 1.0f);
+        float Cool_Dwon = Dash_Cool;
+        float time = 0;
+        while (Cool_Dwon >= 0.0f)
+        {
+            time += Time.deltaTime;
+            if ((time >= 1.0f) && (dashactive == true))
+            {
+                GetComponent<Movement2D>().moveSpeed /= 2;
+                Don_Restart = false;
+                dashactive = false;
+            }
+
+
+            img_Daush_Cool.fillAmount = (Cool_Dwon / Dash_Cool);
+            Cool_Dwon -= Time.deltaTime;
+            yield return new WaitForFixedUpdate();
+        }
         isdash = false;
+
+        //yield return new WaitForSeconds(1.0f);
+        //GetComponent<Movement2D>().moveSpeed /= 2;
+        //Don_Restart = false;
+        //dashactive = false;
+        //yield return new WaitForSeconds(Dash_Cool - 1.0f);
+        //isdash = false;
     }
     #endregion
 }

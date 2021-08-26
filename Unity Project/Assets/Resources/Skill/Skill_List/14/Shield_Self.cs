@@ -20,7 +20,7 @@ public class Shield_Self : MonoBehaviour
 
         angle = Mathf.Atan2(Joystick.inputDirection.y
                 , Joystick.inputDirection.x) * Mathf.Rad2Deg;
-        gameObject.transform.rotation = Quaternion.AngleAxis(angle + 135, Vector3.forward);
+        gameObject.transform.rotation = Quaternion.AngleAxis(angle -180, Vector3.forward);
     }
 
     private void OnTriggerEnter2D(Collider2D collision)

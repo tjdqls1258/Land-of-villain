@@ -33,12 +33,12 @@ public class Monster_stats : MonoBehaviour
         damage += Player.GetComponent<Player_Stat>().N_Stages;
     }
 
-    public void Get_damange(int damage)
+    public void Get_damange(int damage, bool NoCrit)
     {
         int Critcal = GameObject.Find("Player").GetComponent<Player_Stat>().Get_P_State(5);
         int Add_Damage = 0;
         bool Critcal_Hit = false;
-        if(Critcal > Random.Range(0, 100))
+        if(Critcal > Random.Range(0, 100) && (!NoCrit))
         {
             Add_Damage += (int)(GameObject.Find("Player").GetComponent<Player_Stat>().Get_P_State(2) * 0.5f);
             if(Add_Damage == 0)
@@ -75,7 +75,7 @@ public class Monster_stats : MonoBehaviour
         {
             if (other.gameObject.tag == "Player_Meele")
             {
-                Get_damange(other.GetComponent<Set_Damage>().Damage());
+                Get_damange(other.GetComponent<Set_Damage>().Damage(), false);
                 
                 Take_Damage = true;
                 StartCoroutine("Take_Damages");
@@ -83,7 +83,7 @@ public class Monster_stats : MonoBehaviour
             if (other.gameObject.tag == "Player_ATk")
             {
                 //충돌한 객체의 컴퍼넌트에서 데미지 받아옴
-                Get_damange(other.GetComponent<Set_Damage>().Damage());
+                Get_damange(other.GetComponent<Set_Damage>().Damage(), false);
 
                 
                 Destroy(other.gameObject);
@@ -93,7 +93,7 @@ public class Monster_stats : MonoBehaviour
             if (other.gameObject.tag == "Player_Boom")
             {
                 //충돌한 객체의 컴퍼넌트에서 데미지 받아옴
-                Get_damange(other.GetComponent<Set_Damage>().Damage());
+                Get_damange(other.GetComponent<Set_Damage>().Damage(), false);
 
                 
                 Take_Damage = true;
@@ -101,7 +101,7 @@ public class Monster_stats : MonoBehaviour
             }
             if (other.gameObject.tag == "Skill")
             {
-                Get_damange(other.GetComponent<Skill_Danamge>().Damage());
+                Get_damange(other.GetComponent<Skill_Danamge>().Damage(), false);
                 
 
                 Take_Damage = true;
@@ -115,7 +115,7 @@ public class Monster_stats : MonoBehaviour
         {
             if (other.gameObject.tag == "Player_Meele")
             {
-                Get_damange(other.GetComponent<Set_Damage>().Damage());
+                Get_damange(other.GetComponent<Set_Damage>().Damage(), false);
                 if (Hp <= 0)
                 {
                     Destroy(gameObject);
@@ -126,7 +126,7 @@ public class Monster_stats : MonoBehaviour
             if (other.gameObject.tag == "Player_ATk")
             {
                 //충돌한 객체의 컴퍼넌트에서 데미지 받아옴
-                Get_damange(other.GetComponent<Set_Damage>().Damage());
+                Get_damange(other.GetComponent<Set_Damage>().Damage(), false);
 
                 if (Hp <= 0)
                 {
@@ -137,7 +137,7 @@ public class Monster_stats : MonoBehaviour
             if (other.gameObject.tag == "Player_Boom")
             {
                 //충돌한 객체의 컴퍼넌트에서 데미지 받아옴
-                Get_damange(other.GetComponent<Set_Damage>().Damage());
+                Get_damange(other.GetComponent<Set_Damage>().Damage(), false);
 
                 if (Hp <= 0)
                 {
@@ -148,7 +148,7 @@ public class Monster_stats : MonoBehaviour
             }
             if (other.gameObject.tag == "Skill")
             {
-                Get_damange(other.GetComponent<Skill_Danamge>().Damage());
+                Get_damange(other.GetComponent<Skill_Danamge>().Damage(), false);
                 if (Hp <= 0)
                 {
                     Destroy(gameObject);

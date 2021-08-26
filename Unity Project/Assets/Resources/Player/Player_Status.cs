@@ -93,6 +93,10 @@ public class Player_Status : MonoBehaviour
             Get_damange(other.GetComponent<Skill_damage>().Damage());
             StartCoroutine("CollisionINvincible");
         }
+        if ((other.gameObject.tag == "Money"))
+        {
+            GetComponent<Player_Stat>().Set_P_State(6, GetComponent<Player_Stat>().Get_P_State(6) + other.GetComponent<Money_Stats>().Get_Money_Value());
+        }
     }
     public bool isinvincible_Check()
     {

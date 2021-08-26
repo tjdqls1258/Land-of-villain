@@ -104,9 +104,10 @@ MonoBehaviour:
   CoolTime: 3
   Item_Information: 
   reinforce_add: 0
-  item_skill_name: 
+  item_skill_name: "\uBC31\uC2A4\uD15D"
   ATK_Speed: 0.3
   Bullte: {fileID: 7358419363960929659, guid: ef484ac038ef1a449a47dbba350b450b, type: 3}
+  "\uC2A4\uD0AC_\uC124\uBA85": "\uBE7D\uC2A4\uD15D"
 --- !u!61 &8012180621869118171
 BoxCollider2D:
   m_ObjectHideFlags: 0

@@ -107,6 +107,7 @@ MonoBehaviour:
   item_skill_name: Confidence UP
   ATK_Speed: 0
   Bullte: {fileID: 0}
+  "\uC2A4\uD0AC_\uC124\uBA85": "\uC790\uC2E0\uAC10 \uC0C1\uC2B9(\uD6A8\uACFC\uC5C6\uC74C)"
 --- !u!61 &5004215840731786427
 BoxCollider2D:
   m_ObjectHideFlags: 0

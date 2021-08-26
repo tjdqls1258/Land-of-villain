@@ -107,6 +107,8 @@ MonoBehaviour:
   item_skill_name: Fire_in
   ATK_Speed: 2
   Bullte: {fileID: 7211411211070169945, guid: c76fa969499020d49b6e14da05fb50ac, type: 3}
+  "\uC2A4\uD0AC_\uC124\uBA85": "\uC804\uBC29\uC5D0 \uC218\uB958\uD0C4 3\uAC1C\uB97C
+    \uB358\uC9D1\uB2C8\uB2E4. (\uCFE8\uD0C0\uC784 3\uCD08)"
 --- !u!61 &8680786654310435676
 BoxCollider2D:
   m_ObjectHideFlags: 0

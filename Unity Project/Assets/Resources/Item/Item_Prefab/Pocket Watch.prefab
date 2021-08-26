@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 4554817854515663470}
   - component: {fileID: 5336063017482908606}
   m_Layer: 0
-  m_Name: Pocket_Watch
+  m_Name: Pocket Watch
   m_TagString: Item
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -107,6 +107,8 @@ MonoBehaviour:
   item_skill_name: Heal
   ATK_Speed: 0
   Bullte: {fileID: 0}
+  "\uC2A4\uD0AC_\uC124\uBA85": "(\uD328\uC2DC\uBE0C)\uC774\uB3D9\uC18D\uB3C4 20%
+    \uC99D\uAC00."
 --- !u!61 &5336063017482908606
 BoxCollider2D:
   m_ObjectHideFlags: 0

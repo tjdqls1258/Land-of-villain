@@ -101,12 +101,15 @@ MonoBehaviour:
   Item_stat: 000000000000000014000000000000000000000000000000
   meeleatk: 0
   skill_number: "\u5927\u528D_Skill"
-  CoolTime: 3
+  CoolTime: 12
   Item_Information: 
   reinforce_add: 0
   item_skill_name: "\uBB34\uCC28\uBCC4 \uACF5\uACA9"
   ATK_Speed: 1.5
   Bullte: {fileID: 2952489361456770614, guid: a03cef8ccf46dbb4099cc648cde05f1c, type: 3}
+  "\uC2A4\uD0AC_\uC124\uBA85": "\uD50C\uB808\uC774\uC5B4\uB97C \uAE30\uC900\uC73C\uB85C
+    \uC6D0\uC744 \uADF8\uB9AC\uBA70 \uAC80\uC744 \uD718\uB450\uB978\uB2E4. (\uCFE8\uD0C0\uC784
+    12\uCD08)"
 --- !u!61 &6941557037397063063
 BoxCollider2D:
   m_ObjectHideFlags: 0

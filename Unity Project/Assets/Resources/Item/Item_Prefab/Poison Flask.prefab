@@ -107,6 +107,8 @@ MonoBehaviour:
   item_skill_name: More Biggier
   ATK_Speed: 2
   Bullte: {fileID: 5455522379831902594, guid: c6bdec3d903eafa4aa8367cd1a337737, type: 3}
+  "\uC2A4\uD0AC_\uC124\uBA85": "\uD06C\uAE30 2\uBC30\uC758 \uD50C\uB77C\uC2A4\uD06C\uB97C
+    \uB358\uC9D1\uB2C8\uB2E4. (\uCFE8\uD0C0\uC784 3\uCD08)"
 --- !u!61 &2843917429549032992
 BoxCollider2D:
   m_ObjectHideFlags: 0

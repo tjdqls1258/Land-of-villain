@@ -19,7 +19,7 @@ public class Suit_Skill : MonoBehaviour, Skill
         Buffe_ = Instantiate(Buffe_Image, Vector3.zero, Quaternion.identity);
         Buffe_.transform.parent = Buffe_Panel.transform;
 
-        reset_stat1 = (int)(Player.GetComponent<Player_Stat>().Get_P_State(3) * 1.0f);
+        reset_stat1 = (int)(Player.GetComponent<Player_Stat>().Get_P_State(3) * 0.5f);
         Debug.Log("모자 스킬발사 히히");
         Player.GetComponent<Player_Stat>().Set_P_State(3, Player.GetComponent<Player_Stat>().Get_P_State(3) + reset_stat1);
         Invoke("Buffe", 지속시간);

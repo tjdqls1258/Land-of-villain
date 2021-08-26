@@ -104,9 +104,11 @@ MonoBehaviour:
   CoolTime: 9
   Item_Information: 
   reinforce_add: 0
-  item_skill_name: "\uD06C\uB9AC \uC5C5"
+  item_skill_name: 
   ATK_Speed: 0
   Bullte: {fileID: 0}
+  "\uC2A4\uD0AC_\uC124\uBA85": "3\uCD08\uAC04 LUK \uB450\uBC30, \uCFE8\uD0C0\uC784
+    9\uCD08"
 --- !u!61 &1986684711894998544
 BoxCollider2D:
   m_ObjectHideFlags: 0

@@ -108,7 +108,7 @@ MonoBehaviour:
   ATK_Speed: 0
   Bullte: {fileID: 0}
   "\uC2A4\uD0AC_\uC124\uBA85": "\uD50C\uB808\uC774\uC5B4\uC758 \uD589\uC6B4(LUK)
-    50% \uC99D\uAC00 \uC2DC\uD0B5\uB2C8\uB2E4."
+    50% \uC99D\uAC00 \uC2DC\uD0B5\uB2C8\uB2E4.(\uD328\uC2DC\uBE0C)"
 --- !u!61 &7738655564483609497
 BoxCollider2D:
   m_ObjectHideFlags: 0

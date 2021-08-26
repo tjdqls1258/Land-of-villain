@@ -107,6 +107,8 @@ MonoBehaviour:
   item_skill_name: Mod
   ATK_Speed: 0.3
   Bullte: {fileID: 7513320176201619778, guid: b7911f1d6fdfa6d468ed82d2062bc067, type: 3}
+  "\uC2A4\uD0AC_\uC124\uBA85": "\uB2E8\uBC1C/3\uC810\uC0AC/\uC5F0\uC0AC \uB85C \uBAA8\uB4DC\uB97C
+    \uBC14\uAFD4\uC11C \uC3E9\uB2C8\uB2E4."
 --- !u!61 &6997275652965930081
 BoxCollider2D:
   m_ObjectHideFlags: 0

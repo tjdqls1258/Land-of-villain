@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 7354383791549027243}
   - component: {fileID: 7340075043572933494}
   m_Layer: 0
-  m_Name: Pilot_Gogle
+  m_Name: Pilot Gogle
   m_TagString: Item
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -102,9 +102,13 @@ MonoBehaviour:
   meeleatk: 0
   skill_number: Pilot_Gogle_Skill
   CoolTime: 7
+  Item_Information: 
   reinforce_add: 0
   item_skill_name: Speed Up
+  ATK_Speed: 0
   Bullte: {fileID: 0}
+  "\uC2A4\uD0AC_\uC124\uBA85": "5\uCD08\uAC04 AGI 20%\uC99D\uAC00, (\uCFE8\uD0C0\uC784
+    7\uCD08)"
 --- !u!61 &7340075043572933494
 BoxCollider2D:
   m_ObjectHideFlags: 0

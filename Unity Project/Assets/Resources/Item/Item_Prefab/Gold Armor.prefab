@@ -107,6 +107,8 @@ MonoBehaviour:
   item_skill_name: 
   ATK_Speed: 0
   Bullte: {fileID: 0}
+  "\uC2A4\uD0AC_\uC124\uBA85": "3\uCD08\uAC04 \uBC29\uC5B4\uB825 1.5\uBC30 \uC0C1\uC2B9
+    (\uCFE8\uD0C0\uC784 6\uCD08)"
 --- !u!61 &3871499257505455061
 BoxCollider2D:
   m_ObjectHideFlags: 0

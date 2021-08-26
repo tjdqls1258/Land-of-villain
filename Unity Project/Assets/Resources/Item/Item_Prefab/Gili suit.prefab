@@ -101,12 +101,14 @@ MonoBehaviour:
   Item_stat: 0000000078000000000000000f0000000a00000000000000
   meeleatk: 0
   skill_number: Gili_Suit_Skill
-  CoolTime: 6
+  CoolTime: 12
   Item_Information: 
   reinforce_add: 0
-  item_skill_name: DEF_UP
+  item_skill_name: LUK_UP
   ATK_Speed: 0
   Bullte: {fileID: 0}
+  "\uC2A4\uD0AC_\uC124\uBA85": "\uC740\uBC00\uD558\uAC8C \uC704\uB300\uD558\uAC8C
+    ( LUK 50% \uC0C1\uC2B9, \uC9C0\uC18D\uC2DC\uAC04 5\uCD08 \uCFE8\uD0C0\uC784 12\uCD08)"
 --- !u!61 &6253502650491203265
 BoxCollider2D:
   m_ObjectHideFlags: 0

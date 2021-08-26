@@ -26,7 +26,7 @@ public class Return_Player : MonoBehaviour
         while (distance > time)
         {
             time += Time.deltaTime;
-            GetComponent<Set_Damage>().SetDamage((int)(GetComponent<Set_Damage>().Damage() * 0.75f));
+            GetComponent<Set_Damage>().SetDamage((int)(Player.GetComponent<Player_Stat>().Get_P_State(2) * 0.75f));
             transform.position = Vector3.MoveTowards(transform.position, transform.position+ transform.up , Move_speed * Time.deltaTime);
             yield return null;
         }

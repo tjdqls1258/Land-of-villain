@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 1822489777171535275}
   - component: {fileID: -2720952669045501584}
   - component: {fileID: 8526529810247281654}
+  - component: {fileID: 784161962805209908}
   m_Layer: 0
   m_Name: M_Skill02
   m_TagString: Monster_Bullet
@@ -73,3 +74,16 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   life_time: 1
+--- !u!114 &784161962805209908
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8176985918678128510}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: acabe9cef6a5d344595c3c3c6b0b296d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Posion_Damage: 0

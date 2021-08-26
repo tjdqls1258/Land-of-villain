@@ -19,7 +19,7 @@ public class Monster_HP_Bar : MonoBehaviour
 
     public void Get_damage(float hp, float currentHP, int damage)
     {
-        Damage.text = damage.ToString();
+        Damage.text = "-"+damage.ToString();
         Hp.text = GetComponent<Monster_stats>().Hp.ToString() + "/" + GetComponent<Monster_stats>().current_HP.ToString();
         HPBar.fillAmount = hp/ currentHP;
         StartCoroutine("Damages");
@@ -37,7 +37,7 @@ public class Monster_HP_Bar : MonoBehaviour
             yield return null;
         }
         Damage.text = "";
-        Damage.color = new Color(0, 0, 0, 1);
+        Damage.color = new Color(1, 0, 0, 1);
         Damage.rectTransform.position -= pos;
     }
 }

@@ -13,6 +13,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   HPBar: {fileID: 2117177426442783070}
+  Hp: {fileID: 0}
+  Damage: {fileID: 0}
 --- !u!1 &9177610868767889597
 GameObject:
   m_ObjectHideFlags: 0
@@ -86,9 +88,9 @@ MonoBehaviour:
   Hp: 5000
   damage: 30
   Atk_dir: 0
+  current_HP: 0
   Monster_Drop_Tear: 0
   stageManger: {fileID: 0}
-  renderer: {fileID: 0}
 --- !u!212 &9177610868767889599
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -183,6 +185,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Hp_Bar
+      objectReference: {fileID: 0}
+    - target: {fileID: 2112520647455558680, guid: 0848eb869ef28a44dbf7b6107d3efb1c,
+        type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: 0.000000603497
       objectReference: {fileID: 0}
     - target: {fileID: 3715829919171625781, guid: 0848eb869ef28a44dbf7b6107d3efb1c,
         type: 3}

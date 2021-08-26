@@ -201,6 +201,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Minotauros_King: {fileID: 9146172725990912296}
+  mino_normal: {fileID: 5425840346556280956, guid: 70794259e523a814989bea8e4f12e005,
+    type: 3}
 --- !u!114 &8452399070810996971
 MonoBehaviour:
   m_ObjectHideFlags: 0

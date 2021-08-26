@@ -98,7 +98,7 @@ MonoBehaviour:
   Item_Name: Silver Sword
   Item_Kind: 0
   tear: 1
-  Item_stat: 00000000000000000f000000000000000000000000000000
+  Item_stat: 00000000000000001e000000000000000000000000000000
   meeleatk: 1
   skill_number: W_Skill_01
   CoolTime: 3
@@ -106,7 +106,8 @@ MonoBehaviour:
   reinforce_add: 0
   item_skill_name: Power_Slash
   ATK_Speed: 0.4
-  Bullte: {fileID: 3626654304565270336, guid: 141420b2f5b4d0844ba48940533c98b0, type: 3}
+  Bullte: {fileID: 6986820035171500610, guid: fe6e34a046152bd4980a1ea0e5094fd5, type: 3}
+  "\uC2A4\uD0AC_\uC124\uBA85": 
 --- !u!61 &3391523102318890359
 BoxCollider2D:
   m_ObjectHideFlags: 0

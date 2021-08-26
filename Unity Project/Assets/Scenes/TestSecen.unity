@@ -1064,10 +1064,12 @@ MonoBehaviour:
   Monster_Prefabs:
   - {fileID: 5027032303299534393, guid: 8bdad898db19e724e8641b40671d3e2b, type: 3}
   - {fileID: 5436700300560640486, guid: d18fb17948b0fd647a5ad8ade0420d25, type: 3}
+  - {fileID: 5436700300560640486, guid: f813434166f7a2d46afa477a12562237, type: 3}
+  - {fileID: 5425840346556280956, guid: 70794259e523a814989bea8e4f12e005, type: 3}
   - {fileID: 2803380032784225092, guid: bde01bf37d05bec4ba63003bb4a04762, type: 3}
-  - {fileID: 2600614218325703336, guid: ad977519a21cf16479f9c14bd5ea11e8, type: 3}
-  - {fileID: 4513201067994968065, guid: c51d55b2c7d643f419546772b61d2716, type: 3}
   - {fileID: 5711713831556045367, guid: 7ccc2b13f088a1d4abcab36241232167, type: 3}
+  - {fileID: 4513201067994968065, guid: c51d55b2c7d643f419546772b61d2716, type: 3}
+  - {fileID: 2600614218325703336, guid: ad977519a21cf16479f9c14bd5ea11e8, type: 3}
   Boss_Prefabs:
   - {fileID: 8894061094939128250, guid: 9ca50cfe21dccb849b75327f82dd0725, type: 3}
   - {fileID: 296307962828656984, guid: 0d8dee12280ff1741b00602b146c80c2, type: 3}
@@ -1916,12 +1918,12 @@ PrefabInstance:
     - target: {fileID: 7655042785635378895, guid: e7c5321d6b629534a9d7ed98bf1aaf57,
         type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: -290.35
+      value: -290
       objectReference: {fileID: 0}
     - target: {fileID: 7655042785635378895, guid: e7c5321d6b629534a9d7ed98bf1aaf57,
         type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: -94.2
+      value: -94.25
       objectReference: {fileID: 0}
     - target: {fileID: 8763931880682834289, guid: e7c5321d6b629534a9d7ed98bf1aaf57,
         type: 3}

@@ -23,6 +23,7 @@ public class Folk_Bullte_M : MonoBehaviour
     {
         angle = Mathf.Atan2(Joystick_ATK.inputDirection.y
                , Joystick_ATK.inputDirection.x) * Mathf.Rad2Deg;
+        yield return new WaitForSeconds(0.001f);
         GameObject Bullte1, Bullte2, Bullte3;
         Bullte1 = Instantiate(Folk_Bullte, transform.position, Quaternion.AngleAxis(angle - 90, Vector3.forward));
         Bullte1.GetComponent<Set_Damage>().SetDamage(GetComponent<Set_Damage>().Damage());

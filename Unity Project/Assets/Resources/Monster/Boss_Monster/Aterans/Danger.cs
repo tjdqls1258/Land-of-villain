@@ -20,5 +20,6 @@ public class Danger : MonoBehaviour
     {
         GameObject Do_Skill =  Instantiate(Skills, this_transform, Quaternion.identity);
         Do_Skill.GetComponent<Skill_damage>().Set_Damage(Damages);
+        Destroy(gameObject);
     }
 }

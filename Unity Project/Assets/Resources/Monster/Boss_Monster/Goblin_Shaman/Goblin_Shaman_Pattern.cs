@@ -85,14 +85,11 @@ public class Goblin_Shaman_Pattern : MonoBehaviour
         Vector3 Danger = Player.gameObject.transform.position;
 
         
-        yield return new WaitForSeconds(0.3f);
-
-        
         if(광폭화)
         {
             GameObject Danger_check = Instantiate(Dangers, Danger, Quaternion.identity);
             Danger_check.GetComponent<Danger>().Patan_Ative(Goblin_Skill, GetComponent<Monster_stats>().give_damage(), Danger, 0.4f);
-
+            yield return new WaitForSeconds(0.3f);
             GameObject Danger_check_n = Instantiate(Dangers, Danger + new Vector3(0, 0.32f, 0), Quaternion.identity);
             GameObject Danger_check_w = Instantiate(Dangers, Danger - new Vector3(0.32f, 0, 0), Quaternion.identity);
             GameObject Danger_check_e = Instantiate(Dangers, Danger + new Vector3(0.32f, 0, 0), Quaternion.identity);
@@ -109,13 +106,13 @@ public class Goblin_Shaman_Pattern : MonoBehaviour
             Danger_check_w_.GetComponent<Danger>().Patan_Ative(Goblin_Skill, GetComponent<Monster_stats>().give_damage(), Danger + new Vector3(0.32f, -0.32f, 0), 0.4f);
             Danger_check_n_.GetComponent<Danger>().Patan_Ative(Goblin_Skill, GetComponent<Monster_stats>().give_damage(), Danger + new Vector3(0.32f, 0.32f, 0), 0.4f);
             Danger_check_e_.GetComponent<Danger>().Patan_Ative(Goblin_Skill, GetComponent<Monster_stats>().give_damage(), Danger + new Vector3(-0.32f, -0.32f, 0), 0.4f);
-            Danger_check_s_.GetComponent<Danger>().Patan_Ative(Goblin_Skill, GetComponent<Monster_stats>().give_damage(), Danger + new Vector3(-0.32f, -0.32f, 0), 0.4f);
+            Danger_check_s_.GetComponent<Danger>().Patan_Ative(Goblin_Skill, GetComponent<Monster_stats>().give_damage(), Danger + new Vector3(-0.32f, 0.32f, 0), 0.4f);
         }
         else
         {
             GameObject Danger_check = Instantiate(Dangers, Danger, Quaternion.identity);
             Danger_check.GetComponent<Danger>().Patan_Ative(Goblin_Skill, GetComponent<Monster_stats>().give_damage(), Danger, 0.5f);
-
+            yield return new WaitForSeconds(0.3f);
             GameObject Danger_check_n = Instantiate(Dangers, Danger + new Vector3(0, 0.32f, 0), Quaternion.identity);
             GameObject Danger_check_w = Instantiate(Dangers, Danger - new Vector3(0.32f, 0, 0), Quaternion.identity);
             GameObject Danger_check_e = Instantiate(Dangers, Danger + new Vector3(0.32f, 0, 0), Quaternion.identity);

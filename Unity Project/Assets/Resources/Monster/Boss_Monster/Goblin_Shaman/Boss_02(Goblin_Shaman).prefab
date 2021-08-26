@@ -186,6 +186,7 @@ MonoBehaviour:
     type: 3}
   Dangers: {fileID: 1382301597999344926, guid: 65f2a9df84b2f4743a7604c4f2fd64d1, type: 3}
   Player: {fileID: 0}
+  Goblins: {fileID: 5436700300560640486, guid: f813434166f7a2d46afa477a12562237, type: 3}
   Goblin_ispattern: 0
 --- !u!114 &1115585945679820838
 MonoBehaviour:

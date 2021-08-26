@@ -8,12 +8,12 @@ public class Danger : MonoBehaviour
     Vector3 this_transform;
     int Damages;
 
-    public void Patan_Ative(GameObject Skills, int Damage, Vector3 Target)
+    public void Patan_Ative(GameObject Skills, int Damage, Vector3 Target, float Timer)
     {
         this_transform = Target;
         this.Skills = Skills;
         Damages = Damage;
-        Invoke("Do_Skill",0.5f);
+        Invoke("Do_Skill", Timer);
     }
 
     void Do_Skill()

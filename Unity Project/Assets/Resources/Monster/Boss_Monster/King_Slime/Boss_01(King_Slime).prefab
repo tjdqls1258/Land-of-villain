@@ -164,11 +164,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8dabfc865e2173c4f9eb2d7c849d5050, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Hp: 20
+  Hp: 1250
   damage: 7
   Atk_dir: 0
   current_HP: 0
   Monster_Drop_Tear: 0
+  IS_Boss: 1
   stageManger: {fileID: 0}
 --- !u!114 &2143095116229906446
 MonoBehaviour:

@@ -90,6 +90,7 @@ MonoBehaviour:
   Atk_dir: 0
   current_HP: 0
   Monster_Drop_Tear: 0
+  IS_Boss: 1
   stageManger: {fileID: 0}
 --- !u!212 &9177610868767889599
 SpriteRenderer:

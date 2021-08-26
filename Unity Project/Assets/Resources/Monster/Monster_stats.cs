@@ -15,6 +15,7 @@ public class Monster_stats : MonoBehaviour
     public int current_HP;
 
     public int Monster_Drop_Tear;
+    public bool IS_Boss;
 
     public GameObject stageManger;
     SpriteRenderer renderer;
@@ -30,7 +31,10 @@ public class Monster_stats : MonoBehaviour
         stageManger = GameObject.Find("StageManager");
         item_Drop = new Drop_Item();
         Money_drop = new Drop_Money();
-        Hp += (int)((Player.GetComponent<Player_Stat>().N_Stages) * (Hp*0.5f));
+        if (!IS_Boss)
+        {
+            Hp += (int)((Player.GetComponent<Player_Stat>().N_Stages) * (Hp * 0.5f));
+        }
         current_HP = Hp;
         damage += Player.GetComponent<Player_Stat>().N_Stages;
     }

@@ -37,14 +37,20 @@ public class Monster_stats : MonoBehaviour
     {
         int Critcal = GameObject.Find("Player").GetComponent<Player_Stat>().Get_P_State(5);
         int Add_Damage = 0;
+        bool Critcal_Hit = false;
         if(Critcal > Random.Range(0, 100))
         {
             Add_Damage += (int)(GameObject.Find("Player").GetComponent<Player_Stat>().Get_P_State(2) * 0.5f);
+            if(Add_Damage == 0)
+            {
+                Add_Damage = 1;
+            }
+            Critcal_Hit = true;
         }
 
 
         Hp -= (damage+ Add_Damage); //만약 방어력 추가되면 여기에 공식 추가해서 처리
-        gameObject.GetComponent<Monster_HP_Bar>().Get_damage(Hp, current_HP, damage + Add_Damage);
+        gameObject.GetComponent<Monster_HP_Bar>().Get_damage(Hp, current_HP, damage + Add_Damage, Critcal_Hit);
         renderer.color = new Color(1, 0, 0);
         Invoke("Back", 0.1f);
         if (Hp <= 0) //체력 0 되면 사망

@@ -9,6 +9,7 @@ public class Monster_stats : MonoBehaviour
     public int damage;
     public float Atk_dir;
     Drop_Item item_Drop;
+    Drop_Money Money_drop;
     private string Drop_item_it;
 
     public float current_HP;
@@ -28,6 +29,7 @@ public class Monster_stats : MonoBehaviour
         GameObject Player = GameObject.Find("Player");
         stageManger = GameObject.Find("StageManager");
         item_Drop = new Drop_Item();
+        Money_drop = new Drop_Money();
         Hp += (Player.GetComponent<Player_Stat>().N_Stages) * 10;
         current_HP = Hp;
         damage += Player.GetComponent<Player_Stat>().N_Stages;
@@ -65,7 +67,10 @@ public class Monster_stats : MonoBehaviour
     public void die()
     {
         //아이템 드롭의 수정에 따라 수정함.
+        int Rands = Random.Range(0, 100);
+
         item_Drop.drop_Item(Monster_Drop_Tear,this.transform);
+        Money_drop.drop_Money(Monster_Drop_Tear, this.transform);
         stageManger.GetComponent<StageManager>().monsterdead();
         Destroy(gameObject);
     }

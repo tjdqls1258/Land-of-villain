@@ -9,6 +9,8 @@ public class Butler_Sweeter_Skill : MonoBehaviour, Skill
     int Add_Luk;
     public void Skill_Action()
     {
+
+
     }
 
 
@@ -17,8 +19,6 @@ public class Butler_Sweeter_Skill : MonoBehaviour, Skill
         Player = GameObject.Find("Player");
         Add_Luk = (int)(Player.GetComponent<Player_Stat>().Get_P_State(5) * 0.5f);
         Add_ATK = (int)(Player.GetComponent<Player_Stat>().Get_P_State(2) * 0.2f);
-
-
 
         Player.GetComponent<Player_Stat>().Set_P_State(5, (int)(Player.GetComponent<Player_Stat>().Get_P_State(5) + Add_Luk));
         Player.GetComponent<Player_Stat>().Set_P_State(2, (int)(Player.GetComponent<Player_Stat>().Get_P_State(2) + Add_ATK));

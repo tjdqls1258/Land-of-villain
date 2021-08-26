@@ -33,7 +33,7 @@ public class Minotauros_King_Pattern : MonoBehaviour
     {
         rushcool = true;
         this.GetComponent<Move_monster>().moveSpeed = 0.0f;
-        Rush_Target = Player.transform.position;
+        Rush_Target = Player.transform.position * 2f;
         yield return new WaitForSeconds(0.7f);
 
         this.GetComponent<Move_monster>().enabled = false;

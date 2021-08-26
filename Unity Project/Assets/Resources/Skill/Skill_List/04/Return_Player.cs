@@ -20,16 +20,13 @@ public class Return_Player : MonoBehaviour
     }
 
     // Update is called once per frame
-    void Update()
-    {
-        
-    }
     IEnumerator Do_It()
     {
         float time = 0;
         while (distance > time)
         {
             time += Time.deltaTime;
+            
             transform.position = Vector3.MoveTowards(transform.position, transform.position+ transform.up , Move_speed * Time.deltaTime);
             yield return null;
         }

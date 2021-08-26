@@ -98,7 +98,7 @@ MonoBehaviour:
   Item_Name: Copper Sword
   Item_Kind: 0
   tear: 0
-  Item_stat: 00000000000000000a000000000000000000000000000000
+  Item_stat: 000000000000000014000000000000000000000000000000
   meeleatk: 1
   skill_number: W_Skill_01
   CoolTime: 3
@@ -106,7 +106,8 @@ MonoBehaviour:
   reinforce_add: 0
   item_skill_name: Power_Slash
   ATK_Speed: 0.5
-  Bullte: {fileID: 3626654304565270336, guid: 141420b2f5b4d0844ba48940533c98b0, type: 3}
+  Bullte: {fileID: 7905079457651745380, guid: fd6e9b4024435c740bbeee07af7684d8, type: 3}
+  "\uC2A4\uD0AC_\uC124\uBA85": 
 --- !u!61 &8754920593809045317
 BoxCollider2D:
   m_ObjectHideFlags: 0

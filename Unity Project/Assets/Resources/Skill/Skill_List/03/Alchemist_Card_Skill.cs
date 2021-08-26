@@ -22,7 +22,7 @@ public class Alchemist_Card_Skill : MonoBehaviour, Skill
         }
         else
         {
-            Player.GetComponent<Player_Stat>().Set_P_State(1, Player.GetComponent<Player_Stat>().Get_P_State(1) + 50);
+            Player.GetComponent<Player_Stat>().Set_P_State(1, Player.GetComponent<Player_Stat>().Get_P_State(1) + 10);
         }
         Debug.Log("아머 스킬발사 히히");
         Is_Action = true;

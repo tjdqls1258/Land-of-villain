@@ -8,14 +8,14 @@ public class Fire_Stafe_Skill_Bullte : MonoBehaviour
     private void Awake()
     {
         Player = GameObject.Find("Player");
-        Player.GetComponent<SkillCooldown>().atkdelay = true;
+        
         Invoke("Set_false",3.0f);
     }
     void Update()
     {
         float angle = Mathf.Atan2(Joystick.inputDirection.y
             , Joystick.inputDirection.x) * Mathf.Rad2Deg;
-
+        Player.GetComponent<SkillCooldown>().atkdelay = true;
         gameObject.transform.rotation = Quaternion.AngleAxis(angle - 90, Vector3.forward);
         gameObject.transform.position = Player.transform.position;
     }

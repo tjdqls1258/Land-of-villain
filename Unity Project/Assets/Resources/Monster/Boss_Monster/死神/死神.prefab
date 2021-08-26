@@ -85,7 +85,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8dabfc865e2173c4f9eb2d7c849d5050, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Hp: 5000
+  Hp: 60
   damage: 30
   Atk_dir: 0
   current_HP: 0
@@ -173,7 +173,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 77073a43b40445a4bad56f79011638eb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  "\uC0DD\uC874\uC2DC\uAC04": 300
+  "\uC0DD\uC874\uC2DC\uAC04": 60
+  delteHp: 1
 --- !u!1001 &6590697861226140456
 PrefabInstance:
   m_ObjectHideFlags: 0

@@ -34,7 +34,7 @@ public class Monster_Debuff : MonoBehaviour
         while (Poison >= 0)
         {
             yield return new WaitForSeconds(2f);
-            MS.Get_damange(Damage);
+            MS.Get_damange(Damage, true);
              Poison--;
         }
     }

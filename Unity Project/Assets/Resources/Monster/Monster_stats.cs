@@ -36,6 +36,7 @@ public class Monster_stats : MonoBehaviour
             Hp += (int)((Player.GetComponent<Player_Stat>().N_Stages) * (Hp * 0.5f));
         }
         current_HP = Hp;
+        GetComponent<Monster_HP_Bar>().Set_Hp_Text();
         damage += Player.GetComponent<Player_Stat>().N_Stages;
     }
 

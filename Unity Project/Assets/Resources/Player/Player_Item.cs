@@ -22,12 +22,18 @@ public class Player_Item : MonoBehaviour
     {
         UnPassive();
         player_item[N1] = N2;
+        Change_item_state();
         Set_Item_Skills();
     }
     void Awake()
     {
         DontDestroyOnLoad(gameObject);
         item = new Item();
+
+        if (Ring != null) { Ring.GetComponent<Item_stats>().Add_Stat(); }
+        if (Hat != null) { Hat.GetComponent<Item_stats>().Add_Stat(); }
+        if (Armor != null) { Armor.GetComponent<Item_stats>().Add_Stat(); }
+        if (Weapon != null) { Weapon.GetComponent<Item_stats>().Add_Stat(); }
 
         if (Ring != null)
         {
@@ -54,16 +60,14 @@ public class Player_Item : MonoBehaviour
             Hat.GetComponent<Item_stats>().skill.Passive();
             skill3.sprite = Hat.GetComponent<SpriteRenderer>().sprite;
         }
-        if (Ring != null) { Ring.GetComponent<Item_stats>().Add_Stat(); }
-        if (Hat != null) { Hat.GetComponent<Item_stats>().Add_Stat(); }
-        if (Armor != null) { Armor.GetComponent<Item_stats>().Add_Stat(); }
-        if (Weapon != null) { Weapon.GetComponent<Item_stats>().Add_Stat(); }
-        this.GetComponent<Player_Stat>().Reset_Speed();
+        
+        GetComponent<Player_Stat>().Reset_Speed();
     }
 
 
     void Set_Item_Skills()
     {
+
         if (player_item[0] != "NONE")
         {
             Weapon = (GameObject)Resources.Load("Item/Item_Prefab/" + player_item[0]);
@@ -93,7 +97,7 @@ public class Player_Item : MonoBehaviour
             skill4.sprite = Ring.GetComponent<SpriteRenderer>().sprite;
         }
 
-        this.GetComponent<Player_Stat>().Reset_Speed();
+        GetComponent<Player_Stat>().Reset_Speed();
     }
     public void UnPassive()
     {
@@ -131,7 +135,24 @@ public class Player_Item : MonoBehaviour
     }
     public void Change_item_state()
     {
-        if(Weapon != null)
+        if (player_item[0] != "NONE")
+        {
+            Weapon = (GameObject)Resources.Load("Item/Item_Prefab/" + player_item[0]);
+        }
+        if (player_item[1] != "NONE")
+        {
+            Armor = (GameObject)Resources.Load("Item/Item_Prefab/" + player_item[1]);
+        }
+        if (player_item[2] != "NONE")
+        {
+            Hat = (GameObject)Resources.Load("Item/Item_Prefab/" + player_item[2]);
+        }
+        if (player_item[3] != "NONE")
+        {
+            Ring = (GameObject)Resources.Load("Item/Item_Prefab/" + player_item[3]);
+        }
+
+        if (Weapon != null)
         {
             Weapon.GetComponent<Item_stats>().Add_Stat();
         }
@@ -147,7 +168,7 @@ public class Player_Item : MonoBehaviour
         {
             Ring.GetComponent<Item_stats>().Add_Stat();
         }
-        this.GetComponent<Player_Stat>().Reset_Speed();
+        GetComponent<Player_Stat>().Reset_Speed();
     }
     public void Delete_State_item()
     {
@@ -167,7 +188,7 @@ public class Player_Item : MonoBehaviour
         {
             Ring.GetComponent<Item_stats>().Delete_Stat();
         }
-        this.GetComponent<Player_Stat>().Reset_Speed();
+        GetComponent<Player_Stat>().Reset_Speed();
     }
     public bool 아이템_강화(int items, string item_name)
     {

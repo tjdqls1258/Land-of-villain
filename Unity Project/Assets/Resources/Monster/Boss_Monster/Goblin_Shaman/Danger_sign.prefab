@@ -95,7 +95,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1ace381185e6dcd4a95c881e128d2445, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  life_time: 0.4
+  life_time: 0.51
 --- !u!114 &7325988898335360213
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -108,4 +108,3 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 26f431230e06caa499706aab796e9138, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  dely_time: 0

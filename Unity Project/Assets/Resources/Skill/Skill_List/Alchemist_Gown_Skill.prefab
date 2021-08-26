@@ -44,6 +44,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   "\uC9C0\uC18D\uC2DC\uAC04": 0
-  Delete_Time: 10
+  Delete_Time: 3
   Buffe_Image: {fileID: 1533717727821242843, guid: 7716439b4a1b5cd4e9a387cfb26ba23d,
     type: 3}

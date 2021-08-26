@@ -59,7 +59,7 @@ public class Dendallia_Paten : MonoBehaviour
 
         GameObject Prefabs = Skill_Prefabs[selection];
         GameObject Warring = Instantiate(Dangers, Player.transform.position, Quaternion.identity);
-        Warring.GetComponent<Danger>().Patan_Ative(Prefabs, gameObject.GetComponent<Monster_stats>().give_damage(), Player.transform.position);
+        Warring.GetComponent<Danger>().Patan_Ative(Prefabs, gameObject.GetComponent<Monster_stats>().give_damage(), Player.transform.position, 0.45f);
 
 
         StartCoroutine("Next_Patan");
@@ -71,7 +71,7 @@ public class Dendallia_Paten : MonoBehaviour
 
         GameObject Prefabs = Skill_Prefabs[selection];  
         GameObject Warring = Instantiate(Dangers, Player.transform.position, Quaternion.identity);
-        Warring.GetComponent<Danger>().Patan_Ative(Prefabs, gameObject.GetComponent<Monster_stats>().give_damage(), Player.transform.position);
+        Warring.GetComponent<Danger>().Patan_Ative(Prefabs, gameObject.GetComponent<Monster_stats>().give_damage(), Player.transform.position, 0.45f);
 
         StartCoroutine("Warp_To_Player", Warring.transform.position);
     }

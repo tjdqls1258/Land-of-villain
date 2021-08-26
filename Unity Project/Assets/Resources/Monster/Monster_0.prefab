@@ -165,9 +165,9 @@ MonoBehaviour:
   Hp: 10
   damage: 5
   Atk_dir: 0
+  current_HP: 0
   Monster_Drop_Tear: 0
   stageManger: {fileID: 0}
-  renderer: {fileID: 0}
 --- !u!95 &5438994133605351555
 Animator:
   serializedVersion: 3
@@ -200,6 +200,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   HPBar: {fileID: 2060146891555541227}
+  Hp: {fileID: 8590896514723192994}
+  Damage: {fileID: 4160594871592938007}
 --- !u!1001 &6521346130496555677
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -335,5 +337,29 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &8590896514723192994 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 3294531682214488639, guid: 0848eb869ef28a44dbf7b6107d3efb1c,
+    type: 3}
+  m_PrefabInstance: {fileID: 6521346130496555677}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5f7201a12d95ffc409449d95f23cf332, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &4160594871592938007 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 7150906129684783242, guid: 0848eb869ef28a44dbf7b6107d3efb1c,
+    type: 3}
+  m_PrefabInstance: {fileID: 6521346130496555677}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5f7201a12d95ffc409449d95f23cf332, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 

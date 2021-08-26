@@ -75,6 +75,7 @@ public class Player_Status : MonoBehaviour
         {
             isclear = true;
             GetComponent<Player_Stat>().Set_P_State(1, GetComponent<Player_Stat>().Get_P_State(0));
+            GetComponent<item_info>().item_info_Set(false);
             GetComponent<Player_Stat>().N_Stages++;
             Destroy(other.gameObject);
         }

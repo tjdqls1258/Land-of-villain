@@ -20,7 +20,7 @@ public class Ninja_Hat_Skill : MonoBehaviour, Skill
         Buffe_ = Instantiate(Buffe_Image, Vector3.zero, Quaternion.identity);
         Buffe_.transform.parent = Buffe_Panel.transform;
 
-        reset_stat = (int)(Player.GetComponent<Player_Stat>().Get_P_State(4) * 0.5f);
+        reset_stat = (int)(Player.GetComponent<Player_Stat>().Get_P_State(4) * 0.2f);
         reset_stat1 = (int)(Player.GetComponent<Player_Stat>().Get_P_State(7) + 0.5f);
         Debug.Log("모자 스킬발사 히히");
         Player.GetComponent<Player_Stat>().Set_P_State(4, Player.GetComponent<Player_Stat>().Get_P_State(4) + reset_stat);

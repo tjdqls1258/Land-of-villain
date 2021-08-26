@@ -167,9 +167,9 @@ MonoBehaviour:
   Hp: 20
   damage: 7
   Atk_dir: 0
+  current_HP: 0
   Monster_Drop_Tear: 0
   stageManger: {fileID: 0}
-  renderer: {fileID: 0}
 --- !u!114 &2143095116229906446
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -216,6 +216,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   HPBar: {fileID: 2571207000256946914}
+  Hp: {fileID: 5188464903390532267}
+  Damage: {fileID: 469704185957373982}
 --- !u!58 &3901630667543145877
 CircleCollider2D:
   m_ObjectHideFlags: 0
@@ -402,5 +404,29 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &5188464903390532267 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 3294531682214488639, guid: 0848eb869ef28a44dbf7b6107d3efb1c,
+    type: 3}
+  m_PrefabInstance: {fileID: 7330072709902547092}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5f7201a12d95ffc409449d95f23cf332, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &469704185957373982 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 7150906129684783242, guid: 0848eb869ef28a44dbf7b6107d3efb1c,
+    type: 3}
+  m_PrefabInstance: {fileID: 7330072709902547092}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5f7201a12d95ffc409449d95f23cf332, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 

@@ -40,7 +40,7 @@ public class Minotauros_King_Pattern : MonoBehaviour
         while (this.transform.position != Rush_Target)
         {
             yield return null;
-            transform.position = Vector3.MoveTowards(this.transform.position, Rush_Target, ((basespeed * 2 * Time.deltaTime)));
+            transform.position = Vector3.MoveTowards(this.transform.position, Rush_Target, ((basespeed * 4 * Time.deltaTime)));
         }
         yield return new WaitForSeconds(0.1f);
 

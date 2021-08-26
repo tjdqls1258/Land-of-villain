@@ -11,7 +11,7 @@ public class Monster_stats : MonoBehaviour
     Drop_Item item_Drop;
     private string Drop_item_it;
 
-    float current_HP;
+    public float current_HP;
 
     public int Monster_Drop_Tear;
 
@@ -44,7 +44,7 @@ public class Monster_stats : MonoBehaviour
 
 
         Hp -= (damage+ Add_Damage); //만약 방어력 추가되면 여기에 공식 추가해서 처리
-        gameObject.GetComponent<Monster_HP_Bar>().Get_damage(Hp, current_HP);
+        gameObject.GetComponent<Monster_HP_Bar>().Get_damage(Hp, current_HP, damage + Add_Damage);
         renderer.color = new Color(1, 0, 0);
         Invoke("Back", 0.1f);
         if (Hp <= 0) //체력 0 되면 사망

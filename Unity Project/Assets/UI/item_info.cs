@@ -7,19 +7,8 @@ public class item_info : MonoBehaviour
     [SerializeField] private GameObject Item_info;
     public string Item_name;
 
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
-
-    private void OnTriggerEnter2D(Collider2D other)
+    
+    private void OnTriggerStay2D(Collider2D other)
     {
         if (other.gameObject.tag == "Item")
         {
@@ -34,5 +23,9 @@ public class item_info : MonoBehaviour
         {
             Item_info.SetActive(false);
         }
+    }
+    public void item_info_Set(bool a)
+    {
+        Item_info.SetActive(a);
     }
 }

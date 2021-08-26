@@ -13,6 +13,7 @@ GameObject:
   - component: {fileID: 2266043887837551492}
   - component: {fileID: 9129589013421224485}
   - component: {fileID: 4749472828578196317}
+  - component: {fileID: -196133764258950354}
   - component: {fileID: -6275636158255926178}
   m_Layer: 0
   m_Name: Monster_Buttle
@@ -145,6 +146,19 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Move_speed: 3
+--- !u!114 &-196133764258950354
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1260675018369206476}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b77e2826b7d47c649b6914c4f798cd9e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Posion_Damage: 0
 --- !u!114 &-6275636158255926178
 MonoBehaviour:
   m_ObjectHideFlags: 0

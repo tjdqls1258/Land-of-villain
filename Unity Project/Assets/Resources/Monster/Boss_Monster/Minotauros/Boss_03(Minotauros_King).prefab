@@ -12,11 +12,11 @@ GameObject:
   - component: {fileID: 2002816321795233976}
   - component: {fileID: 6841155483161832878}
   - component: {fileID: 6841155483161832913}
-  - component: {fileID: 6841155483161832877}
   - component: {fileID: 3707991457255023545}
   - component: {fileID: 8094394343284273042}
   - component: {fileID: 1016245821693705409}
   - component: {fileID: 8452399070810996971}
+  - component: {fileID: -2660777645739451930}
   m_Layer: 0
   m_Name: Boss_03(Minotauros_King)
   m_TagString: Monster
@@ -137,20 +137,6 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 0.22, y: 0.55}
   m_EdgeRadius: 0
---- !u!114 &6841155483161832877
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 9146172725990912296}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 6c5c134b635234240ab002b49cc97c7a, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  rotateSpeed: 10
-  moveSpeed: 1
 --- !u!114 &3707991457255023545
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -165,7 +151,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Hp: 2000
   damage: 5
-  Atk_dir: 0
+  Atk_dir: 0.2
   current_HP: 0
   Monster_Drop_Tear: 0
   IS_Boss: 1
@@ -219,6 +205,21 @@ MonoBehaviour:
   HPBar: {fileID: 3469343609318601821}
   Hp: {fileID: 6596216349193159700}
   Damage: {fileID: 1517695425243778721}
+--- !u!114 &-2660777645739451930
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 9146172725990912296}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2067bbae600d84e4a8a44d31575a9222, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  rotateSpeed: 0
+  moveSpeed: 0.9
+  Monster_Bullet: {fileID: 0}
 --- !u!1001 &8517134614356192811
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -230,6 +231,26 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Hp_Bar
+      objectReference: {fileID: 0}
+    - target: {fileID: 2112520647455558680, guid: 0848eb869ef28a44dbf7b6107d3efb1c,
+        type: 3}
+      propertyPath: m_SizeDelta.x
+      value: 389.61047
+      objectReference: {fileID: 0}
+    - target: {fileID: 2112520647455558680, guid: 0848eb869ef28a44dbf7b6107d3efb1c,
+        type: 3}
+      propertyPath: m_SizeDelta.y
+      value: 40.678116
+      objectReference: {fileID: 0}
+    - target: {fileID: 2112520647455558680, guid: 0848eb869ef28a44dbf7b6107d3efb1c,
+        type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: -0.00000026822
+      objectReference: {fileID: 0}
+    - target: {fileID: 2112520647455558680, guid: 0848eb869ef28a44dbf7b6107d3efb1c,
+        type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: 0.00036275946
       objectReference: {fileID: 0}
     - target: {fileID: 3715829919171625781, guid: 0848eb869ef28a44dbf7b6107d3efb1c,
         type: 3}

@@ -6,8 +6,7 @@ public class Move_Monster_2 : MonoBehaviour
 {
     [SerializeField]
     private float rotateSpeed;
-    [SerializeField]
-    private float moveSpeed;
+    public float moveSpeed;
 
     SpriteRenderer rend;
     Animator animator;
@@ -85,9 +84,12 @@ public class Move_Monster_2 : MonoBehaviour
             animator.SetBool("ATK", true);
 
             //Instantiate(Monster_Bullet, transform.position, angleAxis);
-            GameObject Bullet = Instantiate(Monster_Bullet, transform.position, angleAxis);
-            Bullet.GetComponent<Monster_Bullet>().Set_Damage(
-                GetComponent<Monster_stats>().give_damage());
+            if (Monster_Bullet != null)
+            {
+                GameObject Bullet = Instantiate(Monster_Bullet, transform.position, angleAxis);
+                Bullet.GetComponent<Monster_Bullet>().Set_Damage(
+                    GetComponent<Monster_stats>().give_damage());
+            }
         }
         else
         {

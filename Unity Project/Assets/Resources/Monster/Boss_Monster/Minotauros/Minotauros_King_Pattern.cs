@@ -21,7 +21,7 @@ public class Minotauros_King_Pattern : MonoBehaviour
     void Start()
     {
         Player = GameObject.Find("Player");
-        basespeed = this.GetComponent<Move_monster>().moveSpeed;
+        basespeed = this.GetComponent<Move_Monster_2>().moveSpeed;
         stagemanager = GameObject.Find("StageManager");
     }
 
@@ -37,13 +37,13 @@ public class Minotauros_King_Pattern : MonoBehaviour
     IEnumerator Rush()
     {
         rushcool = true;
-        this.GetComponent<Move_monster>().moveSpeed = 0.0f;
+        this.GetComponent<Move_Monster_2>().moveSpeed = 0.0f;
         Rush_Target = (Player.transform.position - transform.position).normalized;
         float Distances = Vector2.Distance(transform.position, Player.transform.position);
 
         yield return new WaitForSeconds(0.53f);
         float time = 0; 
-        this.GetComponent<Move_monster>().enabled = false;
+        this.GetComponent<Move_Monster_2>().enabled = false;
         while (Distances * 1.2 >= time)
         {
             yield return null;
@@ -60,8 +60,8 @@ public class Minotauros_King_Pattern : MonoBehaviour
         stagemanager.GetComponent<StageManager>().Monster_Check();
         yield return new WaitForSeconds(0.05f);
 
-        this.GetComponent<Move_monster>().enabled = true ;
-        this.GetComponent<Move_monster>().moveSpeed = basespeed;
+        this.GetComponent<Move_Monster_2>().enabled = true ;
+        this.GetComponent<Move_Monster_2>().moveSpeed = basespeed;
         yield return new WaitForSeconds(10.0f);
 
         rushcool = false;

@@ -9,8 +9,8 @@ public class Player_Stat : MonoBehaviour
     public int Save_Stages = 0;
     private string Hight_Stages;
     Player_Item items;
-    public float 이동속도배율;
 
+    public float 이동속도_증가;
     /*
    int MaxHP=100; //최대 체력[0]
    int HP=100; //체력[1]
@@ -31,6 +31,7 @@ public class Player_Stat : MonoBehaviour
     public int Lenge;
     private void Awake()
     {
+        이동속도_증가 = 0;
         Lenge = P_State.Length;
         Save_Stages = PlayerPrefs.GetInt(Hight_Stages, 0);
         N_Stages = 1;
@@ -65,7 +66,7 @@ public class Player_Stat : MonoBehaviour
         GameObject Player = GameObject.Find("Player");
         if (!Player.GetComponent<SkillCooldown>().Don_Restart)
         {
-            float add = Mathf.FloorToInt(Player.GetComponent<Player_Stat>().Get_P_State(4) / 20) * 0.1f;
+            float add = Mathf.FloorToInt(Player.GetComponent<Player_Stat>().Get_P_State(4) / 20) * 0.1f + 이동속도_증가;
 
             Player.GetComponent<Movement2D>().moveSpeed = 1.0f + add;
             if(Player.GetComponent<SkillCooldown>().atkdelay)

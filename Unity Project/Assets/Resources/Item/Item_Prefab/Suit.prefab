@@ -101,12 +101,14 @@ MonoBehaviour:
   Item_stat: 00000000c8000000000000000a0000000f00000005000000
   meeleatk: 0
   skill_number: Suit_Skill
-  CoolTime: 6
+  CoolTime: 9
   Item_Information: 
   reinforce_add: 0
   item_skill_name: DEF_UP
   ATK_Speed: 0
   Bullte: {fileID: 0}
+  "\uC2A4\uD0AC_\uC124\uBA85": "4\uCD08\uAC04 \uBC29\uC5B4\uB825 1.5\uBC30 \uC0C1\uC2B9
+    (\uCFE8\uD0C0\uC784 9\uCD08)"
 --- !u!61 &8667202751168664819
 BoxCollider2D:
   m_ObjectHideFlags: 0

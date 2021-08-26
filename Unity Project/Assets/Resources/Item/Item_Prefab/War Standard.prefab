@@ -104,9 +104,10 @@ MonoBehaviour:
   CoolTime: 1
   Item_Information: 
   reinforce_add: 0
-  item_skill_name: Undying
+  item_skill_name: ing
   ATK_Speed: 0
   Bullte: {fileID: 0}
+  "\uC2A4\uD0AC_\uC124\uBA85": "5\uCD08\uB2F9 \uD53C\uB97C 1\uD68C\uBCF5\uD569\uB2C8\uB2E4."
 --- !u!61 &6017185476323567549
 BoxCollider2D:
   m_ObjectHideFlags: 0

@@ -5,7 +5,7 @@ using UnityEngine;
 public class Pocket_Watch_Skill : MonoBehaviour, Skill
 {
     GameObject Player;
-    int Add_Speed;
+    float Add_Speed;
     public void Skill_Action()
     {
     }
@@ -14,8 +14,9 @@ public class Pocket_Watch_Skill : MonoBehaviour, Skill
     public void Passive()
     {
         Player = GameObject.Find("Player");
-        Add_Speed = (int)(Player.GetComponent<Player_Stat>().Get_P_State(4) * 0.5f);  
-        Player.GetComponent<Player_Stat>().Set_P_State(4, (int)(Player.GetComponent<Player_Stat>().Get_P_State(4) + Add_Speed));
+        Add_Speed = Player.GetComponent<Movement2D>().moveSpeed * 0.2f;
+        Player.GetComponent<Player_Stat>().이동속도_증가 = Add_Speed ;
+        Player.GetComponent<Player_Stat>().Reset_Speed();
     }
     void Slow_Monster()
     {
@@ -26,8 +27,8 @@ public class Pocket_Watch_Skill : MonoBehaviour, Skill
     {
         if (Player != null)
         {
-            Player.GetComponent<Player_Stat>().Set_P_State(4, (int)(Player.GetComponent<Player_Stat>().Get_P_State(4) - Add_Speed));
-
+            Player.GetComponent<Player_Stat>().이동속도_증가 = 0;
+            Player.GetComponent<Player_Stat>().Reset_Speed();
         }
     }
 }

@@ -163,7 +163,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c9cf23a5e82c4534aa69d2094e8a39b7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Move_speed: 0.5
+  Move_speed: 1
   Destory_self_this: 10
 --- !u!114 &49210232901038043
 MonoBehaviour:
@@ -177,7 +177,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7509e2a1402e1ce4ba2f46664491a2f6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  distance: 1
+  distance: 1.5
   Boom: {fileID: 440851170629837406, guid: 447a64c4dc704684a82072c5521c4995, type: 3}
   add: 0.5
 --- !u!114 &6541006301866185217

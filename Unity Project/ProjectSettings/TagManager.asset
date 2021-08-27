@@ -16,6 +16,8 @@ TagManager:
   - Boom
   - Monster_Skill
   - Player_Boom
+  - Money
+  - Walls
   layers:
   - Default
   - TransparentFX

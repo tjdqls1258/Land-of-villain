@@ -77,6 +77,7 @@ public class King_Slime_Pattern : MonoBehaviour
         float PosX = basePosition.x + Random.Range(-3, 3);
         float PosY = basePosition.y + Random.Range(-3, 3);
 
+        
         if (PosX < 0)
         {
             PosX -= 0.5f;
@@ -85,7 +86,7 @@ public class King_Slime_Pattern : MonoBehaviour
         {
             PosX += 0.5f;
         }
-
+        
         if (PosY < 0)
         {
             PosY -= 0.5f;
@@ -93,6 +94,23 @@ public class King_Slime_Pattern : MonoBehaviour
         else
         {
             PosY += 0.5f;
+        }
+
+        if (PosX < -9.5f)
+        {
+            PosX = -9.5f;
+        }
+        if (PosX > 9.5f)
+        {
+            PosX = 9.5f;
+        }
+        if (PosY < -9.5f)
+        {
+            PosY = -9.5f;
+        }
+        if (PosY > 9.5f)
+        {
+            PosY = 9.5f;
         }
 
         Vector3 spawnPos = new Vector3(PosX, PosY, 0f);

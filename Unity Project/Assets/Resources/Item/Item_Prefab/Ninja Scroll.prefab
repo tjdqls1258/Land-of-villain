@@ -98,7 +98,7 @@ MonoBehaviour:
   Item_Name: Ninja Scroll
   Item_Kind: 3
   tear: 1
-  Item_stat: 000000000000000000000000000000000a00000000000000
+  Item_stat: 000000000000000000000000000000000a0000000a000000
   meeleatk: 0
   skill_number: Ninja_Scroll_Skill
   CoolTime: 10

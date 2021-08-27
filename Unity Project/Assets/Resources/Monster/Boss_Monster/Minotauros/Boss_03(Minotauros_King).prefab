@@ -17,6 +17,7 @@ GameObject:
   - component: {fileID: 1016245821693705409}
   - component: {fileID: 8452399070810996971}
   - component: {fileID: -2660777645739451930}
+  - component: {fileID: -8747204349680621319}
   m_Layer: 0
   m_Name: Boss_03(Minotauros_King)
   m_TagString: Monster
@@ -220,6 +221,20 @@ MonoBehaviour:
   rotateSpeed: 0
   moveSpeed: 0.9
   Monster_Bullet: {fileID: 0}
+--- !u!114 &-8747204349680621319
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 9146172725990912296}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 11f32bc8f1a992c4492d42d3911b7b78, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Deffue_Image: {fileID: 4621737708198100051, guid: caa16500fa911384a9b4e191592fe6fe,
+    type: 3}
 --- !u!1001 &8517134614356192811
 PrefabInstance:
   m_ObjectHideFlags: 0

@@ -98,7 +98,7 @@ MonoBehaviour:
   Item_Name: Pilot Amor
   Item_Kind: 1
   tear: 0
-  Item_stat: 0000000064000000000000000a0000000500000000000000
+  Item_stat: 000000005a000000000000000a0000000a00000000000000
   meeleatk: 0
   skill_number: Pilot_Amor_Skill
   CoolTime: 7

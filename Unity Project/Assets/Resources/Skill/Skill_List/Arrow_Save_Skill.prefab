@@ -43,6 +43,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 413a889d079d0eb4cb10975cc3879d7e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  "\uC9C0\uC18D\uC2DC\uAC04": 2
+  "\uC9C0\uC18D\uC2DC\uAC04": 4
   Buffe_Image: {fileID: 4365183125844377129, guid: d584f01ae04305a4389436668cd86cc4,
     type: 3}

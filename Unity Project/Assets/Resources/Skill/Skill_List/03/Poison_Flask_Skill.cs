@@ -19,7 +19,7 @@ public class Poison_Flask_Skill : MonoBehaviour, Skill
             FireBottles.GetComponent<Transform>().localScale.x *2,
             FireBottles.GetComponent<Transform>().localScale.y *2,
             1);
-        FireBottles.GetComponent<Set_Damage>().SetDamage((int)(Player.GetComponent<Player_Stat>().Get_P_State(2) *2f));
+        FireBottles.GetComponent<Set_Damage>().SetDamage((int)(Player.GetComponent<Player_Stat>().Get_P_State(2) * 2f));
 
 
         Debug.Log("수류탄 스킬발사 히히");

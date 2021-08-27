@@ -10,6 +10,7 @@ public class Shield_Self : MonoBehaviour
     void Awake()
     {
         Player = GameObject.Find("Player");
+        transform.parent = Player.transform;
         angle = 0;
     }
 

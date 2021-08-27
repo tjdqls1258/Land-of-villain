@@ -9,6 +9,7 @@ public class Monster_Debuff : MonoBehaviour
     //독 상태의 변수가 0 이상일 경우 독공력 활성화
     int Poison = 0;
     int Damage;
+    public GameObject Deffue_Image;
     // Start is called before the first frame update
     void Start()
     {   
@@ -26,6 +27,8 @@ public class Monster_Debuff : MonoBehaviour
         this.Damage = Damage;
         StopCoroutine("Poison_D");
         StartCoroutine("Poison_D");
+        GameObject Deffu = Instantiate(Deffue_Image, transform.position, Quaternion.identity);
+        Deffu.GetComponent<Deffue_Monster>().transform_move(gameObject);
     }
 
     IEnumerator Poison_D()
@@ -33,9 +36,9 @@ public class Monster_Debuff : MonoBehaviour
         Poison = 5;
         while (Poison >= 0)
         {
-            yield return new WaitForSeconds(2f);
+            yield return new WaitForSeconds(0.5f);
             MS.Get_damange(Damage, true);
-             Poison--;
+            Poison--;
         }
     }
 

@@ -98,7 +98,7 @@ MonoBehaviour:
   Item_Name: Gold Sword
   Item_Kind: 0
   tear: 2
-  Item_stat: 000000000000000028000000000000000000000000000000
+  Item_stat: 000000000000000019000000000000000000000000000000
   meeleatk: 1
   skill_number: W_Skill_01
   CoolTime: 3
@@ -107,7 +107,8 @@ MonoBehaviour:
   item_skill_name: 
   ATK_Speed: 0.3
   Bullte: {fileID: 3146773742952640478, guid: 7dbffc89f8ece9b459404cb0363d58ca, type: 3}
-  "\uC2A4\uD0AC_\uC124\uBA85": 
+  "\uC2A4\uD0AC_\uC124\uBA85": "\uC804\uBC29\uC5D0 \uCE7C\uC744 \uBE60\uB974\uAC8C
+    \uD718\uB450\uB985\uB2C8\uB2E4.(\uCFE8\uD0C0\uC784 3\uCD08)"
 --- !u!61 &6484538440035860599
 BoxCollider2D:
   m_ObjectHideFlags: 0

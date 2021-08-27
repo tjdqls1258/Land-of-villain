@@ -98,7 +98,7 @@ MonoBehaviour:
   Item_Name: Pilot Toy
   Item_Kind: 3
   tear: 0
-  Item_stat: 000000000000000000000000050000000500000000000000
+  Item_stat: 000000000000000000000000050000000a00000000000000
   meeleatk: 0
   skill_number: Pilot_Toy_Skill
   CoolTime: 7

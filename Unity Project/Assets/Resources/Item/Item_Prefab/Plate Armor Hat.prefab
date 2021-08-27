@@ -98,7 +98,7 @@ MonoBehaviour:
   Item_Name: Plate Armor Hat
   Item_Kind: 2
   tear: 2
-  Item_stat: 32000000000000000000000014000000ffffffff00000000
+  Item_stat: 00000000320000000000000014000000ffffffff00000000
   meeleatk: 0
   skill_number: Plate_Armor_Hat_Skill
   CoolTime: 9

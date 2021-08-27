@@ -16,6 +16,7 @@ GameObject:
   - component: {fileID: 7093189944533682011}
   - component: {fileID: 3822303737933195184}
   - component: {fileID: 102427390525492008}
+  - component: {fileID: 3443009773671222084}
   m_Layer: 0
   m_Name: Monster_2
   m_TagString: Monster
@@ -169,6 +170,7 @@ MonoBehaviour:
   Atk_dir: 0.3
   current_HP: 0
   Monster_Drop_Tear: 0
+  IS_Boss: 0
   stageManger: {fileID: 0}
 --- !u!95 &3822303737933195184
 Animator:
@@ -204,6 +206,20 @@ MonoBehaviour:
   HPBar: {fileID: 6457692664841623277}
   Hp: {fileID: 3616873394470610596}
   Damage: {fileID: 8985858904614710289}
+--- !u!114 &3443009773671222084
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8238402939074595968}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 11f32bc8f1a992c4492d42d3911b7b78, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Deffue_Image: {fileID: 4621737708198100051, guid: caa16500fa911384a9b4e191592fe6fe,
+    type: 3}
 --- !u!1001 &2272400454288755867
 PrefabInstance:
   m_ObjectHideFlags: 0

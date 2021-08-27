@@ -1,11 +1,9 @@
 fileFormatVersion: 2
-guid: 11f32bc8f1a992c4492d42d3911b7b78
+guid: 0d6437e87d5095646a3875f82eb064f6
 MonoImporter:
   externalObjects: {}
   serializedVersion: 2
-  defaultReferences:
-  - Deffue_Image: {fileID: 4621737708198100051, guid: caa16500fa911384a9b4e191592fe6fe,
-      type: 3}
+  defaultReferences: []
   executionOrder: 0
   icon: {instanceID: 0}
   userData: 

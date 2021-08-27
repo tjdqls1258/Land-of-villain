@@ -16,6 +16,7 @@ GameObject:
   - component: {fileID: 1200899232}
   - component: {fileID: 5918652378018870323}
   - component: {fileID: 7927152637242067141}
+  - component: {fileID: -2092239868242504685}
   m_Layer: 0
   m_Name: Aterans
   m_TagString: Monster
@@ -201,6 +202,20 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Skill: {fileID: 6448691101354608114, guid: d2829342f1b385c4c902b9dc966b5474, type: 3}
+--- !u!114 &-2092239868242504685
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1908040921549510902}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 11f32bc8f1a992c4492d42d3911b7b78, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Deffue_Image: {fileID: 4621737708198100051, guid: caa16500fa911384a9b4e191592fe6fe,
+    type: 3}
 --- !u!1001 &7086039138892522612
 PrefabInstance:
   m_ObjectHideFlags: 0

@@ -15,6 +15,7 @@ GameObject:
   - component: {fileID: 1826987928640650469}
   - component: {fileID: 225315002151018674}
   - component: {fileID: 6920725804752360590}
+  - component: {fileID: -8940163874096971224}
   m_Layer: 0
   m_Name: Queen_Bee
   m_TagString: Monster
@@ -190,6 +191,20 @@ MonoBehaviour:
   HPBar: {fileID: 6621151880881641473}
   Hp: {fileID: 3480417187609487432}
   Damage: {fileID: 9135961811635200765}
+--- !u!114 &-8940163874096971224
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1826987928640650468}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 11f32bc8f1a992c4492d42d3911b7b78, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Deffue_Image: {fileID: 4621737708198100051, guid: caa16500fa911384a9b4e191592fe6fe,
+    type: 3}
 --- !u!1001 &2158468739321463415
 PrefabInstance:
   m_ObjectHideFlags: 0

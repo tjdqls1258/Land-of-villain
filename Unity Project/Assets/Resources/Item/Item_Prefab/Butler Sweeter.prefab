@@ -98,7 +98,7 @@ MonoBehaviour:
   Item_Name: Butler Sweeter
   Item_Kind: 1
   tear: 1
-  Item_stat: 0000000064000000000000000a0000000500000000000000
+  Item_stat: 000000005a00000000000000050000000500000000000000
   meeleatk: 0
   skill_number: Butler_Sweeter_Skill
   CoolTime: 6

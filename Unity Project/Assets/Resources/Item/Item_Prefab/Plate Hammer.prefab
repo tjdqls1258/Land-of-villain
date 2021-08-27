@@ -98,14 +98,14 @@ MonoBehaviour:
   Item_Name: Plate Hammer
   Item_Kind: 0
   tear: 1
-  Item_stat: 000000000000000014000000000000000000000000000000
+  Item_stat: 000000000000000023000000000000000000000000000000
   meeleatk: 0
   skill_number: Plate_Hammer_Skill
   CoolTime: 12
   Item_Information: 
   reinforce_add: 0
   item_skill_name: "\uBB34\uCC28\uBCC4 \uACF5\uACA9"
-  ATK_Speed: 2
+  ATK_Speed: 1
   Bullte: {fileID: 1831893577153778583, guid: 387e54526d41a3a47b6b2bc406bca2b8, type: 3}
   "\uC2A4\uD0AC_\uC124\uBA85": "\uD50C\uB808\uC774\uC5B4\uB97C \uAE30\uC900\uC73C\uB85C
     \uC6D0\uC744 \uADF8\uB9AC\uBA70 \uB9DD\uCE58\uB97C \uD718\uB450\uB978\uB2E4.

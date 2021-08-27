@@ -98,7 +98,7 @@ MonoBehaviour:
   Item_Name: Poison Flask
   Item_Kind: 0
   tear: 0
-  Item_stat: 000000000000000003000000000000000000000000000000
+  Item_stat: 000000000000000003000000000000000000000001000000
   meeleatk: 0
   skill_number: Poison_Flask_Skill
   CoolTime: 3

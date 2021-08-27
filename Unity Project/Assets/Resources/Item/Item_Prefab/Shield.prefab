@@ -98,7 +98,7 @@ MonoBehaviour:
   Item_Name: Shield
   Item_Kind: 3
   tear: 2
-  Item_stat: 00000000000000000000000000000000ffffffff00000000
+  Item_stat: 00000000000000000000000000000000feffffff00000000
   meeleatk: 0
   skill_number: Shield_Skill
   CoolTime: 3

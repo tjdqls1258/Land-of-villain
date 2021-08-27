@@ -31,7 +31,13 @@ public class Monster_stats : MonoBehaviour
         stageManger = GameObject.Find("StageManager");
         item_Drop = new Drop_Item();
         Money_drop = new Drop_Money();
-        if (!IS_Boss)
+        
+
+        if (IS_Boss)
+        {
+            Hp += (int)(Mathf.FloorToInt(Player.GetComponent<Player_Stat>().N_Stages/35) * Hp);
+        }
+        else
         {
             Hp += (int)((Player.GetComponent<Player_Stat>().N_Stages) * (Hp * 0.5f));
         }

@@ -80,6 +80,7 @@ public class Player_Status : MonoBehaviour
             GetComponent<Player_Stat>().Set_P_State(1, GetComponent<Player_Stat>().Get_P_State(0));
             GetComponent<item_info>().item_info_Set(false);
             GetComponent<Player_Stat>().N_Stages++;
+            GameObject.Find("Camera").GetComponent<BGM_Saver>().Setting_BGM();
             Destroy(other.gameObject);
         }
         if ((other.gameObject.tag == "Boom") && (Boom == false)) 

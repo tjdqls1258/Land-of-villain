@@ -16,14 +16,14 @@ public class Passive : MonoBehaviour
         x = 0;
         y = 0;
 
-        InvokeRepeating("Passives", 0.5f, 0.3f);
+        InvokeRepeating("Passives", 0.5f, 0.2f);
     }
 
 
     void Passives()
     {
-        x = Random.Range(-0.5f , 0.5f);
-        y = Random.Range(-0.5f , 0.5f);
+        x = Random.Range(-0.7f , 0.7f);
+        y = Random.Range(-0.7f , 0.7f);
 
         GameObject GOGO_Run = Instantiate(Skill, Player.transform.position + new Vector3(x, y, 0), Quaternion.identity);
         int a = 1 ;

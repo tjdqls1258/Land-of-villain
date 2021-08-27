@@ -69,7 +69,22 @@ public class Goblin_Shaman_Pattern : MonoBehaviour
         {
             PosY += 0.5f;
         }
-
+        if (PosX < -9.5f)
+        {
+            PosX = -9.5f;
+        }
+        if (PosX > 9.5f)
+        {
+            PosX = 9.5f;
+        }
+        if (PosY < -9.5f)
+        {
+            PosY = -9.5f;
+        }
+        if (PosY > 9.5f)
+        {
+            PosY = 9.5f;
+        }
         Vector3 spawnPos = new Vector3(PosX, PosY, 0f);
 
         return spawnPos;

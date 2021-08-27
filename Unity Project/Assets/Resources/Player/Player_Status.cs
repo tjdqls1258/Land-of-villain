@@ -60,7 +60,10 @@ public class Player_Status : MonoBehaviour
         Player_die_UI.SetActive(true);
         Time.timeScale = 0.0f;
     }
-
+    public GameObject Get_Player_die_UI()
+    {
+        return Player_die_UI;
+    }
     void OnTriggerEnter2D(Collider2D other)
     {
         if ((other.gameObject.tag == "Monster_Bullet") && (isinvincible == false)) //몬스터 원거리 공격과 충돌시

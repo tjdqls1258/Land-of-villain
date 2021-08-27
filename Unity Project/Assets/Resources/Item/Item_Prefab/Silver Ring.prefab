@@ -104,10 +104,12 @@ MonoBehaviour:
   CoolTime: 1
   Item_Information: 
   reinforce_add: 0
-  item_skill_name: Undying
+  item_skill_name: "\uAE30\uD569\uC73C\uB85C \uBC84\uD2F0\uAE30"
   ATK_Speed: 0
   Bullte: {fileID: 0}
-  "\uC2A4\uD0AC_\uC124\uBA85": "\uC8FD\uC74C\uC5D0 "
+  "\uC2A4\uD0AC_\uC124\uBA85": "\uC8FD\uC74C\uC5D0 \uC774\uB974\uB294 \uACF5\uACA9\uC744
+    \uBC29\uC5B4\uD558\uACE0 5\uCD08\uAC04 \uC808\uB300 \uD68C\uD53C  \uCCB4\uB825\uC744
+    50\uC73C\uB85C \uB9CC\uB4ED\uB2C8\uB2E4.(\uCFE8\uD0C0\uC784 30\uCD08)"
 --- !u!61 &7637063077376782384
 BoxCollider2D:
   m_ObjectHideFlags: 0

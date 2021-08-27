@@ -31,7 +31,6 @@ public class Monster_stats : MonoBehaviour
         stageManger = GameObject.Find("StageManager");
         item_Drop = new Drop_Item();
         Money_drop = new Drop_Money();
-        
 
         if (IS_Boss)
         {
@@ -85,6 +84,7 @@ public class Monster_stats : MonoBehaviour
         stageManger.GetComponent<StageManager>().monsterdead();
         Destroy(gameObject);
     }
+
     private void OnTriggerStay2D(Collider2D other)
     {
         if(!Take_Damage)

@@ -167,7 +167,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Hp: 10
   damage: 5
-  Atk_dir: 1
+  Atk_dir: 1.5
   current_HP: 0
   Monster_Drop_Tear: 0
   IS_Boss: 0

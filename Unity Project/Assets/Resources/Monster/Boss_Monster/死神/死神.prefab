@@ -15,6 +15,8 @@ GameObject:
   - component: {fileID: 9177610868767889596}
   - component: {fileID: -5808336733404463340}
   - component: {fileID: 1530775688671602398}
+  - component: {fileID: 6677837153104281632}
+  - component: {fileID: 3413944426763742900}
   m_Layer: 0
   m_Name: "\u6B7B\u795E"
   m_TagString: Monster
@@ -177,6 +179,34 @@ MonoBehaviour:
   HPBar: {fileID: 2117177426442783070}
   Hp: {fileID: 8560880912934746391}
   Damage: {fileID: 4056551349805511586}
+--- !u!114 &6677837153104281632
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 9177610868767889597}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1ca1f640423d38b4a8c65d5cc78dfba9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Passive_Skill: {fileID: 6514391355721897081, guid: 2fcbdcde47d326b48a66ad1bf7d349a2,
+    type: 3}
+--- !u!114 &3413944426763742900
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 9177610868767889597}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 881d52e9cfefb254e96fc14d3834c5db, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Passive_Skill2: {fileID: 5004625985353478687, guid: a2fe386f2d0c0d24eb47fd547dea1eb6,
+    type: 3}
 --- !u!1001 &6590697861226140456
 PrefabInstance:
   m_ObjectHideFlags: 0

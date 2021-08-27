@@ -12,7 +12,7 @@ public class Arrow_Blood_Monster : MonoBehaviour
             int Ran = (Random.Range(0, 10));
             if(Ran == 1)
             {
-                other.gameObject.GetComponent<Monster_Debuff>().Poison_Debuff(10);
+                other.gameObject.GetComponent<Monster_Debuff>().Poison_Debuff((int)(GetComponent<Set_Damage>().Damage() * 0.8f));
             }
             
         }

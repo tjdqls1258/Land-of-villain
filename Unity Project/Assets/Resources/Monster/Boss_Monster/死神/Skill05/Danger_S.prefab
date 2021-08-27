@@ -1,6 +1,6 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
---- !u!1 &7622979040218261186
+--- !u!1 &6514391355721897081
 GameObject:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -8,38 +8,38 @@ GameObject:
   m_PrefabAsset: {fileID: 0}
   serializedVersion: 6
   m_Component:
-  - component: {fileID: 3032222397532929176}
-  - component: {fileID: 4347610737445931052}
-  - component: {fileID: 7962429518275227966}
-  - component: {fileID: 7782844702618406380}
+  - component: {fileID: 417538051235972262}
+  - component: {fileID: 6629830172738386575}
+  - component: {fileID: -6971789857913352111}
+  - component: {fileID: 6116695327879813068}
   m_Layer: 0
-  m_Name: Wood Bow
-  m_TagString: Item
+  m_Name: Danger_S
+  m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!4 &3032222397532929176
+--- !u!4 &417538051235972262
 Transform:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7622979040218261186}
+  m_GameObject: {fileID: 6514391355721897081}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -2.1314, y: -1.1206, z: 0}
-  m_LocalScale: {x: 0.5, y: 0.5, z: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!212 &4347610737445931052
+--- !u!212 &6629830172738386575
 SpriteRenderer:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7622979040218261186}
+  m_GameObject: {fileID: 6514391355721897081}
   m_Enabled: 1
   m_CastShadows: 0
   m_ReceiveShadows: 0
@@ -69,68 +69,44 @@ SpriteRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 1976784991
-  m_SortingLayer: 1
-  m_SortingOrder: 1
-  m_Sprite: {fileID: 21300000, guid: 65b8b295c28b42c4188bfbe162f32742, type: 3}
+  m_SortingLayerID: 1395904143
+  m_SortingLayer: 2
+  m_SortingOrder: 2
+  m_Sprite: {fileID: 21300000, guid: 888c5ff11d638ab409280bf71e95d058, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
-  m_Size: {x: 0.16, y: 0.16}
+  m_Size: {x: 0.32, y: 0.32}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!114 &7962429518275227966
+--- !u!114 &-6971789857913352111
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7622979040218261186}
+  m_GameObject: {fileID: 6514391355721897081}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 4ca50350593932d42bc761259a6830ee, type: 3}
+  m_Script: {fileID: 11500000, guid: 8068a1cccecfba644bb8ab8986d14e89, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Item_Name: Wood Bow
-  Item_Kind: 0
-  tear: 1
-  Item_stat: 00000000000000000f000000000000000000000000000000
-  meeleatk: 0
-  skill_number: Wood_Bow_Skill
-  CoolTime: 6
-  Item_Information: 
-  reinforce_add: 0
-  item_skill_name: "\uB3C5\uD654\uC0B4"
-  ATK_Speed: 1
-  Bullte: {fileID: 6622479527988862628, guid: c2b12a44ee717b1449596cf69df07268, type: 3}
-  "\uC2A4\uD0AC_\uC124\uBA85": "10%\uB85C \uB3C5\uD654\uC0B4\uC744 \uC3E9\uB2C8\uB2E4."
---- !u!61 &7782844702618406380
-BoxCollider2D:
+  Skill: {fileID: 6189831572366170577, guid: c55f79fac03ac0a4c9ab2b0c0d262110, type: 3}
+--- !u!114 &6116695327879813068
+MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7622979040218261186}
+  m_GameObject: {fileID: 6514391355721897081}
   m_Enabled: 1
-  m_Density: 1
-  m_Material: {fileID: 0}
-  m_IsTrigger: 1
-  m_UsedByEffector: 0
-  m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0}
-  m_SpriteTilingProperty:
-    border: {x: 0, y: 0, z: 0, w: 0}
-    pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 0.32, y: 0.32}
-    newSize: {x: 0.16, y: 0.16}
-    adaptiveTilingThreshold: 0.5
-    drawMode: 0
-    adaptiveTiling: 0
-  m_AutoTiling: 0
-  serializedVersion: 2
-  m_Size: {x: 0.32, y: 0.32}
-  m_EdgeRadius: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1bf831552b50ae94aba513d98529553d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Skill_type: 0
+  Skill_CollTime: 0

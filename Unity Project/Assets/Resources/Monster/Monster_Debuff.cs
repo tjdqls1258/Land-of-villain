@@ -10,6 +10,7 @@ public class Monster_Debuff : MonoBehaviour
     int Poison = 0;
     int Damage;
     public GameObject Deffue_Image;
+    GameObject Deffu;
     // Start is called before the first frame update
     void Start()
     {   
@@ -27,7 +28,7 @@ public class Monster_Debuff : MonoBehaviour
         this.Damage = Damage;
         StopCoroutine("Poison_D");
         StartCoroutine("Poison_D");
-        GameObject Deffu = Instantiate(Deffue_Image, transform.position, Quaternion.identity);
+        Deffu = Instantiate(Deffue_Image, transform.position, Quaternion.identity);
         Deffu.GetComponent<Deffue_Monster>().transform_move(gameObject);
     }
 
@@ -39,6 +40,10 @@ public class Monster_Debuff : MonoBehaviour
             yield return new WaitForSeconds(0.5f);
             MS.Get_damange(Damage, true);
             Poison--;
+        }
+        if(Poison == 0)
+        {
+            Destroy(Deffu);
         }
     }
 

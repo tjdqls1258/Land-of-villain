@@ -104,7 +104,7 @@ MonoBehaviour:
   CoolTime: 3
   Item_Information: 
   reinforce_add: 0
-  item_skill_name: Burring
+  item_skill_name: Burning
   ATK_Speed: 1.8
   Bullte: {fileID: 832421447178272844, guid: c95aa9b071eaad848a0d7aff98f156ab, type: 3}
   "\uC2A4\uD0AC_\uC124\uBA85": "\uC138\uBC29\uD5A5\uC73C\uB85C \uD654\uC5FC\uBCD1\uC744

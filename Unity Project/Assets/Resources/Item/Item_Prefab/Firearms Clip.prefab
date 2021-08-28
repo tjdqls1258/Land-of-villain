@@ -104,7 +104,7 @@ MonoBehaviour:
   CoolTime: 6
   Item_Information: 
   reinforce_add: 0
-  item_skill_name: "\uC5B4\uB77C... \uD558\uB098\uAC00 \uBE44\uB124..?"
+  item_skill_name: "\uC5B4\uB77C... \uD558\uB098\uAC00"
   ATK_Speed: 0
   Bullte: {fileID: 0}
   "\uC2A4\uD0AC_\uC124\uBA85": "\uD070\uC77C\uC774\uB2E4. \uCC3E\uC544\uC57C\uD574....

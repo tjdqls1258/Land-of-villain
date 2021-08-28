@@ -11,13 +11,13 @@ public class Black_Cow_Wallet_Skill : MonoBehaviour, Skill
         if (Player.GetComponent<Player_Stat>().Get_P_State(6) >= 10)
         {
             Player.GetComponent<Player_Stat>().Set_P_State(6, Player.GetComponent<Player_Stat>().Get_P_State(6) -10);
-            if(Player.GetComponent<Player_Stat>().Get_P_State(2)+10 >= Player.GetComponent<Player_Stat>().Get_P_State(1))
+            if(Player.GetComponent<Player_Stat>().Get_P_State(1)+10 >= Player.GetComponent<Player_Stat>().Get_P_State(0))
             {
-                Player.GetComponent<Player_Stat>().Set_P_State(2, Player.GetComponent<Player_Stat>().Get_P_State(1));
+                Player.GetComponent<Player_Stat>().Set_P_State(1, Player.GetComponent<Player_Stat>().Get_P_State(0));
             }
             else
             {
-                Player.GetComponent<Player_Stat>().Set_P_State(2, Player.GetComponent<Player_Stat>().Get_P_State(2) + 10);
+                Player.GetComponent<Player_Stat>().Set_P_State(1, Player.GetComponent<Player_Stat>().Get_P_State(1) + 10);
             }
         }
     }

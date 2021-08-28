@@ -14,15 +14,15 @@ public class Butler_Glass_Skill : MonoBehaviour, Skill
     public void Passive()
     {
         Player = GameObject.Find("Player");
-        Add_Luk = (int)(Player.GetComponent<Player_Stat>().Get_P_State(4) * 0.5f);
-        Player.GetComponent<Player_Stat>().Set_P_State(4, (int)(Player.GetComponent<Player_Stat>().Get_P_State(4) + Add_Luk));
+        Add_Luk = (int)(Player.GetComponent<Player_Stat>().Get_P_State(5) * 0.5f);
+        Player.GetComponent<Player_Stat>().Set_P_State(5, (int)(Player.GetComponent<Player_Stat>().Get_P_State(4) + Add_Luk));
     }
     //중지시키는 함수
     public void Stop_Passive()
     {
         if (Player)
         {
-            Player.GetComponent<Player_Stat>().Set_P_State(4, (int)(Player.GetComponent<Player_Stat>().Get_P_State(4) - Add_Luk));
+            Player.GetComponent<Player_Stat>().Set_P_State(5, (int)(Player.GetComponent<Player_Stat>().Get_P_State(4) - Add_Luk));
 
         }
     }

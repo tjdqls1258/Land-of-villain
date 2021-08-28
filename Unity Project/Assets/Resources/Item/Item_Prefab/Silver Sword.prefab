@@ -104,7 +104,7 @@ MonoBehaviour:
   CoolTime: 3
   Item_Information: 
   reinforce_add: 0
-  item_skill_name: Power_Slash
+  item_skill_name: Power Slash
   ATK_Speed: 0.4
   Bullte: {fileID: 6986820035171500610, guid: fe6e34a046152bd4980a1ea0e5094fd5, type: 3}
   "\uC2A4\uD0AC_\uC124\uBA85": "\uC804\uBC29\uC5D0 \uCE7C\uC744 \uBE60\uB974\uAC8C

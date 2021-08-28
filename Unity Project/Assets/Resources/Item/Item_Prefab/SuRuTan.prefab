@@ -104,7 +104,7 @@ MonoBehaviour:
   CoolTime: 3
   Item_Information: 
   reinforce_add: 0
-  item_skill_name: Fire_in
+  item_skill_name: Fire In
   ATK_Speed: 2
   Bullte: {fileID: 7211411211070169945, guid: c76fa969499020d49b6e14da05fb50ac, type: 3}
   "\uC2A4\uD0AC_\uC124\uBA85": "\uC804\uBC29\uC5D0 \uC218\uB958\uD0C4 3\uAC1C\uB97C

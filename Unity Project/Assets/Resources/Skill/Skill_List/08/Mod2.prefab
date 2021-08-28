@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 8870104504598005511}
   - component: {fileID: 6976878724490041123}
   - component: {fileID: 2493196979394098714}
+  - component: {fileID: -6205438258046971531}
   m_Layer: 0
   m_Name: Mod2
   m_TagString: Untagged
@@ -59,3 +60,15 @@ MonoBehaviour:
   Folk_Bullte: {fileID: 7513320176201619778, guid: b7911f1d6fdfa6d468ed82d2062bc067,
     type: 3}
   distance: 0.2
+--- !u!114 &-6205438258046971531
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4362053785487356125}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 53261f70f16fdf34e8af64aa379ec9a6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 

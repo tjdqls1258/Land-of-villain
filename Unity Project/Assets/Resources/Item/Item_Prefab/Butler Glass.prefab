@@ -104,7 +104,7 @@ MonoBehaviour:
   CoolTime: 6
   Item_Information: 
   reinforce_add: 0
-  item_skill_name: AGI_UP
+  item_skill_name: LUK UP
   ATK_Speed: 0
   Bullte: {fileID: 0}
   "\uC2A4\uD0AC_\uC124\uBA85": "\uD50C\uB808\uC774\uC5B4\uC758 \uD589\uC6B4(LUK)

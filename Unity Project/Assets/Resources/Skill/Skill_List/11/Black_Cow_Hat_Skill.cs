@@ -16,15 +16,15 @@ public class Black_Cow_Hat_Skill : MonoBehaviour, Skill
     {
         if (Player.GetComponent<Player_Status>().isinvincible_Check() && (check == true))
         {
-            if (Random.Range(0, 10) < 2)
+            if (Random.Range(0, 10) < 1)
             {
-                if (Player.GetComponent<Player_Stat>().Get_P_State(2) + 10 >= Player.GetComponent<Player_Stat>().Get_P_State(1))
+                if (Player.GetComponent<Player_Stat>().Get_P_State(1) + 20 >= Player.GetComponent<Player_Stat>().Get_P_State(0))
                 {
-                    Player.GetComponent<Player_Stat>().Set_P_State(2, Player.GetComponent<Player_Stat>().Get_P_State(1));
+                    Player.GetComponent<Player_Stat>().Set_P_State(1, Player.GetComponent<Player_Stat>().Get_P_State(0));
                 }
                 else
                 {
-                    Player.GetComponent<Player_Stat>().Set_P_State(2, Player.GetComponent<Player_Stat>().Get_P_State(2) + 10);
+                    Player.GetComponent<Player_Stat>().Set_P_State(1, Player.GetComponent<Player_Stat>().Get_P_State(1) + 20);
                 }
             }
             check = false;

@@ -104,7 +104,7 @@ MonoBehaviour:
   CoolTime: 6
   Item_Information: 
   reinforce_add: 0
-  item_skill_name: AGI_UP
+  item_skill_name: AGI UP
   ATK_Speed: 0
   Bullte: {fileID: 0}
   "\uC2A4\uD0AC_\uC124\uBA85": "\uBCC4\uAC70 \uC5C6\uB294 \uD22C\uAD6C \uC785\uB2C8\uB2E4.

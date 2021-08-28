@@ -104,7 +104,7 @@ MonoBehaviour:
   CoolTime: 5
   Item_Information: 
   reinforce_add: 0
-  item_skill_name: 
+  item_skill_name: PAYPAY
   ATK_Speed: 0
   Bullte: {fileID: 0}
   "\uC2A4\uD0AC_\uC124\uBA85": "\uAC80\uC740 \uC18C\uB294 \uB3C8\uC73C\uB85C \uBAA8\uB4E0\uAC78

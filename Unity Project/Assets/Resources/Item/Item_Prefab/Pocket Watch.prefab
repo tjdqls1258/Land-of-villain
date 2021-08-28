@@ -104,7 +104,7 @@ MonoBehaviour:
   CoolTime: 1
   Item_Information: 
   reinforce_add: 0
-  item_skill_name: Heal
+  item_skill_name: Speed Up
   ATK_Speed: 0
   Bullte: {fileID: 0}
   "\uC2A4\uD0AC_\uC124\uBA85": "(\uD328\uC2DC\uBE0C)\uC774\uB3D9\uC18D\uB3C4 20%

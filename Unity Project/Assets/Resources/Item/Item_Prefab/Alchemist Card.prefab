@@ -101,14 +101,14 @@ MonoBehaviour:
   Item_stat: 000000000000000000000000000000000a00000000000000
   meeleatk: 0
   skill_number: Alchemist_Card_Skill
-  CoolTime: 20
+  CoolTime: 30
   Item_Information: 
   reinforce_add: 0
-  item_skill_name: Undying
+  item_skill_name: "\uBA54\uC774\uCEE4"
   ATK_Speed: 0
   Bullte: {fileID: 0}
   "\uC2A4\uD0AC_\uC124\uBA85": "\uBB3C\uC57D\uC744 \uC81C\uC870\uD574\uC11C \uBA39\uC2B5\uB2C8\uB2E4.
-    (\uCCB4\uB825 50 \uD68C\uBCF5) \uCFE8\uD0C0\uC784 20\uCD08"
+    (\uCCB4\uB825 50 \uD68C\uBCF5) \uCFE8\uD0C0\uC784 30\uCD08"
 --- !u!61 &9082326517880334722
 BoxCollider2D:
   m_ObjectHideFlags: 0

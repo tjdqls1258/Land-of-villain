@@ -32,7 +32,7 @@ public class Player_Status : MonoBehaviour
 
     public void Get_damange(int damage)
     {
-        int Setting_Hp = (damage - (int)(Player.GetComponent<Player_Stat>().Get_P_State(3)* 0.2f));
+        int Setting_Hp = (damage - (int)(Player.GetComponent<Player_Stat>().Get_P_State(3) * 0.2f));
         if(Setting_Hp < 1)
         {
             Setting_Hp = 1;

@@ -16,7 +16,7 @@ public class Item_List
         { "Silver Sword", "Blood Knife","Blood Folk","FireBottle","Magic Stafe","SMG","NinJa Wepown","Plate Hammer" }, 
         { "Silver Armor", "Blood Rope","Butler Sweeter","Gili suit","Military Armor","Ninja Armor","Suit","NONE"    }, 
         { "Silver Hat", "Blood Hood","Butler Glass","GrandMa_Wig","Military Hat","Ninja Hat","Gas Mask","NONE"    },
-        { "Silver Ring", "Blood Ring","Pocket Watch","Firearms Clip","Glass" ,"Ninja Scroll","War Standard","NONE"   } };
+        { "Silver Ring", "Blood Ring","Pocket Watch","Firearms Clip","Glass" ,"Ninja Scroll","War Standard","효자손"   } };
     //Epic 아이템 이름.(희귀한 아이템)
     private string[,] E_Item = new string[,] { 
         { "Gold Sword", "SuRuTan","Boomerang Up", "Black Cow Card","HandGun","地獄斬魔刀","大劍" }, 

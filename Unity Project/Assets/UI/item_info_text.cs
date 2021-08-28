@@ -42,7 +42,25 @@ public class item_info_text : MonoBehaviour
         {
             return;
         }
-        I_name_text.text = i_stat.GetComponent<Item_stats>().Item_Name;
+        int a = i_stat.GetComponent<Item_stats>().Item_Kind;
+        string Tiyp = "";
+        switch (a)
+        {
+            case 0:
+                Tiyp = "W";
+                break;
+            case 1:
+                Tiyp = "A";
+                break;
+            case 2:
+                Tiyp = "H";
+                break;
+            case 3:
+                Tiyp = "S";
+                break;
+        }
+
+        I_name_text.text = i_stat.GetComponent<Item_stats>().Item_Name + "(" + Tiyp+ ")";
         I_reinforce_text.text = " LV " + i_stat.GetComponent<Item_stats>().reinforce_add.ToString();
         I_hp_text.text = " + " + i_stat.GetComponent<Item_stats>().Item_stat[1].ToString();
         I_str_text.text = " + " + i_stat.GetComponent<Item_stats>().Item_stat[2].ToString();

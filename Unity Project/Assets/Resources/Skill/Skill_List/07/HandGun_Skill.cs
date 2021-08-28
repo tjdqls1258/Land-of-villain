@@ -5,16 +5,33 @@ using UnityEngine;
 public class HandGun_Skill : MonoBehaviour, Skill
 {
     public float Distance;
+    float time;
+    Vector3 Dis;
+    GameObject Player;
     public void Skill_Action()
     {
-        GameObject Player = GameObject.Find("Player");
+        Player = GameObject.Find("Player");
 
-        Vector3 Dis = new Vector3(Joystick.inputDirection.x, Joystick.inputDirection.y, 0);
+        Dis = new Vector3(Joystick.inputDirection.x, Joystick.inputDirection.y, 0);
 
-        Player.transform.position -= Dis * Distance * Time.deltaTime;
-
+        //Player.transform.position -= Dis * Distance * Time.deltaTime;
+        time = 0;
+        Player.GetComponent<Movement2D>().enabled = false;
+        InvokeRepeating("BackStap", 0.0f, 0.05f);
+       
     }
-
+    void BackStap()
+    {
+        if(time <= Distance)
+        {
+            time += Time.deltaTime;
+            Player.transform.position -= Dis * time;
+        }
+        else
+        {
+            Player.GetComponent<Movement2D>().enabled = true;
+        }
+    }
     public void Passive()
     {
 

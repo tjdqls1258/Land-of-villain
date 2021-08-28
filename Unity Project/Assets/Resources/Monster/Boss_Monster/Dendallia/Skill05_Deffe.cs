@@ -6,8 +6,10 @@ public class Skill05_Deffe : MonoBehaviour
 {
     float First_Speed;
     float time;
+    GameObject Dendallias;
     private void Awake()
     {
+        Dendallias = GameObject.Find("Dendallia(Clone)");
         GameObject Player = GameObject.Find("Player");
         First_Speed = Player.GetComponent<Movement2D>().moveSpeed;
         time = 0;
@@ -16,8 +18,6 @@ public class Skill05_Deffe : MonoBehaviour
     {
         if(collision.tag == "Player")
         {
-            
-            
             if(time >= 2.0f)
             {
                 collision.gameObject.GetComponent<Movement2D>().moveSpeed = 0f;
@@ -30,6 +30,13 @@ public class Skill05_Deffe : MonoBehaviour
                 collision.gameObject.GetComponent<Movement2D>().moveSpeed = First_Speed * 0.5f;
                 collision.gameObject.GetComponent<SkillCooldown>().Don_Restart = true;
             }
+        }
+    }
+    private void Update()
+    {
+        if(Dendallias == null)
+        {
+            Destroy(gameObject);
         }
     }
     void EndDeffue()

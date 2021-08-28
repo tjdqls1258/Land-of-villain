@@ -39,7 +39,7 @@ public class SMG_Skill : MonoBehaviour, Skill
                 break;
         }
         Mod++;
-        if(Mod >= 3)
+        if(Mod > 3)
         {
             Mod = 1;
         }
@@ -68,7 +68,7 @@ public class SMG_Skill : MonoBehaviour, Skill
     public void Mod3_State()
     {
         //공속 개빨라짐, 데미지 0.3배
-        Player.GetComponent<Player_Item>().Weapon.GetComponent<Item_stats>().ATK_Speed = 0.05f;
+        Player.GetComponent<Player_Item>().Weapon.GetComponent<Item_stats>().ATK_Speed = 0.1f;
         Player.GetComponent<Player_Item>().Weapon.GetComponent<Item_stats>().Item_stat[2] =
             (int)(Player.GetComponent<Player_Item>().Weapon.GetComponent<Item_stats>().Item_stat[2] * 0.1f);
     }

@@ -28,23 +28,26 @@ public class Monster_Debuff : MonoBehaviour
         this.Damage = Damage;
         StopCoroutine("Poison_D");
         StartCoroutine("Poison_D");
-        Deffu = Instantiate(Deffue_Image, transform.position, Quaternion.identity);
-        Deffu.GetComponent<Deffue_Monster>().transform_move(gameObject);
+        
     }
 
     IEnumerator Poison_D()
     {
+        Deffu = Instantiate(Deffue_Image, transform.position, Quaternion.identity);
+        Deffu.transform.localScale = transform.localScale;
+        Deffu.GetComponent<Deffue_Monster>().transform_move(gameObject);
         Poison = 5;
         while (Poison >= 0)
         {
             yield return new WaitForSeconds(0.5f);
             MS.Get_damange(Damage, true);
             Poison--;
+            if (Poison == 0)
+            {
+                Destroy(Deffu);
+            }
         }
-        if(Poison == 0)
-        {
-            Destroy(Deffu);
-        }
+        
     }
 
 }

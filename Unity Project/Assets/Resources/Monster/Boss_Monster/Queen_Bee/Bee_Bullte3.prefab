@@ -10,7 +10,6 @@ GameObject:
   m_Component:
   - component: {fileID: 3922022750420508531}
   - component: {fileID: 4259058488073495436}
-  - component: {fileID: 756384811658837499}
   - component: {fileID: 4432977008535136724}
   m_Layer: 0
   m_Name: Bee_Bullte3
@@ -49,20 +48,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Rota_Speed: 100
---- !u!114 &756384811658837499
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5243060690790728821}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 1bf831552b50ae94aba513d98529553d, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  Skill_type: 3
-  Skill_CollTime: 0
 --- !u!114 &4432977008535136724
 MonoBehaviour:
   m_ObjectHideFlags: 0

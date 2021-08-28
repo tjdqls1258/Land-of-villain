@@ -5,6 +5,7 @@ using UnityEngine;
 public class Skill_damage : MonoBehaviour
 {
     public int Skill_type;
+    [SerializeField]
     private int Damage_s = 0;
     public float Skill_CollTime;
     public int Damage()

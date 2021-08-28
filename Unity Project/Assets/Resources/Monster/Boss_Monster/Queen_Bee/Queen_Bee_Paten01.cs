@@ -8,20 +8,24 @@ public class Queen_Bee_Paten01 : MonoBehaviour
     GameObject Player;
     Quaternion angleAxis;
     public GameObject Bullte;
-
+    GameObject Bulltes;
     // Start is called before the first frame update
     void Awake()
     {
         StartPoint = transform.position; //시작지점
         Find_Player();
-        GameObject Bulltes = Instantiate(Bullte, transform.position, angleAxis);
-        Bulltes.GetComponent<Skill_damage>().Set_Damage(GetComponent<Skill_damage>().Damage());
+        Bulltes = Instantiate(Bullte, transform.position, angleAxis);
+        Invoke("Set_Dam", 0.1f);
 
     }
-
+    void Set_Dam()
+    {
+        Bulltes.GetComponent<Skill_damage>().Set_Damage(GetComponent<Skill_damage>().Damage());
+    }
 
     void Find_Player()
     {
+        
         Player = GameObject.Find("Player");
         Vector2 vec = Vector2.zero;//초기화
         if (Player == null)

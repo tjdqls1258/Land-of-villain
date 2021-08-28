@@ -14,6 +14,7 @@ GameObject:
   - component: {fileID: 3812346434339390709}
   - component: {fileID: 7038097008096968018}
   - component: {fileID: 5311967728372901798}
+  - component: {fileID: -2475894249232736090}
   m_Layer: 0
   m_Name: Bee_Bullte2
   m_TagString: Monster_Skill
@@ -159,5 +160,17 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1bf831552b50ae94aba513d98529553d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Skill_type: 0
+  Skill_type: 3
   Skill_CollTime: 0
+--- !u!114 &-2475894249232736090
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6567423684546018844}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: acabe9cef6a5d344595c3c3c6b0b296d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 

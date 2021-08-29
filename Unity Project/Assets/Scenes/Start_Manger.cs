@@ -11,6 +11,7 @@ public class Start_Manger : MonoBehaviour
     public Slider Save_slider_Sound;
     public GameObject Setting;
     public GameObject Help;
+    public GameObject Credits;
     public AudioSource audioSource;
     void Awake()
     {
@@ -56,6 +57,14 @@ public class Start_Manger : MonoBehaviour
     public void ExitHelp()
     {
         Help.SetActive(false);
+    }
+    public void OnCredit()
+    {
+        Credits.SetActive(true);
+    }
+    public void ExitCredit()
+    {
+        Credits.SetActive(false);
     }
     public void Game_Exit()
     {

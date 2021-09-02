@@ -19,6 +19,7 @@ public class Gas_Mask_Skill : MonoBehaviour,Skill
     }
     public void Passive()
     {
+        Player = GameObject.Find("Player");
         GameObject Buffe_Panel = Player.transform.Find("Play_UI").transform.
            Find("BuffPanel").gameObject;
         if (Buffe_ != null)
@@ -28,7 +29,7 @@ public class Gas_Mask_Skill : MonoBehaviour,Skill
         Buffe_ = Instantiate(Buffe_Image, Vector3.zero, Quaternion.identity);
         Buffe_.transform.parent = Buffe_Panel.transform;
 
-        Player = GameObject.Find("Player");
+        
         reset = Player.GetComponent<Player_Status>().Debuff_DEF;
 
         Player.GetComponent<Player_Status>().Debuff_DEF = 30.0f;

@@ -13,13 +13,13 @@ public class 효자손_Skill : MonoBehaviour, Skill
     //액티브 스킬
     public void Skill_Action()
     {
-
+        Player = GameObject.Find("Player");
         GameObject Buffe_Panel = Player.transform.Find("Play_UI").transform.
            Find("BuffPanel").gameObject;
         Buffe_ = Instantiate(Buffe_Image, Vector3.zero, Quaternion.identity);
         Buffe_.transform.parent = Buffe_Panel.transform;
 
-        Player = GameObject.Find("Player");
+       
         count = 0;
         InvokeRepeating("Hp_Add",1f, 1f);
 

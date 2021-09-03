@@ -18,6 +18,21 @@ public class Player_Item : MonoBehaviour
     {
         return player_item[N];
     }
+    public GameObject Get_Drop_Player_Item(int N)
+    {
+        switch (N)
+        {
+            case 0:
+                return Weapon;
+            case 1:
+                return Armor;
+            case 2:
+                return Hat;
+            case 3:
+                return Ring;
+        }
+        return null;
+    }
     public void Set_Player_Item(int N1, string N2)
     {
         UnPassive();

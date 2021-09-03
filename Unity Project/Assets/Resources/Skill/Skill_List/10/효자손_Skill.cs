@@ -27,14 +27,14 @@ public class 효자손_Skill : MonoBehaviour, Skill
     void Hp_Add()
     {
         int N_HP = Player.GetComponent<Player_Stat>().Get_P_State(1); //현재 HP
-        if (N_HP + 10 > Player.GetComponent<Player_Stat>().Get_P_State(0))//현재 HP+10 > 최대 HP
+        if (N_HP + 3 > Player.GetComponent<Player_Stat>().Get_P_State(0))//현재 HP+10 > 최대 HP
         {
             Player.GetComponent<Player_Stat>().Set_P_State(
                 1, Player.GetComponent<Player_Stat>().Get_P_State(0));
         }
         else
         {
-            Player.GetComponent<Player_Stat>().Set_P_State(1, N_HP + 10);
+            Player.GetComponent<Player_Stat>().Set_P_State(1, N_HP + 3);
         }
         count++;
         if(count >= 5)

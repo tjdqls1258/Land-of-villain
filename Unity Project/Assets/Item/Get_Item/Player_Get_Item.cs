@@ -77,8 +77,12 @@ public class Player_Get_Item : MonoBehaviour
     //코드를 설명하자면 N에 들어가는 내용이 아이템의 이름임.
     //Instantiate는 오브젝트를 생성하는 코드임. Instantiate(게임오브젝트,포지션,회전값)
     //현재 Instantiate(Item_Prefab에 있는 프리팹(게임오브젝트),플레이어의 위치,회전값 변경 없음)으로 만듦
-    public void Creat_Drop_Item(string N)
-    { Instantiate(Resources.Load("Item/Item_Prefab/" + N), transform.position, Quaternion.identity); }
+    public void Creat_Drop_Item(GameObject N)
+    { 
+        GameObject Item =  Instantiate(N, transform.position, Quaternion.identity);
+        Item.GetComponent<Item_stats>().Item_stat = PE.Get_Drop_Player_Item(IS.Get_Item_Kind()).GetComponent<Item_stats>().Item_stat;
+        Item.GetComponent<Item_stats>().reinforce_add = PE.Get_Drop_Player_Item(IS.Get_Item_Kind()).GetComponent<Item_stats>().reinforce_add;
+    }
 
     //원래는 OnTriggerstay2D로 만들려 했으나 가만히 있으면 몇 프레임 동안만 호출하여 계속 움직여 줘야하는 문제가 생겨서 아래 코드로 제작
     public void Drop_Item()
@@ -104,7 +108,7 @@ public class Player_Get_Item : MonoBehaviour
                 {
                     //플레이어가 가지고 있던 아이템 프리팹을 생성
                     PE.Delete_State_item();
-                    Creat_Drop_Item(PE.Get_Player_Item(IS.Get_Item_Kind()));
+                    Creat_Drop_Item(PE.Get_Drop_Player_Item(IS.Get_Item_Kind()));
                     //플레이어의 아이템의 장비에 맞춰 플레이어 장비에 이름을 할당해줌.
                     PE.Set_Player_Item(IS.Get_Item_Kind(), IS.Get_Item_Name());
                     //PE.Change_item_state();

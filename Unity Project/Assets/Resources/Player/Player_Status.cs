@@ -81,6 +81,14 @@ public class Player_Status : MonoBehaviour
             GetComponent<item_info>().item_info_Set(false);
             GetComponent<Player_Stat>().N_Stages++;
             GameObject.Find("Camera").GetComponent<BGM_Saver>().Setting_BGM();
+            if(GetComponent<Player_Stat>().N_Stages == 36)
+            {
+                Social.ReportProgress(GPGSIds.achievement, 100f, null);
+            }
+            if (GetComponent<Player_Stat>().N_Stages == 100)
+            {
+                Social.ReportProgress(GPGSIds.achievement_100, 100f, null);
+            }
             Destroy(other.gameObject);
         }
         if ((other.gameObject.tag == "Boom") && (Boom == false)) 

@@ -3683,7 +3683,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: Tester
+  m_Text: Land Of Villains
 --- !u!222 &1540874895
 CanvasRenderer:
   m_ObjectHideFlags: 0

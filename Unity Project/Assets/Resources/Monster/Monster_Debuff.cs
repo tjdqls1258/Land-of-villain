@@ -33,6 +33,10 @@ public class Monster_Debuff : MonoBehaviour
 
     IEnumerator Poison_D()
     {
+        if (Deffu != null)
+        {
+            Destroy(Deffu);
+        }
         Deffu = Instantiate(Deffue_Image, transform.position, Quaternion.identity);
         Deffu.transform.localScale = transform.localScale;
         Deffu.GetComponent<Deffue_Monster>().transform_move(gameObject);

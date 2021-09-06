@@ -56,30 +56,29 @@ public class SMG_Skill : MonoBehaviour, Skill
     //중지시키는 함수
     public void Stop_Passive()
     {
+        Player.GetComponent<Player_Item>().Weapon.GetComponent<Item_stats>().Item_stat[2] -= ATK_Damage;
     }
 
     public void Mod2_State()
     {
         //공속 느려짐 데미지 0.5배
-        Player.GetComponent<Player_Item>().Weapon.GetComponent<Item_stats>().Item_stat[2] =
-            (int)(Player.GetComponent<Player_Item>().Weapon.GetComponent<Item_stats>().Item_stat[2] * 0.7f);
+        Player.GetComponent<Player_Stat>().Set_P_State(2, Player.GetComponent<Player_Stat>().Get_P_State(2) - (int)(ATK_Damage * 0.3f));
         Player.GetComponent<Player_Item>().Weapon.GetComponent<Item_stats>().ATK_Speed = 0.7f;
     }
     public void Mod3_State()
     {
         //공속 개빨라짐, 데미지 0.3배
         Player.GetComponent<Player_Item>().Weapon.GetComponent<Item_stats>().ATK_Speed = 0.1f;
-        Player.GetComponent<Player_Item>().Weapon.GetComponent<Item_stats>().Item_stat[2] =
-            (int)(Player.GetComponent<Player_Item>().Weapon.GetComponent<Item_stats>().Item_stat[2] * 0.1f);
+        Player.GetComponent<Player_Stat>().Set_P_State(2, Player.GetComponent<Player_Stat>().Get_P_State(2) - (int)(ATK_Damage * 0.9f));
     }
     public void Mod2_State_End()
     {
+        Player.GetComponent<Player_Stat>().Set_P_State(2, Player.GetComponent<Player_Stat>().Get_P_State(2) + (int)(ATK_Damage * 0.3f));
         Player.GetComponent<Player_Item>().Weapon.GetComponent<Item_stats>().ATK_Speed = ATK_Speed;
-        Player.GetComponent<Player_Item>().Weapon.GetComponent<Item_stats>().Item_stat[2] = ATK_Damage;
     }
     public void Mod3_State_End()
     {
-        Player.GetComponent<Player_Item>().Weapon.GetComponent<Item_stats>().Item_stat[2] = ATK_Damage;
+        Player.GetComponent<Player_Stat>().Set_P_State(2, Player.GetComponent<Player_Stat>().Get_P_State(2) + (int)(ATK_Damage * 0.9f));
         Player.GetComponent<Player_Item>().Weapon.GetComponent<Item_stats>().ATK_Speed = ATK_Speed;
     }
 

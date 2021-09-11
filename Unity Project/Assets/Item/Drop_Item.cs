@@ -25,7 +25,13 @@ public class Drop_Item : MonoBehaviour
         //아이템이 아무것도 없지 않는 이상 아이템을 떨굼.
         if (Drop_Item_Name !="NONE")
         {
-            Instantiate(Resources.Load("Item/Item_Prefab/" + Drop_Item_Name), new Vector2(TS.position.x + Random.Range(-0.01f, 0.01f), TS.position.y + Random.Range(-0.01f, 0.01f)), Quaternion.identity);
+            GameObject Item_Drop = (GameObject)Instantiate(Resources.Load("Item/Item_Prefab/" + Drop_Item_Name), new Vector2(TS.position.x + Random.Range(-0.01f, 0.01f), TS.position.y + Random.Range(-0.01f, 0.01f)), Quaternion.identity);
+            Item_Drop.GetComponent<Item_stats>().reinforce_add = 0;
+            for (int i = 0; i < Item_Drop.GetComponent<Item_stats>().Item_stat_add.Length; i++)
+            {
+                Item_Drop.GetComponent<Item_stats>().Item_stat_add[i] = 0;
+            }
+
         }
 
     }

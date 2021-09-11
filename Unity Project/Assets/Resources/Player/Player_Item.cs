@@ -213,7 +213,6 @@ public class Player_Item : MonoBehaviour
             {
                 case 0:
                     Weapon.GetComponent<Item_stats>().reinforce();
-
                     return true;
                 case 1:
                     Armor.GetComponent<Item_stats>().reinforce();

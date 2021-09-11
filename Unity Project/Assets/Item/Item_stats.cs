@@ -37,6 +37,11 @@ public class Item_stats : MonoBehaviour
     public void Awake()
     {
         this.transform.parent = null; //아이템 상속 해제
+        reinforce_add = 0;
+        for (int i = 0; i < Item_stat_add.Length; i++)
+        {
+            Item_stat_add[i] = 0;
+        }
     }
     //스킬을 세팅해주는 함수 (아이템 교체될때마다 해줘야함)
     public void Skill_Set()
@@ -46,20 +51,20 @@ public class Item_stats : MonoBehaviour
     public void Add_Stat()
     {
         player_s = GameObject.Find("Player");
-        player_s.GetComponent<Player_Stat>().Add_P_State(0, Item_stat[1]);
+        player_s.GetComponent<Player_Stat>().Add_P_State(0, Item_stat[1] + Item_stat_add[1]);
         for (int i = 2; i < Item_stat.Length; i++)
         {
-            player_s.GetComponent<Player_Stat>().Add_P_State(i, Item_stat[i]);
+            player_s.GetComponent<Player_Stat>().Add_P_State(i, Item_stat[i] + Item_stat_add[i]);
         }
         player_s.GetComponent<Player_Stat>().Reset_Speed();
     }
     public void Delete_Stat()
     {
         player_s = GameObject.Find("Player");
-        player_s.GetComponent<Player_Stat>().Miner_P_State(0, Item_stat[1]);
+        player_s.GetComponent<Player_Stat>().Miner_P_State(0, Item_stat[1] + Item_stat_add[1]);
         for (int i = 2; i < Item_stat.Length; i++)
         {
-            player_s.GetComponent<Player_Stat>().Miner_P_State(i, Item_stat[i]);
+            player_s.GetComponent<Player_Stat>().Miner_P_State(i, Item_stat[i] + Item_stat_add[i]);
         }
         player_s.GetComponent<Player_Stat>().Reset_Speed();
     }
@@ -67,15 +72,10 @@ public class Item_stats : MonoBehaviour
     public void reinforce()
     {
         Delete_Stat();
+        reinforce_add++;
         for (int i = 0; i < Item_stat.Length; i++)
         {
-            Item_stat[i] -= (int)(Item_stat_add[i] * reinforce_add);
-            Item_stat_add[i] = (int)(Mathf.Ceil(Item_stat[i] * 0.1f));
-        }
-        reinforce_add++;
-        for (int i = 0; i< Item_stat.Length;i++)
-        {
-            Item_stat[i] += (int)(Item_stat_add[i] * reinforce_add);
+            Item_stat_add[i] += (int)(Mathf.Ceil(Item_stat[i] * 0.1f));
         }
         Add_Stat();
     }

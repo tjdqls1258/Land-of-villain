@@ -81,6 +81,7 @@ public class Player_Get_Item : MonoBehaviour
     { 
         GameObject Item =  Instantiate(N, transform.position, Quaternion.identity);
         Item.GetComponent<Item_stats>().Item_stat = PE.Get_Drop_Player_Item(IS.Get_Item_Kind()).GetComponent<Item_stats>().Item_stat;
+        Item.GetComponent<Item_stats>().Item_stat_add = PE.Get_Drop_Player_Item(IS.Get_Item_Kind()).GetComponent<Item_stats>().Item_stat_add;
         Item.GetComponent<Item_stats>().reinforce_add = PE.Get_Drop_Player_Item(IS.Get_Item_Kind()).GetComponent<Item_stats>().reinforce_add;
     }
 

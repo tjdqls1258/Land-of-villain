@@ -76,8 +76,9 @@ public class Item_Shop : MonoBehaviour
         Button_Text[2] = BS[2].transform.GetChild(0).GetComponent<Text>();
         Button_Text[3] = BS[3].transform.GetChild(0).GetComponent<Text>();
 
+
         //플레이어의 돈을 가져오기 위해 사용(오브젝트의 이름을 찾아 스크립트를 가져온다.)
-        PS= GameObject.Find("Player").GetComponent<Player_Stat>();
+        PS = GameObject.Find("Player").GetComponent<Player_Stat>();
 
         //플레이어의 위치를 사용하기 위해.
         PT = GameObject.Find("Player");
@@ -236,5 +237,53 @@ public class Item_Shop : MonoBehaviour
         //현재 스테이지를 다음 스테이지로 넘겨주고, 현재 게임오브젝트를 Destroy함 
         //다음스테이지로 넘겨주는 방법이 안보임
         Destroy(gameObject);
+    }
+
+    public void HpUp()
+    {
+        if (PS.Get_P_State(6) >= 1000)
+        {
+            PS.Set_P_State(0, PS.Get_P_State(0) + 10);
+            PS.Set_P_Base_State(0, PS.Get_P_Base_State(0) + 10);
+            PS.Set_P_State(6, PS.Get_P_State(6) - 1000);
+        }
+    }
+
+    public void ATKUp()
+    {
+        if (PS.Get_P_State(6) >= 1000)
+        {
+            PS.Set_P_State(2, PS.Get_P_State(2) + 3);
+            PS.Set_P_Base_State(2, PS.Get_P_Base_State(2) + 3);
+            PS.Set_P_State(6, PS.Get_P_State(6) - 1000);
+        }
+    }
+
+    public void LUKUp()
+    {
+        if (PS.Get_P_State(6) >= 1000)
+        {
+            PS.Set_P_State(5, PS.Get_P_State(5) + 1);
+            PS.Set_P_Base_State(5, PS.Get_P_Base_State(5) + 1);
+            PS.Set_P_State(6, PS.Get_P_State(6) - 1000);
+        }
+    }
+    public void DEFUp()
+    {
+        if (PS.Get_P_State(6) >= 1000)
+        {
+            PS.Set_P_State(3, PS.Get_P_State(3) + 3);
+            PS.Set_P_Base_State(3, PS.Get_P_Base_State(3) + 3);
+            PS.Set_P_State(6, PS.Get_P_State(6) - 1000);
+        }
+    }
+    public void AGIUp()
+    {
+        if (PS.Get_P_State(6) >= 1000)
+        {
+            PS.Set_P_State(4, PS.Get_P_State(4) + 1);
+            PS.Set_P_Base_State(4, PS.Get_P_Base_State(4) + 1);
+            PS.Set_P_State(6, PS.Get_P_State(6) - 1000);
+        }
     }
 }

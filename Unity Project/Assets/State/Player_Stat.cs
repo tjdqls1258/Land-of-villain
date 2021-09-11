@@ -48,6 +48,8 @@ public class Player_Stat : MonoBehaviour
     {
         return P_State[N1];
     }
+    public void Set_P_Base_State(int N1, int N2)
+    { P_Base_State[N1] = N2; }
     public int Get_P_Base_State(int N1)
     {
         return P_Base_State[N1];

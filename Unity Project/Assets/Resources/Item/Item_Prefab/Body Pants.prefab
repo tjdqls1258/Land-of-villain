@@ -99,6 +99,7 @@ MonoBehaviour:
   Item_Kind: 1
   tear: 1
   Item_stat: 0000000064000000000000000a0000000a00000000000000
+  Item_stat_add: 000000000000000000000000000000000000000000000000
   meeleatk: 0
   skill_number: Body_Pants_Skill
   CoolTime: 6

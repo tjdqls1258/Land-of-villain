@@ -17,6 +17,9 @@ public class Magic_Hat_Skill : MonoBehaviour, Skill
         GameObject Player = GameObject.Find("Player");
         GameObject Buffe_Panel = Player.transform.Find("Play_UI").transform.
             Find("BuffPanel").gameObject;
+        Buffe_ = Instantiate(Buffe_Image, Vector3.zero, Quaternion.identity);
+        Buffe_.transform.parent = Buffe_Panel.transform;
+
         reset_stat = 5;
         Player.GetComponent<Player_Stat>().Set_P_State(2,
             (int)(Player.GetComponent<Player_Stat>().Get_P_State(2) + reset_stat));

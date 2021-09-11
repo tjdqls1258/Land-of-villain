@@ -99,6 +99,7 @@ MonoBehaviour:
   Item_Kind: 2
   tear: 0
   Item_stat: 0000000000000000000000000a0000000a00000000000000
+  Item_stat_add: 000000000000000000000000000000000000000000000000
   meeleatk: 0
   skill_number: Gas_Mask_Skill
   CoolTime: 6

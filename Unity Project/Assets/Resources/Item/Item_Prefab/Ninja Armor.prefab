@@ -99,6 +99,7 @@ MonoBehaviour:
   Item_Kind: 1
   tear: 1
   Item_stat: 000000006400000000000000050000000a00000005000000
+  Item_stat_add: 000000000000000000000000000000000000000000000000
   meeleatk: 0
   skill_number: Ninja_Armor_Skill
   CoolTime: 6

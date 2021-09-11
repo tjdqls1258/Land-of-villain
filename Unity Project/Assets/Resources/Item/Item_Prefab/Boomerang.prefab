@@ -99,6 +99,7 @@ MonoBehaviour:
   Item_Kind: 0
   tear: 0
   Item_stat: 00000000000000000a000000000000000000000001000000
+  Item_stat_add: 000000000000000000000000000000000000000000000000
   meeleatk: 0
   skill_number: Pilot_Wepwon_Skill
   CoolTime: 8

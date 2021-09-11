@@ -99,6 +99,7 @@ MonoBehaviour:
   Item_Kind: 2
   tear: 0
   Item_stat: 000000000000000000000000050000000a00000000000000
+  Item_stat_add: 000000000000000000000000000000000000000000000000
   meeleatk: 0
   skill_number: Pilot_Gogle_Skill
   CoolTime: 7

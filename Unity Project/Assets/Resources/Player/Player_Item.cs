@@ -212,25 +212,17 @@ public class Player_Item : MonoBehaviour
             switch (items)
             {
                 case 0:
-                    Weapon.GetComponent<Item_stats>().Delete_Stat();
                     Weapon.GetComponent<Item_stats>().reinforce();
-                    Weapon.GetComponent<Item_stats>().Add_Stat();
 
                     return true;
                 case 1:
-                    Armor.GetComponent<Item_stats>().Delete_Stat();
                     Armor.GetComponent<Item_stats>().reinforce();
-                    Armor.GetComponent<Item_stats>().Add_Stat();
                     return true;
                 case 2:
-                    Hat.GetComponent<Item_stats>().Delete_Stat();
                     Hat.GetComponent<Item_stats>().reinforce();
-                    Hat.GetComponent<Item_stats>().Add_Stat();
                     return true;
                 case 3:
-                    Ring.GetComponent<Item_stats>().Delete_Stat();
                     Ring.GetComponent<Item_stats>().reinforce();
-                    Ring.GetComponent<Item_stats>().Add_Stat();
                     return true;
             }
                 

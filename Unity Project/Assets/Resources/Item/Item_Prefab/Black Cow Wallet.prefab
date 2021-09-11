@@ -99,6 +99,7 @@ MonoBehaviour:
   Item_Kind: 3
   tear: 2
   Item_stat: 000000000000000000000000140000000f00000000000000
+  Item_stat_add: 000000000000000000000000000000000000000000000000
   meeleatk: 0
   skill_number: Black_Cow_Wallet_Skill
   CoolTime: 5

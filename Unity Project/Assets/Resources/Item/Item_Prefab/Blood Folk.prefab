@@ -99,6 +99,7 @@ MonoBehaviour:
   Item_Kind: 0
   tear: 1
   Item_stat: 000000000000000007000000000000000000000001000000
+  Item_stat_add: 000000000000000000000000000000000000000000000000
   meeleatk: 0
   skill_number: Blood_FolK_Skill
   CoolTime: 5

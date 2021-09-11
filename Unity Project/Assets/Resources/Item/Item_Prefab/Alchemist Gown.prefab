@@ -99,6 +99,7 @@ MonoBehaviour:
   Item_Kind: 1
   tear: 0
   Item_stat: 0000000078000000000000000f0000000a00000000000000
+  Item_stat_add: 000000000000000000000000000000000000000000000000
   meeleatk: 0
   skill_number: Alchemist_Gown_Skill
   CoolTime: 9

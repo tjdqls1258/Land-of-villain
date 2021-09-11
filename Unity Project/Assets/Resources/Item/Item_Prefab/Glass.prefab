@@ -99,6 +99,7 @@ MonoBehaviour:
   Item_Kind: 3
   tear: 1
   Item_stat: 00000000000000000000000000000000000000000a000000
+  Item_stat_add: 000000000000000000000000000000000000000000000000
   meeleatk: 0
   skill_number: Glass_Skill
   CoolTime: 9

@@ -99,6 +99,7 @@ MonoBehaviour:
   Item_Kind: 0
   tear: 2
   Item_stat: 00000000000000000a00000000000000000000000f000000
+  Item_stat_add: 000000000000000000000000000000000000000000000000
   meeleatk: 0
   skill_number: Black_Cow_Card_Skill
   CoolTime: 3

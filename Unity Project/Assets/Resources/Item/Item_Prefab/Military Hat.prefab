@@ -99,6 +99,7 @@ MonoBehaviour:
   Item_Kind: 2
   tear: 1
   Item_stat: 000000001400000000000000050000000500000000000000
+  Item_stat_add: 000000000000000000000000000000000000000000000000
   meeleatk: 0
   skill_number: Military_Hat_Skill
   CoolTime: 12

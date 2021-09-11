@@ -99,6 +99,7 @@ MonoBehaviour:
   Item_Kind: 0
   tear: 1
   Item_stat: 00000000000000000a00000000000000000000000a000000
+  Item_stat_add: 000000000000000000000000000000000000000000000000
   meeleatk: 1
   skill_number: SMG_Skill
   CoolTime: 1

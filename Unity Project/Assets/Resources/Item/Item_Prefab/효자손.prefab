@@ -99,6 +99,7 @@ MonoBehaviour:
   Item_Kind: 3
   tear: 1
   Item_stat: 000000000000000002000000000000000100000000000000
+  Item_stat_add: 000000000000000000000000000000000000000000000000
   meeleatk: 0
   skill_number: "\uD6A8\uC790\uC190_Skill"
   CoolTime: 25

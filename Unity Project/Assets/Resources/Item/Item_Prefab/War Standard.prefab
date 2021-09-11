@@ -99,6 +99,7 @@ MonoBehaviour:
   Item_Kind: 3
   tear: 1
   Item_stat: 000000000000000000000000000000000300000000000000
+  Item_stat_add: 000000000000000000000000000000000000000000000000
   meeleatk: 0
   skill_number: War_Standard_Skill
   CoolTime: 1

@@ -9,6 +9,7 @@ public class Item_stats : MonoBehaviour
     public int Item_Kind; //아이템 종류
     public int tear;//아이템 등급  0 , 1 , 2 =  N ,  R ,  E
     public int[] Item_stat;
+    public int[] Item_stat_add;
     // 0 = 강화정도
     // 1 = 체력
     // 2 = 힘
@@ -65,11 +66,16 @@ public class Item_stats : MonoBehaviour
     //아이템 강화에 사용되는 함수
     public void reinforce()
     {
-        reinforce_add++;
         Delete_Stat();
+        for (int i = 0; i < Item_stat.Length; i++)
+        {
+            Item_stat[i] -= (int)(Item_stat_add[i] * reinforce_add);
+            Item_stat_add[i] = (int)(Mathf.Ceil(Item_stat[i] * 0.1f));
+        }
+        reinforce_add++;
         for (int i = 0; i< Item_stat.Length;i++)
         {
-            Item_stat[i] += (int)Mathf.Ceil((Item_stat[i] * 0.1f));
+            Item_stat[i] += (int)(Item_stat_add[i] * reinforce_add);
         }
         Add_Stat();
     }

@@ -99,6 +99,7 @@ MonoBehaviour:
   Item_Kind: 2
   tear: 2
   Item_stat: 000000008c00000000000000140000000f00000000000000
+  Item_stat_add: 000000000000000000000000000000000000000000000000
   meeleatk: 0
   skill_number: Black_Cow_Hat_Skill
   CoolTime: 0

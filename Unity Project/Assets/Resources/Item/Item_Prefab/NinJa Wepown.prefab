@@ -99,6 +99,7 @@ MonoBehaviour:
   Item_Kind: 0
   tear: 1
   Item_stat: 00000000000000001400000000000000000000000a000000
+  Item_stat_add: 000000000000000000000000000000000000000000000000
   meeleatk: 0
   skill_number: NinJa_Wepown_Skill
   CoolTime: 0.5

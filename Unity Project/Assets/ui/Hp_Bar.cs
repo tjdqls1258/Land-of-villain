@@ -24,9 +24,4 @@ public class Hp_Bar : MonoBehaviour
         HealthText.text = Player.GetComponent<Player_Stat>().Get_P_State(1).ToString();
     }
 
-    public void Damage(int Dam)
-    {
-        HealthText.text = (Player.GetComponent<Player_Stat>().Get_P_State(1)).ToString();
-        //100부분 플레이어 HP로 치완
-    }
 }

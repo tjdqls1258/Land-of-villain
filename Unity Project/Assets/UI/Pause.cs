@@ -5,6 +5,8 @@ using UnityEngine;
 public class Pause : MonoBehaviour
 {
     [SerializeField] private GameObject pauseUI;
+    [SerializeField] private GameObject QuitUI;
+    [SerializeField] private GameObject ReturnToMenuUI;
 
     public void PauseBtn()
     {
@@ -26,9 +28,13 @@ public class Pause : MonoBehaviour
         }
     }
 
+    public void ReturnToMenuBtn()
+    {
+        ReturnToMenuUI.SetActive(true);
+    }
+
     public void QuitBtn()
     {
-        Debug.Log("게임종료");
-        Application.Quit();
+        QuitUI.SetActive(true);
     }
 }

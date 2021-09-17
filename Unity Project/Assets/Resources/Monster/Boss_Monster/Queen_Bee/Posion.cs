@@ -13,7 +13,7 @@ public class Posion : MonoBehaviour
     {
         if(collision.tag == "Player")
         {
-           Posion_Damage = Mathf.CeilToInt(GetComponent<Monster_Bullet>().Damage() * 0.5f);
+           Posion_Damage = Mathf.CeilToInt(GetComponent<Monster_Bullet>().Damage() * 0.1f);
             collision.GetComponent<Player_Debuff>().Poison_Debuff(Posion_Damage);
         }
     }

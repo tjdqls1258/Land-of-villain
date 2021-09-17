@@ -20,6 +20,7 @@ public class R_Skill_01 : MonoBehaviour, Skill
 
     public void Passive()
     {
+        Stop_Passive();
         Player = GameObject.Find("Player"); 
 
         GameObject Buffe_Panel = Player.transform.Find("Play_UI").transform.
@@ -55,7 +56,5 @@ public class R_Skill_01 : MonoBehaviour, Skill
     {
         Destroy(Buffe_);
         CancelInvoke("Passive");
-
-       
     }
 }

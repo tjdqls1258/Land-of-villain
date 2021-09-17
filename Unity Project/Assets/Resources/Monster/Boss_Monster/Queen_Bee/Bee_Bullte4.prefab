@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 5543586886003279888}
   - component: {fileID: 1343485530376217942}
   - component: {fileID: 8874235660640058324}
+  - component: {fileID: 7908236089250942088}
   m_Layer: 0
   m_Name: Bee_Bullte4
   m_TagString: Untagged
@@ -61,6 +62,19 @@ MonoBehaviour:
   Skill_type: 0
   Damage_s: 0
   Skill_CollTime: 0
+--- !u!114 &7908236089250942088
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7210821655803319731}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1ace381185e6dcd4a95c881e128d2445, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  life_time: 10
 --- !u!1001 &4949716236329465291
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -77,6 +91,16 @@ PrefabInstance:
         type: 3}
       propertyPath: m_RootOrder
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6539003475254097955, guid: 7db6b57f1a3680e4f9aa530f148aa599,
+        type: 3}
+      propertyPath: m_LocalScale.x
+      value: 0.48
+      objectReference: {fileID: 0}
+    - target: {fileID: 6539003475254097955, guid: 7db6b57f1a3680e4f9aa530f148aa599,
+        type: 3}
+      propertyPath: m_LocalScale.y
+      value: 0.48
       objectReference: {fileID: 0}
     - target: {fileID: 6539003475254097955, guid: 7db6b57f1a3680e4f9aa530f148aa599,
         type: 3}
@@ -152,6 +176,16 @@ PrefabInstance:
         type: 3}
       propertyPath: m_RootOrder
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6539003475254097955, guid: 7db6b57f1a3680e4f9aa530f148aa599,
+        type: 3}
+      propertyPath: m_LocalScale.x
+      value: 0.48
+      objectReference: {fileID: 0}
+    - target: {fileID: 6539003475254097955, guid: 7db6b57f1a3680e4f9aa530f148aa599,
+        type: 3}
+      propertyPath: m_LocalScale.y
+      value: 0.48
       objectReference: {fileID: 0}
     - target: {fileID: 6539003475254097955, guid: 7db6b57f1a3680e4f9aa530f148aa599,
         type: 3}

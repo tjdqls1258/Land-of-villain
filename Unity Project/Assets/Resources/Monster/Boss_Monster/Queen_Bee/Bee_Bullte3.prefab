@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 3922022750420508531}
   - component: {fileID: 4259058488073495436}
   - component: {fileID: 4432977008535136724}
+  - component: {fileID: 7156484925466059919}
   m_Layer: 0
   m_Name: Bee_Bullte3
   m_TagString: Untagged
@@ -60,6 +61,19 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6d97c9e4e6afbcb43b0c583e3e7109c3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &7156484925466059919
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5243060690790728821}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1ace381185e6dcd4a95c881e128d2445, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  life_time: 10
 --- !u!1001 &138961956539410416
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -71,6 +85,16 @@ PrefabInstance:
         type: 3}
       propertyPath: m_RootOrder
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5618460528348525913, guid: 2611ffd76c9ca944e9c45c93d3dfba05,
+        type: 3}
+      propertyPath: m_LocalScale.x
+      value: 0.48
+      objectReference: {fileID: 0}
+    - target: {fileID: 5618460528348525913, guid: 2611ffd76c9ca944e9c45c93d3dfba05,
+        type: 3}
+      propertyPath: m_LocalScale.y
+      value: 0.48
       objectReference: {fileID: 0}
     - target: {fileID: 5618460528348525913, guid: 2611ffd76c9ca944e9c45c93d3dfba05,
         type: 3}
@@ -150,12 +174,12 @@ PrefabInstance:
     - target: {fileID: 5618460528348525913, guid: 2611ffd76c9ca944e9c45c93d3dfba05,
         type: 3}
       propertyPath: m_LocalScale.x
-      value: 0.32
+      value: 0.48
       objectReference: {fileID: 0}
     - target: {fileID: 5618460528348525913, guid: 2611ffd76c9ca944e9c45c93d3dfba05,
         type: 3}
       propertyPath: m_LocalScale.y
-      value: 0.32
+      value: 0.48
       objectReference: {fileID: 0}
     - target: {fileID: 5618460528348525913, guid: 2611ffd76c9ca944e9c45c93d3dfba05,
         type: 3}
@@ -235,12 +259,12 @@ PrefabInstance:
     - target: {fileID: 5618460528348525913, guid: 2611ffd76c9ca944e9c45c93d3dfba05,
         type: 3}
       propertyPath: m_LocalScale.x
-      value: 0.32
+      value: 0.48
       objectReference: {fileID: 0}
     - target: {fileID: 5618460528348525913, guid: 2611ffd76c9ca944e9c45c93d3dfba05,
         type: 3}
       propertyPath: m_LocalScale.y
-      value: 0.32
+      value: 0.48
       objectReference: {fileID: 0}
     - target: {fileID: 5618460528348525913, guid: 2611ffd76c9ca944e9c45c93d3dfba05,
         type: 3}

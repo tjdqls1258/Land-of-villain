@@ -39,6 +39,8 @@ public class Item_Shop : MonoBehaviour
     //아이템 샵을 나가기 위한 버튼을 가져옴.
 
     private Button Exit_Button;
+    [SerializeField] private GameObject Shop_UI;
+    [SerializeField] private GameObject Shop_btn;
 
     //일시정지 추가하여 사용할 예정.
     void Start()
@@ -236,7 +238,14 @@ public class Item_Shop : MonoBehaviour
     {
         //현재 스테이지를 다음 스테이지로 넘겨주고, 현재 게임오브젝트를 Destroy함 
         //다음스테이지로 넘겨주는 방법이 안보임
-        Destroy(gameObject);
+        Shop_UI.SetActive(false);
+        Shop_btn.SetActive(true);
+    }
+
+    public void Shop_enter()
+    {
+        Shop_UI.SetActive(true);
+        Shop_btn.SetActive(false);
     }
 
     public void HpUp()

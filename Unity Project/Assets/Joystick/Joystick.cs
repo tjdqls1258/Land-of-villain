@@ -30,7 +30,7 @@ public class Joystick : MonoBehaviour, IBeginDragHandler, IDragHandler, IEndDrag
 
     private void Update()
     {
-        if (Input.GetMouseButtonDown(0) && (Input.mousePosition.x < 600) && (Input.mousePosition.y < 340))
+        if (Input.GetMouseButtonDown(0) && (Input.mousePosition.x < 450) && (Input.mousePosition.y < 340))
         {
             mousepos = Input.mousePosition;
             // = Camera.ScreenToWorldPoint(mousepos);

@@ -19,7 +19,11 @@ public class SMG_Skill : MonoBehaviour, Skill
     public void Skill_Action()
     {
         Player = GameObject.Find("Player");
-
+        Mod++;
+        if (Mod > 3)
+        {
+            Mod = 1;
+        }
         switch (Mod)
         {
             case 1://초기화
@@ -38,48 +42,54 @@ public class SMG_Skill : MonoBehaviour, Skill
             default:
                 break;
         }
-        Mod++;
-        if(Mod > 3)
-        {
-            Mod = 1;
-        }
+        
 
     }
 
     public void Passive()
     {
         Player = GameObject.Find("Player");
-        ATK_Damage = Player.GetComponent<Player_Item>().Weapon.GetComponent<Item_stats>().Item_stat[2];
+        Player.GetComponent<Player_Item>().Weapon.GetComponent<Item_stats>().ATK_Speed = 0.3f;
+        Mod1.GetComponent<Set_Damage>().데미지_비율 = 1f;
+        Mod2.GetComponent<Set_Damage>().데미지_비율 = 1f;
+        Mod3.GetComponent<Set_Damage>().데미지_비율 = 1f;
         ATK_Speed = Player.GetComponent<Player_Item>().Weapon.GetComponent<Item_stats>().ATK_Speed;
+        ATK_Damage = Player.GetComponent<Player_Stat>().Get_P_State(5);
+        Player.GetComponent<Player_Stat>().Set_P_State(5, ATK_Damage + 30);
         Mod = 1;
     }
     //중지시키는 함수
     public void Stop_Passive()
     {
-        Player.GetComponent<Player_Item>().Weapon.GetComponent<Item_stats>().Item_stat[2] -= ATK_Damage;
+        Player.GetComponent<Player_Item>().Weapon.GetComponent<Item_stats>().ATK_Speed = 0.3f;
+        Mod1.GetComponent<Set_Damage>().데미지_비율 = 1f;
+        Mod2.GetComponent<Set_Damage>().데미지_비율 = 1f;
+        Mod3.GetComponent<Set_Damage>().데미지_비율 = 1f;
+        Player.GetComponent<Player_Stat>().Set_P_State(5, ATK_Damage);
     }
 
     public void Mod2_State()
     {
-        //공속 느려짐 데미지 0.5배
-        Player.GetComponent<Player_Stat>().Set_P_State(2, Player.GetComponent<Player_Stat>().Get_P_State(2) - (int)(ATK_Damage * 0.3f));
-        Player.GetComponent<Player_Item>().Weapon.GetComponent<Item_stats>().ATK_Speed = 0.7f;
+        Mod2.GetComponent<Set_Damage>().데미지_비율 = 0.4f;
+        Player.GetComponent<Player_Item>().Weapon.GetComponent<Item_stats>().ATK_Speed = 0.5f;
+        Player.GetComponent<Player_Stat>().Set_P_State(5, ATK_Damage);
     }
     public void Mod3_State()
     {
-        //공속 개빨라짐, 데미지 0.3배
+        Mod3.GetComponent<Set_Damage>().데미지_비율 = 0.2f;
         Player.GetComponent<Player_Item>().Weapon.GetComponent<Item_stats>().ATK_Speed = 0.1f;
-        Player.GetComponent<Player_Stat>().Set_P_State(2, Player.GetComponent<Player_Stat>().Get_P_State(2) - (int)(ATK_Damage * 0.9f));
+        Player.GetComponent<Player_Stat>().Set_P_State(5, 0);
     }
     public void Mod2_State_End()
     {
-        Player.GetComponent<Player_Stat>().Set_P_State(2, Player.GetComponent<Player_Stat>().Get_P_State(2) + (int)(ATK_Damage * 0.3f));
+        Mod2.GetComponent<Set_Damage>().데미지_비율 = 1.0f;
         Player.GetComponent<Player_Item>().Weapon.GetComponent<Item_stats>().ATK_Speed = ATK_Speed;
     }
     public void Mod3_State_End()
     {
-        Player.GetComponent<Player_Stat>().Set_P_State(2, Player.GetComponent<Player_Stat>().Get_P_State(2) + (int)(ATK_Damage * 0.9f));
         Player.GetComponent<Player_Item>().Weapon.GetComponent<Item_stats>().ATK_Speed = ATK_Speed;
+        Mod3.GetComponent<Set_Damage>().데미지_비율 = 1f;
+        Player.GetComponent<Player_Stat>().Set_P_State(5, ATK_Damage + 30);
     }
 
 }

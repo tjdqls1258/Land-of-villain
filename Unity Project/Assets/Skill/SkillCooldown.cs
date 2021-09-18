@@ -14,7 +14,7 @@ public class SkillCooldown : MonoBehaviour
     public bool dashactive = false;
     public bool Don_Restart = false;
     public AudioClip ATK_Sound;
-    AudioSource audioSource;
+    public AudioSource audioSource;
 
     bool ismeele;
 
@@ -62,7 +62,11 @@ public class SkillCooldown : MonoBehaviour
         audioSource.volume = PlayerPrefs.GetFloat("E_Sound");
         Save_slider.value = PlayerPrefs.GetFloat("E_Sound_Slider");
     }
-
+    public void save_E_sound_Setting()
+    {
+        PlayerPrefs.SetFloat("E_Sound", audioSource.volume);
+        PlayerPrefs.SetFloat("E_Sound_Slider", Save_slider.value);
+    }
     // Update is called once per frame
     void Update()
     {

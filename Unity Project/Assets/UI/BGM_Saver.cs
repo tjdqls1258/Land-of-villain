@@ -4,9 +4,9 @@ using UnityEngine;
 using UnityEngine.UI;
 public class BGM_Saver : MonoBehaviour
 {
-    public GameObject Player;
+    GameObject Player;
     public Slider Save_slider;
-    AudioSource audioSource;
+    public AudioSource audioSource;
 
     public AudioClip Sound;
     public AudioClip Sound2;
@@ -26,13 +26,13 @@ public class BGM_Saver : MonoBehaviour
     }
     public void Setting_BGM()
     {
-        if ((Player.GetComponent<Player_Stat>().N_Stages % 36) == 1)
+        if ((Player.GetComponent<Player_Stat>().N_Stages % 36) >= 1)
         {
             GetComponent<AudioSource>().Stop();
             GetComponent<AudioSource>().clip = Sound;
             GetComponent<AudioSource>().Play();
         }
-        if ((Player.GetComponent<Player_Stat>().N_Stages % 36) == 12)
+        if ((Player.GetComponent<Player_Stat>().N_Stages % 36) >= 12)
         {
             GetComponent<AudioSource>().Stop();
             GetComponent<AudioSource>().clip = Sound2;

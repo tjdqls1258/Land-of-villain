@@ -26,9 +26,9 @@ public class Blood_Ring_Skill : MonoBehaviour, Skill
         Buffe_.transform.parent = Buffe_Panel.transform;
         Is_Action = true;
         Player.GetComponent<Player_Stat>().Set_P_State(1, Player.GetComponent<Player_Stat>().Get_P_State(1) - Delete_Hp);
-        reset_stat = (int)(Player.GetComponent<Player_Stat>().Get_P_State(3));
+        reset_stat = (int)(Player.GetComponent<Player_Stat>().Get_P_State(2));
         Debug.Log("반지 스킬발사 히히");
-        Player.GetComponent<Player_Stat>().Set_P_State(3, Player.GetComponent<Player_Stat>().Get_P_State(3) + reset_stat);
+        Player.GetComponent<Player_Stat>().Set_P_State(2, Player.GetComponent<Player_Stat>().Get_P_State(2) + reset_stat);
         Invoke("Buffe", 지속시간);
 
     }
@@ -43,7 +43,7 @@ public class Blood_Ring_Skill : MonoBehaviour, Skill
     void Buffe()
     {
         GameObject Player = GameObject.Find("Player");
-        Player.GetComponent<Player_Stat>().Set_P_State(3, Player.GetComponent<Player_Stat>().Get_P_State(3) - reset_stat);
+        Player.GetComponent<Player_Stat>().Set_P_State(2, Player.GetComponent<Player_Stat>().Get_P_State(3) - reset_stat);
         Is_Action = false;
         Destroy(Buffe_);
         Debug.Log("반지 스킬종료 희희");

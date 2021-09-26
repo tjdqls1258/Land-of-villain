@@ -124,7 +124,7 @@ PlayerSettings:
     16:10: 1
     16:9: 1
     Others: 1
-  bundleVersion: 1.5.4
+  bundleVersion: 1.5.41
   preloadedAssets: []
   metroInputSource: 0
   wsaTransparentSwapchain: 0
@@ -170,7 +170,7 @@ PlayerSettings:
   applicationIdentifier:
     Android: com.ComeOnVillainFriend.Tester
   buildNumber: {}
-  AndroidBundleVersionCode: 12
+  AndroidBundleVersionCode: 13
   AndroidMinSdkVersion: 19
   AndroidTargetSdkVersion: 30
   AndroidPreferredInstallLocation: 1

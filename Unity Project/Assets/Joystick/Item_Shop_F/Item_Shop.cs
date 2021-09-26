@@ -42,6 +42,8 @@ public class Item_Shop : MonoBehaviour
     [SerializeField] private GameObject Shop_UI;
     [SerializeField] private GameObject Shop_btn;
 
+    public Text Message;
+
     //일시정지 추가하여 사용할 예정.
     void Start()
     {   //아이템 이름 텍스트 찾아 텍스트 컴포넌트 넣기
@@ -255,6 +257,7 @@ public class Item_Shop : MonoBehaviour
             PS.Set_P_State(0, PS.Get_P_State(0) + 10);
             PS.Set_P_Base_State(0, PS.Get_P_Base_State(0) + 10);
             PS.Set_P_State(6, PS.Get_P_State(6) - 1000);
+            Start_FateOut();
         }
     }
 
@@ -265,6 +268,7 @@ public class Item_Shop : MonoBehaviour
             PS.Set_P_State(2, PS.Get_P_State(2) + 3);
             PS.Set_P_Base_State(2, PS.Get_P_Base_State(2) + 3);
             PS.Set_P_State(6, PS.Get_P_State(6) - 1000);
+            Start_FateOut();
         }
     }
 
@@ -275,6 +279,7 @@ public class Item_Shop : MonoBehaviour
             PS.Set_P_State(5, PS.Get_P_State(5) + 1);
             PS.Set_P_Base_State(5, PS.Get_P_Base_State(5) + 1);
             PS.Set_P_State(6, PS.Get_P_State(6) - 1000);
+            Start_FateOut();
         }
     }
     public void DEFUp()
@@ -284,6 +289,7 @@ public class Item_Shop : MonoBehaviour
             PS.Set_P_State(3, PS.Get_P_State(3) + 3);
             PS.Set_P_Base_State(3, PS.Get_P_Base_State(3) + 3);
             PS.Set_P_State(6, PS.Get_P_State(6) - 1000);
+            Start_FateOut();
         }
     }
     public void AGIUp()
@@ -293,6 +299,25 @@ public class Item_Shop : MonoBehaviour
             PS.Set_P_State(4, PS.Get_P_State(4) + 1);
             PS.Set_P_Base_State(4, PS.Get_P_Base_State(4) + 1);
             PS.Set_P_State(6, PS.Get_P_State(6) - 1000);
+            Start_FateOut();
         }
+    }
+
+    IEnumerator FateOut(Text color)
+    {
+        float timmer = 0;
+        while (1 - (timmer) > 0)
+        {
+            timmer += Time.deltaTime;
+            Message.color = new Color(Message.color.r, Message.color.g, Message.color.b, 1 - (timmer));
+            yield return null;
+        }
+    }
+    public void Start_FateOut()
+    {
+        Message.color = new Color(Message.color.r, Message.color.g, Message.color.b, 0);
+        StopCoroutine("FateOut");
+        Message.color = new Color(Message.color.r, Message.color.g, Message.color.b, 1);
+        StartCoroutine("FateOut", Message);
     }
 }
